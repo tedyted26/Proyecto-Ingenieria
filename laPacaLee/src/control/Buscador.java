@@ -1,5 +1,8 @@
-package laPacaLee;
+package control;
 import java.util.*;
+
+import model.Biblioteca;
+import model.Libro;
 
 public class Buscador {
 	

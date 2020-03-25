@@ -5,7 +5,7 @@
  * Clase principal. Es la que contiene los datos de la biblioteca. 
  * Contiene los usuarios y los libros.
  */
-package laPacaLee;
+package model;
 
 import java.util.ArrayList;
 import java.util.Scanner;

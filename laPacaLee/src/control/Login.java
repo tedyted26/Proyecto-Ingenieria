@@ -3,9 +3,13 @@
  * @Group Grupo 2
  * @Date 9/3/2020
  */
-package laPacaLee;
+package control;
 
 import java.util.Scanner;
+
+import model.Biblioteca;
+import model.Usuario;
+import model.UsuarioNormal;
 
 public class Login {
 	

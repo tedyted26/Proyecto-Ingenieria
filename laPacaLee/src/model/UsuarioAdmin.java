@@ -5,7 +5,7 @@
  * Clase que hereda los atributos y funcionalidades de la clase Usuario
  * pero además tiene las de un usuario administrador
  */
-package laPacaLee;
+package model;
 
 import java.util.Vector;
 

@@ -1,4 +1,4 @@
-package laPacaLee;
+package model;
 
 public class Incidencia {
 	private String texto;

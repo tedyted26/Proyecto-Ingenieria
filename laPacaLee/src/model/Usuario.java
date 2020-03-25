@@ -4,7 +4,7 @@
  * @Date 9/3/2020
  * Clase principal de usuarios, contiene todos los atributos y funciones comunes a todos los usuarios
  */
-package laPacaLee;
+package model;
 
 import java.util.Scanner;
 import java.util.Vector;

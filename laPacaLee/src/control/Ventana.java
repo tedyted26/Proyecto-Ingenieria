@@ -1,6 +1,10 @@
-package laPacaLee;
+package control;
 
 import java.util.Scanner;
+
+import model.Biblioteca;
+import model.UsuarioAdmin;
+import model.UsuarioNormal;
 
 public class Ventana {
 

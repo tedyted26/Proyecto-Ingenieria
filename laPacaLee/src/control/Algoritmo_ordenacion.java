@@ -1,4 +1,4 @@
-package laPacaLee;
+package control;
 
 public class Algoritmo_ordenacion {
 
