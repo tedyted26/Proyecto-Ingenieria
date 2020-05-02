@@ -1,0 +1,7 @@
+digraph "model.Biblioteca"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{model.Biblioteca\n||+ Biblioteca()\l+ getUsers()\l+ setUsers()\l+ getAdmin()\l+ setAdmin()\l+ getU()\l+ setU()\l+ getLibros()\l+ setLibros()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}
