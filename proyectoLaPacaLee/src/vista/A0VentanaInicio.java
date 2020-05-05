@@ -10,9 +10,11 @@ import java.awt.Toolkit;
 
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 import control.Controlador;
 import model.Usuario;
@@ -29,6 +31,11 @@ import javax.swing.UIManager;
 public class A0VentanaInicio {
 
 	private JFrame frmLaPacaLee;
+	
+	//POP-UP AL CREAR CUENTA
+	private JDialog exitoOperacion;
+	private JButton btnAceptar;
+	private JLabel lblAviso;
 	
 	//PANEL INICIO
 	private JPanel panelInicio;
@@ -61,7 +68,6 @@ public class A0VentanaInicio {
 	
 	//PANEL INICIO SESION
 	private JPanel panelInicioSesion;
-	private GroupLayout groupLayout;
 	private JLabel lblInicioSesion;
 	private Panel marcoDeIncio;
 	private JLabel lblCorreo;
@@ -73,16 +79,26 @@ public class A0VentanaInicio {
 	private JButton btnAdmin;
 	private JPanel panelMensajes;
 	private JLabel lblAutentificacionDeContrasena;
+	private JLabel lblDebeSer_1;
+	private JLabel lblDebeSer;
 
 	
-	//CONSTRUCTOR
+	/**
+	 * Crea la ventana
+	 */
 	public A0VentanaInicio() {
 		initialize();
 	}
 	
 	
-	//CONTROLADOR
+	/**
+	 * Método que especifica la clase Controlador como Listener para las acciones de los componentes.
+	 * @param control
+	 */
 	public void setControlador(Controlador control) {
+		//BOTONES DE POP-UP
+		btnAceptar.addActionListener(control);
+		
 		//BOTONES INICIO
 		btnCrearCuenta.addActionListener(control);
 		btnIniciarSesion.addActionListener(control);
@@ -98,7 +114,10 @@ public class A0VentanaInicio {
 	}
 	
 	
-	//METODOS DE LA CREACION DE CUENTA
+	/**
+	 * Devuelve los datos de los campos de la creación de usuario
+	 * @return  usuario
+	 */
 	public Usuario obtenerDatosUsuarioCC() {
 		Usuario user;
 		String dni = textFieldDNI.getText(); 
@@ -120,6 +139,9 @@ public class A0VentanaInicio {
 		return user;
 	}
 	
+	/**
+	 * Elimina el contenido de los campos de la creación de usuario
+	 */
 	public void eliminarContenidoCC() {
 		textFieldDNI.setText("");
 		textFieldCorreo.setText("");
@@ -129,6 +151,10 @@ public class A0VentanaInicio {
 		textFieldApellidos.setText("");
 	}
 	
+	/**
+	 * Comprueba si los datos en la creación de usuario son correctos
+	 * @return true o false 
+	 */
 	@SuppressWarnings("deprecation")
 	public boolean comprobarDatosCC() {
 		if (textFieldDNI.getText().equals("")
@@ -143,7 +169,10 @@ public class A0VentanaInicio {
 		else return true;
 	}
 	
-	//METODOS DE INICIAR SESION
+	/**
+	 * Devuelve los datos de los campos de iniciar sesión
+	 * @return array de tipo string
+	 */
 	@SuppressWarnings("deprecation")
 	public String[] devolverDatosIS() {
 		String[] datos=new String[2];
@@ -152,6 +181,9 @@ public class A0VentanaInicio {
 		return datos;
 	}
 	
+	/**
+	 * Elimina el contenido de los campos de iniciar sesion
+	 */
 	public void eliminarContenidoIS() {
 		textField.setText("");
 		passwordField.setText("");
@@ -159,10 +191,13 @@ public class A0VentanaInicio {
 	}
 
 	
-	//INICIALIZACION DE LA VENTANA
+	/**
+	 * Inicializa el contenido de la ventana
+	 */
 	private void initialize() {
 		frmLaPacaLee = new JFrame();
-		frmLaPacaLee.getContentPane().setBackground(new Color(255, 153, 153));
+		frmLaPacaLee.setTitle("LaPacaLee");
+		frmLaPacaLee.getContentPane().setBackground(new Color(255, 192, 203));
 		Toolkit screen=Toolkit.getDefaultToolkit();
 		Dimension dimension=screen.getScreenSize();
 		frmLaPacaLee.setSize(dimension.width*5/12,dimension.height/2);
@@ -175,10 +210,52 @@ public class A0VentanaInicio {
 		frmLaPacaLee.getContentPane().setLayout(cl);
 		frmLaPacaLee.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		//POP-UP AL CREAR CUENTA
+		exitoOperacion =new JDialog();
+		exitoOperacion.setTitle("LaPacaLee");
+		exitoOperacion.setSize(dimension.width*16/100,dimension.height*178/1000);
+		exitoOperacion.setLocation(dimension.width*20/48,dimension.height*5/12);
+		exitoOperacion.setVisible(false);
+		exitoOperacion.setResizable(false);
+		exitoOperacion.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		exitoOperacion.setAlwaysOnTop(true);
+		exitoOperacion.setIconImage(Toolkit.getDefaultToolkit().getImage("./library.png"));
+		exitoOperacion.getContentPane().setBackground(new Color(255, 192, 203));
+		
+		btnAceptar = new JButton("Aceptar");
+		btnAceptar.setBorder(UIManager.getBorder("ComboBox.editorBorder"));
+		btnAceptar.setBackground(new Color(255, 250, 240));
+		btnAceptar.setForeground(new Color(220, 20, 60));
+		btnAceptar.setFont(new Font("Arial", Font.BOLD, 13));
+		
+		lblAviso = new JLabel("Cuenta creada con \u00E9xito.");
+		lblAviso.setForeground(new Color(220, 20, 60));
+		lblAviso.setFont(new Font("Goudy Old Style", Font.PLAIN, 20));
+		lblAviso.setHorizontalAlignment(SwingConstants.CENTER);
+		GroupLayout groupLayout = new GroupLayout(exitoOperacion.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblAviso, GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+						.addComponent(btnAceptar, GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
+					.addContainerGap())
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addComponent(lblAviso, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addComponent(btnAceptar, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
+					.addGap(27))
+		);
+		exitoOperacion.getContentPane().setLayout(groupLayout);
 		
 		//PANEL INICIO
 		panelInicio = new JPanel();
-		panelInicio.setBackground(new Color(255, 153, 153));
+		panelInicio.setBackground(new Color(255, 192, 203));
 		frmLaPacaLee.getContentPane().add(panelInicio, "name_73486089282900");
 		
 		btnIniciarSesion = new JButton("Iniciar Sesi\u00F3n");
@@ -225,7 +302,7 @@ public class A0VentanaInicio {
 		
 		//PANEL CREAR CUENTA
 		panelCrearCuenta = new JPanel();
-		panelCrearCuenta.setBackground(new Color(255, 153, 153));
+		panelCrearCuenta.setBackground(new Color(255, 192, 203));
 		frmLaPacaLee.getContentPane().add(panelCrearCuenta, "name_74369261535200");
 		
 		lblCreacionDeCuenta = new JLabel("Creaci\u00F3n de Cuenta");
@@ -272,9 +349,9 @@ public class A0VentanaInicio {
 		springLayout.putConstraint(SpringLayout.SOUTH, marco, 331, SpringLayout.NORTH, panelCrearCuenta);
 		springLayout.putConstraint(SpringLayout.EAST, marco, 431, SpringLayout.WEST, panelCrearCuenta);
 		panelCrearCuenta.add(marco);
-		marco.setLayout(new MigLayout("", "[124.00px][148px]", "[35px][35px][35px][35px][35px][40px]"));
+		marco.setLayout(new MigLayout("", "[124.00px][148px]", "[35px][35px][][35px][35px][][35px][40px]"));
 		
-		lblNombre = new JLabel("Nombre");
+		lblNombre = new JLabel("Nombre:");
 		lblNombre.setFont(new Font("Arial", Font.BOLD, 13));
 		marco.add(lblNombre, "cell 0 0,grow");
 		
@@ -282,7 +359,7 @@ public class A0VentanaInicio {
 		textFieldNombre.setColumns(10);
 		marco.add(textFieldNombre, "cell 1 0,growx,aligny center");
 		
-		lblApellidos = new JLabel("Apellidos");
+		lblApellidos = new JLabel("Apellidos:");
 		lblApellidos.setFont(new Font("Arial", Font.BOLD, 13));
 		marco.add(lblApellidos, "cell 0 1,grow");
 		
@@ -290,43 +367,53 @@ public class A0VentanaInicio {
 		textFieldApellidos.setColumns(10);
 		marco.add(textFieldApellidos, "cell 1 1,growx,aligny center");
 		
-		lblDNI = new JLabel("DNI");
+		lblDebeSer = new JLabel("* Debe tener min 7 cifras y una letra.");
+		lblDebeSer.setForeground(new Color(220, 20, 60));
+		lblDebeSer.setFont(new Font("Arial", Font.PLAIN, 11));
+		marco.add(lblDebeSer, "cell 0 2 2 1,alignx right");
+		
+		lblDNI = new JLabel("DNI*:");
 		lblDNI.setFont(new Font("Arial", Font.BOLD, 13));
-		marco.add(lblDNI, "cell 0 2,grow");
+		marco.add(lblDNI, "cell 0 3,grow");
 		
 		textFieldDNI = new JTextField();
 		textFieldDNI.setColumns(10);
-		marco.add(textFieldDNI, "cell 1 2,growx,aligny center");
+		marco.add(textFieldDNI, "cell 1 3,growx,aligny center");
 		
-		lblCCCorreo = new JLabel("Correo");
+		lblCCCorreo = new JLabel("Correo:");
 		lblCCCorreo.setFont(new Font("Arial", Font.BOLD, 13));
-		marco.add(lblCCCorreo, "cell 0 3,grow");
+		marco.add(lblCCCorreo, "cell 0 4,grow");
 		
 		textFieldCorreo = new JTextField();
 		textFieldCorreo.setColumns(10);
-		marco.add(textFieldCorreo, "cell 1 3,growx,aligny center");
+		marco.add(textFieldCorreo, "cell 1 4,growx,aligny center");
 		
-		lblCCContrasena = new JLabel("Contrase\u00F1a");
+		lblDebeSer_1 = new JLabel("* Debe ser de 6-50 caracteres.");
+		lblDebeSer_1.setForeground(new Color(220, 20, 60));
+		lblDebeSer_1.setFont(new Font("Arial", Font.PLAIN, 11));
+		marco.add(lblDebeSer_1, "cell 0 5 2 1,alignx right");
+		
+		lblCCContrasena = new JLabel("Contrase\u00F1a*:");
 		lblCCContrasena.setFont(new Font("Arial", Font.BOLD, 13));
-		marco.add(lblCCContrasena, "cell 0 4,grow");
+		marco.add(lblCCContrasena, "cell 0 6,grow");
 		
 		passContrasena1 = new JPasswordField();
 		passContrasena1.setColumns(2);
-		marco.add(passContrasena1, "cell 1 4,growx,aligny center");
+		marco.add(passContrasena1, "cell 1 6,growx,aligny center");
 		
-		lblContrasena2 = new JLabel("Confirma Contrase\u00F1a");
+		lblContrasena2 = new JLabel("Confirma Contrase\u00F1a:");
 		lblContrasena2.setFont(new Font("Arial", Font.BOLD, 13));
-		marco.add(lblContrasena2, "cell 0 5,grow");
+		marco.add(lblContrasena2, "cell 0 7,grow");
 		
 		passContrasena2 = new JPasswordField();
-		marco.add(passContrasena2, "cell 1 5,growx,aligny center");
+		marco.add(passContrasena2, "cell 1 7,growx,aligny center");
 		
 		panelMensaje = new JPanel();
 		springLayout.putConstraint(SpringLayout.NORTH, panelMensaje, 0, SpringLayout.NORTH, lblCreacionDeCuenta);
 		springLayout.putConstraint(SpringLayout.WEST, panelMensaje, 0, SpringLayout.WEST, marco);
 		springLayout.putConstraint(SpringLayout.SOUTH, panelMensaje, 0, SpringLayout.SOUTH, panelCrearCuenta);
 		springLayout.putConstraint(SpringLayout.EAST, panelMensaje, 0, SpringLayout.EAST, marco);
-		panelMensaje.setBackground(new Color(255, 153, 153));
+		panelMensaje.setBackground(new Color(255, 192, 203));
 		panelCrearCuenta.add(panelMensaje);
 		
 		lblMensaje = new JLabel("");
@@ -338,15 +425,15 @@ public class A0VentanaInicio {
 			gl_panelMensaje.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panelMensaje.createSequentialGroup()
 					.addContainerGap()
-					.addComponent(lblMensaje, GroupLayout.PREFERRED_SIZE, 245, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(41, Short.MAX_VALUE))
+					.addComponent(lblMensaje, GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
+					.addContainerGap())
 		);
 		gl_panelMensaje.setVerticalGroup(
 			gl_panelMensaje.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panelMensaje.createSequentialGroup()
 					.addGap(63)
-					.addComponent(lblMensaje)
-					.addContainerGap(266, Short.MAX_VALUE))
+					.addComponent(lblMensaje, GroupLayout.PREFERRED_SIZE, 15, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(265, Short.MAX_VALUE))
 		);
 		panelMensaje.setLayout(gl_panelMensaje);
 		
@@ -354,7 +441,7 @@ public class A0VentanaInicio {
 		//PANEL INICIO SESION
 		panelInicioSesion = new JPanel();
 		frmLaPacaLee.getContentPane().add(panelInicioSesion, "name_246001625800600");
-		panelInicioSesion.setBackground(new Color(255, 153, 153));
+		panelInicioSesion.setBackground(new Color(255, 192, 203));
 		
 		lblInicioSesion = new JLabel("Inicio de Sesi\u00F3n");
 		lblInicioSesion.setBounds(10, 35, 543, 87);
@@ -367,7 +454,7 @@ public class A0VentanaInicio {
 		panelMensajes = new JPanel();
 		panelMensajes.setBounds(136, 117, 290, 24);
 		panelInicioSesion.add(panelMensajes);
-		panelMensajes.setBackground(new Color(255, 153, 153));
+		panelMensajes.setBackground(new Color(255, 192, 203));
 		panelMensajes.setBorder(null);
 		panelMensajes.setForeground(new Color(216, 191, 216));
 		
@@ -409,14 +496,14 @@ public class A0VentanaInicio {
 		marcoDeIncio = new Panel();
 		marcoDeIncio.setBounds(136, 128, 290, 148);
 		
-		lblCorreo = new JLabel("Correo");
+		lblCorreo = new JLabel("Correo:");
 		lblCorreo.setFont(new Font("Arial", Font.BOLD, 13));
 		
 		textField = new JTextField();
 		textField.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		textField.setColumns(10);
 		
-		lblContrasena = new JLabel("Contrase\u00F1a");
+		lblContrasena = new JLabel("Contrase\u00F1a:");
 		lblContrasena.setFont(new Font("Arial", Font.BOLD, 13));
 		
 		passwordField = new JPasswordField();
@@ -729,6 +816,26 @@ public class A0VentanaInicio {
 	}
 	public void setCl(CardLayout cl) {
 		this.cl = cl;
+	}
+
+
+	public JDialog getExitoOperacion() {
+		return exitoOperacion;
+	}
+
+
+	public void setExitoOperacion(JDialog exitoOperacion) {
+		this.exitoOperacion = exitoOperacion;
+	}
+
+
+	public JButton getBtnAceptar() {
+		return btnAceptar;
+	}
+
+
+	public void setBtnAceptar(JButton btnAceptar) {
+		this.btnAceptar = btnAceptar;
 	}
 	
 
