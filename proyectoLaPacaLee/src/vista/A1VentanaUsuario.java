@@ -35,6 +35,11 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextPane;
 import javax.swing.JPasswordField;
 import javax.swing.JSeparator;
+import javax.swing.JScrollPane;
+import javax.swing.JCheckBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.border.EmptyBorder;
 
 public class A1VentanaUsuario {
 
@@ -65,10 +70,26 @@ public class A1VentanaUsuario {
 	
 	//PESTAÑA BIBLIOTECA
 	private JLayeredPane biblioteca;
-	
+	private JPanel panelBuscar;
+	private JLabel lblFiltros;
+	private JPanel panel;
+	private JTextField textFieldBuscar;
+	private JButton btnBuscar;
+	private JScrollPane scrollPaneBiblioteca;
+	private JPanel panelGeneros;
+	private JCheckBox chckbxOtros;
+	private JCheckBox chckbxHistoricos;
+	private JCheckBox chckbxFilosofia;
+	private JCheckBox chckbxDrama;
+	private JCheckBox chckbxPoesia;
+	private JCheckBox chckbxNarrativa;
+	private JLabel lblNewLabel;
+	private JButton btnVerDetalles;
+	private JButton btnPedirPrestado;
 	
 	//PESTAÑA OPCIONES
 	private JLayeredPane opciones;
+	private CardLayout cl;
 	//PANEL OPCIONES
 	private JPanel menuOpciones;
 	private JButton btnInformacionYContacto;
@@ -90,7 +111,7 @@ public class A1VentanaUsuario {
 	private JLabel lblContrasenaNueva;
 	private JSeparator separator;
 	private JButton btnConfirmarModificaciones;
-	private JButton btnAtras;
+	private JButton btnCancelar;
 	private JLabel lblContrasena;
 	private JLabel lblCorreo;
 	private JLabel lblModificacionDePerfil;
@@ -98,9 +119,9 @@ public class A1VentanaUsuario {
 	private JPanel panelInformacion;
 	private JLabel lblLapacalee;
 	private JLabel lblSobreNosotros;
-	private JLabel lblUe;
 	private JButton btncontactanos;
 	private JTextPane txtpnLapacalee;
+	private JButton btnAtras;
 	//PANEL ELIMINAR
 	private JPanel panelEliminar;
 	private JLabel lblCuidado;
@@ -108,6 +129,8 @@ public class A1VentanaUsuario {
 	private JLabel lblInfo;
 	private JButton btnSi;
 	private JButton btnNo;
+	
+
 	
 
 
@@ -123,12 +146,22 @@ public class A1VentanaUsuario {
 	 * @param control
 	 */
 	public void setControlador(Controlador control) {
+		//PESTAÑA BIBLIOTECA
+		btnBuscar.addActionListener(control);
+		btnVerDetalles.addActionListener(control);
+		btnPedirPrestado.addActionListener(control);
 		//PESTAÑA OPCIONES
 		btnInformacionYContacto.addActionListener(control);
 		btnEliminarCuenta.addActionListener(control);
 		btnCerrarSesion.addActionListener(control);
 		btnSalir.addActionListener(control);
 		btnModificarPerfil.addActionListener(control);
+		btnConfirmarModificaciones.addActionListener(control);
+		btnAtras.addActionListener(control);
+		btnCancelar.addActionListener(control);
+		btncontactanos.addActionListener(control);
+		btnSi.addActionListener(control);
+		btnNo.addActionListener(control);
 	}
 	
 	/**
@@ -255,6 +288,130 @@ public class A1VentanaUsuario {
 		biblioteca.setBackground(new Color(255, 228, 196));
 		biblioteca.setBorder(new LineBorder(new Color(220, 20, 60), 3));
 		tabbedPane.addTab("Biblioteca", null, biblioteca, null);
+		biblioteca.setLayout(new CardLayout(0, 0));
+		
+		panelBuscar = new JPanel();
+		panelBuscar.setLayout(null);
+		panelBuscar.setBackground(new Color(255, 228, 196));
+		biblioteca.add(panelBuscar, "name_269283842268700");
+		
+		lblFiltros = new JLabel("B\u00FAsqueda por: ");
+		lblFiltros.setForeground(new Color(220, 20, 60));
+		lblFiltros.setFont(new Font("Goudy Old Style", Font.PLAIN, 20));
+		lblFiltros.setBounds(10, 11, 108, 25);
+		panelBuscar.add(lblFiltros);
+		
+		panel = new JPanel();
+		panel.setBounds(122, 11, 274, 24);
+		panelBuscar.add(panel);
+		
+		textFieldBuscar = new JTextField();
+		textFieldBuscar.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		textFieldBuscar.setColumns(10);
+		textFieldBuscar.setBounds(10, 42, 304, 23);
+		panelBuscar.add(textFieldBuscar);
+		
+		btnBuscar = new JButton("Buscar");
+		btnBuscar.setForeground(new Color(220, 20, 60));
+		btnBuscar.setFont(new Font("Arial", Font.BOLD, 11));
+		btnBuscar.setBackground(new Color(255, 255, 255));
+		btnBuscar.setBounds(320, 42, 76, 23);
+		panelBuscar.add(btnBuscar);
+		
+		scrollPaneBiblioteca = new JScrollPane();
+		scrollPaneBiblioteca.setBounds(10, 71, 386, 206);
+		panelBuscar.add(scrollPaneBiblioteca);
+		
+		panelGeneros = new JPanel();
+		panelGeneros.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panelGeneros.setBackground(new Color(240, 128, 128));
+		panelGeneros.setBounds(402, 11, 146, 304);
+		panelBuscar.add(panelGeneros);
+		
+		chckbxOtros = new JCheckBox("Otros");
+		chckbxOtros.setForeground(Color.WHITE);
+		chckbxOtros.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		chckbxOtros.setBackground(new Color(240, 128, 128));
+		
+		chckbxHistoricos = new JCheckBox("Textos hist\u00F3ricos");
+		chckbxHistoricos.setForeground(Color.WHITE);
+		chckbxHistoricos.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		chckbxHistoricos.setBackground(new Color(240, 128, 128));
+		
+		chckbxFilosofia = new JCheckBox("Filosofia");
+		chckbxFilosofia.setForeground(Color.WHITE);
+		chckbxFilosofia.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		chckbxFilosofia.setBackground(new Color(240, 128, 128));
+		
+		chckbxDrama = new JCheckBox("Drama y teatro");
+		chckbxDrama.setForeground(Color.WHITE);
+		chckbxDrama.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		chckbxDrama.setBackground(new Color(240, 128, 128));
+		
+		chckbxPoesia = new JCheckBox("Poes\u00EDa");
+		chckbxPoesia.setForeground(Color.WHITE);
+		chckbxPoesia.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		chckbxPoesia.setBackground(new Color(240, 128, 128));
+		
+		chckbxNarrativa = new JCheckBox("Narrativa");
+		chckbxNarrativa.setForeground(Color.WHITE);
+		chckbxNarrativa.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		chckbxNarrativa.setBackground(new Color(240, 128, 128));
+		
+		lblNewLabel = new JLabel("G\u00E9neros");
+		lblNewLabel.setForeground(new Color(220, 20, 60));
+		lblNewLabel.setFont(new Font("Goudy Old Style", Font.PLAIN, 25));
+		GroupLayout gl_panelGeneros = new GroupLayout(panelGeneros);
+		gl_panelGeneros.setHorizontalGroup(
+			gl_panelGeneros.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 146, Short.MAX_VALUE)
+				.addGroup(gl_panelGeneros.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(gl_panelGeneros.createParallelGroup(Alignment.LEADING)
+						.addComponent(chckbxOtros)
+						.addComponent(chckbxHistoricos)
+						.addComponent(chckbxFilosofia)
+						.addComponent(chckbxDrama)
+						.addComponent(chckbxPoesia)
+						.addComponent(chckbxNarrativa)
+						.addComponent(lblNewLabel))
+					.addContainerGap(21, Short.MAX_VALUE))
+		);
+		gl_panelGeneros.setVerticalGroup(
+			gl_panelGeneros.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 304, Short.MAX_VALUE)
+				.addGroup(gl_panelGeneros.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(lblNewLabel)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addComponent(chckbxNarrativa)
+					.addGap(18)
+					.addComponent(chckbxPoesia)
+					.addGap(18)
+					.addComponent(chckbxDrama)
+					.addGap(18)
+					.addComponent(chckbxFilosofia)
+					.addGap(18)
+					.addComponent(chckbxHistoricos)
+					.addGap(18)
+					.addComponent(chckbxOtros)
+					.addContainerGap(23, Short.MAX_VALUE))
+		);
+		panelGeneros.setLayout(gl_panelGeneros);
+		
+		btnVerDetalles = new JButton("Ver detalles");
+		btnVerDetalles.setForeground(new Color(220, 20, 60));
+		btnVerDetalles.setFont(new Font("Arial", Font.BOLD, 11));
+		btnVerDetalles.setBackground(new Color(255, 255, 255));
+		btnVerDetalles.setBounds(48, 288, 125, 27);
+		panelBuscar.add(btnVerDetalles);
+		
+		btnPedirPrestado = new JButton("Pedir prestado");
+		btnPedirPrestado.setForeground(new Color(220, 20, 60));
+		btnPedirPrestado.setFont(new Font("Arial", Font.BOLD, 11));
+		btnPedirPrestado.setBackground(new Color(255, 255, 255));
+		btnPedirPrestado.setBounds(223, 288, 125, 27);
+		panelBuscar.add(btnPedirPrestado);
 		tabbedPane.setBackgroundAt(1, new Color(255, 255, 255));
 		tabbedPane.setEnabledAt(1, true);
 		
@@ -264,8 +421,8 @@ public class A1VentanaUsuario {
 		opciones.setBackground(new Color(255, 250, 205));
 		opciones.setBorder(new LineBorder(new Color(220, 20, 60), 3));
 		tabbedPane.addTab("Opciones", (Icon) null, opciones, null);
-
-		opciones.setLayout(new CardLayout(0, 0));
+		cl=new CardLayout(0,0);
+		opciones.setLayout(cl);
 		
 		//PANEL MENU
 		menuOpciones = new JPanel();
@@ -338,6 +495,7 @@ public class A1VentanaUsuario {
 					.addGap(30))
 		);
 		menuOpciones.setLayout(gl_menuOpciones);
+		cl.addLayoutComponent(menuOpciones, "1");
 		
 		//PANEL MODIFICAR
 		panelModificar = new JPanel();
@@ -357,26 +515,24 @@ public class A1VentanaUsuario {
 		lblContrasena.setBounds(51, 236, 142, 16);
 		lblContrasena.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
 		
-		btnAtras = new JButton("\u2190Atr\u00E1s");
-		btnAtras.setForeground(new Color(220, 20, 60));
-		btnAtras.setFont(new Font("Arial", Font.BOLD, 13));
-		btnAtras.setBorder(UIManager.getBorder("ComboBox.editorBorder"));
-		btnAtras.setBackground(new Color(255, 250, 240));
-		btnAtras.setBounds(10, 275, 88, 33);
+		btnCancelar = new JButton("Cancelar");
+		btnCancelar.setForeground(new Color(220, 20, 60));
+		btnCancelar.setFont(new Font("Arial", Font.BOLD, 11));
+		btnCancelar.setBackground(new Color(255, 255, 255));
+		btnCancelar.setBounds(10, 275, 88, 33);
 		
 		btnConfirmarModificaciones = new JButton("Confirmar modificaciones");
 		btnConfirmarModificaciones.setForeground(new Color(220, 20, 60));
-		btnConfirmarModificaciones.setBounds(367, 274, 175, 34);
-		btnConfirmarModificaciones.setBackground(new Color(255, 250, 240));
-		btnConfirmarModificaciones.setFont(new Font("Arial", Font.BOLD, 13));
-		btnConfirmarModificaciones.setBorder(UIManager.getBorder("ComboBox.editorBorder"));
+		btnConfirmarModificaciones.setFont(new Font("Arial", Font.BOLD, 11));
+		btnConfirmarModificaciones.setBackground(new Color(255, 255, 255));
+		btnConfirmarModificaciones.setBounds(355, 274, 187, 34);
 		
 		textFieldCorreoActual = new JTextField();
 		textFieldCorreoActual.setEditable(false);
 		textFieldCorreoActual.setBounds(233, 66, 159, 20);
 		textFieldCorreoActual.setColumns(10);
 		panelModificar.setLayout(null);
-		panelModificar.add(btnAtras);
+		panelModificar.add(btnCancelar);
 		panelModificar.add(btnConfirmarModificaciones);
 		panelModificar.add(lblModificacionDePerfil);
 		panelModificar.add(lblCorreo);
@@ -431,6 +587,8 @@ public class A1VentanaUsuario {
 		lblDebeSer.setBounds(392, 143, 160, 14);
 		panelModificar.add(lblDebeSer);
 		
+		cl.addLayoutComponent(panelModificar, "2");
+		
 		//PANEL DE INFORMACION
 		panelInformacion = new JPanel();
 		panelInformacion.setBackground(new Color(255, 228, 196));
@@ -446,7 +604,7 @@ public class A1VentanaUsuario {
 		lblSobreNosotros.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		
 		txtpnLapacalee = new JTextPane();
-		txtpnLapacalee.setBounds(21, 120, 318, 158);
+		txtpnLapacalee.setBounds(21, 120, 318, 150);
 		txtpnLapacalee.setFont(new Font("Arial", Font.PLAIN, 13));
 		txtpnLapacalee.setBorder(null);
 		txtpnLapacalee.setEditable(false);
@@ -458,18 +616,19 @@ public class A1VentanaUsuario {
 		try {
 			myPicture = ImageIO.read(new File("./ue.png"));
 		} catch (IOException e) {
+			System.out.println("La imagen no carga");
 			e.printStackTrace();
 		}
-		lblUe = new JLabel(new ImageIcon(myPicture));
+		JLabel lblUe = new JLabel(new ImageIcon(myPicture));
 		lblUe.setBorder(null);
 		lblUe.setBounds(362, 25, 157, 167);
 		panelInformacion.add(lblUe);
 
 		btncontactanos = new JButton("\u00A1Cont\u00E1ctanos!");
-		btncontactanos.setForeground(new Color(220, 20, 60));
+		btncontactanos.setForeground(new Color(255, 255, 255));
 		btncontactanos.setFont(new Font("Arial", Font.BOLD, 13));
-		btncontactanos.setBorder(UIManager.getBorder("ComboBox.editorBorder"));
-		btncontactanos.setBackground(new Color(255, 250, 240));
+		btncontactanos.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		btncontactanos.setBackground(new Color(250, 128, 114));
 		btncontactanos.setBounds(362, 261, 157, 37);
 		
 		panelInformacion.setLayout(null);
@@ -478,6 +637,15 @@ public class A1VentanaUsuario {
 		panelInformacion.add(btncontactanos);
 		panelInformacion.add(lblSobreNosotros);
 		panelInformacion.add(lblLapacalee);
+		
+		cl.addLayoutComponent(panelInformacion, "3");
+		
+		btnAtras = new JButton("\u2190 Atr\u00E1s");
+		btnAtras.setForeground(new Color(220, 20, 60));
+		btnAtras.setFont(new Font("Arial", Font.BOLD, 11));
+		btnAtras.setBackground(new Color(255, 255, 255));
+		btnAtras.setBounds(10, 281, 83, 28);
+		panelInformacion.add(btnAtras);
 		
 		//PANEL ELIMINAR
 		panelEliminar = new JPanel();
@@ -491,7 +659,7 @@ public class A1VentanaUsuario {
 		lblSeguro = new JLabel("\u00BFSeguro que quieres eliminar tu cuenta? :(");
 		lblSeguro.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
 		
-		btnNo = new JButton("\u00A1No! Quiero seguir leyendo");
+		btnNo = new JButton("\u00A1No! No me quiero ir");
 		btnNo.setBackground(new Color(255, 255, 255));
 		btnNo.setFont(new Font("Arial", Font.BOLD, 11));
 		btnNo.setForeground(new Color(220, 20, 60));
@@ -537,6 +705,9 @@ public class A1VentanaUsuario {
 					.addContainerGap())
 		);
 		panelEliminar.setLayout(gl_panelEliminar);
+		
+		cl.addLayoutComponent(panelEliminar, "4");
+		
 		tabbedPane.setBackgroundAt(2, new Color(255, 255, 255));
 		tabbedPane.setEnabledAt(2, true);
 		frmLapacalee.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -582,4 +753,141 @@ public class A1VentanaUsuario {
 	public void setTextFieldDNI(JTextField textFieldDNI) {
 		this.textFieldDNI = textFieldDNI;
 	}
+
+	public JLayeredPane getBiblioteca() {
+		return biblioteca;
+	}
+
+	public void setBiblioteca(JLayeredPane biblioteca) {
+		this.biblioteca = biblioteca;
+	}
+
+	public JButton getBtnInformacionYContacto() {
+		return btnInformacionYContacto;
+	}
+
+	public void setBtnInformacionYContacto(JButton btnInformacionYContacto) {
+		this.btnInformacionYContacto = btnInformacionYContacto;
+	}
+
+	public JButton getBtnEliminarCuenta() {
+		return btnEliminarCuenta;
+	}
+
+	public void setBtnEliminarCuenta(JButton btnEliminarCuenta) {
+		this.btnEliminarCuenta = btnEliminarCuenta;
+	}
+
+	public JButton getBtnCerrarSesion() {
+		return btnCerrarSesion;
+	}
+
+	public void setBtnCerrarSesion(JButton btnCerrarSesion) {
+		this.btnCerrarSesion = btnCerrarSesion;
+	}
+
+	public JButton getBtnSalir() {
+		return btnSalir;
+	}
+
+	public void setBtnSalir(JButton btnSalir) {
+		this.btnSalir = btnSalir;
+	}
+
+	public JButton getBtnModificarPerfil() {
+		return btnModificarPerfil;
+	}
+
+	public void setBtnModificarPerfil(JButton btnModificarPerfil) {
+		this.btnModificarPerfil = btnModificarPerfil;
+	}
+
+	public JButton getBtnConfirmarModificaciones() {
+		return btnConfirmarModificaciones;
+	}
+
+	public void setBtnConfirmarModificaciones(JButton btnConfirmarModificaciones) {
+		this.btnConfirmarModificaciones = btnConfirmarModificaciones;
+	}
+
+	public JButton getBtnCancelar() {
+		return btnCancelar;
+	}
+
+	public void setBtnCancelar(JButton btnCancelar) {
+		this.btnCancelar = btnCancelar;
+	}
+
+	public JButton getBtncontactanos() {
+		return btncontactanos;
+	}
+
+	public void setBtncontactanos(JButton btncontactanos) {
+		this.btncontactanos = btncontactanos;
+	}
+
+	public JButton getBtnSi() {
+		return btnSi;
+	}
+
+	public void setBtnSi(JButton btnSi) {
+		this.btnSi = btnSi;
+	}
+
+	public JButton getBtnNo() {
+		return btnNo;
+	}
+
+	public void setBtnNo(JButton btnNo) {
+		this.btnNo = btnNo;
+	}
+
+	public JButton getBtnBuscar() {
+		return btnBuscar;
+	}
+
+	public void setBtnBuscar(JButton btnNewButton) {
+		this.btnBuscar = btnNewButton;
+	}
+
+	public JButton getBtnVerDetalles() {
+		return btnVerDetalles;
+	}
+
+	public void setBtnVerDetalles(JButton btnVerDetalles) {
+		this.btnVerDetalles = btnVerDetalles;
+	}
+
+	public JButton getBtnPedirPrestado() {
+		return btnPedirPrestado;
+	}
+
+	public void setBtnPedirPrestado(JButton btnPedirPrestado) {
+		this.btnPedirPrestado = btnPedirPrestado;
+	}
+
+	public CardLayout getCl() {
+		return cl;
+	}
+
+	public void setCl(CardLayout cl) {
+		this.cl = cl;
+	}
+
+	public JLayeredPane getOpciones() {
+		return opciones;
+	}
+
+	public void setOpciones(JLayeredPane opciones) {
+		this.opciones = opciones;
+	}
+
+	public JButton getBtnAtras() {
+		return btnAtras;
+	}
+
+	public void setBtnAtras(JButton btnAtras) {
+		this.btnAtras = btnAtras;
+	}
+	
 }

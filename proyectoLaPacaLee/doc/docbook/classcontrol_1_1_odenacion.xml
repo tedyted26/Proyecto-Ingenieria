@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcontrol_1_1_odenacion">
+<title>control.Odenacion Class Reference</title>
+<indexterm><primary>control.Odenacion</primary></indexterm>
+Collaboration diagram for control.Odenacion:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_odenacion__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_classcontrol_1_1_odenacion_1abc6b1aaaa85fc3aa9da67006c88bacb8">main</link> (String[] args)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classcontrol_1_1_odenacion_1a911e48a70149c7f73da08c97b144a859">imprimirArray</link> (String lista[])</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classcontrol_1_1_odenacion_1a99b96f1da1734bf63ccfc7530808fe59">quicksortP</link> (String lista1[], int izq, int der)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 3 of file Odenacion.java.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcontrol_1_1_odenacion_1a911e48a70149c7f73da08c97b144a859"/>    <section>
+    <title>imprimirArray()</title>
+<indexterm><primary>imprimirArray</primary><secondary>control.Odenacion</secondary></indexterm>
+<indexterm><primary>control.Odenacion</primary><secondary>imprimirArray</secondary></indexterm>
+<para><computeroutput>static void control.Odenacion.imprimirArray (String lista[])<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 29 of file Odenacion.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_odenacion_a911e48a70149c7f73da08c97b144a859_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classcontrol_1_1_odenacion_1abc6b1aaaa85fc3aa9da67006c88bacb8"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>control.Odenacion</secondary></indexterm>
+<indexterm><primary>control.Odenacion</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>static void control.Odenacion.main (String[] args)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 5 of file Odenacion.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_odenacion_abc6b1aaaa85fc3aa9da67006c88bacb8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classcontrol_1_1_odenacion_1a99b96f1da1734bf63ccfc7530808fe59"/>    <section>
+    <title>quicksortP()</title>
+<indexterm><primary>quicksortP</primary><secondary>control.Odenacion</secondary></indexterm>
+<indexterm><primary>control.Odenacion</primary><secondary>quicksortP</secondary></indexterm>
+<para><computeroutput>static void control.Odenacion.quicksortP (String lista1[], int izq, int der)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 36 of file Odenacion.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_odenacion_a99b96f1da1734bf63ccfc7530808fe59_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/control/<link linkend="__odenacion_8java">Odenacion.java</link></section>
+</section>

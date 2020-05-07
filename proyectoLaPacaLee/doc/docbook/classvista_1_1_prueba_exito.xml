@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classvista_1_1_prueba_exito">
+<title>vista.PruebaExito Class Reference</title>
+<indexterm><primary>vista.PruebaExito</primary></indexterm>
+Inheritance diagram for vista.PruebaExito:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_prueba_exito__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for vista.PruebaExito:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_prueba_exito__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classvista_1_1_prueba_exito_1aebf9724f0fe22c647463b6b2bb112820">PruebaExito</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 15 of file PruebaExito.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classvista_1_1_prueba_exito_1aebf9724f0fe22c647463b6b2bb112820"/>    <section>
+    <title>PruebaExito()</title>
+<indexterm><primary>PruebaExito</primary><secondary>vista.PruebaExito</secondary></indexterm>
+<indexterm><primary>vista.PruebaExito</primary><secondary>PruebaExito</secondary></indexterm>
+<para><computeroutput>vista.PruebaExito.PruebaExito ( )</computeroutput></para><para>
+Definition at line 17 of file PruebaExito.java.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/vista/<link linkend="__prueba_exito_8java">PruebaExito.java</link></section>
+</section>

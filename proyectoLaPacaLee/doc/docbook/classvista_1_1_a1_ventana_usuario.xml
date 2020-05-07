@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classvista_1_1_a1_ventana_usuario">
+<title>vista.A1VentanaUsuario Class Reference</title>
+<indexterm><primary>vista.A1VentanaUsuario</primary></indexterm>
+Collaboration diagram for vista.A1VentanaUsuario:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classvista_1_1_a1_ventana_usuario_1ad8080cebfee608ee2d2013b6a6873e0c">A1VentanaUsuario</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a2e80206b8dbeda7ccb36a79d0e40c091">setControlador</link> (<link linkend="_classcontrol_1_1_controlador">Controlador</link> control)</para>
+</listitem>
+            <listitem><para>JFrame <link linkend="_classvista_1_1_a1_ventana_usuario_1a91143246184db93fbc3588d35a49efcb">getFrmLapacalee</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a01b56859baa1eb3bc31296603f6fd892">setFrmLapacalee</link> (JFrame frmLapacalee)</para>
+</listitem>
+            <listitem><para>JTextField <link linkend="_classvista_1_1_a1_ventana_usuario_1a7e2215e2c90a2da53cdfc5d0fc4fdaea">getTextFieldNombre</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1ad21348c5eea3a06cf7dd01801c62a51e">setTextFieldNombre</link> (JTextField textFieldNombre)</para>
+</listitem>
+            <listitem><para>JTextField <link linkend="_classvista_1_1_a1_ventana_usuario_1a6dfe4482d337f8cbc5c416c2b288b0a8">getTextFieldApellidos</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1ac2c36e962ac08b56555d9e3ee8c27356">setTextFieldApellidos</link> (JTextField textFieldApellidos)</para>
+</listitem>
+            <listitem><para>JTextField <link linkend="_classvista_1_1_a1_ventana_usuario_1a8329f5e6b35b8c7a75864bb5181636eb">getTextFieldCorreo</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a8b604eef75208e435125660222c79e48">setTextFieldCorreo</link> (JTextField textFieldCorreo)</para>
+</listitem>
+            <listitem><para>JTextField <link linkend="_classvista_1_1_a1_ventana_usuario_1a04a0b3771ce4742afb383564964e5b55">getTextFieldDNI</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a280560f1a8c18e4d08f98480d6878d89">setTextFieldDNI</link> (JTextField textFieldDNI)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 50 of file A1VentanaUsuario.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ad8080cebfee608ee2d2013b6a6873e0c"/>    <section>
+    <title>A1VentanaUsuario()</title>
+<indexterm><primary>A1VentanaUsuario</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>A1VentanaUsuario</secondary></indexterm>
+<para><computeroutput>vista.A1VentanaUsuario.A1VentanaUsuario ( )</computeroutput></para><para>
+Definition at line 81 of file A1VentanaUsuario.java.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a91143246184db93fbc3588d35a49efcb"/>    <section>
+    <title>getFrmLapacalee()</title>
+<indexterm><primary>getFrmLapacalee</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getFrmLapacalee</secondary></indexterm>
+<para><computeroutput>JFrame vista.A1VentanaUsuario.getFrmLapacalee ( )</computeroutput></para><para>
+Definition at line 314 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a91143246184db93fbc3588d35a49efcb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a6dfe4482d337f8cbc5c416c2b288b0a8"/>    <section>
+    <title>getTextFieldApellidos()</title>
+<indexterm><primary>getTextFieldApellidos</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldApellidos</secondary></indexterm>
+<para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldApellidos ( )</computeroutput></para><para>
+Definition at line 330 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a8329f5e6b35b8c7a75864bb5181636eb"/>    <section>
+    <title>getTextFieldCorreo()</title>
+<indexterm><primary>getTextFieldCorreo</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldCorreo</secondary></indexterm>
+<para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldCorreo ( )</computeroutput></para><para>
+Definition at line 338 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a04a0b3771ce4742afb383564964e5b55"/>    <section>
+    <title>getTextFieldDNI()</title>
+<indexterm><primary>getTextFieldDNI</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldDNI</secondary></indexterm>
+<para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldDNI ( )</computeroutput></para><para>
+Definition at line 346 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a7e2215e2c90a2da53cdfc5d0fc4fdaea"/>    <section>
+    <title>getTextFieldNombre()</title>
+<indexterm><primary>getTextFieldNombre</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldNombre</secondary></indexterm>
+<para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldNombre ( )</computeroutput></para><para>
+Definition at line 322 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a2e80206b8dbeda7ccb36a79d0e40c091"/>    <section>
+    <title>setControlador()</title>
+<indexterm><primary>setControlador</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setControlador</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setControlador (<link linkend="_classcontrol_1_1_controlador">Controlador</link> control)</computeroutput></para><para>
+Definition at line 85 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a2e80206b8dbeda7ccb36a79d0e40c091_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a01b56859baa1eb3bc31296603f6fd892"/>    <section>
+    <title>setFrmLapacalee()</title>
+<indexterm><primary>setFrmLapacalee</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setFrmLapacalee</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setFrmLapacalee (JFrame frmLapacalee)</computeroutput></para><para>
+Definition at line 318 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ac2c36e962ac08b56555d9e3ee8c27356"/>    <section>
+    <title>setTextFieldApellidos()</title>
+<indexterm><primary>setTextFieldApellidos</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldApellidos</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setTextFieldApellidos (JTextField textFieldApellidos)</computeroutput></para><para>
+Definition at line 334 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a8b604eef75208e435125660222c79e48"/>    <section>
+    <title>setTextFieldCorreo()</title>
+<indexterm><primary>setTextFieldCorreo</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldCorreo</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setTextFieldCorreo (JTextField textFieldCorreo)</computeroutput></para><para>
+Definition at line 342 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a280560f1a8c18e4d08f98480d6878d89"/>    <section>
+    <title>setTextFieldDNI()</title>
+<indexterm><primary>setTextFieldDNI</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldDNI</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setTextFieldDNI (JTextField textFieldDNI)</computeroutput></para><para>
+Definition at line 350 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ad21348c5eea3a06cf7dd01801c62a51e"/>    <section>
+    <title>setTextFieldNombre()</title>
+<indexterm><primary>setTextFieldNombre</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldNombre</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setTextFieldNombre (JTextField textFieldNombre)</computeroutput></para><para>
+Definition at line 326 of file A1VentanaUsuario.java.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/vista/<link linkend="__a1_ventana_usuario_8java">A1VentanaUsuario.java</link></section>
+</section>

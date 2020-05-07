@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcontrol_1_1_algoritmo__ordenacion">
+<title>control.Algoritmo_ordenacion Class Reference</title>
+<indexterm><primary>control.Algoritmo_ordenacion</primary></indexterm>
+Collaboration diagram for control.Algoritmo_ordenacion:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_algoritmo__ordenacion__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classcontrol_1_1_algoritmo__ordenacion_1add4ea55d524c04eb44c03c0eb53d6489">imprimirArray</link> (String lista[])</para>
+</listitem>
+            <listitem><para>void <link linkend="_classcontrol_1_1_algoritmo__ordenacion_1ac2caf733f04f4cf43bcd8aa1dd793688">quicksortP</link> (String lista1[], int izq, int der)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classcontrol_1_1_algoritmo__ordenacion_1a456007644b434885a662d527b8b17f75">OrdenarQicksort</link> (int[] array)</para>
+</listitem>
+            <listitem><para>int[] <link linkend="_classcontrol_1_1_algoritmo__ordenacion_1af362e98922d6d00c29ff7064448229e1">quicksort1</link> (int numeros[])</para>
+</listitem>
+            <listitem><para>int[] <link linkend="_classcontrol_1_1_algoritmo__ordenacion_1aa1d4ec25caf161fd3c67992400658c35">quicksort2</link> (int numeros[], int izq, int der)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 3 of file Algoritmo_ordenacion.java.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcontrol_1_1_algoritmo__ordenacion_1add4ea55d524c04eb44c03c0eb53d6489"/>    <section>
+    <title>imprimirArray()</title>
+<indexterm><primary>imprimirArray</primary><secondary>control.Algoritmo_ordenacion</secondary></indexterm>
+<indexterm><primary>control.Algoritmo_ordenacion</primary><secondary>imprimirArray</secondary></indexterm>
+<para><computeroutput>void control.Algoritmo_ordenacion.imprimirArray (String lista[])</computeroutput></para><para>
+Definition at line 5 of file Algoritmo_ordenacion.java.</para>
+    </section><anchor xml:id="_classcontrol_1_1_algoritmo__ordenacion_1a456007644b434885a662d527b8b17f75"/>    <section>
+    <title>OrdenarQicksort()</title>
+<indexterm><primary>OrdenarQicksort</primary><secondary>control.Algoritmo_ordenacion</secondary></indexterm>
+<indexterm><primary>control.Algoritmo_ordenacion</primary><secondary>OrdenarQicksort</secondary></indexterm>
+<para><computeroutput>void control.Algoritmo_ordenacion.OrdenarQicksort (int[] array)</computeroutput></para><para>
+Definition at line 46 of file Algoritmo_ordenacion.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_algoritmo__ordenacion_a456007644b434885a662d527b8b17f75_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_algoritmo__ordenacion_a456007644b434885a662d527b8b17f75_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classcontrol_1_1_algoritmo__ordenacion_1af362e98922d6d00c29ff7064448229e1"/>    <section>
+    <title>quicksort1()</title>
+<indexterm><primary>quicksort1</primary><secondary>control.Algoritmo_ordenacion</secondary></indexterm>
+<indexterm><primary>control.Algoritmo_ordenacion</primary><secondary>quicksort1</secondary></indexterm>
+<para><computeroutput>int [] control.Algoritmo_ordenacion.quicksort1 (int numeros[])</computeroutput></para><para>
+Definition at line 51 of file Algoritmo_ordenacion.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_algoritmo__ordenacion_af362e98922d6d00c29ff7064448229e1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_algoritmo__ordenacion_af362e98922d6d00c29ff7064448229e1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classcontrol_1_1_algoritmo__ordenacion_1aa1d4ec25caf161fd3c67992400658c35"/>    <section>
+    <title>quicksort2()</title>
+<indexterm><primary>quicksort2</primary><secondary>control.Algoritmo_ordenacion</secondary></indexterm>
+<indexterm><primary>control.Algoritmo_ordenacion</primary><secondary>quicksort2</secondary></indexterm>
+<para><computeroutput>int [] control.Algoritmo_ordenacion.quicksort2 (int numeros[], int izq, int der)</computeroutput></para><para>
+Definition at line 55 of file Algoritmo_ordenacion.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_algoritmo__ordenacion_aa1d4ec25caf161fd3c67992400658c35_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classcontrol_1_1_algoritmo__ordenacion_1ac2caf733f04f4cf43bcd8aa1dd793688"/>    <section>
+    <title>quicksortP()</title>
+<indexterm><primary>quicksortP</primary><secondary>control.Algoritmo_ordenacion</secondary></indexterm>
+<indexterm><primary>control.Algoritmo_ordenacion</primary><secondary>quicksortP</secondary></indexterm>
+<para><computeroutput>void control.Algoritmo_ordenacion.quicksortP (String lista1[], int izq, int der)</computeroutput></para><para>
+Definition at line 12 of file Algoritmo_ordenacion.java.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/control/<link linkend="__algoritmo__ordenacion_8java">Algoritmo_ordenacion.java</link></section>
+</section>

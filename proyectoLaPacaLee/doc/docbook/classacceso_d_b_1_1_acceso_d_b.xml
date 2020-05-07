@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classacceso_d_b_1_1_acceso_d_b">
+<title>accesoDB.AccesoDB Class Reference</title>
+<indexterm><primary>accesoDB.AccesoDB</primary></indexterm>
+Collaboration diagram for accesoDB.AccesoDB:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_acceso_d_b__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classacceso_d_b_1_1_acceso_d_b_1a14dbbd05d4b5bd40871c29148c4942de">AccesoDB</link> ()</para>
+</listitem>
+            <listitem><para>Connection <link linkend="_classacceso_d_b_1_1_acceso_d_b_1a4bd9546f6d8f3ebcd494bfeffab36a79">getConexion</link> ()  throws ClassNotFoundException, SQLException </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 9 of file AccesoDB.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classacceso_d_b_1_1_acceso_d_b_1a14dbbd05d4b5bd40871c29148c4942de"/>    <section>
+    <title>AccesoDB()</title>
+<indexterm><primary>AccesoDB</primary><secondary>accesoDB.AccesoDB</secondary></indexterm>
+<indexterm><primary>accesoDB.AccesoDB</primary><secondary>AccesoDB</secondary></indexterm>
+<para><computeroutput>accesoDB.AccesoDB.AccesoDB ( )</computeroutput></para><para>
+Definition at line 14 of file AccesoDB.java.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classacceso_d_b_1_1_acceso_d_b_1a4bd9546f6d8f3ebcd494bfeffab36a79"/>    <section>
+    <title>getConexion()</title>
+<indexterm><primary>getConexion</primary><secondary>accesoDB.AccesoDB</secondary></indexterm>
+<indexterm><primary>accesoDB.AccesoDB</primary><secondary>getConexion</secondary></indexterm>
+<para><computeroutput>Connection accesoDB.AccesoDB.getConexion ( ) throws ClassNotFoundException, SQLException</computeroutput></para><para>
+Definition at line 19 of file AccesoDB.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_acceso_d_b_a4bd9546f6d8f3ebcd494bfeffab36a79_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/accesoDB/<link linkend="__acceso_d_b_8java">AccesoDB.java</link></section>
+</section>

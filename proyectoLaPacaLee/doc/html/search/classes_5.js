@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['revista_22',['Revista',['../classla_paca_lee_1_1_revista.html',1,'laPacaLee']]]
+  ['odenacion_178',['Odenacion',['../classcontrol_1_1_odenacion.html',1,'control']]]
 ];

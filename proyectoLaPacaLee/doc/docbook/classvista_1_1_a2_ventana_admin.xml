@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classvista_1_1_a2_ventana_admin">
+<title>vista.A2VentanaAdmin Class Reference</title>
+<indexterm><primary>vista.A2VentanaAdmin</primary></indexterm>
+Collaboration diagram for vista.A2VentanaAdmin:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a2_ventana_admin__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classvista_1_1_a2_ventana_admin_1aa7c3b3e6883d65511cd978df689e58ba">A2VentanaAdmin</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_classvista_1_1_a2_ventana_admin_1ab674a4931f439c6a1d1d6e5ec568057b">main</link> (String[] args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 7 of file A2VentanaAdmin.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classvista_1_1_a2_ventana_admin_1aa7c3b3e6883d65511cd978df689e58ba"/>    <section>
+    <title>A2VentanaAdmin()</title>
+<indexterm><primary>A2VentanaAdmin</primary><secondary>vista.A2VentanaAdmin</secondary></indexterm>
+<indexterm><primary>vista.A2VentanaAdmin</primary><secondary>A2VentanaAdmin</secondary></indexterm>
+<para><computeroutput>vista.A2VentanaAdmin.A2VentanaAdmin ( )</computeroutput></para>
+<para>Create the application. </para>
+<para>
+Definition at line 30 of file A2VentanaAdmin.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a2_ventana_admin_aa7c3b3e6883d65511cd978df689e58ba_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classvista_1_1_a2_ventana_admin_1ab674a4931f439c6a1d1d6e5ec568057b"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>vista.A2VentanaAdmin</secondary></indexterm>
+<indexterm><primary>vista.A2VentanaAdmin</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>static void vista.A2VentanaAdmin.main (String[] args)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Launch the application. </para>
+<para>
+Definition at line 14 of file A2VentanaAdmin.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a2_ventana_admin_ab674a4931f439c6a1d1d6e5ec568057b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/vista/<link linkend="__a2_ventana_admin_8java">A2VentanaAdmin.java</link></section>
+</section>

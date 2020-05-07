@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ventana_26',['Ventana',['../classla_paca_lee_1_1_ventana.html',1,'laPacaLee']]]
+  ['usuario_182',['Usuario',['../classmodel_1_1_usuario.html',1,'model']]]
 ];

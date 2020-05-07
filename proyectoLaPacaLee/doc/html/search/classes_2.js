@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['incidencia_18',['Incidencia',['../classla_paca_lee_1_1_incidencia.html',1,'laPacaLee']]]
+  ['controlador_175',['Controlador',['../classcontrol_1_1_controlador.html',1,'control']]]
 ];

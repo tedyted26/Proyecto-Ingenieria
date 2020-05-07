@@ -93,7 +93,7 @@ public class A0VentanaInicio {
 	
 	/**
 	 * Método que especifica la clase Controlador como Listener para las acciones de los componentes.
-	 * @param control
+	 * @param control de tipo Controlador
 	 */
 	public void setControlador(Controlador control) {
 		//BOTONES DE POP-UP

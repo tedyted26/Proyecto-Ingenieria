@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_9680bdcefea49592e8400ac29125aec2">
+<title>src/vista Directory Reference</title>
+<indexterm><primary>src/vista Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__a0_ventana_inicio_8java">A0VentanaInicio.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__a1_ventana_usuario_8java">A1VentanaUsuario.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__a2_ventana_admin_8java">A2VentanaAdmin.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__prueba_exito_8java">PruebaExito.java</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcontrol_1_1_buscador">
+<title>control.Buscador Class Reference</title>
+<indexterm><primary>control.Buscador</primary></indexterm>
+Collaboration diagram for control.Buscador:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_buscador__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classcontrol_1_1_buscador_1ac5f6635ca9cf467d3f3164eff685089e">menu</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 5 of file Buscador.java.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcontrol_1_1_buscador_1ac5f6635ca9cf467d3f3164eff685089e"/>    <section>
+    <title>menu()</title>
+<indexterm><primary>menu</primary><secondary>control.Buscador</secondary></indexterm>
+<indexterm><primary>control.Buscador</primary><secondary>menu</secondary></indexterm>
+<para><computeroutput>void control.Buscador.menu ( )</computeroutput></para><para>
+Definition at line 7 of file Buscador.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_buscador_ac5f6635ca9cf467d3f3164eff685089e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/control/<link linkend="__buscador_8java">Buscador.java</link></section>
+</section>

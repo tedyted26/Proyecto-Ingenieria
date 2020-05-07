@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classacceso_d_b_1_1_persistencia_datos">
+<title>accesoDB.PersistenciaDatos Class Reference</title>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary></indexterm>
+Collaboration diagram for accesoDB.PersistenciaDatos:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classacceso_d_b_1_1_persistencia_datos_1ac43299b4336c14b08183bc7303ce6b96">PersistenciaDatos</link> ()</para>
+</listitem>
+            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a2557a0ee26d8802642b1421a0e4704e5">crearUsuario</link> (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</para>
+</listitem>
+            <listitem><para><link linkend="_classmodel_1_1_usuario">Usuario</link> <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a4f5be43be6a7352894a174da869e2783">consultarUsuario</link> (String correo)</para>
+</listitem>
+            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a5bc6adfcbe03ebed6d802c6bace46ff1">modificarContrasenaUsuario</link> (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</para>
+</listitem>
+            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1ab39660ad9628601f20773f2dc74376a7">bloqueoUsuario</link> (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</para>
+</listitem>
+            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1addb31e733a3e6bd997767f6045b4fe07">eliminarUsuario</link> (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</para>
+</listitem>
+            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1aabbecb71d8845376d15e87196a24eaa7">crearLibro</link> (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</para>
+</listitem>
+            <listitem><para><link linkend="_classmodel_1_1_libro">Libro</link> <link linkend="_classacceso_d_b_1_1_persistencia_datos_1abdf86aed9584de7c8129776297bf2d42">consultaLibro</link> (String titulo)</para>
+</listitem>
+            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a4a98cbf9c638e07e8aefbb37cc9d8052">eliminarLibro</link> (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 11 of file PersistenciaDatos.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1ac43299b4336c14b08183bc7303ce6b96"/>    <section>
+    <title>PersistenciaDatos()</title>
+<indexterm><primary>PersistenciaDatos</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>PersistenciaDatos</secondary></indexterm>
+<para><computeroutput>accesoDB.PersistenciaDatos.PersistenciaDatos ( )</computeroutput></para><para>
+Definition at line 15 of file PersistenciaDatos.java.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1ab39660ad9628601f20773f2dc74376a7"/>    <section>
+    <title>bloqueoUsuario()</title>
+<indexterm><primary>bloqueoUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>bloqueoUsuario</secondary></indexterm>
+<para><computeroutput>String accesoDB.PersistenciaDatos.bloqueoUsuario (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</computeroutput></para><para>
+Definition at line 180 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_ab39660ad9628601f20773f2dc74376a7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1abdf86aed9584de7c8129776297bf2d42"/>    <section>
+    <title>consultaLibro()</title>
+<indexterm><primary>consultaLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>consultaLibro</secondary></indexterm>
+<para><computeroutput><link linkend="_classmodel_1_1_libro">Libro</link> accesoDB.PersistenciaDatos.consultaLibro (String titulo)</computeroutput></para><para>
+Definition at line 318 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_abdf86aed9584de7c8129776297bf2d42_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a4f5be43be6a7352894a174da869e2783"/>    <section>
+    <title>consultarUsuario()</title>
+<indexterm><primary>consultarUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>consultarUsuario</secondary></indexterm>
+<para><computeroutput><link linkend="_classmodel_1_1_usuario">Usuario</link> accesoDB.PersistenciaDatos.consultarUsuario (String correo)</computeroutput></para><para>
+Definition at line 80 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1aabbecb71d8845376d15e87196a24eaa7"/>    <section>
+    <title>crearLibro()</title>
+<indexterm><primary>crearLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>crearLibro</secondary></indexterm>
+<para><computeroutput>String accesoDB.PersistenciaDatos.crearLibro (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</computeroutput></para><para>
+Definition at line 266 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_aabbecb71d8845376d15e87196a24eaa7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a2557a0ee26d8802642b1421a0e4704e5"/>    <section>
+    <title>crearUsuario()</title>
+<indexterm><primary>crearUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>crearUsuario</secondary></indexterm>
+<para><computeroutput>String accesoDB.PersistenciaDatos.crearUsuario (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</computeroutput></para><para>
+Definition at line 19 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a2557a0ee26d8802642b1421a0e4704e5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a2557a0ee26d8802642b1421a0e4704e5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a4a98cbf9c638e07e8aefbb37cc9d8052"/>    <section>
+    <title>eliminarLibro()</title>
+<indexterm><primary>eliminarLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>eliminarLibro</secondary></indexterm>
+<para><computeroutput>String accesoDB.PersistenciaDatos.eliminarLibro (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</computeroutput></para><para>
+Definition at line 369 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a4a98cbf9c638e07e8aefbb37cc9d8052_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1addb31e733a3e6bd997767f6045b4fe07"/>    <section>
+    <title>eliminarUsuario()</title>
+<indexterm><primary>eliminarUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>eliminarUsuario</secondary></indexterm>
+<para><computeroutput>String accesoDB.PersistenciaDatos.eliminarUsuario (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</computeroutput></para><para>
+Definition at line 226 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_addb31e733a3e6bd997767f6045b4fe07_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a5bc6adfcbe03ebed6d802c6bace46ff1"/>    <section>
+    <title>modificarContrasenaUsuario()</title>
+<indexterm><primary>modificarContrasenaUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>modificarContrasenaUsuario</secondary></indexterm>
+<para><computeroutput>String accesoDB.PersistenciaDatos.modificarContrasenaUsuario (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</computeroutput></para><para>
+Definition at line 137 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a5bc6adfcbe03ebed6d802c6bace46ff1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/accesoDB/<link linkend="__persistencia_datos_8java">PersistenciaDatos.java</link></section>
+</section>

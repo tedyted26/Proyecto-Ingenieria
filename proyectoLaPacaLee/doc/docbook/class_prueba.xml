@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_prueba">
+<title>Prueba Class Reference</title>
+<indexterm><primary>Prueba</primary></indexterm>
+Collaboration diagram for Prueba:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_prueba__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_prueba_1ac23b4c99189108f28ed3b9f97e871702">main</link> (String[] args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 6 of file Prueba.java.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_prueba_1ac23b4c99189108f28ed3b9f97e871702"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>Prueba</secondary></indexterm>
+<indexterm><primary>Prueba</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>static void Prueba.main (String[] args)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 9 of file Prueba.java.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="__prueba_8java">Prueba.java</link></section>
+</section>

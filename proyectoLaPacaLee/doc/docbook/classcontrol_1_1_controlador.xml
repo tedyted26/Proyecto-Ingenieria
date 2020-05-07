@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcontrol_1_1_controlador">
+<title>control.Controlador Class Reference</title>
+<indexterm><primary>control.Controlador</primary></indexterm>
+Inheritance diagram for control.Controlador:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_controlador__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for control.Controlador:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_controlador__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcontrol_1_1_controlador_1a67a68ff332b2adb5a3747a2e87e8491a">Controlador</link> (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classcontrol_1_1_controlador_1a1f659a43855ef42fa73f85ed2efea4f8">actionPerformed</link> (ActionEvent ev)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 12 of file Controlador.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classcontrol_1_1_controlador_1a67a68ff332b2adb5a3747a2e87e8491a"/>    <section>
+    <title>Controlador()</title>
+<indexterm><primary>Controlador</primary><secondary>control.Controlador</secondary></indexterm>
+<indexterm><primary>control.Controlador</primary><secondary>Controlador</secondary></indexterm>
+<para><computeroutput>control.Controlador.Controlador (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1)</computeroutput></para><para>
+Definition at line 19 of file Controlador.java.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcontrol_1_1_controlador_1a1f659a43855ef42fa73f85ed2efea4f8"/>    <section>
+    <title>actionPerformed()</title>
+<indexterm><primary>actionPerformed</primary><secondary>control.Controlador</secondary></indexterm>
+<indexterm><primary>control.Controlador</primary><secondary>actionPerformed</secondary></indexterm>
+<para><computeroutput>void control.Controlador.actionPerformed (ActionEvent ev)</computeroutput></para><para>
+Definition at line 25 of file Controlador.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_controlador_a1f659a43855ef42fa73f85ed2efea4f8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/control/<link linkend="__controlador_8java">Controlador.java</link></section>
+</section>

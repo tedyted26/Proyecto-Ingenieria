@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcontrol_1_1_ventana">
+<title>control.Ventana Class Reference</title>
+<indexterm><primary>control.Ventana</primary></indexterm>
+Collaboration diagram for control.Ventana:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_ventana__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcontrol_1_1_ventana_1a083b695899975c577f5985dd773d22ad">Ventana</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classcontrol_1_1_ventana_1ae35c9bb926831f9688c5ce123d81e404">user</link> (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classcontrol_1_1_ventana_1af185a29b44182352a3921b4bde0c3d44">admin</link> (<link linkend="_classmodel_1_1_usuario">Usuario</link> admin)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 7 of file Ventana.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classcontrol_1_1_ventana_1a083b695899975c577f5985dd773d22ad"/>    <section>
+    <title>Ventana()</title>
+<indexterm><primary>Ventana</primary><secondary>control.Ventana</secondary></indexterm>
+<indexterm><primary>control.Ventana</primary><secondary>Ventana</secondary></indexterm>
+<para><computeroutput>control.Ventana.Ventana ( )</computeroutput></para><para>
+Definition at line 13 of file Ventana.java.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcontrol_1_1_ventana_1af185a29b44182352a3921b4bde0c3d44"/>    <section>
+    <title>admin()</title>
+<indexterm><primary>admin</primary><secondary>control.Ventana</secondary></indexterm>
+<indexterm><primary>control.Ventana</primary><secondary>admin</secondary></indexterm>
+<para><computeroutput>void control.Ventana.admin (<link linkend="_classmodel_1_1_usuario">Usuario</link> admin)</computeroutput></para><para>
+Definition at line 41 of file Ventana.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_ventana_af185a29b44182352a3921b4bde0c3d44_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classcontrol_1_1_ventana_1ae35c9bb926831f9688c5ce123d81e404"/>    <section>
+    <title>user()</title>
+<indexterm><primary>user</primary><secondary>control.Ventana</secondary></indexterm>
+<indexterm><primary>control.Ventana</primary><secondary>user</secondary></indexterm>
+<para><computeroutput>void control.Ventana.user (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</computeroutput></para><para>
+Definition at line 17 of file Ventana.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_ventana_ae35c9bb926831f9688c5ce123d81e404_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/control/<link linkend="__ventana_8java">Ventana.java</link></section>
+</section>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_a_sistema">
+<title>ASistema Class Reference</title>
+<indexterm><primary>ASistema</primary></indexterm>
+Collaboration diagram for ASistema:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_a_sistema__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_a_sistema_1ad679dcd9f13dc2b4e53880a09b5184f3">main</link> (String[] args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Descripcion de prueba <formalpara><title>Author</title>
+
+<para>TastyTed </para>
+</formalpara>
+</para>
+<para>
+Definition at line 11 of file ASistema.java.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_a_sistema_1ad679dcd9f13dc2b4e53880a09b5184f3"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>ASistema</secondary></indexterm>
+<indexterm><primary>ASistema</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>static void ASistema.main (String[] args)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>aaa 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>args</entry>
+                                <entry>
+<para>bbb </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 16 of file ASistema.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_a_sistema_ad679dcd9f13dc2b4e53880a09b5184f3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="__a_sistema_8java">ASistema.java</link></section>
+</section>

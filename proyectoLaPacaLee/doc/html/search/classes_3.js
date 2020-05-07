@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['libro_19',['Libro',['../classla_paca_lee_1_1_libro.html',1,'laPacaLee']]],
-  ['login_20',['Login',['../classla_paca_lee_1_1_login.html',1,'laPacaLee']]]
+  ['incidencia_176',['Incidencia',['../classmodel_1_1_incidencia.html',1,'model']]]
 ];

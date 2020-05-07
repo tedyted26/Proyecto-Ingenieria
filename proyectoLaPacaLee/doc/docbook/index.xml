@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index">
+    <info>
+    <title>LaPacaLee</title>
+    </info>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespaceacceso_d_b.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecontrol.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacemodel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacevista.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="classvista_1_1_a0_ventana_inicio.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classvista_1_1_a1_ventana_usuario.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classvista_1_1_a2_ventana_admin.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classacceso_d_b_1_1_acceso_d_b.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcontrol_1_1_algoritmo__ordenacion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_a_sistema.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcontrol_1_1_buscador.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcontrol_1_1_controlador.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classmodel_1_1_incidencia.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classmodel_1_1_libro.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcontrol_1_1_odenacion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classacceso_d_b_1_1_persistencia_datos.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_prueba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classvista_1_1_prueba_exito.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classmodel_1_1_usuario.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcontrol_1_1_ventana.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_acceso_d_b_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_persistencia_datos_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_a_sistema_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_algoritmo__ordenacion_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_buscador_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_controlador_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_odenacion_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ventana_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_incidencia_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_libro_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_usuario_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_prueba_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_a0_ventana_inicio_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_a1_ventana_usuario_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_a2_ventana_admin_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_prueba_exito_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

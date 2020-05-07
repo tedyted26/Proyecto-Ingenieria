@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmodel_1_1_incidencia">
+<title>model.Incidencia Class Reference</title>
+<indexterm><primary>model.Incidencia</primary></indexterm>
+Collaboration diagram for model.Incidencia:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmodel_1_1_incidencia__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmodel_1_1_incidencia_1a713f0cba253b172bf9dd746d85f2d273">Incidencia</link> (String texto, String estado)</para>
+</listitem>
+            <listitem><para>String <link linkend="_classmodel_1_1_incidencia_1aa8edd8c844fb83ba2457e24af5160dad">getTexto</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmodel_1_1_incidencia_1afb407b646aa64a11d250e5b1dd690652">setTexto</link> (String texto)</para>
+</listitem>
+            <listitem><para>String <link linkend="_classmodel_1_1_incidencia_1aada0e05e5286bb2a08093db8297fcf86">getEstado</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmodel_1_1_incidencia_1a3acca530caafe6cebf4552bc5e165e22">setEstado</link> (String estado)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmodel_1_1_incidencia_1a7200771e4abe57a73edcceef5eb3017c">gestionar</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmodel_1_1_incidencia_1a98fd0da6c9f5c12a5d48e5907c83bd7d">notificar</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 3 of file Incidencia.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmodel_1_1_incidencia_1a713f0cba253b172bf9dd746d85f2d273"/>    <section>
+    <title>Incidencia()</title>
+<indexterm><primary>Incidencia</primary><secondary>model.Incidencia</secondary></indexterm>
+<indexterm><primary>model.Incidencia</primary><secondary>Incidencia</secondary></indexterm>
+<para><computeroutput>model.Incidencia.Incidencia (String texto, String estado)</computeroutput></para><para>
+Definition at line 6 of file Incidencia.java.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmodel_1_1_incidencia_1a7200771e4abe57a73edcceef5eb3017c"/>    <section>
+    <title>gestionar()</title>
+<indexterm><primary>gestionar</primary><secondary>model.Incidencia</secondary></indexterm>
+<indexterm><primary>model.Incidencia</primary><secondary>gestionar</secondary></indexterm>
+<para><computeroutput>void model.Incidencia.gestionar ( )</computeroutput></para><para>
+Definition at line 24 of file Incidencia.java.</para>
+    </section><anchor xml:id="_classmodel_1_1_incidencia_1aada0e05e5286bb2a08093db8297fcf86"/>    <section>
+    <title>getEstado()</title>
+<indexterm><primary>getEstado</primary><secondary>model.Incidencia</secondary></indexterm>
+<indexterm><primary>model.Incidencia</primary><secondary>getEstado</secondary></indexterm>
+<para><computeroutput>String model.Incidencia.getEstado ( )</computeroutput></para><para>
+Definition at line 17 of file Incidencia.java.</para>
+    </section><anchor xml:id="_classmodel_1_1_incidencia_1aa8edd8c844fb83ba2457e24af5160dad"/>    <section>
+    <title>getTexto()</title>
+<indexterm><primary>getTexto</primary><secondary>model.Incidencia</secondary></indexterm>
+<indexterm><primary>model.Incidencia</primary><secondary>getTexto</secondary></indexterm>
+<para><computeroutput>String model.Incidencia.getTexto ( )</computeroutput></para><para>
+Definition at line 11 of file Incidencia.java.</para>
+    </section><anchor xml:id="_classmodel_1_1_incidencia_1a98fd0da6c9f5c12a5d48e5907c83bd7d"/>    <section>
+    <title>notificar()</title>
+<indexterm><primary>notificar</primary><secondary>model.Incidencia</secondary></indexterm>
+<indexterm><primary>model.Incidencia</primary><secondary>notificar</secondary></indexterm>
+<para><computeroutput>void model.Incidencia.notificar ( )</computeroutput></para><para>
+Definition at line 27 of file Incidencia.java.</para>
+    </section><anchor xml:id="_classmodel_1_1_incidencia_1a3acca530caafe6cebf4552bc5e165e22"/>    <section>
+    <title>setEstado()</title>
+<indexterm><primary>setEstado</primary><secondary>model.Incidencia</secondary></indexterm>
+<indexterm><primary>model.Incidencia</primary><secondary>setEstado</secondary></indexterm>
+<para><computeroutput>void model.Incidencia.setEstado (String estado)</computeroutput></para><para>
+Definition at line 20 of file Incidencia.java.</para>
+    </section><anchor xml:id="_classmodel_1_1_incidencia_1afb407b646aa64a11d250e5b1dd690652"/>    <section>
+    <title>setTexto()</title>
+<indexterm><primary>setTexto</primary><secondary>model.Incidencia</secondary></indexterm>
+<indexterm><primary>model.Incidencia</primary><secondary>setTexto</secondary></indexterm>
+<para><computeroutput>void model.Incidencia.setTexto (String texto)</computeroutput></para><para>
+Definition at line 14 of file Incidencia.java.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/model/<link linkend="__incidencia_8java">Incidencia.java</link></section>
+</section>
