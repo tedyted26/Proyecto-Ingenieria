@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classvista_1_1_pop_up_info">
+<title>vista.PopUpInfo Class Reference</title>
+<indexterm><primary>vista.PopUpInfo</primary></indexterm>
+Collaboration diagram for vista.PopUpInfo:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up_info__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classvista_1_1_pop_up_info_1a60dfc770ee3c7a6f99a84145cd286133">PopUpInfo</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 9 of file PopUpInfo.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classvista_1_1_pop_up_info_1a60dfc770ee3c7a6f99a84145cd286133"/>    <section>
+    <title>PopUpInfo()</title>
+<indexterm><primary>PopUpInfo</primary><secondary>vista.PopUpInfo</secondary></indexterm>
+<indexterm><primary>vista.PopUpInfo</primary><secondary>PopUpInfo</secondary></indexterm>
+<para><computeroutput>vista.PopUpInfo.PopUpInfo ( )</computeroutput></para>
+<para>Create the application. </para>
+<para>
+Definition at line 15 of file PopUpInfo.java.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/vista/<link linkend="__pop_up_info_8java">PopUpInfo.java</link></section>
+</section>

@@ -10,11 +10,9 @@ import java.awt.Toolkit;
 
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.LayoutStyle.ComponentPlacement;
 
 import control.Controlador;
 import model.Usuario;
@@ -28,14 +26,9 @@ import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 
-public class A0VentanaInicio {
+public class A0VentanaInicio{
 
 	private JFrame frmLaPacaLee;
-	
-	//POP-UP AL CREAR CUENTA
-	private JDialog exitoOperacion;
-	private JButton btnAceptar;
-	private JLabel lblAviso;
 	
 	//PANEL INICIO
 	private JPanel panelInicio;
@@ -43,6 +36,7 @@ public class A0VentanaInicio {
 	private JButton btnCrearCuenta;
 	private JLabel lblLapacalee;
 	private CardLayout cl;
+	private GroupLayout groupLayout;
 	
 	//PANEL CREAR CUENTA
 	private JPanel panelCrearCuenta;
@@ -96,8 +90,6 @@ public class A0VentanaInicio {
 	 * @param control de tipo Controlador
 	 */
 	public void setControlador(Controlador control) {
-		//BOTONES DE POP-UP
-		btnAceptar.addActionListener(control);
 		
 		//BOTONES INICIO
 		btnCrearCuenta.addActionListener(control);
@@ -189,7 +181,6 @@ public class A0VentanaInicio {
 		passwordField.setText("");
 		
 	}
-
 	
 	/**
 	 * Inicializa el contenido de la ventana
@@ -197,7 +188,7 @@ public class A0VentanaInicio {
 	private void initialize() {
 		frmLaPacaLee = new JFrame();
 		frmLaPacaLee.setTitle("LaPacaLee");
-		frmLaPacaLee.getContentPane().setBackground(new Color(255, 192, 203));
+		frmLaPacaLee.getContentPane().setBackground(new Color(255, 250, 240));
 		Toolkit screen=Toolkit.getDefaultToolkit();
 		Dimension dimension=screen.getScreenSize();
 		frmLaPacaLee.setSize(dimension.width*5/12,dimension.height/2);
@@ -209,49 +200,7 @@ public class A0VentanaInicio {
 		cl=new CardLayout(0,0);
 		frmLaPacaLee.getContentPane().setLayout(cl);
 		frmLaPacaLee.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		//POP-UP AL CREAR CUENTA
-		exitoOperacion =new JDialog();
-		exitoOperacion.setTitle("LaPacaLee");
-		exitoOperacion.setSize(dimension.width*16/100,dimension.height*178/1000);
-		exitoOperacion.setLocation(dimension.width*20/48,dimension.height*5/12);
-		exitoOperacion.setVisible(false);
-		exitoOperacion.setResizable(false);
-		exitoOperacion.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		exitoOperacion.setAlwaysOnTop(true);
-		exitoOperacion.setIconImage(Toolkit.getDefaultToolkit().getImage("./library.png"));
-		exitoOperacion.getContentPane().setBackground(new Color(255, 192, 203));
-		
-		btnAceptar = new JButton("Aceptar");
-		btnAceptar.setBorder(UIManager.getBorder("ComboBox.editorBorder"));
-		btnAceptar.setBackground(new Color(255, 250, 240));
-		btnAceptar.setForeground(new Color(220, 20, 60));
-		btnAceptar.setFont(new Font("Arial", Font.BOLD, 13));
-		
-		lblAviso = new JLabel("Cuenta creada con \u00E9xito.");
-		lblAviso.setForeground(new Color(220, 20, 60));
-		lblAviso.setFont(new Font("Goudy Old Style", Font.PLAIN, 20));
-		lblAviso.setHorizontalAlignment(SwingConstants.CENTER);
-		GroupLayout groupLayout = new GroupLayout(exitoOperacion.getContentPane());
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblAviso, GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-						.addComponent(btnAceptar, GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
-					.addContainerGap())
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					.addComponent(lblAviso, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(btnAceptar, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
-					.addGap(27))
-		);
-		exitoOperacion.getContentPane().setLayout(groupLayout);
+	
 		
 		//PANEL INICIO
 		panelInicio = new JPanel();
@@ -816,27 +765,6 @@ public class A0VentanaInicio {
 	}
 	public void setCl(CardLayout cl) {
 		this.cl = cl;
-	}
-
-
-	public JDialog getExitoOperacion() {
-		return exitoOperacion;
-	}
-
-
-	public void setExitoOperacion(JDialog exitoOperacion) {
-		this.exitoOperacion = exitoOperacion;
-	}
-
-
-	public JButton getBtnAceptar() {
-		return btnAceptar;
-	}
-
-
-	public void setBtnAceptar(JButton btnAceptar) {
-		this.btnAceptar = btnAceptar;
-	}
-	
+	}	
 
 }

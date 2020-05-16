@@ -16,15 +16,14 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import net.miginfocom.swing.MigLayout;
 import javax.swing.border.LineBorder;
-import javax.swing.border.MatteBorder;
 import control.Controlador;
 import javax.swing.SwingConstants;
-import javax.swing.UIManager;
 import javax.swing.JList;
 import javax.swing.border.BevelBorder;
 import java.awt.Scrollbar;
@@ -37,9 +36,11 @@ import javax.swing.JPasswordField;
 import javax.swing.JSeparator;
 import javax.swing.JScrollPane;
 import javax.swing.JCheckBox;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.border.EmptyBorder;
+import java.awt.GridBagLayout;
+import javax.swing.JRadioButton;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import javax.swing.JTable;
 
 public class A1VentanaUsuario {
 
@@ -51,15 +52,15 @@ public class A1VentanaUsuario {
 	private JLayeredPane inicio;
 	//PANEL PERFIL
 	private JPanel panelPerfil;
-	private JTextField textFieldNombre;
-	private JTextField textFieldApellidos;
-	private JTextField textFieldCorreo;
-	private JTextField textFieldDNI;
 	private JLabel lblPerfil;
 	private JLabel lblNombre;
 	private JLabel lblApellidos;
 	private JLabel lblCorreoElectronico;
 	private JLabel lblDni;
+	private JTextField textFieldNombre;
+	private JTextField textFieldApellidos;
+	private JTextField textFieldCorreo;
+	private JTextField textFieldDNI;
 	//PANEL LIBROS
 	private JPanel panelLibros;
 	private JLabel lblLibrosEnPosesion;
@@ -75,7 +76,6 @@ public class A1VentanaUsuario {
 	private JPanel panel;
 	private JTextField textFieldBuscar;
 	private JButton btnBuscar;
-	private JScrollPane scrollPaneBiblioteca;
 	private JPanel panelGeneros;
 	private JCheckBox chckbxOtros;
 	private JCheckBox chckbxHistoricos;
@@ -100,8 +100,8 @@ public class A1VentanaUsuario {
 	//PANEL MODIFICAR
 	private JPanel panelModificar;
 	private JTextField textFieldCorreoActual;
-	private JPasswordField passwordFieldContrasenaActual;
 	private JTextField textFieldCorreoNuevo;
+	private JPasswordField passwordFieldContrasenaActual;
 	private JPasswordField passwordContrasena;
 	private JPasswordField passwordFieldConfirmarContrasena;
 	private JLabel lblDebeSer;
@@ -115,6 +115,7 @@ public class A1VentanaUsuario {
 	private JLabel lblContrasena;
 	private JLabel lblCorreo;
 	private JLabel lblModificacionDePerfil;
+	private JLabel labelMensaje;
 	//PANEL INFORMACION
 	private JPanel panelInformacion;
 	private JLabel lblLapacalee;
@@ -129,7 +130,8 @@ public class A1VentanaUsuario {
 	private JLabel lblInfo;
 	private JButton btnSi;
 	private JButton btnNo;
-	
+	private JTable table;
+
 
 	
 
@@ -139,6 +141,16 @@ public class A1VentanaUsuario {
 	 */
 	public A1VentanaUsuario() {
 		initialize();
+	}
+	
+	/**
+	 * Elimina el contenido de los campos de la modificacion de perfil
+	 */
+	public void eliminarContenidoMU() {
+		textFieldCorreoNuevo.setText("");
+		passwordFieldContrasenaActual.setText("");
+		passwordContrasena.setText("");
+		passwordFieldConfirmarContrasena.setText("");
 	}
 	
 	/**
@@ -210,54 +222,44 @@ public class A1VentanaUsuario {
 		lblPerfil.setForeground(new Color(220, 20, 60));
 		lblPerfil.setFont(new Font("Goudy Old Style", Font.PLAIN, 30));
 		lblPerfil.setBackground(new Color(255, 192, 203));
-		panelPerfil.add(lblPerfil, "cell 0 0,alignx left,aligny center");
+		panelPerfil.add(lblPerfil, "cell 0 0 2 1,alignx left,aligny center");
 		
 		lblNombre = new JLabel("Nombre:");
 		lblNombre.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
 		lblNombre.setHorizontalAlignment(SwingConstants.LEFT);
-		panelPerfil.add(lblNombre, "cell 0 1,alignx leading");
+		panelPerfil.add(lblNombre, "cell 0 1,alignx trailing");
 		
 		textFieldNombre = new JTextField();
-		textFieldNombre.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(250, 128, 114)));
-		textFieldNombre.setSelectedTextColor(new Color(255, 255, 255));
-		textFieldNombre.setEnabled(false);
 		textFieldNombre.setEditable(false);
-		textFieldNombre.setToolTipText("");
 		panelPerfil.add(textFieldNombre, "cell 1 1,growx");
 		textFieldNombre.setColumns(10);
 		
 		lblApellidos = new JLabel("Apellidos:");
 		lblApellidos.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		panelPerfil.add(lblApellidos, "cell 0 2,alignx leading");
+		panelPerfil.add(lblApellidos, "cell 0 2,alignx trailing");
 		
 		textFieldApellidos = new JTextField();
-		textFieldApellidos.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(250, 128, 114)));
-		textFieldApellidos.setEnabled(false);
 		textFieldApellidos.setEditable(false);
 		panelPerfil.add(textFieldApellidos, "cell 1 2,growx");
 		textFieldApellidos.setColumns(10);
 		
-		lblCorreoElectronico = new JLabel("Correo:");
-		lblCorreoElectronico.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		panelPerfil.add(lblCorreoElectronico, "cell 0 3,alignx leading");
-		
-		textFieldCorreo = new JTextField();
-		textFieldCorreo.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(250, 128, 114)));
-		textFieldCorreo.setEditable(false);
-		textFieldCorreo.setEnabled(false);
-		panelPerfil.add(textFieldCorreo, "cell 1 3,growx");
-		textFieldCorreo.setColumns(10);
-		
 		lblDni = new JLabel("DNI:");
 		lblDni.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		panelPerfil.add(lblDni, "cell 0 4,alignx leading");
+		panelPerfil.add(lblDni, "cell 0 3,alignx trailing");
 		
 		textFieldDNI = new JTextField();
-		textFieldDNI.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(250, 128, 114)));
 		textFieldDNI.setEditable(false);
-		textFieldDNI.setEnabled(false);
-		panelPerfil.add(textFieldDNI, "cell 1 4,growx");
+		panelPerfil.add(textFieldDNI, "cell 1 3,growx");
 		textFieldDNI.setColumns(10);
+		
+		lblCorreoElectronico = new JLabel("Correo:");
+		lblCorreoElectronico.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		panelPerfil.add(lblCorreoElectronico, "cell 0 4,alignx trailing");
+		
+		textFieldCorreo = new JTextField();
+		textFieldCorreo.setEditable(false);
+		panelPerfil.add(textFieldCorreo, "cell 1 4,growx");
+		textFieldCorreo.setColumns(10);
 		
 		//PANEL LIBROS 
 		panelLibros = new JPanel();
@@ -302,8 +304,63 @@ public class A1VentanaUsuario {
 		panelBuscar.add(lblFiltros);
 		
 		panel = new JPanel();
+		panel.setBackground(new Color(255, 228, 196));
 		panel.setBounds(122, 11, 274, 24);
 		panelBuscar.add(panel);
+		GridBagLayout gbl_panel = new GridBagLayout();
+		gbl_panel.columnWidths = new int[]{68, 68, 68, 68, 0};
+		gbl_panel.rowHeights = new int[]{24, 0};
+		gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel.rowWeights = new double[]{0.0, Double.MIN_VALUE};
+		panel.setLayout(gbl_panel);
+		
+		JRadioButton rdbtnAutor = new JRadioButton("Autor");
+		GridBagConstraints gbc_rdbtnAutor = new GridBagConstraints();
+		gbc_rdbtnAutor.fill = GridBagConstraints.BOTH;
+		gbc_rdbtnAutor.insets = new Insets(0, 0, 0, 5);
+		gbc_rdbtnAutor.gridx = 0;
+		gbc_rdbtnAutor.gridy = 0;
+		panel.add(rdbtnAutor, gbc_rdbtnAutor);
+		rdbtnAutor.setForeground(Color.BLACK);
+		rdbtnAutor.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		rdbtnAutor.setBackground(new Color(255, 228, 196));
+		
+		JRadioButton rdbtnTtulo = new JRadioButton("T\u00EDtulo");
+		rdbtnTtulo.setSelected(true);
+		GridBagConstraints gbc_rdbtnTtulo = new GridBagConstraints();
+		gbc_rdbtnTtulo.fill = GridBagConstraints.BOTH;
+		gbc_rdbtnTtulo.insets = new Insets(0, 0, 0, 5);
+		gbc_rdbtnTtulo.gridx = 1;
+		gbc_rdbtnTtulo.gridy = 0;
+		panel.add(rdbtnTtulo, gbc_rdbtnTtulo);
+		rdbtnTtulo.setForeground(Color.BLACK);
+		rdbtnTtulo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		rdbtnTtulo.setBackground(new Color(255, 228, 196));
+		
+		JRadioButton rdbtnCdigo = new JRadioButton("C\u00F3digo");
+		GridBagConstraints gbc_rdbtnCdigo = new GridBagConstraints();
+		gbc_rdbtnCdigo.fill = GridBagConstraints.BOTH;
+		gbc_rdbtnCdigo.insets = new Insets(0, 0, 0, 5);
+		gbc_rdbtnCdigo.gridx = 2;
+		gbc_rdbtnCdigo.gridy = 0;
+		panel.add(rdbtnCdigo, gbc_rdbtnCdigo);
+		rdbtnCdigo.setForeground(Color.BLACK);
+		rdbtnCdigo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		rdbtnCdigo.setBackground(new Color(255, 228, 196));
+		
+		ButtonGroup grupo = new ButtonGroup();
+		grupo.add(rdbtnAutor);
+		grupo.add(rdbtnTtulo);
+		grupo.add(rdbtnCdigo);
+		
+		JCheckBox chckbxDisponible = new JCheckBox("Disponible");
+		chckbxDisponible.setSelected(false);
+		chckbxDisponible.setBackground(new Color(255, 228, 196));
+		chckbxDisponible.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		GridBagConstraints gbc_chckbxDisponible = new GridBagConstraints();
+		gbc_chckbxDisponible.gridx = 3;
+		gbc_chckbxDisponible.gridy = 0;
+		panel.add(chckbxDisponible, gbc_chckbxDisponible);
 		
 		textFieldBuscar = new JTextField();
 		textFieldBuscar.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
@@ -317,10 +374,6 @@ public class A1VentanaUsuario {
 		btnBuscar.setBackground(new Color(255, 255, 255));
 		btnBuscar.setBounds(320, 42, 76, 23);
 		panelBuscar.add(btnBuscar);
-		
-		scrollPaneBiblioteca = new JScrollPane();
-		scrollPaneBiblioteca.setBounds(10, 71, 386, 206);
-		panelBuscar.add(scrollPaneBiblioteca);
 		
 		panelGeneros = new JPanel();
 		panelGeneros.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
@@ -357,6 +410,14 @@ public class A1VentanaUsuario {
 		chckbxNarrativa.setForeground(Color.WHITE);
 		chckbxNarrativa.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		chckbxNarrativa.setBackground(new Color(240, 128, 128));
+		
+		ButtonGroup grupoBuscarGeneros = new ButtonGroup();
+		grupoBuscarGeneros.add(chckbxNarrativa);
+		grupoBuscarGeneros.add(chckbxHistoricos);
+		grupoBuscarGeneros.add(chckbxPoesia);
+		grupoBuscarGeneros.add(chckbxFilosofia);
+		grupoBuscarGeneros.add(chckbxOtros);
+		grupoBuscarGeneros.add(chckbxDrama);
 		
 		lblNewLabel = new JLabel("G\u00E9neros");
 		lblNewLabel.setForeground(new Color(220, 20, 60));
@@ -412,6 +473,13 @@ public class A1VentanaUsuario {
 		btnPedirPrestado.setBackground(new Color(255, 255, 255));
 		btnPedirPrestado.setBounds(223, 288, 125, 27);
 		panelBuscar.add(btnPedirPrestado);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(10, 76, 386, 205);
+		panelBuscar.add(panel_1);
+		
+		table = new JTable();
+		panel_1.add(table);
 		tabbedPane.setBackgroundAt(1, new Color(255, 255, 255));
 		tabbedPane.setEnabledAt(1, true);
 		
@@ -508,11 +576,11 @@ public class A1VentanaUsuario {
 		lblModificacionDePerfil.setForeground(new Color(220, 20, 60));
 		
 		lblCorreo = new JLabel("Correo electr\u00F3nico actual:");
-		lblCorreo.setBounds(51, 67, 142, 16);
+		lblCorreo.setBounds(51, 76, 142, 16);
 		lblCorreo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
 		
 		lblContrasena = new JLabel("Contrase\u00F1a actual:");
-		lblContrasena.setBounds(51, 236, 142, 16);
+		lblContrasena.setBounds(51, 245, 142, 16);
 		lblContrasena.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
 		
 		btnCancelar = new JButton("Cancelar");
@@ -529,7 +597,7 @@ public class A1VentanaUsuario {
 		
 		textFieldCorreoActual = new JTextField();
 		textFieldCorreoActual.setEditable(false);
-		textFieldCorreoActual.setBounds(233, 66, 159, 20);
+		textFieldCorreoActual.setBounds(233, 75, 159, 20);
 		textFieldCorreoActual.setColumns(10);
 		panelModificar.setLayout(null);
 		panelModificar.add(btnCancelar);
@@ -540,54 +608,61 @@ public class A1VentanaUsuario {
 		panelModificar.add(textFieldCorreoActual);
 		
 		passwordFieldContrasenaActual = new JPasswordField();
-		passwordFieldContrasenaActual.setBounds(233, 235, 159, 20);
+		passwordFieldContrasenaActual.setBounds(233, 244, 159, 20);
 		panelModificar.add(passwordFieldContrasenaActual);
 		
 		separator = new JSeparator();
-		separator.setBounds(51, 128, 341, 2);
+		separator.setBounds(51, 137, 341, 2);
 		panelModificar.add(separator);
 		
 		lblContrasenaNueva = new JLabel("Contrase\u00F1a nueva:");
 		lblContrasenaNueva.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		lblContrasenaNueva.setBounds(51, 141, 142, 16);
+		lblContrasenaNueva.setBounds(51, 150, 142, 16);
 		panelModificar.add(lblContrasenaNueva);
 		
 		lblCorreoNuevo = new JLabel("Correo electr\u00F3nico nuevo:");
 		lblCorreoNuevo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		lblCorreoNuevo.setBounds(51, 98, 142, 16);
+		lblCorreoNuevo.setBounds(51, 107, 142, 16);
 		panelModificar.add(lblCorreoNuevo);
 		
 		textFieldCorreoNuevo = new JTextField();
 		textFieldCorreoNuevo.setColumns(10);
-		textFieldCorreoNuevo.setBounds(233, 97, 159, 20);
+		textFieldCorreoNuevo.setBounds(233, 106, 159, 20);
 		panelModificar.add(textFieldCorreoNuevo);
 		
 		passwordContrasena = new JPasswordField();
-		passwordContrasena.setBounds(233, 141, 159, 20);
+		passwordContrasena.setBounds(233, 150, 159, 20);
 		panelModificar.add(passwordContrasena);
 		
 		lblConfirmarContrasena = new JLabel("Confirmar contrase\u00F1a nueva:");
 		lblConfirmarContrasena.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		lblConfirmarContrasena.setBounds(51, 173, 159, 16);
+		lblConfirmarContrasena.setBounds(51, 182, 159, 16);
 		panelModificar.add(lblConfirmarContrasena);
 		
 		passwordFieldConfirmarContrasena = new JPasswordField();
-		passwordFieldConfirmarContrasena.setBounds(233, 172, 159, 20);
+		passwordFieldConfirmarContrasena.setBounds(233, 181, 159, 20);
 		panelModificar.add(passwordFieldConfirmarContrasena);
 		
 		lblEsNecesario = new JLabel("* Es necesario introducir la contrase\u00F1a para guardar cualquier cambio.");
 		lblEsNecesario.setForeground(new Color(220, 20, 60));
 		lblEsNecesario.setFont(new Font("Arial", Font.PLAIN, 11));
-		lblEsNecesario.setBounds(51, 211, 341, 14);
+		lblEsNecesario.setBounds(51, 220, 341, 14);
 		panelModificar.add(lblEsNecesario);
 		
 		lblDebeSer = new JLabel(" * Debe ser de 6-50 caracteres.");
 		lblDebeSer.setForeground(new Color(220, 20, 60));
 		lblDebeSer.setFont(new Font("Arial", Font.PLAIN, 11));
-		lblDebeSer.setBounds(392, 143, 160, 14);
+		lblDebeSer.setBounds(392, 152, 160, 14);
 		panelModificar.add(lblDebeSer);
 		
 		cl.addLayoutComponent(panelModificar, "2");
+		
+		labelMensaje = new JLabel("");
+		labelMensaje.setHorizontalAlignment(SwingConstants.CENTER);
+		labelMensaje.setForeground(new Color(220, 20, 60));
+		labelMensaje.setFont(new Font("Arial", Font.PLAIN, 11));
+		labelMensaje.setBounds(51, 50, 341, 25);
+		panelModificar.add(labelMensaje);
 		
 		//PANEL DE INFORMACION
 		panelInformacion = new JPanel();
@@ -628,7 +703,7 @@ public class A1VentanaUsuario {
 		btncontactanos.setForeground(new Color(255, 255, 255));
 		btncontactanos.setFont(new Font("Arial", Font.BOLD, 13));
 		btncontactanos.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
-		btncontactanos.setBackground(new Color(250, 128, 114));
+		btncontactanos.setBackground(new Color(240, 128, 128));
 		btncontactanos.setBounds(362, 261, 157, 37);
 		
 		panelInformacion.setLayout(null);
@@ -889,5 +964,60 @@ public class A1VentanaUsuario {
 	public void setBtnAtras(JButton btnAtras) {
 		this.btnAtras = btnAtras;
 	}
-	
+
+	public JTextField getTextFieldCorreoActual() {
+		return textFieldCorreoActual;
+	}
+
+	public void setTextFieldCorreoActual(JTextField textFieldCorreoActual) {
+		this.textFieldCorreoActual = textFieldCorreoActual;
+	}
+
+	public JTextPane getTxtpnLapacalee() {
+		return txtpnLapacalee;
+	}
+
+	public void setTxtpnLapacalee(JTextPane txtpnLapacalee) {
+		this.txtpnLapacalee = txtpnLapacalee;
+	}
+
+	public JTextField getTextFieldCorreoNuevo() {
+		return textFieldCorreoNuevo;
+	}
+
+	public void setTextFieldCorreoNuevo(JTextField textFieldCorreoNuevo) {
+		this.textFieldCorreoNuevo = textFieldCorreoNuevo;
+	}
+
+	public JPasswordField getPasswordFieldContrasenaActual() {
+		return passwordFieldContrasenaActual;
+	}
+
+	public void setPasswordFieldContrasenaActual(JPasswordField passwordFieldContrasenaActual) {
+		this.passwordFieldContrasenaActual = passwordFieldContrasenaActual;
+	}
+
+	public JPasswordField getPasswordContrasena() {
+		return passwordContrasena;
+	}
+
+	public void setPasswordContrasena(JPasswordField passwordContrasena) {
+		this.passwordContrasena = passwordContrasena;
+	}
+
+	public JPasswordField getPasswordFieldConfirmarContrasena() {
+		return passwordFieldConfirmarContrasena;
+	}
+
+	public void setPasswordFieldConfirmarContrasena(JPasswordField passwordFieldConfirmarContrasena) {
+		this.passwordFieldConfirmarContrasena = passwordFieldConfirmarContrasena;
+	}
+
+	public JLabel getLabelMensaje() {
+		return labelMensaje;
+	}
+
+	public void setLabelMensaje(JLabel labelMensaje) {
+		this.labelMensaje = labelMensaje;
+	}
 }

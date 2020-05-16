@@ -23,7 +23,7 @@ Collaboration diagram for control.Controlador:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_classcontrol_1_1_controlador_1a67a68ff332b2adb5a3747a2e87e8491a">Controlador</link> (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1)</para>
+            <listitem><para><link linkend="_classcontrol_1_1_controlador_1a673417fa0276a97add35d20443bfcca3">Controlador</link> (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1, <link linkend="_classvista_1_1_a2_ventana_admin">A2VentanaAdmin</link> app2, <link linkend="_classvista_1_1_pop_up1_b">PopUp1B</link> popup)</para>
 </listitem>
             <listitem><para>void <link linkend="_classcontrol_1_1_controlador_1a1f659a43855ef42fa73f85ed2efea4f8">actionPerformed</link> (ActionEvent ev)</para>
 </listitem>
@@ -32,16 +32,60 @@ Collaboration diagram for control.Controlador:<para>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 12 of file Controlador.java.</para>
+Definition at line 18 of file Controlador.java.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
-<anchor xml:id="_classcontrol_1_1_controlador_1a67a68ff332b2adb5a3747a2e87e8491a"/>    <section>
+<anchor xml:id="_classcontrol_1_1_controlador_1a673417fa0276a97add35d20443bfcca3"/>    <section>
     <title>Controlador()</title>
 <indexterm><primary>Controlador</primary><secondary>control.Controlador</secondary></indexterm>
 <indexterm><primary>control.Controlador</primary><secondary>Controlador</secondary></indexterm>
-<para><computeroutput>control.Controlador.Controlador (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1)</computeroutput></para><para>
-Definition at line 19 of file Controlador.java.</para>
+<para><computeroutput>control.Controlador.Controlador (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1, <link linkend="_classvista_1_1_a2_ventana_admin">A2VentanaAdmin</link> app2, <link linkend="_classvista_1_1_pop_up1_b">PopUp1B</link> popup)</computeroutput></para>
+<para>Constructor 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>app0</entry>
+                                <entry>
+<para>Ventana de inicio de sesion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>app1</entry>
+                                <entry>
+<para>Ventana de uso de usuarios </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>app2</entry>
+                                <entry>
+<para>Ventana de uso de administracion </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 39 of file Controlador.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_controlador_a673417fa0276a97add35d20443bfcca3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 </section>
 <section>
@@ -50,17 +94,37 @@ Definition at line 19 of file Controlador.java.</para>
     <title>actionPerformed()</title>
 <indexterm><primary>actionPerformed</primary><secondary>control.Controlador</secondary></indexterm>
 <indexterm><primary>control.Controlador</primary><secondary>actionPerformed</secondary></indexterm>
-<para><computeroutput>void control.Controlador.actionPerformed (ActionEvent ev)</computeroutput></para><para>
-Definition at line 25 of file Controlador.java.</para>
-Here is the call graph for this function:<para>
-    <informalfigure>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_controlador_a1f659a43855ef42fa73f85ed2efea4f8_cgraph.png"></imagedata>
-            </imageobject>
-        </mediaobject>
-    </informalfigure>
-</para>
+<para><computeroutput>void control.Controlador.actionPerformed (ActionEvent ev)</computeroutput></para>
+<para>Método que dicta las acciones de los componentes de las ventanas inicializadas 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ev</entry>
+                                <entry>
+<para>Evento que recoge la clase al implementar el ActionListener </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>Acciones de la ventana de inicio (inicio de sesion, y creación de cuenta)</para>
+
+<para>Acciones de la ventana de usuario (inicio, biblioteca y opciones)</para>
+
+<para>Acciones de la ventana de administrador (inicio, biblioteca, usuarios y opciones)</para>
+<para>
+Definition at line 63 of file Controlador.java.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

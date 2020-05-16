@@ -31,15 +31,6 @@ Definition at line 5 of file Buscador.java.</para>
 <indexterm><primary>control.Buscador</primary><secondary>menu</secondary></indexterm>
 <para><computeroutput>void control.Buscador.menu ( )</computeroutput></para><para>
 Definition at line 7 of file Buscador.java.</para>
-Here is the caller graph for this function:<para>
-    <informalfigure>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_buscador_ac5f6635ca9cf467d3f3164eff685089e_icgraph.png"></imagedata>
-            </imageobject>
-        </mediaobject>
-    </informalfigure>
-</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

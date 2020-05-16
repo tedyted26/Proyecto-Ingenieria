@@ -16,6 +16,8 @@ Collaboration diagram for vista.A1VentanaUsuario:<para>
         <itemizedlist>
             <listitem><para><link linkend="_classvista_1_1_a1_ventana_usuario_1ad8080cebfee608ee2d2013b6a6873e0c">A1VentanaUsuario</link> ()</para>
 </listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a49c4a53bd62626c7ec3b046708bdbfcf">eliminarContenidoMU</link> ()</para>
+</listitem>
             <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a2e80206b8dbeda7ccb36a79d0e40c091">setControlador</link> (<link linkend="_classcontrol_1_1_controlador">Controlador</link> control)</para>
 </listitem>
             <listitem><para>JFrame <link linkend="_classvista_1_1_a1_ventana_usuario_1a91143246184db93fbc3588d35a49efcb">getFrmLapacalee</link> ()</para>
@@ -38,12 +40,108 @@ Collaboration diagram for vista.A1VentanaUsuario:<para>
 </listitem>
             <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a280560f1a8c18e4d08f98480d6878d89">setTextFieldDNI</link> (JTextField textFieldDNI)</para>
 </listitem>
+            <listitem><para>JLayeredPane <link linkend="_classvista_1_1_a1_ventana_usuario_1aaa4063aaebef4685ad282aeaa3e65245">getBiblioteca</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a498d49e2e0ecfc7988d019bd423bfbe6">setBiblioteca</link> (JLayeredPane biblioteca)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1a08656a64d88e344e2b976b81cad4a0a4">getBtnInformacionYContacto</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a052f7f95fb0f912952ff8c4bd1187919">setBtnInformacionYContacto</link> (JButton btnInformacionYContacto)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1a6a76d4234281ad960f6743476cc9f2b3">getBtnEliminarCuenta</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1ac6c33b4ff10b66f1e5e4dbf7f120d896">setBtnEliminarCuenta</link> (JButton btnEliminarCuenta)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1ad7e571d603b2f89f2ae724168249b250">getBtnCerrarSesion</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a7d333ef45c47915ae25baf5909f21bf7">setBtnCerrarSesion</link> (JButton btnCerrarSesion)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1aa54b45bfb9a6f0f5ac626ab3b9c0242a">getBtnSalir</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a80ae1c2cd5381baf52522948654d382d">setBtnSalir</link> (JButton btnSalir)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1a00fd77c695ee0ea290c98bfbfd9ce6c6">getBtnModificarPerfil</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a788a3aa6903ed5f853165736df4f40bd">setBtnModificarPerfil</link> (JButton btnModificarPerfil)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1afb6b9966e2b1ade55bbd968778ad1668">getBtnConfirmarModificaciones</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a4cff0b56bbaf30e9660f36a7bad0b261">setBtnConfirmarModificaciones</link> (JButton btnConfirmarModificaciones)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1a59cb484ccf0d0df411192a2344b62589">getBtnCancelar</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a5165e5567a01a3b8b9cd8e27871d3b06">setBtnCancelar</link> (JButton btnCancelar)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1a13c29ec2f7eed41fc298b59f8c886aab">getBtncontactanos</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a00997e6710695b6361c75451ea2ca87e">setBtncontactanos</link> (JButton btncontactanos)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1af6ba54f31e74bd067647bb386b694c95">getBtnSi</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a9859b3aada5c6f7e33416a64975eb786">setBtnSi</link> (JButton btnSi)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1ab5e1b746dc92abc2a9d0f0a76dab11e0">getBtnNo</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1af0f137c0573ac9a107e38cd390770dc7">setBtnNo</link> (JButton btnNo)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1af1fcb424d619a9227d6502f8a5accff7">getBtnBuscar</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a93167ad6333cda9c1fbf260911ffa933">setBtnBuscar</link> (JButton btnNewButton)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1ad0c3044ce2794d6beeacb5107f649667">getBtnVerDetalles</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a6ec4b70442c38ba365cdce50147d63a0">setBtnVerDetalles</link> (JButton btnVerDetalles)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1a601d41a22b4eefd2178277750fd5eeed">getBtnPedirPrestado</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a2c91425e03d85c7b9b43401789f4d5a4">setBtnPedirPrestado</link> (JButton btnPedirPrestado)</para>
+</listitem>
+            <listitem><para>CardLayout <link linkend="_classvista_1_1_a1_ventana_usuario_1a8543a51d4e081a2d9a0309b1b1f9a48b">getCl</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a25ad8b951184bd6e782e46effd9211d0">setCl</link> (CardLayout cl)</para>
+</listitem>
+            <listitem><para>JLayeredPane <link linkend="_classvista_1_1_a1_ventana_usuario_1a763790e732721e68a028c7f5cde7ae76">getOpciones</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1aaf58bd98690b4327e8a7cddde970d7dd">setOpciones</link> (JLayeredPane opciones)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_a1_ventana_usuario_1a1f1e06bbb8ac76eced62372c36f5ab37">getBtnAtras</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1ad56faf5370ac9dec6be4ae0481658173">setBtnAtras</link> (JButton btnAtras)</para>
+</listitem>
+            <listitem><para>JTextField <link linkend="_classvista_1_1_a1_ventana_usuario_1aeea732478e847819e43dc422e7734667">getTextFieldCorreoActual</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a181f522f28f3f8dd6be97351f600c63c">setTextFieldCorreoActual</link> (JTextField textFieldCorreoActual)</para>
+</listitem>
+            <listitem><para>JTextPane <link linkend="_classvista_1_1_a1_ventana_usuario_1a7655aff70ce9edd50e41aa25979c04d6">getTxtpnLapacalee</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1acbcd8f4fe1bc780b9bb0a7f0a3769db4">setTxtpnLapacalee</link> (JTextPane txtpnLapacalee)</para>
+</listitem>
+            <listitem><para>JTextField <link linkend="_classvista_1_1_a1_ventana_usuario_1acc3928898aac1fa0126f044e9247ad8d">getTextFieldCorreoNuevo</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1ae6cf31b90191aedb61a719ef9a572061">setTextFieldCorreoNuevo</link> (JTextField textFieldCorreoNuevo)</para>
+</listitem>
+            <listitem><para>JPasswordField <link linkend="_classvista_1_1_a1_ventana_usuario_1a628a97136d302ee29d8ae9b106cf6419">getPasswordFieldContrasenaActual</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1abb469775b4e05e9d7ce1e542d5b85d75">setPasswordFieldContrasenaActual</link> (JPasswordField passwordFieldContrasenaActual)</para>
+</listitem>
+            <listitem><para>JPasswordField <link linkend="_classvista_1_1_a1_ventana_usuario_1a7b386a17a2cd32ed9942e6320e9db3ec">getPasswordContrasena</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1ae5c77855ad75db2a3d55c1fd277fac5a">setPasswordContrasena</link> (JPasswordField passwordContrasena)</para>
+</listitem>
+            <listitem><para>JPasswordField <link linkend="_classvista_1_1_a1_ventana_usuario_1abfab88dc813295489ae29f46e4ba5245">getPasswordFieldConfirmarContrasena</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a33775bc9efcde7da1f6ede9edd7c33ff">setPasswordFieldConfirmarContrasena</link> (JPasswordField passwordFieldConfirmarContrasena)</para>
+</listitem>
+            <listitem><para>JLabel <link linkend="_classvista_1_1_a1_ventana_usuario_1ad5b3f959aefb05dd46b4408044bf45ec">getLabelMensaje</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_a1_ventana_usuario_1a3547489594a7339cce03b3c52393b665">setLabelMensaje</link> (JLabel labelMensaje)</para>
+</listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 50 of file A1VentanaUsuario.java.</para>
+Definition at line 44 of file A1VentanaUsuario.java.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -51,57 +149,492 @@ Definition at line 50 of file A1VentanaUsuario.java.</para>
     <title>A1VentanaUsuario()</title>
 <indexterm><primary>A1VentanaUsuario</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>A1VentanaUsuario</secondary></indexterm>
-<para><computeroutput>vista.A1VentanaUsuario.A1VentanaUsuario ( )</computeroutput></para><para>
-Definition at line 81 of file A1VentanaUsuario.java.</para>
+<para><computeroutput>vista.A1VentanaUsuario.A1VentanaUsuario ( )</computeroutput></para>
+<para>Crea la ventana </para>
+<para>
+Definition at line 141 of file A1VentanaUsuario.java.</para>
 </section>
 </section>
 <section>
 <title>Member Function Documentation</title>
-<anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a91143246184db93fbc3588d35a49efcb"/>    <section>
-    <title>getFrmLapacalee()</title>
-<indexterm><primary>getFrmLapacalee</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
-<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getFrmLapacalee</secondary></indexterm>
-<para><computeroutput>JFrame vista.A1VentanaUsuario.getFrmLapacalee ( )</computeroutput></para><para>
-Definition at line 314 of file A1VentanaUsuario.java.</para>
+<anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a49c4a53bd62626c7ec3b046708bdbfcf"/>    <section>
+    <title>eliminarContenidoMU()</title>
+<indexterm><primary>eliminarContenidoMU</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>eliminarContenidoMU</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.eliminarContenidoMU ( )</computeroutput></para>
+<para>Elimina el contenido de los campos de la modificacion de perfil </para>
+<para>
+Definition at line 148 of file A1VentanaUsuario.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a91143246184db93fbc3588d35a49efcb_icgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a49c4a53bd62626c7ec3b046708bdbfcf_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
 </para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1aaa4063aaebef4685ad282aeaa3e65245"/>    <section>
+    <title>getBiblioteca()</title>
+<indexterm><primary>getBiblioteca</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBiblioteca</secondary></indexterm>
+<para><computeroutput>JLayeredPane vista.A1VentanaUsuario.getBiblioteca ( )</computeroutput></para><para>
+Definition at line 828 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a1f1e06bbb8ac76eced62372c36f5ab37"/>    <section>
+    <title>getBtnAtras()</title>
+<indexterm><primary>getBtnAtras</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnAtras</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnAtras ( )</computeroutput></para><para>
+Definition at line 956 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a1f1e06bbb8ac76eced62372c36f5ab37_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1af1fcb424d619a9227d6502f8a5accff7"/>    <section>
+    <title>getBtnBuscar()</title>
+<indexterm><primary>getBtnBuscar</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnBuscar</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnBuscar ( )</computeroutput></para><para>
+Definition at line 916 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_af1fcb424d619a9227d6502f8a5accff7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a59cb484ccf0d0df411192a2344b62589"/>    <section>
+    <title>getBtnCancelar()</title>
+<indexterm><primary>getBtnCancelar</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnCancelar</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnCancelar ( )</computeroutput></para><para>
+Definition at line 884 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a59cb484ccf0d0df411192a2344b62589_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ad7e571d603b2f89f2ae724168249b250"/>    <section>
+    <title>getBtnCerrarSesion()</title>
+<indexterm><primary>getBtnCerrarSesion</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnCerrarSesion</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnCerrarSesion ( )</computeroutput></para><para>
+Definition at line 852 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_ad7e571d603b2f89f2ae724168249b250_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1afb6b9966e2b1ade55bbd968778ad1668"/>    <section>
+    <title>getBtnConfirmarModificaciones()</title>
+<indexterm><primary>getBtnConfirmarModificaciones</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnConfirmarModificaciones</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnConfirmarModificaciones ( )</computeroutput></para><para>
+Definition at line 876 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_afb6b9966e2b1ade55bbd968778ad1668_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a13c29ec2f7eed41fc298b59f8c886aab"/>    <section>
+    <title>getBtncontactanos()</title>
+<indexterm><primary>getBtncontactanos</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtncontactanos</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtncontactanos ( )</computeroutput></para><para>
+Definition at line 892 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a13c29ec2f7eed41fc298b59f8c886aab_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a6a76d4234281ad960f6743476cc9f2b3"/>    <section>
+    <title>getBtnEliminarCuenta()</title>
+<indexterm><primary>getBtnEliminarCuenta</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnEliminarCuenta</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnEliminarCuenta ( )</computeroutput></para><para>
+Definition at line 844 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a6a76d4234281ad960f6743476cc9f2b3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a08656a64d88e344e2b976b81cad4a0a4"/>    <section>
+    <title>getBtnInformacionYContacto()</title>
+<indexterm><primary>getBtnInformacionYContacto</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnInformacionYContacto</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnInformacionYContacto ( )</computeroutput></para><para>
+Definition at line 836 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a08656a64d88e344e2b976b81cad4a0a4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a00fd77c695ee0ea290c98bfbfd9ce6c6"/>    <section>
+    <title>getBtnModificarPerfil()</title>
+<indexterm><primary>getBtnModificarPerfil</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnModificarPerfil</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnModificarPerfil ( )</computeroutput></para><para>
+Definition at line 868 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a00fd77c695ee0ea290c98bfbfd9ce6c6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ab5e1b746dc92abc2a9d0f0a76dab11e0"/>    <section>
+    <title>getBtnNo()</title>
+<indexterm><primary>getBtnNo</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnNo</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnNo ( )</computeroutput></para><para>
+Definition at line 908 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_ab5e1b746dc92abc2a9d0f0a76dab11e0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a601d41a22b4eefd2178277750fd5eeed"/>    <section>
+    <title>getBtnPedirPrestado()</title>
+<indexterm><primary>getBtnPedirPrestado</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnPedirPrestado</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnPedirPrestado ( )</computeroutput></para><para>
+Definition at line 932 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a601d41a22b4eefd2178277750fd5eeed_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1aa54b45bfb9a6f0f5ac626ab3b9c0242a"/>    <section>
+    <title>getBtnSalir()</title>
+<indexterm><primary>getBtnSalir</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnSalir</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnSalir ( )</computeroutput></para><para>
+Definition at line 860 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_aa54b45bfb9a6f0f5ac626ab3b9c0242a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1af6ba54f31e74bd067647bb386b694c95"/>    <section>
+    <title>getBtnSi()</title>
+<indexterm><primary>getBtnSi</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnSi</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnSi ( )</computeroutput></para><para>
+Definition at line 900 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_af6ba54f31e74bd067647bb386b694c95_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ad0c3044ce2794d6beeacb5107f649667"/>    <section>
+    <title>getBtnVerDetalles()</title>
+<indexterm><primary>getBtnVerDetalles</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getBtnVerDetalles</secondary></indexterm>
+<para><computeroutput>JButton vista.A1VentanaUsuario.getBtnVerDetalles ( )</computeroutput></para><para>
+Definition at line 924 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_ad0c3044ce2794d6beeacb5107f649667_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a8543a51d4e081a2d9a0309b1b1f9a48b"/>    <section>
+    <title>getCl()</title>
+<indexterm><primary>getCl</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getCl</secondary></indexterm>
+<para><computeroutput>CardLayout vista.A1VentanaUsuario.getCl ( )</computeroutput></para><para>
+Definition at line 940 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a8543a51d4e081a2d9a0309b1b1f9a48b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a91143246184db93fbc3588d35a49efcb"/>    <section>
+    <title>getFrmLapacalee()</title>
+<indexterm><primary>getFrmLapacalee</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getFrmLapacalee</secondary></indexterm>
+<para><computeroutput>JFrame vista.A1VentanaUsuario.getFrmLapacalee ( )</computeroutput></para><para>
+Definition at line 788 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ad5b3f959aefb05dd46b4408044bf45ec"/>    <section>
+    <title>getLabelMensaje()</title>
+<indexterm><primary>getLabelMensaje</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getLabelMensaje</secondary></indexterm>
+<para><computeroutput>JLabel vista.A1VentanaUsuario.getLabelMensaje ( )</computeroutput></para><para>
+Definition at line 1012 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a763790e732721e68a028c7f5cde7ae76"/>    <section>
+    <title>getOpciones()</title>
+<indexterm><primary>getOpciones</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getOpciones</secondary></indexterm>
+<para><computeroutput>JLayeredPane vista.A1VentanaUsuario.getOpciones ( )</computeroutput></para><para>
+Definition at line 948 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a763790e732721e68a028c7f5cde7ae76_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a7b386a17a2cd32ed9942e6320e9db3ec"/>    <section>
+    <title>getPasswordContrasena()</title>
+<indexterm><primary>getPasswordContrasena</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getPasswordContrasena</secondary></indexterm>
+<para><computeroutput>JPasswordField vista.A1VentanaUsuario.getPasswordContrasena ( )</computeroutput></para><para>
+Definition at line 996 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1abfab88dc813295489ae29f46e4ba5245"/>    <section>
+    <title>getPasswordFieldConfirmarContrasena()</title>
+<indexterm><primary>getPasswordFieldConfirmarContrasena</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getPasswordFieldConfirmarContrasena</secondary></indexterm>
+<para><computeroutput>JPasswordField vista.A1VentanaUsuario.getPasswordFieldConfirmarContrasena ( )</computeroutput></para><para>
+Definition at line 1004 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a628a97136d302ee29d8ae9b106cf6419"/>    <section>
+    <title>getPasswordFieldContrasenaActual()</title>
+<indexterm><primary>getPasswordFieldContrasenaActual</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getPasswordFieldContrasenaActual</secondary></indexterm>
+<para><computeroutput>JPasswordField vista.A1VentanaUsuario.getPasswordFieldContrasenaActual ( )</computeroutput></para><para>
+Definition at line 988 of file A1VentanaUsuario.java.</para>
     </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a6dfe4482d337f8cbc5c416c2b288b0a8"/>    <section>
     <title>getTextFieldApellidos()</title>
 <indexterm><primary>getTextFieldApellidos</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldApellidos</secondary></indexterm>
 <para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldApellidos ( )</computeroutput></para><para>
-Definition at line 330 of file A1VentanaUsuario.java.</para>
+Definition at line 804 of file A1VentanaUsuario.java.</para>
     </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a8329f5e6b35b8c7a75864bb5181636eb"/>    <section>
     <title>getTextFieldCorreo()</title>
 <indexterm><primary>getTextFieldCorreo</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldCorreo</secondary></indexterm>
 <para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldCorreo ( )</computeroutput></para><para>
-Definition at line 338 of file A1VentanaUsuario.java.</para>
+Definition at line 812 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1aeea732478e847819e43dc422e7734667"/>    <section>
+    <title>getTextFieldCorreoActual()</title>
+<indexterm><primary>getTextFieldCorreoActual</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldCorreoActual</secondary></indexterm>
+<para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldCorreoActual ( )</computeroutput></para><para>
+Definition at line 964 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1acc3928898aac1fa0126f044e9247ad8d"/>    <section>
+    <title>getTextFieldCorreoNuevo()</title>
+<indexterm><primary>getTextFieldCorreoNuevo</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldCorreoNuevo</secondary></indexterm>
+<para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldCorreoNuevo ( )</computeroutput></para><para>
+Definition at line 980 of file A1VentanaUsuario.java.</para>
     </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a04a0b3771ce4742afb383564964e5b55"/>    <section>
     <title>getTextFieldDNI()</title>
 <indexterm><primary>getTextFieldDNI</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldDNI</secondary></indexterm>
 <para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldDNI ( )</computeroutput></para><para>
-Definition at line 346 of file A1VentanaUsuario.java.</para>
+Definition at line 820 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a04a0b3771ce4742afb383564964e5b55_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
     </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a7e2215e2c90a2da53cdfc5d0fc4fdaea"/>    <section>
     <title>getTextFieldNombre()</title>
 <indexterm><primary>getTextFieldNombre</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTextFieldNombre</secondary></indexterm>
 <para><computeroutput>JTextField vista.A1VentanaUsuario.getTextFieldNombre ( )</computeroutput></para><para>
-Definition at line 322 of file A1VentanaUsuario.java.</para>
+Definition at line 796 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a7655aff70ce9edd50e41aa25979c04d6"/>    <section>
+    <title>getTxtpnLapacalee()</title>
+<indexterm><primary>getTxtpnLapacalee</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>getTxtpnLapacalee</secondary></indexterm>
+<para><computeroutput>JTextPane vista.A1VentanaUsuario.getTxtpnLapacalee ( )</computeroutput></para><para>
+Definition at line 972 of file A1VentanaUsuario.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_a1_ventana_usuario_a7655aff70ce9edd50e41aa25979c04d6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a498d49e2e0ecfc7988d019bd423bfbe6"/>    <section>
+    <title>setBiblioteca()</title>
+<indexterm><primary>setBiblioteca</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBiblioteca</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBiblioteca (JLayeredPane biblioteca)</computeroutput></para><para>
+Definition at line 832 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ad56faf5370ac9dec6be4ae0481658173"/>    <section>
+    <title>setBtnAtras()</title>
+<indexterm><primary>setBtnAtras</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnAtras</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnAtras (JButton btnAtras)</computeroutput></para><para>
+Definition at line 960 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a93167ad6333cda9c1fbf260911ffa933"/>    <section>
+    <title>setBtnBuscar()</title>
+<indexterm><primary>setBtnBuscar</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnBuscar</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnBuscar (JButton btnNewButton)</computeroutput></para><para>
+Definition at line 920 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a5165e5567a01a3b8b9cd8e27871d3b06"/>    <section>
+    <title>setBtnCancelar()</title>
+<indexterm><primary>setBtnCancelar</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnCancelar</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnCancelar (JButton btnCancelar)</computeroutput></para><para>
+Definition at line 888 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a7d333ef45c47915ae25baf5909f21bf7"/>    <section>
+    <title>setBtnCerrarSesion()</title>
+<indexterm><primary>setBtnCerrarSesion</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnCerrarSesion</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnCerrarSesion (JButton btnCerrarSesion)</computeroutput></para><para>
+Definition at line 856 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a4cff0b56bbaf30e9660f36a7bad0b261"/>    <section>
+    <title>setBtnConfirmarModificaciones()</title>
+<indexterm><primary>setBtnConfirmarModificaciones</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnConfirmarModificaciones</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnConfirmarModificaciones (JButton btnConfirmarModificaciones)</computeroutput></para><para>
+Definition at line 880 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a00997e6710695b6361c75451ea2ca87e"/>    <section>
+    <title>setBtncontactanos()</title>
+<indexterm><primary>setBtncontactanos</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtncontactanos</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtncontactanos (JButton btncontactanos)</computeroutput></para><para>
+Definition at line 896 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ac6c33b4ff10b66f1e5e4dbf7f120d896"/>    <section>
+    <title>setBtnEliminarCuenta()</title>
+<indexterm><primary>setBtnEliminarCuenta</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnEliminarCuenta</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnEliminarCuenta (JButton btnEliminarCuenta)</computeroutput></para><para>
+Definition at line 848 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a052f7f95fb0f912952ff8c4bd1187919"/>    <section>
+    <title>setBtnInformacionYContacto()</title>
+<indexterm><primary>setBtnInformacionYContacto</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnInformacionYContacto</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnInformacionYContacto (JButton btnInformacionYContacto)</computeroutput></para><para>
+Definition at line 840 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a788a3aa6903ed5f853165736df4f40bd"/>    <section>
+    <title>setBtnModificarPerfil()</title>
+<indexterm><primary>setBtnModificarPerfil</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnModificarPerfil</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnModificarPerfil (JButton btnModificarPerfil)</computeroutput></para><para>
+Definition at line 872 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1af0f137c0573ac9a107e38cd390770dc7"/>    <section>
+    <title>setBtnNo()</title>
+<indexterm><primary>setBtnNo</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnNo</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnNo (JButton btnNo)</computeroutput></para><para>
+Definition at line 912 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a2c91425e03d85c7b9b43401789f4d5a4"/>    <section>
+    <title>setBtnPedirPrestado()</title>
+<indexterm><primary>setBtnPedirPrestado</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnPedirPrestado</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnPedirPrestado (JButton btnPedirPrestado)</computeroutput></para><para>
+Definition at line 936 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a80ae1c2cd5381baf52522948654d382d"/>    <section>
+    <title>setBtnSalir()</title>
+<indexterm><primary>setBtnSalir</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnSalir</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnSalir (JButton btnSalir)</computeroutput></para><para>
+Definition at line 864 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a9859b3aada5c6f7e33416a64975eb786"/>    <section>
+    <title>setBtnSi()</title>
+<indexterm><primary>setBtnSi</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnSi</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnSi (JButton btnSi)</computeroutput></para><para>
+Definition at line 904 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a6ec4b70442c38ba365cdce50147d63a0"/>    <section>
+    <title>setBtnVerDetalles()</title>
+<indexterm><primary>setBtnVerDetalles</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setBtnVerDetalles</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setBtnVerDetalles (JButton btnVerDetalles)</computeroutput></para><para>
+Definition at line 928 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a25ad8b951184bd6e782e46effd9211d0"/>    <section>
+    <title>setCl()</title>
+<indexterm><primary>setCl</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setCl</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setCl (CardLayout cl)</computeroutput></para><para>
+Definition at line 944 of file A1VentanaUsuario.java.</para>
     </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a2e80206b8dbeda7ccb36a79d0e40c091"/>    <section>
     <title>setControlador()</title>
 <indexterm><primary>setControlador</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setControlador</secondary></indexterm>
-<para><computeroutput>void vista.A1VentanaUsuario.setControlador (<link linkend="_classcontrol_1_1_controlador">Controlador</link> control)</computeroutput></para><para>
-Definition at line 85 of file A1VentanaUsuario.java.</para>
+<para><computeroutput>void vista.A1VentanaUsuario.setControlador (<link linkend="_classcontrol_1_1_controlador">Controlador</link> control)</computeroutput></para>
+<para>Método que especifica la clase Controlador como Listener para las acciones de los componentes. 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>control</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 159 of file A1VentanaUsuario.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -116,31 +649,79 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>setFrmLapacalee</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setFrmLapacalee</secondary></indexterm>
 <para><computeroutput>void vista.A1VentanaUsuario.setFrmLapacalee (JFrame frmLapacalee)</computeroutput></para><para>
-Definition at line 318 of file A1VentanaUsuario.java.</para>
+Definition at line 792 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a3547489594a7339cce03b3c52393b665"/>    <section>
+    <title>setLabelMensaje()</title>
+<indexterm><primary>setLabelMensaje</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setLabelMensaje</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setLabelMensaje (JLabel labelMensaje)</computeroutput></para><para>
+Definition at line 1016 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1aaf58bd98690b4327e8a7cddde970d7dd"/>    <section>
+    <title>setOpciones()</title>
+<indexterm><primary>setOpciones</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setOpciones</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setOpciones (JLayeredPane opciones)</computeroutput></para><para>
+Definition at line 952 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ae5c77855ad75db2a3d55c1fd277fac5a"/>    <section>
+    <title>setPasswordContrasena()</title>
+<indexterm><primary>setPasswordContrasena</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setPasswordContrasena</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setPasswordContrasena (JPasswordField passwordContrasena)</computeroutput></para><para>
+Definition at line 1000 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a33775bc9efcde7da1f6ede9edd7c33ff"/>    <section>
+    <title>setPasswordFieldConfirmarContrasena()</title>
+<indexterm><primary>setPasswordFieldConfirmarContrasena</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setPasswordFieldConfirmarContrasena</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setPasswordFieldConfirmarContrasena (JPasswordField passwordFieldConfirmarContrasena)</computeroutput></para><para>
+Definition at line 1008 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1abb469775b4e05e9d7ce1e542d5b85d75"/>    <section>
+    <title>setPasswordFieldContrasenaActual()</title>
+<indexterm><primary>setPasswordFieldContrasenaActual</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setPasswordFieldContrasenaActual</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setPasswordFieldContrasenaActual (JPasswordField passwordFieldContrasenaActual)</computeroutput></para><para>
+Definition at line 992 of file A1VentanaUsuario.java.</para>
     </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ac2c36e962ac08b56555d9e3ee8c27356"/>    <section>
     <title>setTextFieldApellidos()</title>
 <indexterm><primary>setTextFieldApellidos</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldApellidos</secondary></indexterm>
 <para><computeroutput>void vista.A1VentanaUsuario.setTextFieldApellidos (JTextField textFieldApellidos)</computeroutput></para><para>
-Definition at line 334 of file A1VentanaUsuario.java.</para>
+Definition at line 808 of file A1VentanaUsuario.java.</para>
     </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a8b604eef75208e435125660222c79e48"/>    <section>
     <title>setTextFieldCorreo()</title>
 <indexterm><primary>setTextFieldCorreo</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldCorreo</secondary></indexterm>
 <para><computeroutput>void vista.A1VentanaUsuario.setTextFieldCorreo (JTextField textFieldCorreo)</computeroutput></para><para>
-Definition at line 342 of file A1VentanaUsuario.java.</para>
+Definition at line 816 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a181f522f28f3f8dd6be97351f600c63c"/>    <section>
+    <title>setTextFieldCorreoActual()</title>
+<indexterm><primary>setTextFieldCorreoActual</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldCorreoActual</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setTextFieldCorreoActual (JTextField textFieldCorreoActual)</computeroutput></para><para>
+Definition at line 968 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ae6cf31b90191aedb61a719ef9a572061"/>    <section>
+    <title>setTextFieldCorreoNuevo()</title>
+<indexterm><primary>setTextFieldCorreoNuevo</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldCorreoNuevo</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setTextFieldCorreoNuevo (JTextField textFieldCorreoNuevo)</computeroutput></para><para>
+Definition at line 984 of file A1VentanaUsuario.java.</para>
     </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1a280560f1a8c18e4d08f98480d6878d89"/>    <section>
     <title>setTextFieldDNI()</title>
 <indexterm><primary>setTextFieldDNI</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldDNI</secondary></indexterm>
 <para><computeroutput>void vista.A1VentanaUsuario.setTextFieldDNI (JTextField textFieldDNI)</computeroutput></para><para>
-Definition at line 350 of file A1VentanaUsuario.java.</para>
+Definition at line 824 of file A1VentanaUsuario.java.</para>
     </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1ad21348c5eea3a06cf7dd01801c62a51e"/>    <section>
     <title>setTextFieldNombre()</title>
 <indexterm><primary>setTextFieldNombre</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
 <indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTextFieldNombre</secondary></indexterm>
 <para><computeroutput>void vista.A1VentanaUsuario.setTextFieldNombre (JTextField textFieldNombre)</computeroutput></para><para>
-Definition at line 326 of file A1VentanaUsuario.java.</para>
+Definition at line 800 of file A1VentanaUsuario.java.</para>
+    </section><anchor xml:id="_classvista_1_1_a1_ventana_usuario_1acbcd8f4fe1bc780b9bb0a7f0a3769db4"/>    <section>
+    <title>setTxtpnLapacalee()</title>
+<indexterm><primary>setTxtpnLapacalee</primary><secondary>vista.A1VentanaUsuario</secondary></indexterm>
+<indexterm><primary>vista.A1VentanaUsuario</primary><secondary>setTxtpnLapacalee</secondary></indexterm>
+<para><computeroutput>void vista.A1VentanaUsuario.setTxtpnLapacalee (JTextPane txtpnLapacalee)</computeroutput></para><para>
+Definition at line 976 of file A1VentanaUsuario.java.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

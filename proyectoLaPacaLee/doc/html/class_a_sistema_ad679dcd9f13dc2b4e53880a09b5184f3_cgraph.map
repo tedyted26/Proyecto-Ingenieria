@@ -1,6 +1,8 @@
 <map id="ASistema.main" name="ASistema.main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,78,116,105"/>
-<area shape="rect" id="node2" href="$classvista_1_1_a0_ventana_inicio.html#aacecf44389469ae513fa9f9e5eacb4a2" title=" " alt="" coords="171,5,339,47"/>
-<area shape="rect" id="node3" href="$classvista_1_1_a1_ventana_usuario.html#a2e80206b8dbeda7ccb36a79d0e40c091" title=" " alt="" coords="164,71,347,112"/>
-<area shape="rect" id="node4" href="$classvista_1_1_a0_ventana_inicio.html#af8b7c9d3b7f8cc88f2a08731d233e68f" title=" " alt="" coords="171,136,339,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,130,116,157"/>
+<area shape="rect" id="node2" href="$classvista_1_1_a0_ventana_inicio.html#aacecf44389469ae513fa9f9e5eacb4a2" title=" " alt="" coords="177,5,345,47"/>
+<area shape="rect" id="node3" href="$classvista_1_1_pop_up1_b.html#a3f5f654df97a91789053b56c85a19139" title=" " alt="" coords="164,71,359,98"/>
+<area shape="rect" id="node4" href="$classvista_1_1_a0_ventana_inicio.html#af8b7c9d3b7f8cc88f2a08731d233e68f" title=" " alt="" coords="177,123,345,164"/>
+<area shape="rect" id="node5" href="$classvista_1_1_a1_ventana_usuario.html#a2e80206b8dbeda7ccb36a79d0e40c091" title=" " alt="" coords="170,188,353,229"/>
+<area shape="rect" id="node6" href="$classvista_1_1_a2_ventana_admin.html#af7f0e6a06a4db4a1e176e24e5dc99413" title=" " alt="" coords="174,253,349,295"/>
 </map>

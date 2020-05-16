@@ -1,4 +1,4 @@
-\hypertarget{classcontrol_1_1_controlador}{}\doxysection{control.\+Controlador Class Reference}
+\doxysection{control.\+Controlador Class Reference}
 \label{classcontrol_1_1_controlador}\index{control.Controlador@{control.Controlador}}
 
 
@@ -21,52 +21,70 @@ Collaboration diagram for control.\+Controlador\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcontrol_1_1_controlador_a67a68ff332b2adb5a3747a2e87e8491a}{Controlador}} (\mbox{\hyperlink{classvista_1_1_a0_ventana_inicio}{A0\+Ventana\+Inicio}} app0, \mbox{\hyperlink{classvista_1_1_a1_ventana_usuario}{A1\+Ventana\+Usuario}} app1)
+\textbf{ Controlador} (\textbf{ A0\+Ventana\+Inicio} app0, \textbf{ A1\+Ventana\+Usuario} app1, \textbf{ A2\+Ventana\+Admin} app2, \textbf{ Pop\+Up1B} popup)
 \item 
-void \mbox{\hyperlink{classcontrol_1_1_controlador_a1f659a43855ef42fa73f85ed2efea4f8}{action\+Performed}} (Action\+Event ev)
+void \textbf{ action\+Performed} (Action\+Event ev)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line 12 of file Controlador.\+java.
+Definition at line 18 of file Controlador.\+java.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classcontrol_1_1_controlador_a67a68ff332b2adb5a3747a2e87e8491a}\label{classcontrol_1_1_controlador_a67a68ff332b2adb5a3747a2e87e8491a}} 
+\mbox{\label{classcontrol_1_1_controlador_a673417fa0276a97add35d20443bfcca3}} 
 \index{control.Controlador@{control.Controlador}!Controlador@{Controlador}}
 \index{Controlador@{Controlador}!control.Controlador@{control.Controlador}}
-\doxysubsubsection{\texorpdfstring{Controlador()}{Controlador()}}
-{\footnotesize\ttfamily control.\+Controlador.\+Controlador (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvista_1_1_a0_ventana_inicio}{A0\+Ventana\+Inicio}}}]{app0,  }\item[{\mbox{\hyperlink{classvista_1_1_a1_ventana_usuario}{A1\+Ventana\+Usuario}}}]{app1 }\end{DoxyParamCaption})}
+\doxysubsubsection{Controlador()}
+{\footnotesize\ttfamily control.\+Controlador.\+Controlador (\begin{DoxyParamCaption}\item[{\textbf{ A0\+Ventana\+Inicio}}]{app0,  }\item[{\textbf{ A1\+Ventana\+Usuario}}]{app1,  }\item[{\textbf{ A2\+Ventana\+Admin}}]{app2,  }\item[{\textbf{ Pop\+Up1B}}]{popup }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em app0} & Ventana de inicio de sesion \\
+\hline
+{\em app1} & Ventana de uso de usuarios \\
+\hline
+{\em app2} & Ventana de uso de administracion \\
+\hline
+\end{DoxyParams}
 
 
-
-Definition at line 19 of file Controlador.\+java.
-
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classcontrol_1_1_controlador_a1f659a43855ef42fa73f85ed2efea4f8}\label{classcontrol_1_1_controlador_a1f659a43855ef42fa73f85ed2efea4f8}} 
-\index{control.Controlador@{control.Controlador}!actionPerformed@{actionPerformed}}
-\index{actionPerformed@{actionPerformed}!control.Controlador@{control.Controlador}}
-\doxysubsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
-{\footnotesize\ttfamily void control.\+Controlador.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{ev }\end{DoxyParamCaption})}
-
-
-
-Definition at line 25 of file Controlador.\+java.
+Definition at line 39 of file Controlador.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{classcontrol_1_1_controlador_a1f659a43855ef42fa73f85ed2efea4f8_cgraph}
+\includegraphics[width=350pt]{classcontrol_1_1_controlador_a673417fa0276a97add35d20443bfcca3_cgraph}
 \end{center}
 \end{figure}
 
 
+\doxysubsection{Member Function Documentation}
+\mbox{\label{classcontrol_1_1_controlador_a1f659a43855ef42fa73f85ed2efea4f8}} 
+\index{control.Controlador@{control.Controlador}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!control.Controlador@{control.Controlador}}
+\doxysubsubsection{actionPerformed()}
+{\footnotesize\ttfamily void control.\+Controlador.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{ev }\end{DoxyParamCaption})}
+
+Método que dicta las acciones de los componentes de las ventanas inicializadas 
+\begin{DoxyParams}{Parameters}
+{\em ev} & Evento que recoge la clase al implementar el Action\+Listener \\
+\hline
+\end{DoxyParams}
+Acciones de la ventana de inicio (inicio de sesion, y creación de cuenta)
+
+Acciones de la ventana de usuario (inicio, biblioteca y opciones)
+
+Acciones de la ventana de administrador (inicio, biblioteca, usuarios y opciones)
+
+Definition at line 63 of file Controlador.\+java.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/control/\mbox{\hyperlink{_controlador_8java}{Controlador.\+java}}\end{DoxyCompactItemize}
+src/control/\textbf{ Controlador.\+java}\end{DoxyCompactItemize}

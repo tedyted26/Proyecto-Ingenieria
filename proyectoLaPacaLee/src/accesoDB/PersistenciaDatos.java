@@ -16,10 +16,14 @@ public class PersistenciaDatos {
 		acceso = new AccesoDB();
 	}
 	
-	public String crearUsuario(Usuario user) {
+	/**
+	 * Crea un usuario y devuelve true si se inserta correctamente en la bbdd
+	 * @param user
+	 * @return boolean exito 
+	 */
+	public boolean crearUsuario(Usuario user) {
 		//se declaran las variables que se van a utilizar
-		//msg es el mensaje que se va a devolver, depende del resultado de la query
-		String msg = "";
+		boolean exito;
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -51,19 +55,21 @@ public class PersistenciaDatos {
 			
 			//dependiendo del resultado, devuelve un mensaje u otro
 			if (res == 1) {
-				msg = "Usuario creado";
+				//Usuario creado
+				exito = true;
 			} else {
-				msg = "No se ha podido crear el usuario";
+				//No se ha podido crear el usuario
+				exito = false;
 			}
 			
 		//control de errores	
 		} catch (ClassNotFoundException e) {
-			msg = "No se ha podido establecer la conexion con la base de datos";
-			e.printStackTrace();
+			//No se ha podido establecer la conexion con la base de datos
+			exito = false;
 		} catch (SQLException e) {
-			msg = "Se ha producido un error de SQL";
-			e.printStackTrace();
-		} finally {
+			exito = false;
+			//error de sql
+		}finally {
 			try {
 				//se cierran las conexiones
 				if (pstmt != null) pstmt.close();
@@ -73,10 +79,14 @@ public class PersistenciaDatos {
 			}
 		}
 		
-		return msg;
+		return exito;
 	}
 	
-	//consulta de usuario por su correo
+	/**
+	 * Consulta un usuario por su correo y devuelve los datos completos del usuario si se realiza correctamente
+	 * @param correo
+	 * @return user
+	 */
 	public Usuario consultarUsuario(String correo) {
 		//decalracion de variables
 		Usuario user = null;
@@ -133,10 +143,125 @@ public class PersistenciaDatos {
 		//devuelve el usuario que se consulta
 		return user;
 	}
-
-	public String modificarContrasenaUsuario(Usuario user) {
+	
+	/**
+	 * Consulta los datos de un usuario a traves de su dni y los devuelve
+	 * @param dni
+	 * @return user
+	 */
+	public Usuario consultarUsuarioDni(String dni) {
+		//decalracion de variables
+		Usuario user = null;
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rslt = null;
+		
+		try {
+			//comprobar conexion
+			con = acceso.getConexion();
+			
+			String query = "SELECT * FROM USUARIO WHERE DNI = ?";
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, dni);
+			
+			rslt = pstmt.executeQuery();
+			
+			//declaracion de las variables e inicializacion vacia
+			String correo = "";
+			String contrasena = "";
+			String nombre = "";
+			String apellidos = "";
+			boolean bloqueado;
+			boolean admin;
+			
+			if (rslt.next()) {
+				correo = rslt.getString("CORREO");
+				contrasena = rslt.getString("CONTRASENA");
+				nombre = rslt.getString("NOMBRE");
+				apellidos = rslt.getString("APELLIDOS");
+				bloqueado = rslt.getBoolean("BLOQUEO");
+				admin = rslt.getBoolean("ADMIN");
+				
+				user = new Usuario(dni, correo, contrasena, nombre, apellidos, bloqueado, admin);
+			}
+			//control de errores
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			System.out.println("Correo inexistente");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Correo inexistente");
+		} finally {
+			try {
+				//cierra conexiones
+				if (rslt != null) rslt.close();
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		//devuelve el usuario que se consulta
+		return user;
+	}
+	
+	/**
+	 * Modifica el correo de un usuario utilizando su dni. Devuelve true si la modificacion se ha hecho con exito
+	 * @param user
+	 * @return boolean exito 
+	 */
+	public boolean modificarCorreoUsuario(Usuario user, String correoNuevo) {
 		//funciona igual que el metodo anterior
-		String msg = "";
+		boolean exito;
+
+		Connection con = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			con = acceso.getConexion();
+
+			String query = "UPDATE USUARIO SET CORREO = ? WHERE DNI = ?";
+
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, correoNuevo);
+			pstmt.setString(2, user.getDni());
+
+			int res = pstmt.executeUpdate();
+
+			if (res == 1) {
+				exito=true;
+			} else {
+				exito=false;
+			}
+
+		} catch (ClassNotFoundException e) {
+			//No se ha podido establecer la conexion con la base de datos
+			exito=false;
+		} catch (SQLException e) {
+			//Se ha producido un error de SQL
+			exito=false;
+		} finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return exito;
+	}
+
+	/**
+	 * Modifica la contraseña de un usuario utilizando su dni. Devuelve true si la modificacion se ha hecho con exito
+	 * @param user
+	 * @param contrasena
+	 * @return boolean exito
+	 */
+	public boolean modificarContrasenaUsuario(Usuario user, String contrasena) {
+		//funciona igual que el metodo anterior
+		boolean exito;
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -144,26 +269,27 @@ public class PersistenciaDatos {
 		try {
 			con = acceso.getConexion();
 			
-			String query = "UPDATE USUARIO SET CONTRASENA = ? WHERE CORREO = ?";
+			String query = "UPDATE USUARIO SET CONTRASENA = ? WHERE DNI = ?";
 			
 			pstmt = con.prepareStatement(query);
-			pstmt.setString(1, user.getNombre());
-			pstmt.setString(2, user.getCorreo());
+			pstmt.setString(1, contrasena);
+			pstmt.setString(2, user.getDni());
 			
 			int res = pstmt.executeUpdate();
 			
 			if (res == 1) {
-				msg = "La modificacion se ha realizado con exito";
+				exito=true;
 			} else {
-				msg = "No se ha podido realizar la modificacion";
+				exito=false;
 			}
 			
 		} catch (ClassNotFoundException e) {
-			msg = "No se ha podido establecer la conexion con la base de datos";
-			e.printStackTrace();
+			//No se ha podido establecer la conexion con la base de datos
+			exito=false;
+			
 		} catch (SQLException e) {
-			msg = "Se ha producido un error de SQL";
-			e.printStackTrace();
+			//Se ha producido un error de SQL
+			exito=false;
 		} finally {
 			try {
 				if (pstmt != null) pstmt.close();
@@ -173,7 +299,7 @@ public class PersistenciaDatos {
 			}
 		}
 		
-		return msg;
+		return exito;
 	}
 
 	//controla el bloqueo del usuario, sirve tanto para bloquear como para desboquear
@@ -223,7 +349,7 @@ public class PersistenciaDatos {
 		return msg;
 	}
 	
-	public String eliminarUsuario(Usuario user) {
+	public String eliminarUsuario(String dni) {
 		String msg = "";
 		
 		Connection con = null;
@@ -232,10 +358,10 @@ public class PersistenciaDatos {
 		try {
 			con = acceso.getConexion();
 			
-			String query = "DELETE FROM USUARIO WHERE CORREO = ?";
+			String query = "DELETE FROM USUARIO WHERE DNI = ?";
 			
 			pstmt = con.prepareStatement(query);
-			pstmt.setString(1, user.getCorreo());
+			pstmt.setString(1, dni);
 			
 			int res = pstmt.executeUpdate();
 			
@@ -281,7 +407,7 @@ public class PersistenciaDatos {
 			pstmt.setString(1, libro.getTitulo());
 			pstmt.setString(2, libro.getAutor());
 			pstmt.setString(3, libro.getResumen());
-			pstmt.setString(4, libro.getGenero());
+			//pstmt.setString(4, libro.getGenero());
 			pstmt.setString(5, libro.getCodigo());
 			pstmt.setBoolean(6, libro.isPrestado());
 
@@ -338,6 +464,7 @@ public class PersistenciaDatos {
 			String genero = "";
 			String codigo = "";
 			boolean prestado = false;
+			String dniPrestatario = null;
 
 			if (rslt.next()) {
 				titulo = rslt.getString("TITULO");
@@ -345,7 +472,8 @@ public class PersistenciaDatos {
 				genero = rslt.getString("GENERO");
 				codigo = rslt.getString("CODIGO");
 				prestado = rslt.getBoolean("PRESTADO");
-				libro = new Libro(titulo, autor, genero, codigo, prestado);
+				dniPrestatario = rslt.getString("PRESTATARIO");
+				libro =null; //new Libro(titulo, autor, genero, codigo, prestado, dniPrestatario);
 			}
 
 			//control de errores

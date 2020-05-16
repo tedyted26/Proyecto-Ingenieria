@@ -11,7 +11,11 @@
 </listitem>
             <listitem><para>file <link linkend="__a2_ventana_admin_8java">A2VentanaAdmin.java</link></para>
 </listitem>
-            <listitem><para>file <link linkend="__prueba_exito_8java">PruebaExito.java</link></para>
+            <listitem><para>file <link linkend="__pop_up1_b_8java">PopUp1B.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__pop_up2_b_8java">PopUp2B.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__pop_up_info_8java">PopUpInfo.java</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classvista_1_1_pop_up1_b">
+<title>vista.PopUp1B Class Reference</title>
+<indexterm><primary>vista.PopUp1B</primary></indexterm>
+Inheritance diagram for vista.PopUp1B:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up1_b__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for vista.PopUp1B:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up1_b__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classvista_1_1_pop_up1_b_1a3f5f654df97a91789053b56c85a19139">setControlador</link> (<link linkend="_classcontrol_1_1_controlador">Controlador</link> control)</para>
+</listitem>
+            <listitem><para><link linkend="_classvista_1_1_pop_up1_b_1a92d3bbe8a5ee82a7fdd5eb15d60bffaa">PopUp1B</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_pop_up1_b_1afd1b05e01dcb34ef21d5e260fa598726">initialize</link> ()</para>
+</listitem>
+            <listitem><para>JDialog <link linkend="_classvista_1_1_pop_up1_b_1a8551a96f1665d2ca50ccdb0c0774ee18">getFrmpopup</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_pop_up1_b_1a0ec5d386e37bb15cf9ee7a6379940336">setFrmpopup</link> (JDialog popup)</para>
+</listitem>
+            <listitem><para>JButton <link linkend="_classvista_1_1_pop_up1_b_1aff6a86ec382ce190f8f9d49bb2cfc07c">getBtnAceptar</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_pop_up1_b_1a6451287b3cb668e8e6dc4781d68d1246">setBtnAceptar</link> (JButton btnAceptar)</para>
+</listitem>
+            <listitem><para>JLabel <link linkend="_classvista_1_1_pop_up1_b_1ac1467c2b53f1628ac028d0122f6423d6">getLblAviso</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_pop_up1_b_1aa59b6a836395ef9ecc534480f2945da8">setLblAviso</link> (JLabel lblAviso)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 22 of file PopUp1B.java.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classvista_1_1_pop_up1_b_1a92d3bbe8a5ee82a7fdd5eb15d60bffaa"/>    <section>
+    <title>PopUp1B()</title>
+<indexterm><primary>PopUp1B</primary><secondary>vista.PopUp1B</secondary></indexterm>
+<indexterm><primary>vista.PopUp1B</primary><secondary>PopUp1B</secondary></indexterm>
+<para><computeroutput>vista.PopUp1B.PopUp1B ( )</computeroutput></para><para>
+Definition at line 32 of file PopUp1B.java.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classvista_1_1_pop_up1_b_1aff6a86ec382ce190f8f9d49bb2cfc07c"/>    <section>
+    <title>getBtnAceptar()</title>
+<indexterm><primary>getBtnAceptar</primary><secondary>vista.PopUp1B</secondary></indexterm>
+<indexterm><primary>vista.PopUp1B</primary><secondary>getBtnAceptar</secondary></indexterm>
+<para><computeroutput>JButton vista.PopUp1B.getBtnAceptar ( )</computeroutput></para><para>
+Definition at line 91 of file PopUp1B.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up1_b_aff6a86ec382ce190f8f9d49bb2cfc07c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_pop_up1_b_1a8551a96f1665d2ca50ccdb0c0774ee18"/>    <section>
+    <title>getFrmpopup()</title>
+<indexterm><primary>getFrmpopup</primary><secondary>vista.PopUp1B</secondary></indexterm>
+<indexterm><primary>vista.PopUp1B</primary><secondary>getFrmpopup</secondary></indexterm>
+<para><computeroutput>JDialog vista.PopUp1B.getFrmpopup ( )</computeroutput></para><para>
+Definition at line 83 of file PopUp1B.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up1_b_a8551a96f1665d2ca50ccdb0c0774ee18_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_pop_up1_b_1ac1467c2b53f1628ac028d0122f6423d6"/>    <section>
+    <title>getLblAviso()</title>
+<indexterm><primary>getLblAviso</primary><secondary>vista.PopUp1B</secondary></indexterm>
+<indexterm><primary>vista.PopUp1B</primary><secondary>getLblAviso</secondary></indexterm>
+<para><computeroutput>JLabel vista.PopUp1B.getLblAviso ( )</computeroutput></para><para>
+Definition at line 99 of file PopUp1B.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up1_b_ac1467c2b53f1628ac028d0122f6423d6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_pop_up1_b_1afd1b05e01dcb34ef21d5e260fa598726"/>    <section>
+    <title>initialize()</title>
+<indexterm><primary>initialize</primary><secondary>vista.PopUp1B</secondary></indexterm>
+<indexterm><primary>vista.PopUp1B</primary><secondary>initialize</secondary></indexterm>
+<para><computeroutput>void vista.PopUp1B.initialize ( )</computeroutput></para><para>
+Definition at line 36 of file PopUp1B.java.</para>
+    </section><anchor xml:id="_classvista_1_1_pop_up1_b_1a6451287b3cb668e8e6dc4781d68d1246"/>    <section>
+    <title>setBtnAceptar()</title>
+<indexterm><primary>setBtnAceptar</primary><secondary>vista.PopUp1B</secondary></indexterm>
+<indexterm><primary>vista.PopUp1B</primary><secondary>setBtnAceptar</secondary></indexterm>
+<para><computeroutput>void vista.PopUp1B.setBtnAceptar (JButton btnAceptar)</computeroutput></para><para>
+Definition at line 95 of file PopUp1B.java.</para>
+    </section><anchor xml:id="_classvista_1_1_pop_up1_b_1a3f5f654df97a91789053b56c85a19139"/>    <section>
+    <title>setControlador()</title>
+<indexterm><primary>setControlador</primary><secondary>vista.PopUp1B</secondary></indexterm>
+<indexterm><primary>vista.PopUp1B</primary><secondary>setControlador</secondary></indexterm>
+<para><computeroutput>void vista.PopUp1B.setControlador (<link linkend="_classcontrol_1_1_controlador">Controlador</link> control)</computeroutput></para><para>
+Definition at line 28 of file PopUp1B.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up1_b_a3f5f654df97a91789053b56c85a19139_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_pop_up1_b_1a0ec5d386e37bb15cf9ee7a6379940336"/>    <section>
+    <title>setFrmpopup()</title>
+<indexterm><primary>setFrmpopup</primary><secondary>vista.PopUp1B</secondary></indexterm>
+<indexterm><primary>vista.PopUp1B</primary><secondary>setFrmpopup</secondary></indexterm>
+<para><computeroutput>void vista.PopUp1B.setFrmpopup (JDialog popup)</computeroutput></para><para>
+Definition at line 87 of file PopUp1B.java.</para>
+    </section><anchor xml:id="_classvista_1_1_pop_up1_b_1aa59b6a836395ef9ecc534480f2945da8"/>    <section>
+    <title>setLblAviso()</title>
+<indexterm><primary>setLblAviso</primary><secondary>vista.PopUp1B</secondary></indexterm>
+<indexterm><primary>vista.PopUp1B</primary><secondary>setLblAviso</secondary></indexterm>
+<para><computeroutput>void vista.PopUp1B.setLblAviso (JLabel lblAviso)</computeroutput></para><para>
+Definition at line 103 of file PopUp1B.java.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/vista/<link linkend="__pop_up1_b_8java">PopUp1B.java</link></section>
+</section>

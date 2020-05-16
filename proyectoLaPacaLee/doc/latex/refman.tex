@@ -116,24 +116,6 @@
   \newunicodechar{²}{${}^{2}$}% Superscript two
   \newunicodechar{³}{${}^{3}$}% Superscript three
 
-% Hyperlinks (required, but should be loaded last)
-\ifpdf
-  \usepackage[pdftex,pagebackref=true]{hyperref}
-\else
-  \ifxetex
-    \usepackage[pagebackref=true]{hyperref}
-  \else
-    \usepackage[ps2pdf,pagebackref=true]{hyperref}
-  \fi
-\fi
-
-\hypersetup{%
-  colorlinks=true,%
-  linkcolor=blue,%
-  citecolor=blue,%
-  unicode%
-}
-
 % Custom commands
 \newcommand{\clearemptydoublepage}{%
   \newpage{\pagestyle{empty}\cleardoublepage}%
@@ -150,10 +132,6 @@
 \begin{document}
 
 % Titlepage & ToC
-\hypersetup{pageanchor=false,
-             bookmarksnumbered=true,
-             pdfencoding=unicode
-            }
 \pagenumbering{alph}
 \begin{titlepage}
 \vspace*{7cm}
@@ -168,7 +146,6 @@
 \tableofcontents
 \clearemptydoublepage
 \pagenumbering{arabic}
-\hypersetup{pageanchor=true}
 
 %--- Begin generated contents ---
 \chapter{Namespace Index}
@@ -197,10 +174,11 @@
 \input{classmodel_1_1_libro}
 \input{classcontrol_1_1_odenacion}
 \input{classacceso_d_b_1_1_persistencia_datos}
+\input{classvista_1_1_pop_up1_b}
+\input{classvista_1_1_pop_up2_b}
+\input{classvista_1_1_pop_up_info}
 \input{class_prueba}
-\input{classvista_1_1_prueba_exito}
 \input{classmodel_1_1_usuario}
-\input{classcontrol_1_1_ventana}
 \chapter{File Documentation}
 \input{_acceso_d_b_8java}
 \input{_persistencia_datos_8java}
@@ -209,7 +187,6 @@
 \input{_buscador_8java}
 \input{_controlador_8java}
 \input{_odenacion_8java}
-\input{_ventana_8java}
 \input{_incidencia_8java}
 \input{_libro_8java}
 \input{_usuario_8java}
@@ -217,7 +194,9 @@
 \input{_a0_ventana_inicio_8java}
 \input{_a1_ventana_usuario_8java}
 \input{_a2_ventana_admin_8java}
-\input{_prueba_exito_8java}
+\input{_pop_up1_b_8java}
+\input{_pop_up2_b_8java}
+\input{_pop_up_info_8java}
 %--- End generated contents ---
 
 % Index

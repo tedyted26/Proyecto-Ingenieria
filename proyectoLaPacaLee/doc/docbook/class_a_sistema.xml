@@ -21,13 +21,13 @@ Collaboration diagram for ASistema:<para>
 <section>
 <title>Detailed Description</title>
 
-<para>Descripcion de prueba <formalpara><title>Author</title>
+<para><formalpara><title>Author</title>
 
-<para>TastyTed </para>
+<para>Teodora Nikoalaeva Nikolova </para>
 </formalpara>
 </para>
 <para>
-Definition at line 11 of file ASistema.java.</para>
+Definition at line 13 of file ASistema.java.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -36,7 +36,7 @@ Definition at line 11 of file ASistema.java.</para>
 <indexterm><primary>main</primary><secondary>ASistema</secondary></indexterm>
 <indexterm><primary>ASistema</primary><secondary>main</secondary></indexterm>
 <para><computeroutput>static void ASistema.main (String[] args)<computeroutput>[static]</computeroutput></computeroutput></para>
-<para>aaa 
+<para>Inicializa las ventanas y el controlador 
                 <formalpara>
                     <title>
 Parameters                    </title>
@@ -49,7 +49,7 @@ Parameters                    </title>
                             <row>
                                 <entry>args</entry>
                                 <entry>
-<para>bbb </para>
+<para></para>
 </entry>
                             </row>
                         </tbody>
@@ -59,7 +59,7 @@ Parameters                    </title>
                 </formalpara>
                 </para>
 <para>
-Definition at line 16 of file ASistema.java.</para>
+Definition at line 18 of file ASistema.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>

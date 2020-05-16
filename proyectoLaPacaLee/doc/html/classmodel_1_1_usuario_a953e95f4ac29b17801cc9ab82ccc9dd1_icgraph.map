@@ -1,5 +1,6 @@
 <map id="model.Usuario.getDni" name="model.Usuario.getDni">
-<area shape="rect" id="node1" title=" " alt="" coords="497,13,644,39"/>
-<area shape="rect" id="node2" href="$classacceso_d_b_1_1_persistencia_datos.html#a2557a0ee26d8802642b1421a0e4704e5" title=" " alt="" coords="224,5,449,47"/>
-<area shape="rect" id="node3" href="$classcontrol_1_1_controlador.html#a1f659a43855ef42fa73f85ed2efea4f8" title=" " alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="301,78,448,105"/>
+<area shape="rect" id="node2" href="$classacceso_d_b_1_1_persistencia_datos.html#a905ddf3e5fb4ee83a4c1e58bdd86e920" title=" " alt="" coords="17,5,242,47"/>
+<area shape="rect" id="node3" href="$classacceso_d_b_1_1_persistencia_datos.html#a919f101ac8c818d3517106b0ed47dfbd" title=" " alt="" coords="5,71,253,112"/>
+<area shape="rect" id="node4" href="$classacceso_d_b_1_1_persistencia_datos.html#a95739805e115766083cf228f290de8d6" title=" " alt="" coords="5,136,253,177"/>
 </map>

@@ -1,12 +1,14 @@
 <map id="accesoDB.AccesoDB.getConexion" name="accesoDB.AccesoDB.getConexion">
-<area shape="rect" id="node1" title=" " alt="" coords="521,242,745,269"/>
+<area shape="rect" id="node1" title=" " alt="" coords="521,307,745,334"/>
 <area shape="rect" id="node2" href="$classacceso_d_b_1_1_persistencia_datos.html#ab39660ad9628601f20773f2dc74376a7" title=" " alt="" coords="228,5,469,47"/>
 <area shape="rect" id="node3" href="$classacceso_d_b_1_1_persistencia_datos.html#abdf86aed9584de7c8129776297bf2d42" title=" " alt="" coords="226,71,471,112"/>
 <area shape="rect" id="node4" href="$classacceso_d_b_1_1_persistencia_datos.html#a4f5be43be6a7352894a174da869e2783" title=" " alt="" coords="224,136,473,177"/>
-<area shape="rect" id="node6" href="$classacceso_d_b_1_1_persistencia_datos.html#aabbecb71d8845376d15e87196a24eaa7" title=" " alt="" coords="236,201,461,243"/>
-<area shape="rect" id="node7" href="$classacceso_d_b_1_1_persistencia_datos.html#a2557a0ee26d8802642b1421a0e4704e5" title=" " alt="" coords="236,267,461,308"/>
-<area shape="rect" id="node8" href="$classacceso_d_b_1_1_persistencia_datos.html#a4a98cbf9c638e07e8aefbb37cc9d8052" title=" " alt="" coords="228,332,469,373"/>
-<area shape="rect" id="node9" href="$classacceso_d_b_1_1_persistencia_datos.html#addb31e733a3e6bd997767f6045b4fe07" title=" " alt="" coords="228,397,469,439"/>
-<area shape="rect" id="node10" href="$classacceso_d_b_1_1_persistencia_datos.html#a5bc6adfcbe03ebed6d802c6bace46ff1" title=" " alt="" coords="225,463,473,504"/>
-<area shape="rect" id="node5" href="$classcontrol_1_1_controlador.html#a1f659a43855ef42fa73f85ed2efea4f8" title=" " alt="" coords="5,201,176,243"/>
+<area shape="rect" id="node5" href="$classacceso_d_b_1_1_persistencia_datos.html#a10adbeedb31fb40147576f9884cb6747" title=" " alt="" coords="224,201,473,243"/>
+<area shape="rect" id="node6" href="$classacceso_d_b_1_1_persistencia_datos.html#aabbecb71d8845376d15e87196a24eaa7" title=" " alt="" coords="236,267,461,308"/>
+<area shape="rect" id="node7" href="$classacceso_d_b_1_1_persistencia_datos.html#a905ddf3e5fb4ee83a4c1e58bdd86e920" title=" " alt="" coords="236,332,461,373"/>
+<area shape="rect" id="node8" href="$classacceso_d_b_1_1_persistencia_datos.html#a4a98cbf9c638e07e8aefbb37cc9d8052" title=" " alt="" coords="228,397,469,439"/>
+<area shape="rect" id="node9" href="$classacceso_d_b_1_1_persistencia_datos.html#abe5b6bc072191c582aa455de7ea1a928" title=" " alt="" coords="228,463,469,504"/>
+<area shape="rect" id="node11" href="$classacceso_d_b_1_1_persistencia_datos.html#a919f101ac8c818d3517106b0ed47dfbd" title=" " alt="" coords="225,528,473,569"/>
+<area shape="rect" id="node12" href="$classacceso_d_b_1_1_persistencia_datos.html#a95739805e115766083cf228f290de8d6" title=" " alt="" coords="225,593,473,635"/>
+<area shape="rect" id="node10" href="$classcontrol_1_1_controlador.html#a1f659a43855ef42fa73f85ed2efea4f8" title=" " alt="" coords="5,463,176,504"/>
 </map>

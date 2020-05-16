@@ -1,27 +1,28 @@
 
 import java.awt.EventQueue;
 
-import vista.PruebaExito;
+import vista.TablaLibrosUsuario;
+
 
 public class Prueba {
 
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		PersistenciaDatos p=new PersistenciaDatos();
-//		p.eliminarUsuario(p.consultarUsuario(""));
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				PruebaExito p = new PruebaExito();
-				try {
-					p.setVisible(true);
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	
-		
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+////		PersistenciaDatos p=new PersistenciaDatos();
+////		p.eliminarUsuario(p.consultarUsuario(""));
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				TablaLibrosUsuario tabla=new TablaLibrosUsuario();
+//				try {
+//					tabla.setVisible(true);
+//					
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	
+//		
+//	}
 }

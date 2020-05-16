@@ -11,7 +11,11 @@
 </listitem>
             <listitem><para>class <link linkend="_classvista_1_1_a2_ventana_admin">A2VentanaAdmin</link></para>
 </listitem>
-            <listitem><para>class <link linkend="_classvista_1_1_prueba_exito">PruebaExito</link></para>
+            <listitem><para>class <link linkend="_classvista_1_1_pop_up1_b">PopUp1B</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classvista_1_1_pop_up2_b">PopUp2B</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classvista_1_1_pop_up_info">PopUpInfo</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

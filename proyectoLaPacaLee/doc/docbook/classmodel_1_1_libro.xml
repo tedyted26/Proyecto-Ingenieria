@@ -14,7 +14,7 @@ Collaboration diagram for model.Libro:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_classmodel_1_1_libro_1a911f8e94cadff4f177c5c924ffcbd883">Libro</link> (String titulo, String autor, String genero, String codigo, boolean prestado)</para>
+            <listitem><para><link linkend="_classmodel_1_1_libro_1aeff4c8cd37c2e13c8c98d9266b248454">Libro</link> (String titulo, String autor, String resumen, String[] genero, String codigo, boolean prestado)</para>
 </listitem>
             <listitem><para>String <link linkend="_classmodel_1_1_libro_1aff2850da358eb42564280d95d7e7c8db">getTitulo</link> ()</para>
 </listitem>
@@ -28,9 +28,9 @@ Collaboration diagram for model.Libro:<para>
 </listitem>
             <listitem><para>void <link linkend="_classmodel_1_1_libro_1afcbed34011120b89d06efe6f85b2c56f">setResumen</link> (String resumen)</para>
 </listitem>
-            <listitem><para>String <link linkend="_classmodel_1_1_libro_1a612432d3649aa038c39d33f24c9b3d1a">getGenero</link> ()</para>
+            <listitem><para>String[] <link linkend="_classmodel_1_1_libro_1a4022d6fc6863819b2926de658d5e2033">getGenero</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_classmodel_1_1_libro_1a10b5f924ea676f559b0962770df63e55">setGenero</link> (String genero)</para>
+            <listitem><para>void <link linkend="_classmodel_1_1_libro_1a120ed891cd48438db2a91401e17107ca">setGenero</link> (String[] genero)</para>
 </listitem>
             <listitem><para>String <link linkend="_classmodel_1_1_libro_1abcad99177f6c4491a5434f7d1910118e">getCodigo</link> ()</para>
 </listitem>
@@ -39,6 +39,10 @@ Collaboration diagram for model.Libro:<para>
             <listitem><para>boolean <link linkend="_classmodel_1_1_libro_1a641ecfb8aa794c19412470e2be8ddc20">isPrestado</link> ()</para>
 </listitem>
             <listitem><para>void <link linkend="_classmodel_1_1_libro_1a4dee5274219abbbf17d494eefe76e8c3">setPrestado</link> (boolean prestado)</para>
+</listitem>
+            <listitem><para>String <link linkend="_classmodel_1_1_libro_1a2f75462b55d3e719b866f6ffa1f6aaf0">getDniPrestatario</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmodel_1_1_libro_1a3bade68441e8489cd9bcc829f3d98707">setDniPrestatario</link> (String dniPrestatario)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -49,11 +53,11 @@ Definition at line 5 of file Libro.java.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
-<anchor xml:id="_classmodel_1_1_libro_1a911f8e94cadff4f177c5c924ffcbd883"/>    <section>
+<anchor xml:id="_classmodel_1_1_libro_1aeff4c8cd37c2e13c8c98d9266b248454"/>    <section>
     <title>Libro()</title>
 <indexterm><primary>Libro</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>Libro</secondary></indexterm>
-<para><computeroutput>model.Libro.Libro (String titulo, String autor, String genero, String codigo, boolean prestado)</computeroutput></para><para>
+<para><computeroutput>model.Libro.Libro (String titulo, String autor, String resumen, String[] genero, String codigo, boolean prestado)</computeroutput></para><para>
 Definition at line 15 of file Libro.java.</para>
 </section>
 </section>
@@ -64,7 +68,7 @@ Definition at line 15 of file Libro.java.</para>
 <indexterm><primary>getAutor</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>getAutor</secondary></indexterm>
 <para><computeroutput>String model.Libro.getAutor ( )</computeroutput></para><para>
-Definition at line 29 of file Libro.java.</para>
+Definition at line 31 of file Libro.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -79,7 +83,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getCodigo</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>getCodigo</secondary></indexterm>
 <para><computeroutput>String model.Libro.getCodigo ( )</computeroutput></para><para>
-Definition at line 47 of file Libro.java.</para>
+Definition at line 49 of file Libro.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -89,27 +93,24 @@ Here is the caller graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
-    </section><anchor xml:id="_classmodel_1_1_libro_1a612432d3649aa038c39d33f24c9b3d1a"/>    <section>
+    </section><anchor xml:id="_classmodel_1_1_libro_1a2f75462b55d3e719b866f6ffa1f6aaf0"/>    <section>
+    <title>getDniPrestatario()</title>
+<indexterm><primary>getDniPrestatario</primary><secondary>model.Libro</secondary></indexterm>
+<indexterm><primary>model.Libro</primary><secondary>getDniPrestatario</secondary></indexterm>
+<para><computeroutput>String model.Libro.getDniPrestatario ( )</computeroutput></para><para>
+Definition at line 61 of file Libro.java.</para>
+    </section><anchor xml:id="_classmodel_1_1_libro_1a4022d6fc6863819b2926de658d5e2033"/>    <section>
     <title>getGenero()</title>
 <indexterm><primary>getGenero</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>getGenero</secondary></indexterm>
-<para><computeroutput>String model.Libro.getGenero ( )</computeroutput></para><para>
-Definition at line 41 of file Libro.java.</para>
-Here is the caller graph for this function:<para>
-    <informalfigure>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmodel_1_1_libro_a612432d3649aa038c39d33f24c9b3d1a_icgraph.png"></imagedata>
-            </imageobject>
-        </mediaobject>
-    </informalfigure>
-</para>
+<para><computeroutput>String [] model.Libro.getGenero ( )</computeroutput></para><para>
+Definition at line 43 of file Libro.java.</para>
     </section><anchor xml:id="_classmodel_1_1_libro_1a7229b977136c6ed25edcd46e4fb4fafe"/>    <section>
     <title>getResumen()</title>
 <indexterm><primary>getResumen</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>getResumen</secondary></indexterm>
 <para><computeroutput>String model.Libro.getResumen ( )</computeroutput></para><para>
-Definition at line 35 of file Libro.java.</para>
+Definition at line 37 of file Libro.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -124,7 +125,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getTitulo</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>getTitulo</secondary></indexterm>
 <para><computeroutput>String model.Libro.getTitulo ( )</computeroutput></para><para>
-Definition at line 23 of file Libro.java.</para>
+Definition at line 25 of file Libro.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -139,7 +140,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>isPrestado</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>isPrestado</secondary></indexterm>
 <para><computeroutput>boolean model.Libro.isPrestado ( )</computeroutput></para><para>
-Definition at line 53 of file Libro.java.</para>
+Definition at line 55 of file Libro.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -154,37 +155,43 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>setAutor</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>setAutor</secondary></indexterm>
 <para><computeroutput>void model.Libro.setAutor (String autor)</computeroutput></para><para>
-Definition at line 32 of file Libro.java.</para>
+Definition at line 34 of file Libro.java.</para>
     </section><anchor xml:id="_classmodel_1_1_libro_1a47c9761598dc78ae7ab54541171666c6"/>    <section>
     <title>setCodigo()</title>
 <indexterm><primary>setCodigo</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>setCodigo</secondary></indexterm>
 <para><computeroutput>void model.Libro.setCodigo (String codigo)</computeroutput></para><para>
-Definition at line 50 of file Libro.java.</para>
-    </section><anchor xml:id="_classmodel_1_1_libro_1a10b5f924ea676f559b0962770df63e55"/>    <section>
+Definition at line 52 of file Libro.java.</para>
+    </section><anchor xml:id="_classmodel_1_1_libro_1a3bade68441e8489cd9bcc829f3d98707"/>    <section>
+    <title>setDniPrestatario()</title>
+<indexterm><primary>setDniPrestatario</primary><secondary>model.Libro</secondary></indexterm>
+<indexterm><primary>model.Libro</primary><secondary>setDniPrestatario</secondary></indexterm>
+<para><computeroutput>void model.Libro.setDniPrestatario (String dniPrestatario)</computeroutput></para><para>
+Definition at line 64 of file Libro.java.</para>
+    </section><anchor xml:id="_classmodel_1_1_libro_1a120ed891cd48438db2a91401e17107ca"/>    <section>
     <title>setGenero()</title>
 <indexterm><primary>setGenero</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>setGenero</secondary></indexterm>
-<para><computeroutput>void model.Libro.setGenero (String genero)</computeroutput></para><para>
-Definition at line 44 of file Libro.java.</para>
+<para><computeroutput>void model.Libro.setGenero (String[] genero)</computeroutput></para><para>
+Definition at line 46 of file Libro.java.</para>
     </section><anchor xml:id="_classmodel_1_1_libro_1a4dee5274219abbbf17d494eefe76e8c3"/>    <section>
     <title>setPrestado()</title>
 <indexterm><primary>setPrestado</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>setPrestado</secondary></indexterm>
 <para><computeroutput>void model.Libro.setPrestado (boolean prestado)</computeroutput></para><para>
-Definition at line 56 of file Libro.java.</para>
+Definition at line 58 of file Libro.java.</para>
     </section><anchor xml:id="_classmodel_1_1_libro_1afcbed34011120b89d06efe6f85b2c56f"/>    <section>
     <title>setResumen()</title>
 <indexterm><primary>setResumen</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>setResumen</secondary></indexterm>
 <para><computeroutput>void model.Libro.setResumen (String resumen)</computeroutput></para><para>
-Definition at line 38 of file Libro.java.</para>
+Definition at line 40 of file Libro.java.</para>
     </section><anchor xml:id="_classmodel_1_1_libro_1aaee1f83210ba13c5cc86eda6c3c7bffb"/>    <section>
     <title>setTitulo()</title>
 <indexterm><primary>setTitulo</primary><secondary>model.Libro</secondary></indexterm>
 <indexterm><primary>model.Libro</primary><secondary>setTitulo</secondary></indexterm>
 <para><computeroutput>void model.Libro.setTitulo (String titulo)</computeroutput></para><para>
-Definition at line 26 of file Libro.java.</para>
+Definition at line 28 of file Libro.java.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>
