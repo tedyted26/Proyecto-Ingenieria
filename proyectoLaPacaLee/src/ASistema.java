@@ -3,7 +3,6 @@ import control.Controlador;
 import vista.A0VentanaInicio;
 import vista.A1VentanaUsuario;
 import vista.A2VentanaAdmin;
-import vista.PopUp1B;
 
 /**
  * 
@@ -21,8 +20,7 @@ public class ASistema {
 				A0VentanaInicio vInicio=new A0VentanaInicio();
 				A1VentanaUsuario vUsuario=new A1VentanaUsuario();
 				A2VentanaAdmin vAdmin=new A2VentanaAdmin();
-				PopUp1B vPopup=new PopUp1B();
-				Controlador control=new Controlador(vInicio,vUsuario,vAdmin,vPopup);
+				Controlador control=new Controlador(vInicio,vUsuario,vAdmin);
 				
 				try {
 					
@@ -30,7 +28,6 @@ public class ASistema {
 					vInicio.setControlador(control);
 					vUsuario.setControlador(control);
 					vAdmin.setControlador(control);
-					vPopup.setControlador(control);
 
 				} catch (Exception e) {
 					e.printStackTrace();

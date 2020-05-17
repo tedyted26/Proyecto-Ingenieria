@@ -1,13 +1,6 @@
 package accesoDB;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.*;
-
-import java.util.Vector;
-
-import javax.swing.JComboBox;
-import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
 
 import model.Libro;
@@ -309,9 +302,8 @@ public class PersistenciaDatos {
 	}
 
 	//controla el bloqueo del usuario, sirve tanto para bloquear como para desboquear
-	public String bloqueoUsuario(Usuario user) {
+	public boolean bloquearUsuario(String dni) {
 		//funciona de la misma manera que el metodo anterior
-		String msg = "";
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -319,40 +311,31 @@ public class PersistenciaDatos {
 		try {
 			con = acceso.getConexion();
 			
-			String query = "UPDATE USUARIO SET BLOQUEADO = ? WHERE CORREO = ?";
+			String query = "UPDATE USUARIO SET BLOQUEO = 1 WHERE DNI = ?";
 			
 			pstmt = con.prepareStatement(query);
-			pstmt.setBoolean(1, user.isBloqueado());
-			pstmt.setString(2, user.getCorreo());
+			pstmt.setString(1, dni);
 			
-			int res = pstmt.executeUpdate();
+			pstmt.executeUpdate();
 			
-			if (res == 1) {
-				if (user.isBloqueado()) {
-					msg = "Se ha bloqueado con exito";
-				}
-				else msg= "Se ha desbloqueado con exito";
-			
-			} else {
-				msg = "No se ha podido realizar la modificacion";
-			}
+			return true;
 			
 		} catch (ClassNotFoundException e) {
-			msg = "No se ha podido establecer la conexion con la base de datos";
 			e.printStackTrace();
+			return false;
 		} catch (SQLException e) {
-			msg = "Se ha producido un error de SQL";
 			e.printStackTrace();
+			return false;
 		} finally {
 			try {
 				if (pstmt != null) pstmt.close();
 				if (con != null) con.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
+				return false;
 			}
 		}
-		
-		return msg;
+
 	}
 	
 	public String eliminarUsuario(String dni) {
@@ -446,8 +429,12 @@ public class PersistenciaDatos {
 		return mnsg;
 	}
 
-	//consulta de libro por su titulo
-	public Libro consultaLibro(String titulo) {
+	/**
+	 * Función que consulta los datos de un libro según su código
+	 * @param codigo
+	 * @return Libro
+	 */
+	public Libro consultaLibro(String codigo) {
 		//declaracion de variables
 		Libro libro = null;
 
@@ -459,27 +446,28 @@ public class PersistenciaDatos {
 			//comprobar conexion
 			conec = acceso.getConexion();
 
-			String query = "SELECT * FROM LIBRO WHERE TITULO = ?";
+			String query = "SELECT * FROM LIBRO WHERE CODIGO = ?";
 			pstmt = conec.prepareStatement(query);
-			pstmt.setString(1, titulo);
+			pstmt.setString(1, codigo);
 
 			rslt = pstmt.executeQuery();
 
 			//declaracion de las variables e inicializacion vacia
 			String autor = "";
+			String resumen = "";
 			String genero = "";
-			String codigo = "";
+			String titulo = "";
 			boolean prestado = false;
 			String dniPrestatario = null;
 
 			if (rslt.next()) {
 				titulo = rslt.getString("TITULO");
 				autor = rslt.getString("AUTOR");
+				resumen = rslt.getString("RESUMEN");
 				genero = rslt.getString("GENERO");
-				codigo = rslt.getString("CODIGO");
 				prestado = rslt.getBoolean("PRESTADO");
 				dniPrestatario = rslt.getString("PRESTATARIO");
-				libro =null; //new Libro(titulo, autor, genero, codigo, prestado, dniPrestatario);
+				libro =new Libro(titulo, autor, resumen, genero, codigo, prestado, dniPrestatario);
 			}
 
 			//control de errores
@@ -500,6 +488,49 @@ public class PersistenciaDatos {
 		//devuelve el libro que se consulta
 		return libro;
 	}
+	//TODO que almacene el dni de la persona que lo pilla
+	/**
+	 * Funcion que cambia el estado de los libros a prestado
+	 * @param codigo
+	 * @return true cuando se realiza de forma correcta
+	 */
+	public boolean prestarLibro(String codigo) {
+		//funciona de la misma manera que el metodo anterior
+		boolean exito;
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			con = acceso.getConexion();
+			
+			String query = "UPDATE LIBRO SET PRESTADO = 1 WHERE CODIGO = ?";
+			
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, codigo);
+			
+			pstmt.executeUpdate();
+			
+			exito=true;
+			
+		} catch (ClassNotFoundException e) {
+			exito=false;
+			e.printStackTrace();
+		} catch (SQLException e) {
+			exito=false;
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return exito;
+	}
+	
 	public String eliminarLibro(Libro libro) {
 		String mnsg = "";
 
@@ -541,6 +572,11 @@ public class PersistenciaDatos {
 		return mnsg;
 	}
 
+	/**
+	 * Función que modela una tabla dependiendo de los datos que se necesiten
+	 * @param query Sentencia sql con los datos pedidos
+	 * @return TableModel 
+	 */
 	public TableModel modelarTabla(String query) {
 		ResultSet rs=null;
 		DatabaseMetaData datos=null;
@@ -561,11 +597,9 @@ public class PersistenciaDatos {
 			return modelo;
 
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
 		} finally {

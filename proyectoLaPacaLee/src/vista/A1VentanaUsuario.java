@@ -157,6 +157,19 @@ public class A1VentanaUsuario {
 	}
 	
 	/**
+	 * Actualiza el contenido de las tablas al producirse una modificación
+	 * @param nombreTabla especifica qué tabla tiene que ser modificada
+	 */
+	public void refrescarTablas() {
+		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
+		tablaLibros.getColumn("TITULO").setPreferredWidth(200);
+		tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
+		tablaLibros.getColumn("GENERO").setPreferredWidth(100);
+		tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
+		tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
+	}
+
+	/**
 	 * Inicializa el contenido de la ventana
 	 */
 	@SuppressWarnings("rawtypes")
@@ -795,232 +808,94 @@ public class A1VentanaUsuario {
 	public JFrame getFrmLapacalee() {
 		return frmLapacalee;
 	}
-	
-	public void setFrmLapacalee(JFrame frmLapacalee) {
-		this.frmLapacalee = frmLapacalee;
-	}
-
 	public JTextField getTextFieldNombre() {
 		return textFieldNombre;
 	}
-
-	public void setTextFieldNombre(JTextField textFieldNombre) {
-		this.textFieldNombre = textFieldNombre;
-	}
-
 	public JTextField getTextFieldApellidos() {
 		return textFieldApellidos;
 	}
-
-	public void setTextFieldApellidos(JTextField textFieldApellidos) {
-		this.textFieldApellidos = textFieldApellidos;
-	}
-
 	public JTextField getTextFieldCorreo() {
 		return textFieldCorreo;
 	}
-
-	public void setTextFieldCorreo(JTextField textFieldCorreo) {
-		this.textFieldCorreo = textFieldCorreo;
-	}
-
 	public JTextField getTextFieldDNI() {
 		return textFieldDNI;
 	}
-
-	public void setTextFieldDNI(JTextField textFieldDNI) {
-		this.textFieldDNI = textFieldDNI;
-	}
-
 	public JLayeredPane getBiblioteca() {
 		return biblioteca;
 	}
-
-	public void setBiblioteca(JLayeredPane biblioteca) {
-		this.biblioteca = biblioteca;
-	}
-
 	public JButton getBtnInformacionYContacto() {
 		return btnInformacionYContacto;
 	}
-
-	public void setBtnInformacionYContacto(JButton btnInformacionYContacto) {
-		this.btnInformacionYContacto = btnInformacionYContacto;
-	}
-
 	public JButton getBtnEliminarCuenta() {
 		return btnEliminarCuenta;
 	}
-
-	public void setBtnEliminarCuenta(JButton btnEliminarCuenta) {
-		this.btnEliminarCuenta = btnEliminarCuenta;
-	}
-
 	public JButton getBtnCerrarSesion() {
 		return btnCerrarSesion;
 	}
-
-	public void setBtnCerrarSesion(JButton btnCerrarSesion) {
-		this.btnCerrarSesion = btnCerrarSesion;
-	}
-
 	public JButton getBtnSalir() {
 		return btnSalir;
 	}
-
-	public void setBtnSalir(JButton btnSalir) {
-		this.btnSalir = btnSalir;
-	}
-
 	public JButton getBtnModificarPerfil() {
 		return btnModificarPerfil;
 	}
-
-	public void setBtnModificarPerfil(JButton btnModificarPerfil) {
-		this.btnModificarPerfil = btnModificarPerfil;
-	}
-
 	public JButton getBtnConfirmarModificaciones() {
 		return btnConfirmarModificaciones;
 	}
-
-	public void setBtnConfirmarModificaciones(JButton btnConfirmarModificaciones) {
-		this.btnConfirmarModificaciones = btnConfirmarModificaciones;
-	}
-
 	public JButton getBtnCancelar() {
 		return btnCancelar;
 	}
-
-	public void setBtnCancelar(JButton btnCancelar) {
-		this.btnCancelar = btnCancelar;
-	}
-
 	public JButton getBtncontactanos() {
 		return btncontactanos;
 	}
-
-	public void setBtncontactanos(JButton btncontactanos) {
-		this.btncontactanos = btncontactanos;
-	}
-
 	public JButton getBtnSi() {
 		return btnSi;
 	}
-
-	public void setBtnSi(JButton btnSi) {
-		this.btnSi = btnSi;
-	}
-
 	public JButton getBtnNo() {
 		return btnNo;
 	}
-
-	public void setBtnNo(JButton btnNo) {
-		this.btnNo = btnNo;
-	}
-
 	public JButton getBtnBuscar() {
 		return btnBuscar;
 	}
-
-	public void setBtnBuscar(JButton btnNewButton) {
-		this.btnBuscar = btnNewButton;
-	}
-
 	public JButton getBtnVerDetalles() {
 		return btnVerDetalles;
 	}
-
-	public void setBtnVerDetalles(JButton btnVerDetalles) {
-		this.btnVerDetalles = btnVerDetalles;
-	}
-
 	public JButton getBtnPedirPrestado() {
 		return btnPedirPrestado;
 	}
-
-	public void setBtnPedirPrestado(JButton btnPedirPrestado) {
-		this.btnPedirPrestado = btnPedirPrestado;
-	}
-
 	public CardLayout getCl() {
 		return cl;
 	}
-
-	public void setCl(CardLayout cl) {
-		this.cl = cl;
-	}
-
 	public JLayeredPane getOpciones() {
 		return opciones;
 	}
-
-	public void setOpciones(JLayeredPane opciones) {
-		this.opciones = opciones;
-	}
-
 	public JButton getBtnAtras() {
 		return btnAtras;
 	}
-
-	public void setBtnAtras(JButton btnAtras) {
-		this.btnAtras = btnAtras;
-	}
-
 	public JTextField getTextFieldCorreoActual() {
 		return textFieldCorreoActual;
 	}
-
-	public void setTextFieldCorreoActual(JTextField textFieldCorreoActual) {
-		this.textFieldCorreoActual = textFieldCorreoActual;
-	}
-
 	public JTextPane getTxtpnLapacalee() {
 		return txtpnLapacalee;
 	}
-
-	public void setTxtpnLapacalee(JTextPane txtpnLapacalee) {
-		this.txtpnLapacalee = txtpnLapacalee;
-	}
-
 	public JTextField getTextFieldCorreoNuevo() {
 		return textFieldCorreoNuevo;
 	}
-
-	public void setTextFieldCorreoNuevo(JTextField textFieldCorreoNuevo) {
-		this.textFieldCorreoNuevo = textFieldCorreoNuevo;
-	}
-
 	public JPasswordField getPasswordFieldContrasenaActual() {
 		return passwordFieldContrasenaActual;
 	}
-
-	public void setPasswordFieldContrasenaActual(JPasswordField passwordFieldContrasenaActual) {
-		this.passwordFieldContrasenaActual = passwordFieldContrasenaActual;
-	}
-
 	public JPasswordField getPasswordContrasena() {
 		return passwordContrasena;
 	}
-
-	public void setPasswordContrasena(JPasswordField passwordContrasena) {
-		this.passwordContrasena = passwordContrasena;
-	}
-
 	public JPasswordField getPasswordFieldConfirmarContrasena() {
 		return passwordFieldConfirmarContrasena;
 	}
-
-	public void setPasswordFieldConfirmarContrasena(JPasswordField passwordFieldConfirmarContrasena) {
-		this.passwordFieldConfirmarContrasena = passwordFieldConfirmarContrasena;
-	}
-
 	public JLabel getLabelMensaje() {
 		return labelMensaje;
 	}
-
-	public void setLabelMensaje(JLabel labelMensaje) {
-		this.labelMensaje = labelMensaje;
+	public JTable getTablaLibros() {
+		return tablaLibros;
+	}
+	public JButton getBtnDevolver() {
+		return btnDevolver;
 	}
 }

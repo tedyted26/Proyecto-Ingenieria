@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import accesoDB.PersistenciaDatos;
+import model.Libro;
 import model.Usuario;
 import vista.A0VentanaInicio;
 import vista.A1VentanaUsuario;
@@ -36,12 +37,14 @@ public class Controlador implements ActionListener{
 	 * @param app1 Ventana de uso de usuarios
 	 * @param app2 Ventana de uso de administracion
 	 */
-	public Controlador(A0VentanaInicio app0, A1VentanaUsuario app1, A2VentanaAdmin app2, PopUp1B popup) {
+	public Controlador(A0VentanaInicio app0, A1VentanaUsuario app1, A2VentanaAdmin app2) {
 		this.app0=app0;
 		this.app1=app1;
 		this.app2=app2;
-		this.popup=popup;
 		this.p=new PersistenciaDatos();
+		
+		popup = new PopUp1B();
+		popup.setControlador(this);
 		
 		popupPedirPrestado = new PopUp2B();
 		popupPedirPrestado.setControlador(this);
@@ -54,6 +57,9 @@ public class Controlador implements ActionListener{
 		
 		popupEliminarLibro = new PopUp2B();
 		popupEliminarLibro.setControlador(this);
+		
+		popupInfoLibro = new PopUpInfo();
+		
 	}
 		
 	/**
@@ -68,9 +74,6 @@ public class Controlador implements ActionListener{
 		Container parent2 = app2.getBiblioteca();
 		Container parent3 = app2.getUsuarios();
 		Container parent4 = app2.getOpciones();
-		
-		//TODO MIRAR COMO HACER QUE CUANDO TE SALGAS DE UN PANEL VUELVA AL INICIAL
-		//TODO MIRAR "" CUANDO TE SALES DE LA APLICACION Y VUELVES A ENTRAR QUE VUELVA AL INICIAL
 		
 		/**
 		 * Acciones de la ventana de inicio (inicio de sesion, y creación de cuenta)
@@ -94,11 +97,6 @@ public class Controlador implements ActionListener{
 		}
 		
 		else if(fuente.equals(app0.getBtnCCSiguiente())) {
-			
-			//TODO COMPROBAR QUE EL DNI Y EL CORREO SON UNICOS Y CONTROLAR ERRORES (SI EXISTE USUARIO)
-			//TODO COMPROBAR FORMATO DEL CORREO Y FORMATO DEL DNI(8N Y 1L O 7N Y 2L)
-			//TODO CONTRASEÑA FORMATO DE MÁS DE X CARACTERES
-			//TODO LIMPIAR LOS ESPACIOS DE LOS CAMPOS CADA VEZ QUE SE RECOGEN LOS DATOS
 			crearUsuario(app0);
 		}
 		
@@ -135,7 +133,15 @@ public class Controlador implements ActionListener{
 			// TODO buscador
 		}
 		else if(fuente.equals(app1.getBtnVerDetalles())) {
-			//TODO panel con detalles de los libros
+			try {
+				int fila=app1.getTablaLibros().getSelectedRow();
+				String codigo=(String)app1.getTablaLibros().getValueAt(fila, 4);
+				Libro libro=p.consultaLibro(codigo);
+				popupInfoLibro.rellenarDatos(libro);
+				popupInfoLibro.getFrmpopup().setVisible(true);
+			}catch(Exception e) {
+				System.out.println("No has seleccionado nada");
+			}
 		}
 		else if(fuente.equals(app1.getBtnPedirPrestado())) {
 			popupPedirPrestado.getLblAviso().setFont(new Font("Goudy Old Style", Font.PLAIN, 18));
@@ -147,12 +153,22 @@ public class Controlador implements ActionListener{
 		else if(fuente.equals(popupPedirPrestado.getBtnNo())) {
 			popupPedirPrestado.getFrmpopup().setVisible(false);
 		}
+		
 		else if(fuente.equals(popupPedirPrestado.getBtnSi())) {
-			popup.getFrmpopup().getContentPane().setBackground(new Color(255, 228, 196));
-			popup.getLblAviso().setText("¡Hecho!");
-			popup.getFrmpopup().setVisible(true);
-			popupPedirPrestado.getFrmpopup().setVisible(false);
-			//TODO cambiar estado del libro
+			try {
+				int fila=app1.getTablaLibros().getSelectedRow();
+				String codigo=(String)app1.getTablaLibros().getValueAt(fila, 4);
+				p.prestarLibro(codigo);
+				popup.getFrmpopup().getContentPane().setBackground(new Color(255, 228, 196));
+				popup.getLblAviso().setText("¡Hecho!");
+				app1.refrescarTablas();
+				popup.getFrmpopup().setVisible(true);
+				popupPedirPrestado.getFrmpopup().setVisible(false);
+				//TODO modificar en la lista
+				
+			}catch(Exception e) {
+				System.out.println("No has seleccionado nada");
+			}
 		}
 		
 		else if(fuente.equals(app1.getBtnModificarPerfil())) {
@@ -169,7 +185,6 @@ public class Controlador implements ActionListener{
 			app1.getCl().show(parent1, "3");
 		}
 		else if(fuente.equals(app1.getBtncontactanos())) {
-			//TODO cambiar el correo por una consulta a la base de datos
 			popup.getLblAviso().setText("Correo: admin@admin");
 			popup.getFrmpopup().setBackground(new Color(255, 192, 203));
 			popup.getFrmpopup().setVisible(true);
@@ -220,10 +235,25 @@ public class Controlador implements ActionListener{
 //			app2.getCb().show(parent2, "1");
 		}
 		else if(fuente.equals(app2.getBtnDetalles())) {
-			//TODO JDialog con los detalles
+			try {
+				int fila=app2.getTablaLibros().getSelectedRow();
+				String codigo=(String)app2.getTablaLibros().getValueAt(fila, 4);
+				Libro libro=p.consultaLibro(codigo);
+				popupInfoLibro.rellenarDatos(libro);
+				popupInfoLibro.getFrmpopup().setVisible(true);
+			}catch(Exception e) {
+				System.out.println("No has seleccionado nada");
+			}
 		}
 		else if(fuente.equals(app2.getBtnEditar())) {
-			//TODO si no hay libro seleccionado que lo diga
+			try {
+				int fila=app2.getTablaLibros().getSelectedRow();
+				String codigo=(String)app2.getTablaLibros().getValueAt(fila, 4);
+				Libro libro=p.consultaLibro(codigo);
+				//Rellenar datos del libro
+			}catch(Exception e) {
+				System.out.println("No has seleccionado nada");
+			}
 			app2.getCb().show(parent2, "3");
 		}
 		else if(fuente.equals(app2.getBtnCancelarEditar())) {
@@ -231,6 +261,7 @@ public class Controlador implements ActionListener{
 			
 		}
 		else if(fuente.equals(app2.getBtnConfirmarCambios())) {
+			//TODO realizar cambios
 			popup.getLblAviso().setText("Cambios realizados");
 			popup.getFrmpopup().setBackground(new Color(255, 250, 240));
 			popup.getFrmpopup().setVisible(true);
@@ -268,12 +299,18 @@ public class Controlador implements ActionListener{
 		else if(fuente.equals(app2.getBtnConfirmarU())) {
 			crearUsuario(app2);
 		}
-		else if(fuente.equals(app2.getBtnVerInfo())) {
-			//JDialog con informacion
-		}
+		
 		else if(fuente.equals(app2.getBtnEditarU())) {
-			//TODO si no hay usuario que lo diga
-			app2.getCu().show(parent3, "3");
+			try {
+				int fila=app2.getTablaUsuarios().getSelectedRow();
+				String dni=(String)app2.getTablaUsuarios().getValueAt(fila, 1);
+				Usuario user=p.consultarUsuario(dni);
+				//TODO rellenar los datos actuales del libro
+				app2.getCu().show(parent3, "3");
+			}catch(Exception e) {
+				System.out.println("No has seleccionado nada");
+			}
+			
 		}
 		else if(fuente.equals(app2.getBtnCancelarEditarU())) {
 			app2.getCu().show(parent3, "1");
@@ -295,11 +332,19 @@ public class Controlador implements ActionListener{
 			popupBloquearUsuario.getFrmpopup().setVisible(false);
 		}
 		else if (fuente.equals(popupBloquearUsuario.getBtnSi())) {
-			popup.getLblAviso().setText("Usuario bloqueado");
-			popup.getFrmpopup().setBackground(new Color(255, 250, 240));
-			popup.getFrmpopup().setVisible(true);
-			popupBloquearUsuario.getFrmpopup().setVisible(false);
-			//TODO update a la base de datos
+			try {
+				int fila=app2.getTablaUsuarios().getSelectedRow();
+				String dni=(String)app2.getTablaUsuarios().getValueAt(fila, 1);
+				p.bloquearUsuario(dni);
+				app2.refrescarTablas("usuario");
+				popup.getLblAviso().setText("Usuario bloqueado");
+				popup.getFrmpopup().setBackground(new Color(255, 250, 240));
+				popup.getFrmpopup().setVisible(true);
+				popupBloquearUsuario.getFrmpopup().setVisible(false);
+				
+			}catch(Exception e) {
+				System.out.println("No has seleccionado nada");
+			}
 		}
 		
 		else if(fuente.equals(app2.getBtnEliminarU())) {
@@ -313,11 +358,19 @@ public class Controlador implements ActionListener{
 			popupEliminarUsuario.getFrmpopup().setVisible(false);
 		}
 		else if (fuente.equals(popupEliminarUsuario.getBtnSi())) {
-			popup.getLblAviso().setText("Usuario eliminado");
-			popup.getFrmpopup().setBackground(new Color(255, 250, 240));
-			popup.getFrmpopup().setVisible(true);
-			popupEliminarUsuario.getFrmpopup().setVisible(false);
-			//TODO delete a la base de datos
+			try {
+				int fila=app2.getTablaUsuarios().getSelectedRow();
+				String dni=(String)app2.getTablaUsuarios().getValueAt(fila, 1);
+				p.eliminarUsuario(dni);
+				app2.refrescarTablas("usuario");
+				popup.getLblAviso().setText("Usuario eliminado");
+				popup.getFrmpopup().setBackground(new Color(255, 250, 240));
+				popup.getFrmpopup().setVisible(true);
+				popupEliminarUsuario.getFrmpopup().setVisible(false);
+				
+			}catch(Exception e) {
+				System.out.println("No has seleccionado nada");
+			}
 		}
 		else if(fuente.equals(app2.getBtnInformacion())) {
 			app2.getCo().show(parent4, "2");
@@ -362,7 +415,7 @@ public class Controlador implements ActionListener{
 				app0.eliminarContenidoCC();
 				app0.getCl().show(app0.getFrmLaPacaLee().getContentPane(), "1");
 			}
-			else app0.getLblMensaje().setText("Correo ya existente");
+			else app0.getLblMensaje().setText("Correo o DNI ya existente");
 		}
 		else if (app instanceof A2VentanaAdmin) {
 			A2VentanaAdmin app2=(A2VentanaAdmin)app;
@@ -374,13 +427,15 @@ public class Controlador implements ActionListener{
 				app2.getLblMensaje().setText("Debe completar los campos");			
 			}
 			else if(app2.comprobarDatosCC()&&p.crearUsuario(u)) {
-				popup.getFrmpopup().getContentPane().setBackground(new Color(255, 250, 240));
+				popup.getFrmpopup().getContentPane().setBackground(new Color(255, 228, 196));
 				popup.getLblAviso().setText("Usuario creado con éxito");
 				popup.getFrmpopup().setVisible(true);
 				app2.eliminarContenidoCC();
+				app2.refrescarTablas("usuario");
 				app2.getCu().show(app2.getUsuarios(), "1");
+				
 			}
-			else app2.getLblMensaje().setText("Correo ya existente");
+			else app2.getLblMensaje().setText("Correo o DNI ya existente");
 		}
 		
 	}

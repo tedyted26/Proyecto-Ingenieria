@@ -125,7 +125,6 @@ public class A2VentanaAdmin{
 	private JCheckBox chckbxAdministrador;
 	private JLabel lblFiltrarPorU;
 	private JButton btnAnadirU;
-	private JButton btnVerInfo;
 	private JButton btnEditarU;
 	private JButton btnBloquear;
 	private JButton btnEliminarU;
@@ -227,7 +226,6 @@ public class A2VentanaAdmin{
 		//PANEL BUSCAR
 		btnBuscarU.addActionListener(control);
 		btnAnadirU.addActionListener(control);
-		btnVerInfo.addActionListener(control);
 		btnEditarU.addActionListener(control);
 		btnBloquear.addActionListener(control);
 		btnEliminarU.addActionListener(control);
@@ -369,12 +367,27 @@ public class A2VentanaAdmin{
 		chckbxNarrativaA.setSelected(false);
 	}
 	
+	/**
+	 * Actualiza el contenido de las tablas al producirse una modificación
+	 * @param nombreTabla especifica qué tabla tiene que ser modificada
+	 */
 	public void refrescarTablas(String nombreTabla) {
 		if(nombreTabla.equals("libro")) {
 			tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
+			tablaLibros.getColumn("TITULO").setPreferredWidth(200);
+			tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
+			tablaLibros.getColumn("GENERO").setPreferredWidth(100);
+			tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
+			tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
 		}
 		else if (nombreTabla.equals("usuario")) {
 			tablaUsuarios.setModel(p.modelarTabla("SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO"));
+			tablaUsuarios.getColumn("DNI").setPreferredWidth(100);
+			tablaUsuarios.getColumn("CORREO").setPreferredWidth(150);
+			tablaUsuarios.getColumn("NOMBRE").setPreferredWidth(150);
+			tablaUsuarios.getColumn("APELLIDOS").setPreferredWidth(200);
+			tablaUsuarios.getColumn("BLOQUEO").setPreferredWidth(50);
+			tablaUsuarios.getColumn("ADMIN").setPreferredWidth(50);
 		}
 	}
 
@@ -737,11 +750,7 @@ public class A2VentanaAdmin{
 		
 		tablaLibros = new JTable();
 		tablaLibros.setFillsViewportHeight(true);
-		scrollPaneLibros.setViewportView(tablaLibros);
-		
-		tablaLibros = new JTable();
 		tablaLibros.setFocusable(false);
-		tablaLibros.setFillsViewportHeight(true);
 		tablaLibros.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		tablaLibros.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
 		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
@@ -750,6 +759,8 @@ public class A2VentanaAdmin{
 		tablaLibros.getColumn("GENERO").setPreferredWidth(100);
 		tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
 		tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
+		
+		scrollPaneLibros.setViewportView(tablaLibros);
 		
 		//PANEL AÑADIR
 		panelAnadir = new JPanel();
@@ -1161,7 +1172,7 @@ public class A2VentanaAdmin{
 		panelBotonesU.setBackground(new Color(255, 228, 196));
 		panelBotonesU.setBounds(399, 140, 156, 183);
 		panelBuscarU.add(panelBotonesU);
-		panelBotonesU.setLayout(new MigLayout("", "[100%]", "[20%][20%][20%][20%][20%]"));
+		panelBotonesU.setLayout(new MigLayout("", "[100%]", "[20%][20%][20%][20%]"));
 		
 		btnAnadirU = new JButton("A\u00F1adir");
 		btnAnadirU.setForeground(new Color(220, 20, 60));
@@ -1169,29 +1180,23 @@ public class A2VentanaAdmin{
 		btnAnadirU.setBackground(new Color(255, 255, 255));
 		panelBotonesU.add(btnAnadirU, "cell 0 0,grow");
 		
-		btnVerInfo = new JButton("Ver Informaci\u00F3n");
-		btnVerInfo.setForeground(new Color(220, 20, 60));
-		btnVerInfo.setFont(new Font("Arial", Font.BOLD, 11));
-		btnVerInfo.setBackground(new Color(255, 255, 255));
-		panelBotonesU.add(btnVerInfo, "cell 0 1,grow");
-		
 		btnEditarU = new JButton("Editar");
 		btnEditarU.setForeground(new Color(220, 20, 60));
 		btnEditarU.setFont(new Font("Arial", Font.BOLD, 11));
 		btnEditarU.setBackground(new Color(255, 255, 255));
-		panelBotonesU.add(btnEditarU, "cell 0 2,grow");
+		panelBotonesU.add(btnEditarU, "cell 0 1,grow");
 		
 		btnBloquear = new JButton("Bloquear");
 		btnBloquear.setForeground(new Color(220, 20, 60));
 		btnBloquear.setFont(new Font("Arial", Font.BOLD, 11));
 		btnBloquear.setBackground(new Color(255, 255, 255));
-		panelBotonesU.add(btnBloquear, "cell 0 3,grow");
+		panelBotonesU.add(btnBloquear, "cell 0 2,grow");
 		
 		btnEliminarU = new JButton("Eliminar");
 		btnEliminarU.setForeground(new Color(220, 20, 60));
 		btnEliminarU.setFont(new Font("Arial", Font.BOLD, 11));
 		btnEliminarU.setBackground(new Color(255, 255, 255));
-		panelBotonesU.add(btnEliminarU, "cell 0 4,grow");
+		panelBotonesU.add(btnEliminarU, "cell 0 3,grow");
 		
 		panelCheckBxU = new JPanel();
 		panelCheckBxU.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
@@ -1246,7 +1251,7 @@ public class A2VentanaAdmin{
 		cu.addLayoutComponent(panelBuscarU, "1");
 		
 		panelBuscador = new JPanel();
-		panelBuscador.setBounds(10, 70, 386, 246);
+		panelBuscador.setBounds(10, 70, 386, 239);
 		panelBuscarU.add(panelBuscador);
 		panelBuscador.setLayout(new BorderLayout(0,0));
 		
@@ -1627,304 +1632,122 @@ public class A2VentanaAdmin{
 	public JFrame getFrmLapacalee() {
 		return frmLapacalee;
 	}
-
-	public void setFrmLapacalee(JFrame frmLapacalee) {
-		this.frmLapacalee = frmLapacalee;
-	}
-
 	public JPanel getBiblioteca() {
 		return biblioteca;
 	}
-
-	public void setBiblioteca(JPanel biblioteca) {
-		this.biblioteca = biblioteca;
-	}
-
 	public JButton getBtnBuscar() {
 		return btnBuscar;
 	}
-
-	public void setBtnBuscar(JButton btnBuscar) {
-		this.btnBuscar = btnBuscar;
-	}
-
 	public JButton getBtnDetalles() {
 		return btnDetalles;
 	}
-
-	public void setBtnDetalles(JButton btnDetalles) {
-		this.btnDetalles = btnDetalles;
-	}
-
 	public JButton getBtnEliminar() {
 		return btnEliminar;
 	}
-
-	public void setBtnEliminar(JButton btnEliminar) {
-		this.btnEliminar = btnEliminar;
-	}
-
 	public JButton getBtnAnadir() {
 		return btnAnadir;
 	}
-
-	public void setBtnAnadir(JButton btnAnadir) {
-		this.btnAnadir = btnAnadir;
-	}
-
 	public JButton getBtnEditar() {
 		return btnEditar;
 	}
-
-	public void setBtnEditar(JButton btnEditar) {
-		this.btnEditar = btnEditar;
-	}
-
 	public JButton getBtnConfirmar() {
 		return btnConfirmar;
 	}
-
-	public void setBtnConfirmar(JButton btnConfirmar) {
-		this.btnConfirmar = btnConfirmar;
-	}
-
 	public JButton getBtnCancelarAnadir() {
 		return btnCancelarAnadir;
 	}
-
-	public void setBtnCancelarAnadir(JButton btnCancelarAnadir) {
-		this.btnCancelarAnadir = btnCancelarAnadir;
-	}
-
 	public JButton getBtnConfirmarCambios() {
 		return btnConfirmarCambios;
 	}
-
-	public void setBtnConfirmarCambios(JButton btnConfirmarCambios) {
-		this.btnConfirmarCambios = btnConfirmarCambios;
-	}
-
 	public JButton getBtnCancelarEditar() {
 		return btnCancelarEditar;
 	}
-
-	public void setBtnCancelarEditar(JButton btnCancelarEditar) {
-		this.btnCancelarEditar = btnCancelarEditar;
-	}
-
 	public JPanel getOpciones() {
 		return opciones;
 	}
-
-	public void setOpciones(JPanel opciones) {
-		this.opciones = opciones;
-	}
-
 	public JButton getBtnInformacion() {
 		return btnInformacion;
 	}
-
-	public void setBtnInformacion(JButton btnInformacion) {
-		this.btnInformacion = btnInformacion;
-	}
-
 	public JButton getBtnCerrarSesion() {
 		return btnCerrarSesion;
 	}
-
-	public void setBtnCerrarSesion(JButton btnCerrarSesion) {
-		this.btnCerrarSesion = btnCerrarSesion;
-	}
-
 	public JButton getBtnSalir() {
 		return btnSalir;
 	}
-
-	public void setBtnSalir(JButton btnSalir) {
-		this.btnSalir = btnSalir;
-	}
-
 	public JButton getBtncontactanos() {
 		return btncontactanos;
 	}
-
-	public void setBtncontactanos(JButton btncontactanos) {
-		this.btncontactanos = btncontactanos;
-	}
-
 	public JButton getBtnAtras() {
 		return btnAtras;
 	}
-
-	public void setBtnAtras(JButton btnAtras) {
-		this.btnAtras = btnAtras;
-	}
-
 	public JButton getBtnEditarInfo() {
 		return btnEditarInfo;
 	}
-
-	public void setBtnEditarInfo(JButton btnEditarInfo) {
-		this.btnEditarInfo = btnEditarInfo;
-	}
-
 	public CardLayout getCb() {
 		return cb;
 	}
-
-	public void setCb(CardLayout cb) {
-		this.cb = cb;
-	}
-
 	public CardLayout getCo() {
 		return co;
 	}
-
-	public void setCo(CardLayout co) {
-		this.co = co;
-	}
-
 	public JButton getBtnBuscarU() {
 		return btnBuscarU;
 	}
-
-	public void setBtnBuscarU(JButton btnBuscarU) {
-		this.btnBuscarU = btnBuscarU;
-	}
-
 	public JButton getBtnAnadirU() {
 		return btnAnadirU;
 	}
-
-	public void setBtnAnadirU(JButton btnAnadirU) {
-		this.btnAnadirU = btnAnadirU;
-	}
-
-	public JButton getBtnVerInfo() {
-		return btnVerInfo;
-	}
-
-	public void setBtnVerInfo(JButton btnVerInfo) {
-		this.btnVerInfo = btnVerInfo;
-	}
-
 	public JButton getBtnEditarU() {
 		return btnEditarU;
 	}
-
-	public void setBtnEditarU(JButton btnEditarU) {
-		this.btnEditarU = btnEditarU;
-	}
-
 	public JButton getBtnBloquear() {
 		return btnBloquear;
 	}
-
-	public void setBtnBloquear(JButton btnBloquear) {
-		this.btnBloquear = btnBloquear;
-	}
-
 	public JButton getBtnEliminarU() {
 		return btnEliminarU;
 	}
-
-	public void setBtnEliminarU(JButton btnEliminarU) {
-		this.btnEliminarU = btnEliminarU;
-	}
-
 	public JButton getBtnConfirmarU() {
 		return btnConfirmarU;
 	}
-
-	public void setBtnConfirmarU(JButton btnConfirmarU) {
-		this.btnConfirmarU = btnConfirmarU;
-	}
-
 	public JButton getBtnCancelarAnadirU() {
 		return btnCancelarAnadirU;
 	}
-
-	public void setBtnCancelarAnadirU(JButton btnCancelarAnadirU) {
-		this.btnCancelarAnadirU = btnCancelarAnadirU;
-	}
-
 	public JButton getBtnConfirmarCambiosU() {
 		return btnConfirmarCambiosU;
 	}
-
-	public void setBtnConfirmarCambiosU(JButton btnConfirmarCambiosU) {
-		this.btnConfirmarCambiosU = btnConfirmarCambiosU;
-	}
-
 	public JButton getBtnCancelarEditarU() {
 		return btnCancelarEditarU;
 	}
-
-	public void setBtnCancelarEditarU(JButton btnCancelarEditarU) {
-		this.btnCancelarEditarU = btnCancelarEditarU;
-	}
-
 	public CardLayout getCu() {
 		return cu;
 	}
-
-	public void setCu(CardLayout cu) {
-		this.cu = cu;
-	}
-
 	public JPanel getUsuarios() {
 		return usuarios;
 	}
-
-	public void setUsuarios(JPanel usuarios) {
-		this.usuarios = usuarios;
-	}
-
 	public JTextField getTextFieldNombre() {
 		return textFieldNombre;
 	}
-
-	public void setTextFieldNombre(JTextField textFieldNombre) {
-		this.textFieldNombre = textFieldNombre;
-	}
-
 	public JTextField getTextFieldApellidos() {
 		return textFieldApellidos;
 	}
-
-	public void setTextFieldApellidos(JTextField textFieldApellidos) {
-		this.textFieldApellidos = textFieldApellidos;
-	}
-
 	public JTextField getTextFieldCorreo() {
 		return textFieldCorreo;
 	}
-
-	public void setTextFieldCorreo(JTextField textFieldCorreo) {
-		this.textFieldCorreo = textFieldCorreo;
-	}
-
 	public JTextField getTextFieldDNI() {
 		return textFieldDNI;
 	}
-
-	public void setTextFieldDNI(JTextField textFieldDNI) {
-		this.textFieldDNI = textFieldDNI;
-	}
-
 	public JTextPane getTxtpnLapacalee() {
 		return txtpnLapacalee;
-	}
-
-	public void setTxtpnLapacalee(JTextPane txtpnLapacalee) {
-		this.txtpnLapacalee = txtpnLapacalee;
 	}
 
 	public JLabel getLblMensaje() {
 		return lblMensaje;
 	}
 
-	public void setLblMensaje(JLabel lblMensaje) {
-		this.lblMensaje = lblMensaje;
+	public JTable getTablaLibros() {
+		return tablaLibros;
 	}
+	public JTable getTablaUsuarios() {
+		return tablaUsuarios;
+	}
+
+	
 }

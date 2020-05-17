@@ -7,12 +7,12 @@ public class Libro {
 	private String titulo;
 	private String autor;
 	private String resumen;
-	private String[] genero;
+	private String genero;
 	private String codigo;
 	private boolean prestado;
 	private String dniPrestatario;
 	
-	public Libro(String titulo, String autor, String resumen, String[] genero, String codigo, boolean prestado) {
+	public Libro(String titulo, String autor, String resumen, String genero, String codigo, boolean prestado, String dniPrestatario) {
 		super();
 		this.titulo = titulo;
 		this.autor = autor;
@@ -20,7 +20,7 @@ public class Libro {
 		this.genero = genero;
 		this.codigo = codigo;
 		this.prestado = prestado;
-		if (prestado==false) this.dniPrestatario=null;
+		this.dniPrestatario = dniPrestatario;
 	}
 	public String getTitulo() {
 		return titulo;
@@ -40,10 +40,10 @@ public class Libro {
 	public void setResumen(String resumen) {
 		this.resumen = resumen;
 	}
-	public String[] getGenero() {
+	public String getGenero() {
 		return genero;
 	}
-	public void setGenero(String[] genero) {
+	public void setGenero(String genero) {
 		this.genero = genero;
 	}
 	public String getCodigo() {
