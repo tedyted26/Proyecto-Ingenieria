@@ -1,46 +1,20 @@
 package vista;
 
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.swing.JFrame;
-import javax.swing.JTabbedPane;
-import javax.swing.JButton;
-import javax.swing.JLayeredPane;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.imageio.ImageIO;
-import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
 import net.miginfocom.swing.MigLayout;
-import javax.swing.border.LineBorder;
-import control.Controlador;
-import javax.swing.SwingConstants;
-import javax.swing.JList;
-import javax.swing.border.BevelBorder;
-import java.awt.Scrollbar;
-import java.awt.CardLayout;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JTextPane;
-import javax.swing.JPasswordField;
-import javax.swing.JSeparator;
-import javax.swing.JScrollPane;
-import javax.swing.JCheckBox;
-import java.awt.GridBagLayout;
-import javax.swing.JRadioButton;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import javax.swing.JTable;
+import javax.swing.border.LineBorder;
+import accesoDB.PersistenciaDatos;
+import javax.swing.border.BevelBorder;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+import control.Controlador;
+
 
 public class A1VentanaUsuario {
 
@@ -64,7 +38,6 @@ public class A1VentanaUsuario {
 	//PANEL LIBROS
 	private JPanel panelLibros;
 	private JLabel lblLibrosEnPosesion;
-	private Scrollbar scrollbarLibros;
 	@SuppressWarnings("rawtypes")
 	private JList listaLibros;
 
@@ -130,7 +103,14 @@ public class A1VentanaUsuario {
 	private JLabel lblInfo;
 	private JButton btnSi;
 	private JButton btnNo;
-	private JTable table;
+	
+	private JPanel panelBuscador;
+	private JScrollPane scrollPane;
+	private JTable tablaLibros;
+	
+	private PersistenciaDatos p;
+	private JScrollPane scrollPaneLista;
+	private JButton btnDevolver;
 
 
 	
@@ -181,6 +161,8 @@ public class A1VentanaUsuario {
 	 */
 	@SuppressWarnings("rawtypes")
 	private void initialize() {
+		p=new PersistenciaDatos();
+		
 		frmLapacalee = new JFrame();
 		frmLapacalee.setTitle("LaPacaLee");
 		Toolkit screen=Toolkit.getDefaultToolkit();
@@ -266,7 +248,7 @@ public class A1VentanaUsuario {
 		panelLibros.setBackground(new Color(216, 191, 216));
 		panelLibros.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		inicio.add(panelLibros, "cell 1 0,grow");
-		panelLibros.setLayout(new MigLayout("", "[grow]", "[16%][grow]"));
+		panelLibros.setLayout(new MigLayout("", "[grow]", "[16%][grow][]"));
 		
 		lblLibrosEnPosesion = new JLabel("Libros en posesi\u00F3n");
 		lblLibrosEnPosesion.setHorizontalAlignment(SwingConstants.CENTER);
@@ -275,12 +257,18 @@ public class A1VentanaUsuario {
 		lblLibrosEnPosesion.setBackground(new Color(173, 216, 230));
 		panelLibros.add(lblLibrosEnPosesion, "cell 0 0");
 		
-		listaLibros = new JList();
-		panelLibros.add(listaLibros, "flowx,cell 0 1,grow");
+		scrollPaneLista = new JScrollPane();
+		panelLibros.add(scrollPaneLista, "cell 0 1,grow");
 		
-		scrollbarLibros = new Scrollbar();
-		scrollbarLibros.setBackground(new Color(255, 255, 255));
-		panelLibros.add(scrollbarLibros, "cell 0 1,alignx left,growy");
+		listaLibros = new JList();
+		scrollPaneLista.setViewportView(listaLibros);
+		
+		btnDevolver = new JButton("Devolver");
+		btnDevolver.setActionCommand("");
+		btnDevolver.setForeground(new Color(220, 20, 60));
+		btnDevolver.setFont(new Font("Arial", Font.BOLD, 11));
+		btnDevolver.setBackground(Color.WHITE);
+		panelLibros.add(btnDevolver, "cell 0 2,alignx center");
 		tabbedPane.setEnabledAt(0, true);
 		tabbedPane.setBackgroundAt(0, new Color(255, 255, 255));
 		
@@ -474,12 +462,27 @@ public class A1VentanaUsuario {
 		btnPedirPrestado.setBounds(223, 288, 125, 27);
 		panelBuscar.add(btnPedirPrestado);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(10, 76, 386, 205);
-		panelBuscar.add(panel_1);
+		panelBuscador = new JPanel();
+		panelBuscador.setBounds(10, 76, 386, 201);
+		panelBuscar.add(panelBuscador);
+		panelBuscador.setLayout(new BorderLayout(0, 0));
 		
-		table = new JTable();
-		panel_1.add(table);
+		scrollPane = new JScrollPane();
+		panelBuscador.add(scrollPane);
+		
+		tablaLibros = new JTable();
+		tablaLibros.setFocusable(false);
+		tablaLibros.setFillsViewportHeight(true);
+		tablaLibros.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		tablaLibros.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
+		tablaLibros.getColumn("TITULO").setPreferredWidth(200);
+		tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
+		tablaLibros.getColumn("GENERO").setPreferredWidth(100);
+		tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
+		tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
+		
+		scrollPane.setViewportView(tablaLibros);
 		tabbedPane.setBackgroundAt(1, new Color(255, 255, 255));
 		tabbedPane.setEnabledAt(1, true);
 		

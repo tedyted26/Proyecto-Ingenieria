@@ -1,48 +1,25 @@
 package vista;
 
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Toolkit;
+import java.awt.*;
+import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import javax.swing.JFrame;
 import control.Controlador;
 import model.Usuario;
-import java.awt.CardLayout;
-import javax.swing.JTabbedPane;
-import javax.swing.JPanel;
 import javax.imageio.ImageIO;
-import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JButton;
 import javax.swing.border.BevelBorder;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import javax.swing.JTextPane;
-import javax.swing.UIManager;
-import javax.swing.JCheckBox;
-import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JScrollPane;
 import javax.swing.border.LineBorder;
-import javax.swing.SwingConstants;
+import accesoDB.PersistenciaDatos;
 import net.miginfocom.swing.MigLayout;
-import java.awt.Component;
-import javax.swing.JPasswordField;
-import javax.swing.JSeparator;
-import javax.swing.JRadioButton;
-import javax.swing.ButtonGroup;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 
 public class A2VentanaAdmin{
 
 	private JFrame frmLapacalee;
 	private JTabbedPane tabbedPane;
+	private PersistenciaDatos p;
 	
 	//PESTAÑA INICIO	
 	private JPanel inicio;
@@ -58,13 +35,17 @@ public class A2VentanaAdmin{
 	//PESTAÑA BIBLIOTECA
 	private JPanel biblioteca;
 	private CardLayout cb;
+	//TABLA
+	private JPanel panelBuscadorLibros;
+	private JScrollPane scrollPaneLibros;
+	private JTable tablaLibros;
+	
 	//PANEL BUSCAR
 	private JPanel panelBuscar;
 	private JTextField textFieldBuscar;
 	private JLabel lblFiltros;
 	private JPanel panelFiltros;
 	private JButton btnBuscar;
-	private JScrollPane scrollPaneBiblioteca;
 	private JPanel panelGeneros;
 	private JPanel panelBotones;
 	private JCheckBox chckbxOtros;
@@ -127,13 +108,17 @@ public class A2VentanaAdmin{
 	//PESTAÑA USUARIOS
 	private JPanel usuarios;
 	private CardLayout cu;
+	//TABLA
+	private JPanel panelBuscador;
+	private JTable tablaUsuarios;
+	private JScrollPane scrollPaneUsuarios;
+	
 	//PANEL BUSCAR
 	private JPanel panelBuscarU;
 	private JLabel lblFiltrosU;
 	private JPanel panelFiltrosU;
 	private JTextField textFieldBuscarU;
 	private JButton btnBuscarU;
-	private JScrollPane scrollPaneUsuarios;
 	private JPanel panelBotonesU;
 	private JPanel panelCheckBxU;
 	private JCheckBox chckbxUsuariosBloqueados;
@@ -210,7 +195,6 @@ public class A2VentanaAdmin{
 	private JLabel lblLapacalee;
 	private JButton btnAtras;
 	private JButton btnEditarInfo;
-	
 	
 
 	/**
@@ -384,11 +368,22 @@ public class A2VentanaAdmin{
 		chckbxPoesiaA.setSelected(false);
 		chckbxNarrativaA.setSelected(false);
 	}
+	
+	public void refrescarTablas(String nombreTabla) {
+		if(nombreTabla.equals("libro")) {
+			tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
+		}
+		else if (nombreTabla.equals("usuario")) {
+			tablaUsuarios.setModel(p.modelarTabla("SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO"));
+		}
+	}
 
 	/**
 	 * Initializa el contenido de la ventana.
 	 */
 	private void initialize() {
+		p=new PersistenciaDatos();
+		
 		frmLapacalee = new JFrame();
 		frmLapacalee.setTitle("LaPacaLee");
 		Toolkit screen=Toolkit.getDefaultToolkit();
@@ -612,10 +607,6 @@ public class A2VentanaAdmin{
 		btnBuscar.setBounds(320, 42, 76, 23);
 		panelBuscar.add(btnBuscar);
 		
-		scrollPaneBiblioteca = new JScrollPane();
-		scrollPaneBiblioteca.setBounds(10, 71, 386, 206);
-		panelBuscar.add(scrollPaneBiblioteca);
-		
 		panelGeneros = new JPanel();
 		panelGeneros.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panelGeneros.setBackground(new Color(240, 128, 128));
@@ -705,11 +696,12 @@ public class A2VentanaAdmin{
 		panelBotones = new JPanel();
 		panelBotones.setAlignmentY(0.0f);
 		panelBotones.setBackground(new Color(255, 228, 196));
-		panelBotones.setBounds(0, 277, 403, 43);
+		panelBotones.setBounds(2, 277, 402, 43);
 		panelBuscar.add(panelBotones);
-		panelBotones.setLayout(new MigLayout("", "[25%][25%][25%][25%]", "[100%]"));
+		panelBotones.setLayout(new MigLayout("", "[25%,right][25%][25%][25%]", "[100%]"));
 		
 		btnAnadir = new JButton("A\u00F1adir");
+		btnAnadir.setAlignmentX(0.5f);
 		panelBotones.add(btnAnadir, "cell 0 0,grow");
 		btnAnadir.setForeground(new Color(220, 20, 60));
 		btnAnadir.setFont(new Font("Arial", Font.BOLD, 11));
@@ -718,7 +710,7 @@ public class A2VentanaAdmin{
 		btnDetalles = new JButton("Detalles");
 		btnDetalles.setPreferredSize(new Dimension(92, 23));
 		btnDetalles.setAlignmentY(Component.TOP_ALIGNMENT);
-		panelBotones.add(btnDetalles, "cell 1 0,alignx right,growy");
+		panelBotones.add(btnDetalles, "cell 1 0,grow");
 		btnDetalles.setForeground(new Color(220, 20, 60));
 		btnDetalles.setFont(new Font("Arial", Font.BOLD, 11));
 		btnDetalles.setBackground(Color.WHITE);
@@ -734,6 +726,30 @@ public class A2VentanaAdmin{
 		btnEliminar.setForeground(new Color(220, 20, 60));
 		btnEliminar.setFont(new Font("Arial", Font.BOLD, 11));
 		btnEliminar.setBackground(Color.WHITE);
+		
+		panelBuscadorLibros = new JPanel();
+		panelBuscadorLibros.setBounds(10, 69, 386, 208);
+		panelBuscar.add(panelBuscadorLibros);
+		panelBuscadorLibros.setLayout(new BorderLayout(0, 0));
+		
+		scrollPaneLibros = new JScrollPane();
+		panelBuscadorLibros.add(scrollPaneLibros);
+		
+		tablaLibros = new JTable();
+		tablaLibros.setFillsViewportHeight(true);
+		scrollPaneLibros.setViewportView(tablaLibros);
+		
+		tablaLibros = new JTable();
+		tablaLibros.setFocusable(false);
+		tablaLibros.setFillsViewportHeight(true);
+		tablaLibros.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		tablaLibros.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
+		tablaLibros.getColumn("TITULO").setPreferredWidth(200);
+		tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
+		tablaLibros.getColumn("GENERO").setPreferredWidth(100);
+		tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
+		tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
 		
 		//PANEL AÑADIR
 		panelAnadir = new JPanel();
@@ -1139,9 +1155,7 @@ public class A2VentanaAdmin{
 		btnBuscarU.setBounds(320, 42, 76, 23);
 		panelBuscarU.add(btnBuscarU);
 		
-		scrollPaneUsuarios = new JScrollPane();
-		scrollPaneUsuarios.setBounds(10, 71, 386, 244);
-		panelBuscarU.add(scrollPaneUsuarios);
+	
 		
 		panelBotonesU = new JPanel();
 		panelBotonesU.setBackground(new Color(255, 228, 196));
@@ -1230,6 +1244,27 @@ public class A2VentanaAdmin{
 		);
 		panelCheckBxU.setLayout(gl_panelCheckBxU);
 		cu.addLayoutComponent(panelBuscarU, "1");
+		
+		panelBuscador = new JPanel();
+		panelBuscador.setBounds(10, 70, 386, 246);
+		panelBuscarU.add(panelBuscador);
+		panelBuscador.setLayout(new BorderLayout(0,0));
+		
+		scrollPaneUsuarios = new JScrollPane();
+		panelBuscador.add(scrollPaneUsuarios);
+		
+		tablaUsuarios = new JTable();
+		tablaUsuarios.setFillsViewportHeight(true);
+		tablaUsuarios.setModel(p.modelarTabla("SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO"));
+		tablaUsuarios.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		tablaUsuarios.getColumn("DNI").setPreferredWidth(100);
+		tablaUsuarios.getColumn("CORREO").setPreferredWidth(150);
+		tablaUsuarios.getColumn("NOMBRE").setPreferredWidth(150);
+		tablaUsuarios.getColumn("APELLIDOS").setPreferredWidth(200);
+		tablaUsuarios.getColumn("BLOQUEO").setPreferredWidth(50);
+		tablaUsuarios.getColumn("ADMIN").setPreferredWidth(50);
+		
+		scrollPaneUsuarios.setViewportView(tablaUsuarios);
 		
 		//PANEL AÑADIR
 		panelAnadirU = new JPanel();

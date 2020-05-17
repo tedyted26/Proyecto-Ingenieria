@@ -1,9 +1,3 @@
-
-import java.awt.EventQueue;
-
-import vista.TablaLibrosUsuario;
-
-
 public class Prueba {
 
 	

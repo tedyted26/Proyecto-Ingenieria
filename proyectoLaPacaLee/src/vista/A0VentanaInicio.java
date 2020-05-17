@@ -1,30 +1,11 @@
 package vista;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Panel;
-import java.awt.Toolkit;
-
-import javax.swing.GroupLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import java.awt.*;
+import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
-
 import control.Controlador;
 import model.Usuario;
 import net.miginfocom.swing.MigLayout;
-
-import java.awt.CardLayout;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
-import javax.swing.SpringLayout;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
 
 public class A0VentanaInicio{
 
@@ -145,7 +126,7 @@ public class A0VentanaInicio{
 	
 	/**
 	 * Comprueba si los datos en la creación de usuario son correctos
-	 * @return true o false 
+	 * @return true si son correctos
 	 */
 	@SuppressWarnings("deprecation")
 	public boolean comprobarDatosCC() {
@@ -501,270 +482,47 @@ public class A0VentanaInicio{
 	public JFrame getFrmLaPacaLee() {
 		return frmLaPacaLee;
 	}
-	public void setFrmLaPacaLee(JFrame frmLaPacaLee) {
-		this.frmLaPacaLee = frmLaPacaLee;
-	}
-	public JPanel getPanelInicio() {
-		return panelInicio;
-	}
-	public void setPanelInicio(JPanel panelInicio) {
-		this.panelInicio = panelInicio;
-	}
 	public JButton getBtnIniciarSesion() {
 		return btnIniciarSesion;
-	}
-	public void setBtnIniciarSesion(JButton btnIniciarSesion) {
-		this.btnIniciarSesion = btnIniciarSesion;
 	}
 	public JButton getBtnCrearCuenta() {
 		return btnCrearCuenta;
 	}
-	public void setBtnCrearCuenta(JButton btnCrearCuenta) {
-		this.btnCrearCuenta = btnCrearCuenta;
-	}
-	public JLabel getLblLapacalee() {
-		return lblLapacalee;
-	}
-	public void setLblLapacalee(JLabel lblLapacalee) {
-		this.lblLapacalee = lblLapacalee;
-	}
-	public JPanel getPanelCrearCuenta() {
-		return panelCrearCuenta;
-	}
-	public void setPanelCrearCuenta(JPanel panelCrearCuenta) {
-		this.panelCrearCuenta = panelCrearCuenta;
-	}
-	public JLabel getLblCreacionDeCuenta() {
-		return lblCreacionDeCuenta;
-	}
-	public void setLblCreacionDeCuenta(JLabel lblCreacionDeCuenta) {
-		this.lblCreacionDeCuenta = lblCreacionDeCuenta;
-	}
 	public JButton getBtnCCSiguiente() {
 		return btnCCSiguiente;
-	}
-	public void setBtnCCSiguiente(JButton btnCCSiguiente) {
-		this.btnCCSiguiente = btnCCSiguiente;
 	}
 	public JButton getBtnCCAtras() {
 		return btnCCAtras;
 	}
-	public void setBtnCCAtras(JButton btnCCAtras) {
-		this.btnCCAtras = btnCCAtras;
-	}
-
-	public JTextField getTextFieldNombre() {
-		return textFieldNombre;
-	}
-
-	public void setTextFieldNombre(JTextField textFieldNombre) {
-		this.textFieldNombre = textFieldNombre;
-	}
-
-	public JTextField getTextFieldApellidos() {
-		return textFieldApellidos;
-	}
-
-	public void setTextFieldApellidos(JTextField textFieldApellidos) {
-		this.textFieldApellidos = textFieldApellidos;
-	}
-
-	public JTextField getTextFieldDNI() {
-		return textFieldDNI;
-	}
-
-	public void setTextFieldDNI(JTextField textFieldDNI) {
-		this.textFieldDNI = textFieldDNI;
-	}
-
-	public JTextField getTextFieldCorreo() {
-		return textFieldCorreo;
-	}
-
-	public void setTextFieldCorreo(JTextField textFieldCorreo) {
-		this.textFieldCorreo = textFieldCorreo;
-	}
-
-	public JPasswordField getPassContrasena1() {
-		return passContrasena1;
-	}
-
-	public void setPassContrasena1(JPasswordField passContrasena1) {
-		this.passContrasena1 = passContrasena1;
-	}
-
-	public JPasswordField getPassContrasena2() {
-		return passContrasena2;
-	}
-
-	public void setPassContrasena2(JPasswordField passContrasena2) {
-		this.passContrasena2 = passContrasena2;
-	}
-
-	public JLabel getLblNombre() {
-		return lblNombre;
-	}
-
-	public void setLblNombre(JLabel lblNombre) {
-		this.lblNombre = lblNombre;
-	}
-
-	public JLabel getLblApellidos() {
-		return lblApellidos;
-	}
-
-	public void setLblApellidos(JLabel lblApellidos) {
-		this.lblApellidos = lblApellidos;
-	}
-
-	public JLabel getLblDNI() {
-		return lblDNI;
-	}
-
-	public void setLblDNI(JLabel lblDNI) {
-		this.lblDNI = lblDNI;
-	}
-
-	public JLabel getLblCCCorreo() {
-		return lblCCCorreo;
-	}
-
-	public void setLblCCCorreo(JLabel lblCCCorreo) {
-		this.lblCCCorreo = lblCCCorreo;
-	}
-
-	public JLabel getLblCCContrasena() {
-		return lblCCContrasena;
-	}
-
-	public void setLblCCContrasena(JLabel lblCCContrasena) {
-		this.lblCCContrasena = lblCCContrasena;
-	}
-
-	public JLabel getLblContrasena2() {
-		return lblContrasena2;
-	}
-
-	public void setLblContrasena2(JLabel lblContrasena2) {
-		this.lblContrasena2 = lblContrasena2;
-	}
-
-	public JPanel getPanelMensaje() {
-		return panelMensaje;
-	}
-
-	public void setPanelMensaje(JPanel panelMensaje) {
-		this.panelMensaje = panelMensaje;
-	}
-
 	public JLabel getLblMensaje() {
 		return lblMensaje;
 	}
-
-	public void setLblMensaje(JLabel lblMensaje) {
-		this.lblMensaje = lblMensaje;
-	}
-
 	public JPanel getPanelInicioSesion() {
 		return panelInicioSesion;
 	}
-
-	public void setPanelInicioSesion(JPanel panelInicioSesion) {
-		this.panelInicioSesion = panelInicioSesion;
-	}
-
-	public JLabel getLblInicioSesion() {
-		return lblInicioSesion;
-	}
-
-	public void setLblInicioSesion(JLabel lblInicioSesion) {
-		this.lblInicioSesion = lblInicioSesion;
-	}
-
 	public Panel getMarcoDeIncio() {
 		return marcoDeIncio;
 	}
-
-	public void setMarcoDeIncio(Panel marcoDeIncio) {
-		this.marcoDeIncio = marcoDeIncio;
-	}
-
-	public JLabel getLblCorreo() {
-		return lblCorreo;
-	}
-
-	public void setLblCorreo(JLabel lblCorreo) {
-		this.lblCorreo = lblCorreo;
-	}
-
 	public JTextField getTextField() {
 		return textField;
 	}
-
-	public void setTextField(JTextField textField) {
-		this.textField = textField;
-	}
-
-	public JLabel getLblContrasena() {
-		return lblContrasena;
-	}
-
-	public void setLblContrasena(JLabel lblContrasena) {
-		this.lblContrasena = lblContrasena;
-	}
-
-	public JPasswordField getPasswordField() {
-		return passwordField;
-	}
-
-	public void setPasswordField(JPasswordField passwordField) {
-		this.passwordField = passwordField;
-	}
-
 	public JButton getBtnAtras() {
 		return btnAtras;
 	}
-
-	public void setBtnAtras(JButton btnAtras) {
-		this.btnAtras = btnAtras;
-	}
-
 	public JButton getBtnSiguiente() {
 		return btnSiguiente;
 	}
-
-	public void setBtnSiguiente(JButton btnSiguiente) {
-		this.btnSiguiente = btnSiguiente;
-	}
-
 	public JButton getBtnAdmin() {
 		return btnAdmin;
 	}
-
-	public void setBtnAdmin(JButton btnAdmin) {
-		this.btnAdmin = btnAdmin;
-	}
-
 	public JPanel getPanelMensajes() {
 		return panelMensajes;
 	}
-
-	public void setPanelMensajes(JPanel panelMensajes) {
-		this.panelMensajes = panelMensajes;
-	}
-
 	public JLabel getLblAutentificacionDeContrasena() {
 		return lblAutentificacionDeContrasena;
-	}
-
-	public void setLblAutentificacionDeContrasena(JLabel lblAutentificacionDeContrasena) {
-		this.lblAutentificacionDeContrasena = lblAutentificacionDeContrasena;
 	}
 	public CardLayout getCl() {
 		return cl;
 	}
-	public void setCl(CardLayout cl) {
-		this.cl = cl;
-	}	
 
 }

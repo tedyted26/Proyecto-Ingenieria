@@ -1,12 +1,18 @@
 package accesoDB;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.*;
+
+import java.util.Vector;
+
+import javax.swing.JComboBox;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableModel;
 
 import model.Libro;
 import model.Usuario;
+import net.proteanit.sql.DbUtils;
 
 public class PersistenciaDatos {
 	
@@ -499,6 +505,7 @@ public class PersistenciaDatos {
 
 		Connection conec = null;
 		PreparedStatement pstmt = null;
+		
 
 		try {
 			conec = acceso.getConexion();
@@ -532,5 +539,43 @@ public class PersistenciaDatos {
 		}
 		
 		return mnsg;
+	}
+
+	public TableModel modelarTabla(String query) {
+		ResultSet rs=null;
+		DatabaseMetaData datos=null;
+		Connection conec = null;
+		PreparedStatement pst=null;
+		TableModel modelo=null;
+		
+		
+		try {
+			conec = acceso.getConexion();
+			datos=conec.getMetaData();
+			rs=datos.getTables(null, null, null, null);
+			
+			pst=conec.prepareStatement(query);
+			rs=pst.executeQuery();
+
+			modelo=DbUtils.resultSetToTableModel(rs);
+			return modelo;
+
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				if (pst != null) pst.close();
+				if (conec != null) conec.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
 }
