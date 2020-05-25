@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import control.Controlador;
+import model.Libro;
 import model.Usuario;
 import javax.imageio.ImageIO;
 import javax.swing.GroupLayout.Alignment;
@@ -23,14 +24,8 @@ public class A2VentanaAdmin{
 	
 	//PESTAÑA INICIO	
 	private JPanel inicio;
-	private JLabel lblNombre;
-	private JLabel lblApellidos;
-	private JLabel lblDni;
-	private JLabel lblCorreo;
-	private JTextField textFieldNombre;
-	private JTextField textFieldApellidos;
-	private JTextField textFieldCorreo;
-	private JTextField textFieldDNI;
+	private JLabel lblNombre, lblApellidos, lblDni, lblCorreo;
+	private JTextField textFieldNombre, textFieldApellidos, textFieldCorreo, textFieldDNI;
 	
 	//PESTAÑA BIBLIOTECA
 	private JPanel biblioteca;
@@ -41,69 +36,27 @@ public class A2VentanaAdmin{
 	private JTable tablaLibros;
 	
 	//PANEL BUSCAR
-	private JPanel panelBuscar;
+	private JPanel panelBuscar, panelFiltros, panelGeneros, panelBotones;
 	private JTextField textFieldBuscar;
-	private JLabel lblFiltros;
-	private JPanel panelFiltros;
-	private JButton btnBuscar;
-	private JPanel panelGeneros;
-	private JPanel panelBotones;
-	private JCheckBox chckbxOtros;
-	private JCheckBox chckbxHistoricos;
-	private JCheckBox chckbxFilosofia;
-	private JCheckBox chckbxDrama;
-	private JCheckBox chckbxPoesia;
-	private JCheckBox chckbxNarrativa;
-	private JLabel lblGeneros;
-	private JButton btnDetalles;
-	private JButton btnEliminar;
-	private JButton btnAnadir;
+	private JLabel lblFiltros, lblGeneros;
+	private JButton btnBuscar, btnDetalles, btnEliminar, btnAnadir;
+	private JCheckBox chckbxOtros, chckbxHistoricos, chckbxFilosofia, chckbxDrama, chckbxPoesia, chckbxNarrativa;
 	
 	//PANEL AÑADIR LIBRO
-	private JPanel panelAnadir;
-	private JLabel lblAnadirLibro;
-	private JButton btnConfirmar;
-	private JButton btnCancelarAnadir;
-	private JPanel panelLibroA;
-	private JLabel lblTituloA;
-	private JLabel lblAutorA;
-	private JLabel lblCodigoA;
-	private JLabel lblResumenA;
-	private JTextField textTituloA;
-	private JTextField textFieldAutorA;
-	private JTextField textFieldCodigoA;
+	private JPanel panelAnadir, panelLibroA, panelGenerosA;
+	private JLabel lblAnadirLibro, lblTituloA, lblAutorA, lblCodigoA, lblResumenA, lblGenerosA, lblMensajeAnadirLibro;
+	private JButton btnConfirmar, btnCancelarAnadir;
+	private JTextField textTituloA, textFieldAutorA, textFieldCodigoA;
 	private JTextPane textPaneResumenA;
-	private JPanel panelGenerosA;
-	private JLabel lblGenerosA;
-	private JCheckBox chckbxOtrosA;
-	private JCheckBox chckbxHistoricosA;
-	private JCheckBox chckbxFilosofiaA;
-	private JCheckBox chckbxDramaA;
-	private JCheckBox chckbxPoesiaA;
-	private JCheckBox chckbxNarrativaA;
-	//PANEL EDITAR LIBRO
-	private JPanel panelEditar;
-	private JLabel lblEditar;
-	private JButton btnConfirmarCambios;
-	private JButton btnCancelarEditar;
-	private JPanel panelGenerosE;
-	private JCheckBox chckbxNarrativaE;
-	private JCheckBox chckbxPoesiaE;
-	private JCheckBox chckbxDramaE;
-	private JCheckBox chckbxFilosofiaE;
-	private JCheckBox chckbxHistoricosE;
-	private JCheckBox chckbxOtrosE;
-	private JLabel lblGenerosE;
-	private JPanel panelLibroE;
-	private JLabel lblTituloE;
-	private JTextField textFieldTituloE;
-	private JLabel lblAutorE;
-	private JTextField textFieldAutorE;
-	private JLabel lblCodigoE;
-	private JTextField textFieldCodigoE;
-	private JLabel lblResumenE;
-	private JTextPane textPaneE;
+	private JCheckBox chckbxOtrosA, chckbxHistoricosA, chckbxFilosofiaA, chckbxDramaA, chckbxPoesiaA, chckbxNarrativaA;
 	
+	//PANEL EDITAR LIBRO
+	private JPanel panelEditar, panelGenerosE, panelLibroE;
+	private JLabel lblEditar, lblGenerosE, lblTituloE, lblAutorE, lblCodigoE, lblResumenE;
+	private JButton btnConfirmarCambios, btnCancelarEditar;
+	private JCheckBox chckbxNarrativaE, chckbxPoesiaE, chckbxDramaE, chckbxFilosofiaE, chckbxHistoricosE, chckbxOtrosE, chckbxMarcarComoDevuelto;
+	private JTextField textFieldTituloE, textFieldAutorE, textFieldCodigoE;
+	private JTextPane textPaneE;	
 	
 	//PESTAÑA USUARIOS
 	private JPanel usuarios;
@@ -114,86 +67,40 @@ public class A2VentanaAdmin{
 	private JScrollPane scrollPaneUsuarios;
 	
 	//PANEL BUSCAR
-	private JPanel panelBuscarU;
-	private JLabel lblFiltrosU;
-	private JPanel panelFiltrosU;
+	private JPanel panelBuscarU, panelFiltrosU, panelBotonesU, panelCheckBxU;
+	private JLabel lblFiltrosU, lblFiltrarPorU;
 	private JTextField textFieldBuscarU;
-	private JButton btnBuscarU;
-	private JPanel panelBotonesU;
-	private JPanel panelCheckBxU;
-	private JCheckBox chckbxUsuariosBloqueados;
-	private JCheckBox chckbxAdministrador;
-	private JLabel lblFiltrarPorU;
-	private JButton btnAnadirU;
-	private JButton btnEditarU;
-	private JButton btnBloquear;
-	private JButton btnEliminarU;
-	private JRadioButton rdbtnDni;
-	private JRadioButton rdbtnNombre;
-	private JRadioButton rdbtnApellidos;
-	private JRadioButton rdbtnCorreo;
-	private JCheckBox chckbxDisponible;
+	private JButton btnBuscarU, btnAnadirU, btnEditarU, btnBloquear, btnEliminarU;
+	private JCheckBox chckbxUsuariosBloqueados, chckbxAdministrador, chckbxDisponible;
+	private JRadioButton rdbtnDni,rdbtnNombre, rdbtnApellidos, rdbtnCorreo;
 	//PANEL AÑADIR
-	private JPanel panelAnadirU;
-	private JPanel panelCrearUsuario;
-	private JLabel lblAnadirUsuario;
-	private JButton btnConfirmarU;
-	private JButton btnCancelarAnadirU;
-	private JLabel lblNombreU;
-	private JLabel lblApellidosU;
-	private JLabel lblDniU;
-	private JLabel lblCorreoU;
-	private JLabel lblContrasenaU;
-	private JLabel lblRepetirContrasena;
-	private JTextField textFieldNombreU;
-	private JTextField textFieldApellidosU;
-	private JTextField textFieldDniU;
-	private JTextField textFieldCorreoU;
-	private JPasswordField passwordFieldContrasenaU;
-	private JPasswordField passwordFieldContrasena2U;
-	private JLabel lblMensaje;
+	private JPanel panelAnadirU, panelCrearUsuario;
+	private JButton btnConfirmarU, btnCancelarAnadirU;
+	private JLabel lblAnadirUsuario, lblMensaje, lblNombreU, lblApellidosU, lblDniU, lblCorreoU,lblContrasenaU, lblRepetirContrasena;
+	private JTextField textFieldNombreU, textFieldApellidosU, textFieldDniU,textFieldCorreoU;
+	private JPasswordField passwordFieldContrasenaU, passwordFieldContrasena2U;
 	//PANEL EDITAR
-	private JPanel panelEditarU;
-	private JLabel lblEditarU;
-	private JButton btnConfirmarCambiosU;
-	private JButton btnCancelarEditarU;
-	private JPanel panelE1;
-	private JLabel lblNombreE;
-	private JLabel lblApellidosE;
-	private JLabel lblDniE;
-	private JTextField textFieldNombreNuevo;
-	private JTextField textField_11;
-	private JTextField textField_13;
-	private JLabel lblContraseaNueva_1;
-	private JPasswordField passwordField_2;
-	private JPasswordField passwordField_3;
-	private JLabel lblRepetirContrasena_1;
-	private JCheckBox chckbxDerechosDeAdministrador;
+	private JPanel panelEditarU, panelE1;
+	private JLabel lblEditarU, lblNombreE, lblApellidosE, lblCorreoE, lblContraseaNueva_1, lblRepetirContrasena_1, lblContrasea, lblNoSe;
+	private JButton btnConfirmarCambiosU, btnCancelarEditarU, btnEditar;
+	private JTextField textFieldNombreNuevo, textFieldApellidosNuevos, textFieldCorreoNuevo;
+	private JPasswordField passwordFieldContrasenaNueva, passwordFieldRepContrasenaNueva, passwordFieldContrasenaAdmin;
+	private JCheckBox chckbxDerechosDeAdministrador, chckbxDesbloquear;
 	private JSeparator separator;
-	private JTextPane txtpnParaGuardarLos;
-	private JLabel lblContrasea;
-	private JLabel lblNoSe;
-	private JButton btnEditar;
-	private JPasswordField passwordField;
-	private JCheckBox chckbxDesbloquear;
-	private JTextPane txtpnSoloSi;
+	private JTextPane txtpnParaGuardarLos, txtpnSoloSi;
 	
 	//PESTAÑA OPCIONES
 	private JPanel opciones;
 	private CardLayout co;
 	//PANEL MENU
 	private JPanel menuOpciones;
-	private JButton btnInformacion;
-	private JButton btnCerrarSesion;
-	private JButton btnSalir;
+	private JButton btnInformacion, btnCerrarSesion, btnSalir;
 	//PANEL INFORMACION
 	private JPanel panelInformacion;
 	private JTextPane txtpnLapacalee;
-	private JButton btncontactanos;
-	private JLabel lblSobreNosotros;
-	private JLabel lblLapacalee;
-	private JButton btnAtras;
-	private JButton btnEditarInfo;
+	private JButton btncontactanos, btnAtras, btnEditarInfo;
+	private JLabel lblSobreNosotros, lblLapacalee;
+	private JScrollPane scrollPane;
 	
 
 	/**
@@ -244,6 +151,13 @@ public class A2VentanaAdmin{
 		btnAtras.addActionListener(control);
 		btnEditarInfo.addActionListener(control);
 		
+	}
+	
+	public void reiniciarPaneles() {
+		tabbedPane.setSelectedComponent(inicio);
+		cu.show(usuarios, "1");
+		cb.show(biblioteca, "1");
+		co.show(opciones, "1");
 	}
 	
 	/**
@@ -301,58 +215,91 @@ public class A2VentanaAdmin{
 		else return true;
 	}
 	
+	public void completarCamposEU(Usuario user) {
+		textFieldCorreoNuevo.setText(user.getCorreo());
+		textFieldApellidosNuevos.setText(user.getApellidos());
+		textFieldNombreNuevo.setText(user.getNombre());
+		passwordFieldContrasenaNueva.setText(user.getContrasena());
+		
+		if (user.isBloqueado()) chckbxDesbloquear.setEnabled(true);
+		else chckbxDesbloquear.setEnabled(false);
+		
+		if (user.isAdmin()) chckbxDerechosDeAdministrador.setEnabled(false);
+		else chckbxDerechosDeAdministrador.setEnabled(true);
+
+	}
 	
-	//TODO TODA LA PARTE DE LOS LIBROS
+	public String[] obtenerDatosUsuarioEU() {
+		String[] cambios=new String[5];
+		String correo = textFieldCorreoNuevo.getText();
+		String nombre = textFieldNombreNuevo.getText();
+		String apellidos = textFieldApellidosNuevos.getText();
+		String contrasena = passwordFieldContrasenaNueva.getText();
+		String contrasenaAdmin = passwordFieldContrasenaAdmin.getText();
+		
+		if(correo.equals("")
+				||nombre.equals("")
+				||apellidos.equals("")
+				||contrasena.equals("")
+				||contrasenaAdmin.equals("")) {
+			cambios=null;
+		}
+		else {
+			cambios[0]=correo;
+			cambios[1]=nombre;
+			cambios[2]=apellidos;
+			cambios[3]=contrasena;
+			cambios[4]=contrasenaAdmin;
+		}
+		return cambios;	
+	}
+		
 	/**
 	 * Devuelve los datos de los campos de la creación de libro
 	 * @return  libro
 	 */
-	@SuppressWarnings("null")
-	public String[] obtenerDatosLibroCL() {
-		String[] datosLibro=null;
+	public Libro obtenerDatosLibroCL() {
+		Libro libro;
 		String titulo = textTituloA.getText();
 		String autor = textFieldAutorA.getText();
 		String resumen = textPaneResumenA.getText();
 		String codigo = textFieldCodigoA.getText();
+		String genero = obtenerGeneroLibroCL();
+		String prestatario = null;
 		
 		if(titulo.equals("")
 				||autor.equals("")
 				||resumen.equals("")
-				||codigo.equals("")) {
-			return datosLibro=null;
+				||codigo.equals("")
+				||genero.equals("")) {
+			libro=null;
 		}
 		else {
-			datosLibro[0]=titulo;
-			datosLibro[1]=autor;
-			datosLibro[2]=resumen;
-			datosLibro[3]=codigo;
-			
-			return datosLibro;
+			libro=new Libro(titulo, autor, resumen, genero, codigo, false, prestatario);
 		}
+		return libro;
 	}
 	
-//	@SuppressWarnings("null")
-//	public JCheckBox[] obtenerGenerosLibroCL() {
-//		JCheckBox[] generos=null;
-//		if(chckbxOtrosA.isSelected()
-//				||chckbxHistoricosA.isSelected()
-//				||chckbxFilosofiaA.isSelected()
-//				||chckbxDramaA.isSelected()
-//				||chckbxPoesiaA.isSelected()
-//				||chckbxNarrativaA.isSelected()) {
-//		return generos=null;
-//		} else {
-//			generos[0]=	chckbxOtrosA;
-//			generos[1]=	chckbxHistoricosA;
-//			generos[2]=	chckbxFilosofiaA;
-//			generos[3]=	chckbxDramaA;
-//			generos[4]=	chckbxPoesiaA;
-//			generos[5]=	chckbxNarrativaA;
-//			
-//			return generos;
-//		}
-//	}
+	/**
+	 * Obtiene el género del libro a partir del checkbox y lo devuelve
+	 * @return genero
+	 */
+	private String obtenerGeneroLibroCL() {
+		String genero;
+		if (chckbxNarrativaA.isSelected()) genero=chckbxNarrativaA.getText();
+		else if (chckbxPoesiaA.isSelected()) genero=chckbxPoesiaA.getText();
+		else if (chckbxDramaA.isSelected()) genero=chckbxDramaA.getText();
+		else if (chckbxFilosofiaA.isSelected()) genero=chckbxFilosofiaA.getText();
+		else if (chckbxHistoricosA.isSelected()) genero=chckbxHistoricosA.getText();
+		else if (chckbxOtrosA.isSelected()) genero=chckbxOtrosA.getText();
+		else genero="";
+		
+		return genero;
+	}
 	
+	/**
+	 * Elimina los datos de los campos de añadir libro
+	 */
 	public void eliminarDatosAnadirLibro() {
 		textTituloA.setText("");
 		textFieldAutorA.setText("");
@@ -367,17 +314,75 @@ public class A2VentanaAdmin{
 		chckbxNarrativaA.setSelected(false);
 	}
 	
+	
+	/**
+	 * rellena los campos del panel de editar libro con el libro seleccionado
+	 * @param libro
+	 */
+	public void rellenarDatosLibro(Libro libro) {
+		textFieldTituloE.setText(libro.getTitulo());
+		textFieldAutorE.setText(libro.getAutor());
+		textPaneE.setText(libro.getResumen());
+		textFieldCodigoE.setText(libro.getCodigo());
+		
+		if(libro.getGenero().equals("Narrativa")) chckbxNarrativaE.setSelected(true);
+		else if (libro.getGenero().equals("Poesía"))chckbxPoesiaE.setSelected(true);
+		else if (libro.getGenero().equals("Drama y teatro"))chckbxDramaE.setSelected(true);
+		else if (libro.getGenero().equals("Filosofía"))chckbxFilosofiaE.setSelected(true);
+		else if (libro.getGenero().equals("Textos históricos"))chckbxHistoricosE.setSelected(true);
+		else chckbxOtrosE.setSelected(true);
+		
+		if (!libro.isPrestado()) chckbxMarcarComoDevuelto.setEnabled(false);
+		else chckbxMarcarComoDevuelto.setEnabled(true);
+	}
+	
+	public String[] obtenerDatosLibroEL() {
+		String[] cambios=new String[4];
+		String titulo = textFieldTituloE.getText();
+		String autor = textFieldAutorE.getText();
+		String resumen = textPaneE.getText();
+		String genero = obtenerGeneroLibroEL(); 
+		
+		if(titulo.equals("")
+				||autor.equals("")
+				||resumen.equals("")
+				||genero.equals("")) {
+			cambios=null;
+		}
+		else {
+			cambios[0]=titulo;
+			cambios[1]=autor;
+			cambios[2]=resumen;
+			cambios[3]=genero;
+		}
+		return cambios;
+	}
+	
+	private String obtenerGeneroLibroEL() {
+		String genero;
+		if (chckbxNarrativaE.isSelected()) genero=chckbxNarrativaE.getText();
+		else if (chckbxPoesiaE.isSelected()) genero=chckbxPoesiaE.getText();
+		else if (chckbxDramaE.isSelected()) genero=chckbxDramaE.getText();
+		else if (chckbxFilosofiaE.isSelected()) genero=chckbxFilosofiaE.getText();
+		else if (chckbxHistoricosE.isSelected()) genero=chckbxHistoricosE.getText();
+		else if (chckbxOtrosE.isSelected()) genero=chckbxOtrosE.getText();
+		else genero="";
+		
+		return genero;
+	}
+	
 	/**
 	 * Actualiza el contenido de las tablas al producirse una modificación
 	 * @param nombreTabla especifica qué tabla tiene que ser modificada
 	 */
 	public void refrescarTablas(String nombreTabla) {
 		if(nombreTabla.equals("libro")) {
-			tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
+			tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO"));
 			tablaLibros.getColumn("TITULO").setPreferredWidth(200);
 			tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
 			tablaLibros.getColumn("GENERO").setPreferredWidth(100);
 			tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
+			tablaLibros.getColumn("PRESTATARIO").setPreferredWidth(100);
 			tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
 		}
 		else if (nombreTabla.equals("usuario")) {
@@ -753,11 +758,12 @@ public class A2VentanaAdmin{
 		tablaLibros.setFocusable(false);
 		tablaLibros.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		tablaLibros.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
+		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO"));
 		tablaLibros.getColumn("TITULO").setPreferredWidth(200);
 		tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
 		tablaLibros.getColumn("GENERO").setPreferredWidth(100);
 		tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
+		tablaLibros.getColumn("PRESTATARIO").setPreferredWidth(100);
 		tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
 		
 		scrollPaneLibros.setViewportView(tablaLibros);
@@ -913,6 +919,13 @@ public class A2VentanaAdmin{
 		);
 		panelGenerosA.setLayout(gl_panelGenerosA);
 		
+		lblMensajeAnadirLibro = new JLabel("");
+		lblMensajeAnadirLibro.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMensajeAnadirLibro.setForeground(new Color(220, 20, 60));
+		lblMensajeAnadirLibro.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblMensajeAnadirLibro.setBounds(119, 293, 314, 14);
+		panelAnadir.add(lblMensajeAnadirLibro);
+		
 		//PANEL EDITAR
 		panelEditar = new JPanel();
 		panelEditar.setBackground(new Color(255, 228, 196));
@@ -1060,6 +1073,7 @@ public class A2VentanaAdmin{
 		panelLibroE.add(lblCodigoE);
 		
 		textFieldCodigoE = new JTextField();
+		textFieldCodigoE.setEditable(false);
 		textFieldCodigoE.setColumns(10);
 		textFieldCodigoE.setBounds(62, 48, 321, 20);
 		panelLibroE.add(textFieldCodigoE);
@@ -1069,10 +1083,20 @@ public class A2VentanaAdmin{
 		lblResumenE.setBounds(10, 72, 48, 14);
 		panelLibroE.add(lblResumenE);
 		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(62, 72, 321, 155);
+		panelLibroE.add(scrollPane);
+		
 		textPaneE = new JTextPane();
+		scrollPane.setViewportView(textPaneE);
 		textPaneE.setBorder(null);
-		textPaneE.setBounds(62, 72, 321, 159);
-		panelLibroE.add(textPaneE);
+		
+		chckbxMarcarComoDevuelto = new JCheckBox("Marcar como devuelto");
+		chckbxMarcarComoDevuelto.setBackground(new Color(255, 228, 196));
+		chckbxMarcarComoDevuelto.setForeground(new Color(220, 20, 60));
+		chckbxMarcarComoDevuelto.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		chckbxMarcarComoDevuelto.setBounds(171, 288, 153, 23);
+		panelEditar.add(chckbxMarcarComoDevuelto);
 		
 		/**
 		 * PESTAÑA USUARIOS
@@ -1416,31 +1440,31 @@ public class A2VentanaAdmin{
 		lblApellidosE.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		panelE1.add(lblApellidosE, "cell 0 1,alignx trailing");
 		
-		textField_11 = new JTextField();
-		panelE1.add(textField_11, "cell 1 1,growx");
-		textField_11.setColumns(10);
+		textFieldApellidosNuevos = new JTextField();
+		panelE1.add(textFieldApellidosNuevos, "cell 1 1,growx");
+		textFieldApellidosNuevos.setColumns(10);
 		
-		lblDniE = new JLabel("DNI:");
-		lblDniE.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
-		panelE1.add(lblDniE, "cell 0 2,alignx trailing");
+		lblCorreoE = new JLabel("Correo:");
+		lblCorreoE.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
+		panelE1.add(lblCorreoE, "cell 0 2,alignx trailing");
 		
-		textField_13 = new JTextField();
-		panelE1.add(textField_13, "cell 1 2,growx");
-		textField_13.setColumns(10);
+		textFieldCorreoNuevo = new JTextField();
+		panelE1.add(textFieldCorreoNuevo, "cell 1 2,growx");
+		textFieldCorreoNuevo.setColumns(10);
 		
 		lblContraseaNueva_1 = new JLabel("Contrase\u00F1a:");
 		panelE1.add(lblContraseaNueva_1, "cell 0 3,alignx right");
 		lblContraseaNueva_1.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		
-		passwordField_2 = new JPasswordField();
-		panelE1.add(passwordField_2, "cell 1 3,growx");
+		passwordFieldContrasenaNueva = new JPasswordField();
+		panelE1.add(passwordFieldContrasenaNueva, "cell 1 3,growx");
 		
 		lblRepetirContrasena_1 = new JLabel("Repetir contrasena:");
 		panelE1.add(lblRepetirContrasena_1, "cell 0 4");
 		lblRepetirContrasena_1.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		
-		passwordField_3 = new JPasswordField();
-		panelE1.add(passwordField_3, "cell 1 4,growx");
+		passwordFieldRepContrasenaNueva = new JPasswordField();
+		panelE1.add(passwordFieldRepContrasenaNueva, "cell 1 4,growx");
 		
 		chckbxDerechosDeAdministrador = new JCheckBox("Derechos de administrador**");
 		chckbxDerechosDeAdministrador.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
@@ -1472,9 +1496,9 @@ public class A2VentanaAdmin{
 		panelEditarU.add(lblNoSe);
 		cu.addLayoutComponent(panelEditarU, "3");
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(356, 238, 138, 20);
-		panelEditarU.add(passwordField);
+		passwordFieldContrasenaAdmin = new JPasswordField();
+		passwordFieldContrasenaAdmin.setBounds(356, 238, 138, 20);
+		panelEditarU.add(passwordFieldContrasenaAdmin);
 		
 		chckbxDesbloquear = new JCheckBox("Desbloquear*");
 		chckbxDesbloquear.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
@@ -1737,17 +1761,31 @@ public class A2VentanaAdmin{
 	public JTextPane getTxtpnLapacalee() {
 		return txtpnLapacalee;
 	}
-
 	public JLabel getLblMensaje() {
 		return lblMensaje;
 	}
-
 	public JTable getTablaLibros() {
 		return tablaLibros;
 	}
 	public JTable getTablaUsuarios() {
 		return tablaUsuarios;
 	}
+	public JLabel getLblMensajeAnadirLibro() {
+		return lblMensajeAnadirLibro;
+	}
+	public JCheckBox getChckbxMarcarComoDevuelto() {
+		return chckbxMarcarComoDevuelto;
+	}
+	public JPasswordField getPasswordFieldContrasenaAdmin() {
+		return passwordFieldContrasenaAdmin;
+	}
+	public JCheckBox getChckbxDerechosDeAdministrador() {
+		return chckbxDerechosDeAdministrador;
+	}
+	public JCheckBox getChckbxDesbloquear() {
+		return chckbxDesbloquear;
+	}
+	
 
 	
 }

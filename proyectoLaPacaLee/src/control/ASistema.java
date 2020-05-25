@@ -1,5 +1,6 @@
+package control;
 import java.awt.EventQueue;
-import control.Controlador;
+
 import vista.A0VentanaInicio;
 import vista.A1VentanaUsuario;
 import vista.A2VentanaAdmin;

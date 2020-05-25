@@ -20,7 +20,7 @@ public class A1VentanaUsuario {
 
 	private JFrame frmLapacalee;
 	private JTabbedPane tabbedPane;
-	
+	private PersistenciaDatos p;
 	
 	//PESTAÑA INICIO
 	private JLayeredPane inicio;
@@ -36,6 +36,8 @@ public class A1VentanaUsuario {
 	private JTextField textFieldCorreo;
 	private JTextField textFieldDNI;
 	//PANEL LIBROS
+	private JScrollPane scrollPaneLista;
+	private JButton btnDevolver;
 	private JPanel panelLibros;
 	private JLabel lblLibrosEnPosesion;
 	@SuppressWarnings("rawtypes")
@@ -59,6 +61,13 @@ public class A1VentanaUsuario {
 	private JLabel lblNewLabel;
 	private JButton btnVerDetalles;
 	private JButton btnPedirPrestado;
+	private JRadioButton rdbtnAutor;
+	private JRadioButton rdbtnTtulo;
+	private JRadioButton rdbtnCdigo;
+	private JCheckBox chckbxDisponible;
+	private JPanel panelBuscador;
+	private JScrollPane scrollPane;
+	private JTable tablaLibros;
 	
 	//PESTAÑA OPCIONES
 	private JLayeredPane opciones;
@@ -104,18 +113,6 @@ public class A1VentanaUsuario {
 	private JButton btnSi;
 	private JButton btnNo;
 	
-	private JPanel panelBuscador;
-	private JScrollPane scrollPane;
-	private JTable tablaLibros;
-	
-	private PersistenciaDatos p;
-	private JScrollPane scrollPaneLista;
-	private JButton btnDevolver;
-
-
-	
-
-
 	/**
 	 * Crea la ventana
 	 */
@@ -124,20 +121,11 @@ public class A1VentanaUsuario {
 	}
 	
 	/**
-	 * Elimina el contenido de los campos de la modificacion de perfil
-	 */
-	public void eliminarContenidoMU() {
-		textFieldCorreoNuevo.setText("");
-		passwordFieldContrasenaActual.setText("");
-		passwordContrasena.setText("");
-		passwordFieldConfirmarContrasena.setText("");
-	}
-	
-	/**
 	 * Método que especifica la clase Controlador como Listener para las acciones de los componentes.
 	 * @param control
 	 */
 	public void setControlador(Controlador control) {
+		btnDevolver.addActionListener(control);
 		//PESTAÑA BIBLIOTECA
 		btnBuscar.addActionListener(control);
 		btnVerDetalles.addActionListener(control);
@@ -157,6 +145,21 @@ public class A1VentanaUsuario {
 	}
 	
 	/**
+	 * Elimina el contenido de los campos de la modificacion de perfil
+	 */
+	public void eliminarContenidoMU() {
+		textFieldCorreoNuevo.setText("");
+		passwordFieldContrasenaActual.setText("");
+		passwordContrasena.setText("");
+		passwordFieldConfirmarContrasena.setText("");
+	}
+	
+	public void reiniciarPaneles() {
+		tabbedPane.setSelectedComponent(inicio);
+		cl.show(opciones, "1");
+	}
+	
+	/**
 	 * Actualiza el contenido de las tablas al producirse una modificación
 	 * @param nombreTabla especifica qué tabla tiene que ser modificada
 	 */
@@ -172,7 +175,7 @@ public class A1VentanaUsuario {
 	/**
 	 * Inicializa el contenido de la ventana
 	 */
-	@SuppressWarnings("rawtypes")
+	@SuppressWarnings({ "rawtypes" })
 	private void initialize() {
 		p=new PersistenciaDatos();
 		
@@ -284,7 +287,7 @@ public class A1VentanaUsuario {
 		panelLibros.add(btnDevolver, "cell 0 2,alignx center");
 		tabbedPane.setEnabledAt(0, true);
 		tabbedPane.setBackgroundAt(0, new Color(255, 255, 255));
-		
+
 		//PESTAÑA BIBLIOTECA
 		biblioteca = new JLayeredPane();
 		biblioteca.setOpaque(true);
@@ -308,6 +311,7 @@ public class A1VentanaUsuario {
 		panel.setBackground(new Color(255, 228, 196));
 		panel.setBounds(122, 11, 274, 24);
 		panelBuscar.add(panel);
+		
 		GridBagLayout gbl_panel = new GridBagLayout();
 		gbl_panel.columnWidths = new int[]{68, 68, 68, 68, 0};
 		gbl_panel.rowHeights = new int[]{24, 0};
@@ -315,7 +319,7 @@ public class A1VentanaUsuario {
 		gbl_panel.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
 		
-		JRadioButton rdbtnAutor = new JRadioButton("Autor");
+		rdbtnAutor = new JRadioButton("Autor");
 		GridBagConstraints gbc_rdbtnAutor = new GridBagConstraints();
 		gbc_rdbtnAutor.fill = GridBagConstraints.BOTH;
 		gbc_rdbtnAutor.insets = new Insets(0, 0, 0, 5);
@@ -326,7 +330,7 @@ public class A1VentanaUsuario {
 		rdbtnAutor.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		rdbtnAutor.setBackground(new Color(255, 228, 196));
 		
-		JRadioButton rdbtnTtulo = new JRadioButton("T\u00EDtulo");
+		rdbtnTtulo = new JRadioButton("T\u00EDtulo");
 		rdbtnTtulo.setSelected(true);
 		GridBagConstraints gbc_rdbtnTtulo = new GridBagConstraints();
 		gbc_rdbtnTtulo.fill = GridBagConstraints.BOTH;
@@ -338,7 +342,7 @@ public class A1VentanaUsuario {
 		rdbtnTtulo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		rdbtnTtulo.setBackground(new Color(255, 228, 196));
 		
-		JRadioButton rdbtnCdigo = new JRadioButton("C\u00F3digo");
+		rdbtnCdigo = new JRadioButton("C\u00F3digo");
 		GridBagConstraints gbc_rdbtnCdigo = new GridBagConstraints();
 		gbc_rdbtnCdigo.fill = GridBagConstraints.BOTH;
 		gbc_rdbtnCdigo.insets = new Insets(0, 0, 0, 5);
@@ -354,7 +358,7 @@ public class A1VentanaUsuario {
 		grupo.add(rdbtnTtulo);
 		grupo.add(rdbtnCdigo);
 		
-		JCheckBox chckbxDisponible = new JCheckBox("Disponible");
+		chckbxDisponible = new JCheckBox("Disponible");
 		chckbxDisponible.setSelected(false);
 		chckbxDisponible.setBackground(new Color(255, 228, 196));
 		chckbxDisponible.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
@@ -898,4 +902,9 @@ public class A1VentanaUsuario {
 	public JButton getBtnDevolver() {
 		return btnDevolver;
 	}
+	@SuppressWarnings("rawtypes")
+	public JList getListaLibros() {
+		return listaLibros;
+	}
+	
 }

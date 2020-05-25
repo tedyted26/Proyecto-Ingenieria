@@ -29,6 +29,7 @@ public class Controlador implements ActionListener{
 	private PopUp2B popupEliminarUsuario;
 	private PopUp2B popupEliminarLibro;
 	private PopUpInfo popupInfoLibro;
+	private PopUp2B popupDevolverLibro;
 	
 
 	/**
@@ -60,12 +61,16 @@ public class Controlador implements ActionListener{
 		
 		popupInfoLibro = new PopUpInfo();
 		
+		popupDevolverLibro = new PopUp2B();
+		popupDevolverLibro.setControlador(this);
+		
 	}
 		
 	/**
 	 * Método que dicta las acciones de los componentes de las ventanas inicializadas
 	 * @param ev Evento que recoge la clase al implementar el ActionListener
 	 */
+	@SuppressWarnings("unchecked")
 	public void actionPerformed(ActionEvent ev) {
 		//variables para simplificar
 		Object fuente = ev.getSource();
@@ -104,6 +109,7 @@ public class Controlador implements ActionListener{
 		//POP UP 
 		else if(fuente.equals(popup.getBtnAceptar())) {
 			popup.getFrmpopup().setVisible(false);
+			popup.getFrmpopup().getContentPane().setBackground(new Color(255, 228, 196));
 		}
 		
 		
@@ -117,18 +123,49 @@ public class Controlador implements ActionListener{
 		else if(fuente.equals(app0.getBtnSiguiente())) {
 			iniciarSesion(app0.getBtnSiguiente());
 			rellenarDatosU(app0.getBtnSiguiente());
+			app1.refrescarTablas();
 		}
 		
 			//inicio de sesion de administrador
 		else if(fuente.equals(app0.getBtnAdmin())) {
 			iniciarSesion(app0.getBtnAdmin());
 			rellenarDatosU(app0.getBtnAdmin());
+			app2.refrescarTablas("usuario");
+			app2.refrescarTablas("libro");
 		}
 		
 		/**
 		 * Acciones de la ventana de usuario (inicio, biblioteca y opciones)
 		 */
+		else if(fuente.equals(app1.getBtnDevolver())) {
+			try{
+				app1.getListaLibros().getSelectedValue();
+				popupDevolverLibro.getLblAviso().setText("¿Devolver este libro?");
+				popupDevolverLibro.getFrmpopup().setVisible(true);
+			}catch(Exception e) {
+				popup.getLblAviso().setText("No has seleccionado nada");
+				popup.getFrmpopup().setVisible(true);
+			}
+
+		}
+		//popup
+		else if(fuente.equals(popupDevolverLibro.getBtnNo())) {
+			popupDevolverLibro.getFrmpopup().setVisible(false);
+		}
+		else if(fuente.equals(popupDevolverLibro.getBtnSi())){
+			String titulo=(String)app1.getListaLibros().getSelectedValue();
+			String codigo=p.consultarLibroTitulo(titulo).getCodigo();
+			if (p.devolverLibro(codigo)) {
+				popup.getLblAviso().setText("¡Hecho!");
+				popup.getFrmpopup().setVisible(true);
+				app1.refrescarTablas();
+				Usuario u=getUsuarioIS();
+				app1.getListaLibros().setModel(p.cargarLista(u.getDni()));
+				popupDevolverLibro.getFrmpopup().setVisible(false);
+			}
+		}
 		
+		//biblioteca
 		else if(fuente.equals(app1.getBtnBuscar())) {
 			// TODO buscador
 		}
@@ -136,18 +173,28 @@ public class Controlador implements ActionListener{
 			try {
 				int fila=app1.getTablaLibros().getSelectedRow();
 				String codigo=(String)app1.getTablaLibros().getValueAt(fila, 4);
-				Libro libro=p.consultaLibro(codigo);
+				Libro libro=p.consultarLibro(codigo);
 				popupInfoLibro.rellenarDatos(libro);
 				popupInfoLibro.getFrmpopup().setVisible(true);
 			}catch(Exception e) {
-				System.out.println("No has seleccionado nada");
+				popup.getLblAviso().setText("No has seleccionado nada");
+				popup.getFrmpopup().setVisible(true);
 			}
 		}
 		else if(fuente.equals(app1.getBtnPedirPrestado())) {
-			popupPedirPrestado.getLblAviso().setFont(new Font("Goudy Old Style", Font.PLAIN, 18));
-			popupPedirPrestado.getLblAviso().setText("¿Seguro que quieres este libro?");
-			popupPedirPrestado.getFrmpopup().setVisible(true);
+			
+			try{
+				app1.getTablaLibros().getSelectedRow();
+				popupPedirPrestado.getLblAviso().setFont(new Font("Goudy Old Style", Font.PLAIN, 18));
+				popupPedirPrestado.getLblAviso().setText("¿Seguro que quieres este libro?");
+				popupPedirPrestado.getFrmpopup().setVisible(true);
+			}catch (Exception e) {
+				popup.getLblAviso().setText("No has seleccionado nada");
+				popup.getFrmpopup().setVisible(true);
+			}
+			
 		}
+		
 		
 		//POP UP
 		else if(fuente.equals(popupPedirPrestado.getBtnNo())) {
@@ -155,19 +202,21 @@ public class Controlador implements ActionListener{
 		}
 		
 		else if(fuente.equals(popupPedirPrestado.getBtnSi())) {
-			try {
-				int fila=app1.getTablaLibros().getSelectedRow();
-				String codigo=(String)app1.getTablaLibros().getValueAt(fila, 4);
-				p.prestarLibro(codigo);
-				popup.getFrmpopup().getContentPane().setBackground(new Color(255, 228, 196));
+			int fila=app1.getTablaLibros().getSelectedRow();
+			String codigo=(String)app1.getTablaLibros().getValueAt(fila, 4);
+			if((int)app1.getTablaLibros().getValueAt(fila, 3)==0) {
+				Usuario u=getUsuarioIS();
+				p.prestarLibro(codigo, u.getDni());
 				popup.getLblAviso().setText("¡Hecho!");
+				popup.getFrmpopup().setVisible(true);
 				app1.refrescarTablas();
+				app1.getListaLibros().setModel(p.cargarLista(u.getDni()));
+				popupPedirPrestado.getFrmpopup().setVisible(false);
+			}
+			else {
+				popup.getLblAviso().setText("No disponible");
 				popup.getFrmpopup().setVisible(true);
 				popupPedirPrestado.getFrmpopup().setVisible(false);
-				//TODO modificar en la lista
-				
-			}catch(Exception e) {
-				System.out.println("No has seleccionado nada");
 			}
 		}
 		
@@ -186,7 +235,6 @@ public class Controlador implements ActionListener{
 		}
 		else if(fuente.equals(app1.getBtncontactanos())) {
 			popup.getLblAviso().setText("Correo: admin@admin");
-			popup.getFrmpopup().setBackground(new Color(255, 192, 203));
 			popup.getFrmpopup().setVisible(true);
 		}
 		else if(fuente.equals(app1.getBtnAtras())) {
@@ -200,8 +248,8 @@ public class Controlador implements ActionListener{
 		}
 		else if(fuente.equals(app1.getBtnSi())) {
 			p.eliminarUsuario(app1.getTextFieldDNI().getText());
-			popup.getLblAviso().setText("Eliminado con éxito");
 			popup.getFrmpopup().setBackground(new Color(255, 192, 203));
+			popup.getLblAviso().setText("Eliminado con éxito");
 			popup.getFrmpopup().setVisible(true);
 			cerrarSesion(app1);
 		}
@@ -227,45 +275,51 @@ public class Controlador implements ActionListener{
 			app2.eliminarDatosAnadirLibro();
 		}
 		else if(fuente.equals(app2.getBtnConfirmar())) {
-			popup.getLblAviso().setText("Libro añadido");
-			popup.getFrmpopup().setBackground(new Color(255, 250, 240));
-			popup.getFrmpopup().setVisible(true);
-			app2.eliminarDatosAnadirLibro();
-			//TODO añadir libro a la base de datos
-//			app2.getCb().show(parent2, "1");
+			crearLibro();
+			
 		}
 		else if(fuente.equals(app2.getBtnDetalles())) {
 			try {
 				int fila=app2.getTablaLibros().getSelectedRow();
-				String codigo=(String)app2.getTablaLibros().getValueAt(fila, 4);
-				Libro libro=p.consultaLibro(codigo);
+				String codigo=(String)app2.getTablaLibros().getValueAt(fila, 5);
+				Libro libro=p.consultarLibro(codigo);
 				popupInfoLibro.rellenarDatos(libro);
 				popupInfoLibro.getFrmpopup().setVisible(true);
 			}catch(Exception e) {
-				System.out.println("No has seleccionado nada");
+				popup.getLblAviso().setText("No has seleccionado nada");
+				popup.getFrmpopup().setVisible(true);
 			}
 		}
 		else if(fuente.equals(app2.getBtnEditar())) {
 			try {
 				int fila=app2.getTablaLibros().getSelectedRow();
-				String codigo=(String)app2.getTablaLibros().getValueAt(fila, 4);
-				Libro libro=p.consultaLibro(codigo);
-				//Rellenar datos del libro
+				String codigo=(String)app2.getTablaLibros().getValueAt(fila, 5);
+				Libro libro=p.consultarLibro(codigo);
+				app2.rellenarDatosLibro(libro);
+				app2.getCb().show(parent2, "3");
 			}catch(Exception e) {
-				System.out.println("No has seleccionado nada");
+				popup.getLblAviso().setText("No has seleccionado nada");
+				popup.getFrmpopup().setVisible(true);
 			}
-			app2.getCb().show(parent2, "3");
+			
 		}
 		else if(fuente.equals(app2.getBtnCancelarEditar())) {
 			app2.getCb().show(parent2, "1");
 			
 		}
 		else if(fuente.equals(app2.getBtnConfirmarCambios())) {
-			//TODO realizar cambios
-			popup.getLblAviso().setText("Cambios realizados");
-			popup.getFrmpopup().setBackground(new Color(255, 250, 240));
-			popup.getFrmpopup().setVisible(true);
-//			app2.getCb().show(parent2, "1");
+			try{
+				int fila=app2.getTablaLibros().getSelectedRow();
+				String codigo=(String)app2.getTablaLibros().getValueAt(fila, 5);
+				Libro libro=p.consultarLibro(codigo);
+				editarLibro(libro);
+				app2.refrescarTablas("libro");
+			}catch (Exception e) {
+				popup.getLblAviso().setText("No se puede editar");
+				popup.getFrmpopup().setVisible(true);
+			}
+			
+			
 		}
 		else if(fuente.equals(app2.getBtnEliminar())) {
 			popupEliminarLibro.getLblAviso().setFont(new Font("Goudy Old Style", Font.PLAIN, 18));
@@ -277,12 +331,20 @@ public class Controlador implements ActionListener{
 		else if (fuente.equals(popupEliminarLibro.getBtnNo())) {
 			popupEliminarLibro.getFrmpopup().setVisible(false);
 		}
-		else if (fuente.equals(popupEliminarLibro.getBtnSi())) {	
-			popup.getLblAviso().setText("Libro eliminado");
-			popup.getFrmpopup().setBackground(new Color(255, 250, 240));
-			popup.getFrmpopup().setVisible(true);
-			popupEliminarLibro.getFrmpopup().setVisible(false);
-			//TODO ELIMINAR DE LA BASE DE DATOS
+		else if (fuente.equals(popupEliminarLibro.getBtnSi())) {
+			try {
+				int fila=app2.getTablaLibros().getSelectedRow();
+				String codigo=(String)app2.getTablaLibros().getValueAt(fila, 5);
+				p.devolverLibro(codigo);
+				p.eliminarLibro(codigo);
+				app2.refrescarTablas("libro");
+				popup.getLblAviso().setText("Libro eliminado");
+				popup.getFrmpopup().setVisible(true);
+				popupEliminarLibro.getFrmpopup().setVisible(false);
+				
+			}catch(Exception e) {
+				System.out.println("No has seleccionado nada");
+			}
 		}
 		
 		//USUARIOS
@@ -305,10 +367,16 @@ public class Controlador implements ActionListener{
 				int fila=app2.getTablaUsuarios().getSelectedRow();
 				String dni=(String)app2.getTablaUsuarios().getValueAt(fila, 1);
 				Usuario user=p.consultarUsuario(dni);
-				//TODO rellenar los datos actuales del libro
-				app2.getCu().show(parent3, "3");
+				if(user.isAdmin()) {
+					popup.getLblAviso().setText("No se puede editar");
+					popup.getFrmpopup().setVisible(true);
+				}else {
+					app2.completarCamposEU(user);
+					app2.getCu().show(parent3, "3");
+				}
 			}catch(Exception e) {
-				System.out.println("No has seleccionado nada");
+				popup.getLblAviso().setText("No has seleccionado nada");
+				popup.getFrmpopup().setVisible(true);
 			}
 			
 		}
@@ -316,17 +384,24 @@ public class Controlador implements ActionListener{
 			app2.getCu().show(parent3, "1");
 		}
 		else if(fuente.equals(app2.getBtnConfirmarCambiosU())) {
-			popup.getLblAviso().setText("Cambios realizados");
-			popup.getFrmpopup().setBackground(new Color(255, 250, 240));
-			popup.getFrmpopup().setVisible(true);
-			//TODO hacer update de la base de datos
+			try {
+				int fila=app2.getTablaUsuarios().getSelectedRow();
+				String dni=(String)app2.getTablaUsuarios().getValueAt(fila, 1);
+				Usuario user=p.consultarUsuario(dni);
+				editarUsuario(user);
+			}catch (Exception e) {
+				popup.getLblAviso().setText("No se ha podido editar");
+				popup.getFrmpopup().setVisible(true);
+			}
+			
 		}
 		else if(fuente.equals(app2.getBtnBloquear())) {
 			popupBloquearUsuario.getLblAviso().setFont(new Font("Goudy Old Style", Font.PLAIN, 18));
 			popupBloquearUsuario.getLblAviso().setText("¿Desea bloquear este usuario?");
 			popupBloquearUsuario.getFrmpopup().setVisible(true);
+
 		}
-		
+
 		//popup
 		else if (fuente.equals(popupBloquearUsuario.getBtnNo())){
 			popupBloquearUsuario.getFrmpopup().setVisible(false);
@@ -334,16 +409,23 @@ public class Controlador implements ActionListener{
 		else if (fuente.equals(popupBloquearUsuario.getBtnSi())) {
 			try {
 				int fila=app2.getTablaUsuarios().getSelectedRow();
-				String dni=(String)app2.getTablaUsuarios().getValueAt(fila, 1);
-				p.bloquearUsuario(dni);
-				app2.refrescarTablas("usuario");
-				popup.getLblAviso().setText("Usuario bloqueado");
-				popup.getFrmpopup().setBackground(new Color(255, 250, 240));
-				popup.getFrmpopup().setVisible(true);
-				popupBloquearUsuario.getFrmpopup().setVisible(false);
+				String dni=(String)app2.getTablaUsuarios().getValueAt(fila, 0);
+				Usuario u=p.consultarUsuarioDni(dni);
+				if(u.isAdmin()||u.isBloqueado()) {
+					popup.getLblAviso().setText("No se puede bloquear");
+					popup.getFrmpopup().setVisible(true);
+					popupEliminarUsuario.getFrmpopup().setVisible(false);
+				}else {
+					p.bloquearUsuario(dni);
+					app2.refrescarTablas("usuario");
+					popup.getLblAviso().setText("Usuario bloqueado");
+					popup.getFrmpopup().setVisible(true);
+					popupBloquearUsuario.getFrmpopup().setVisible(false);
+				}
 				
 			}catch(Exception e) {
-				System.out.println("No has seleccionado nada");
+				popup.getLblAviso().setText("No has seleccionado nada");
+				popup.getFrmpopup().setVisible(true);
 			}
 		}
 		
@@ -360,16 +442,24 @@ public class Controlador implements ActionListener{
 		else if (fuente.equals(popupEliminarUsuario.getBtnSi())) {
 			try {
 				int fila=app2.getTablaUsuarios().getSelectedRow();
-				String dni=(String)app2.getTablaUsuarios().getValueAt(fila, 1);
-				p.eliminarUsuario(dni);
-				app2.refrescarTablas("usuario");
-				popup.getLblAviso().setText("Usuario eliminado");
-				popup.getFrmpopup().setBackground(new Color(255, 250, 240));
-				popup.getFrmpopup().setVisible(true);
-				popupEliminarUsuario.getFrmpopup().setVisible(false);
-				
+				String dni=(String)app2.getTablaUsuarios().getValueAt(fila, 0);
+				Usuario u=p.consultarUsuarioDni(dni);
+				if(u.isAdmin()) {
+					popup.getLblAviso().setText("No se puede eliminar");
+					popup.getFrmpopup().setVisible(true);
+					popupEliminarUsuario.getFrmpopup().setVisible(false);
+				}
+				else {
+					p.eliminarUsuario(dni);
+					app2.refrescarTablas("usuario");
+					popup.getLblAviso().setText("Usuario eliminado");
+					popup.getFrmpopup().setVisible(true);
+					popupEliminarUsuario.getFrmpopup().setVisible(false);
+				}
+
 			}catch(Exception e) {
-				System.out.println("No has seleccionado nada");
+				popup.getLblAviso().setText("No has seleccionado nada");
+				popup.getFrmpopup().setVisible(true);
 			}
 		}
 		else if(fuente.equals(app2.getBtnInformacion())) {
@@ -378,20 +468,23 @@ public class Controlador implements ActionListener{
 		else if(fuente.equals(app2.getBtnAtras())) {
 			app2.getTxtpnLapacalee().setEditable(false);
 			app1.getTxtpnLapacalee().setText(app2.getTxtpnLapacalee().getText());
+			app2.getTxtpnLapacalee().setBackground(new Color(255,228,196));
 			app2.getCo().show(parent4, "1");
 		}
 		else if(fuente.equals(app2.getBtnEditarInfo())) {
 			app2.getTxtpnLapacalee().setEditable(true);
+			app2.getTxtpnLapacalee().setBackground(new Color(255,255,255));
 		}
 		else if(fuente.equals(app2.getBtncontactanos())) {
 			popup.getLblAviso().setText("Correo: admin@admin");
-			popup.getFrmpopup().setBackground(new Color(255, 192, 203));
 			popup.getFrmpopup().setVisible(true);
 		}
 		else if(fuente.equals(app2.getBtnCerrarSesion())) {
 			cerrarSesion(app2);
 		}
 	}
+	
+	//MÉTODOS RELACIONADOS CON LOS USUARIOS
 	
 	/**
 	 * Crea un usuario en la base de datos dependiendo desde qué ventana se esta dando la instrucción
@@ -427,7 +520,6 @@ public class Controlador implements ActionListener{
 				app2.getLblMensaje().setText("Debe completar los campos");			
 			}
 			else if(app2.comprobarDatosCC()&&p.crearUsuario(u)) {
-				popup.getFrmpopup().getContentPane().setBackground(new Color(255, 228, 196));
 				popup.getLblAviso().setText("Usuario creado con éxito");
 				popup.getFrmpopup().setVisible(true);
 				app2.eliminarContenidoCC();
@@ -460,13 +552,18 @@ public class Controlador implements ActionListener{
 			if (u==null) {
 				app0.getLblAutentificacionDeContrasena().setText(("Correo inexistente"));
 			}
-			else if(boton.equals(app0.getBtnSiguiente())&&u.isAdmin()==false&&contrasena.equals(u.getContrasena())) {
+			else if(u.isBloqueado()) {
+				app0.getLblAutentificacionDeContrasena().setText(("Cuenta bloqueada"));
+			}
+			else if(boton.equals(app0.getBtnSiguiente())&&u.isAdmin()==false&&contrasena.equals(u.getContrasena())&&!u.isBloqueado()) {
 				app0.getFrmLaPacaLee().setVisible(false);
 				app1.getFrmLapacalee().setVisible(true);
+				app1.reiniciarPaneles();
 			}
 			else if(boton.equals(app0.getBtnAdmin())&&u.isAdmin()&&contrasena.equals(u.getContrasena())) {
 				app0.getFrmLaPacaLee().setVisible(false);
 				app2.getFrmLapacalee().setVisible(true);
+				app2.reiniciarPaneles();
 			}else app0.getLblAutentificacionDeContrasena().setText(("Correo o contraseña incorrectos"));
 		}
 	}
@@ -505,6 +602,7 @@ public class Controlador implements ActionListener{
 	 * Dependiendo del boton pulsado rellena los campos de una ventana o de otra
 	 * @param boton
 	 */
+	@SuppressWarnings("unchecked")
 	private void rellenarDatosU(JButton boton) {
 		Usuario u=getUsuarioIS();
 		
@@ -517,6 +615,8 @@ public class Controlador implements ActionListener{
 			app1.getTextFieldApellidos().setText(u.getApellidos());
 			app1.getTextFieldCorreo().setText(u.getCorreo());
 			app1.getTextFieldDNI().setText(u.getDni());
+			//DATOS DE LIBROS EN POSESION
+			app1.getListaLibros().setModel(p.cargarLista(u.getDni()));
 			//DATOS DE MODIFICAR PERFIL
 			app1.getTextFieldCorreoActual().setText(u.getCorreo());
 			}
@@ -547,6 +647,7 @@ public class Controlador implements ActionListener{
 		Usuario u=p.consultarUsuarioDni(dni);
 		app1.getTextFieldCorreo().setText(u.getCorreo());
 		app1.getTextFieldCorreoActual().setText(u.getCorreo());
+		app1.getListaLibros().setModel(p.cargarLista(dni));
 	}
 	
 	/**
@@ -587,10 +688,119 @@ public class Controlador implements ActionListener{
 	 */
 	private void popUpModificarPerfil() {
 		popup.getLblAviso().setText("Modificado con éxito");
-		popup.getFrmpopup().setBackground(new Color(255, 192, 203));
 		popup.getFrmpopup().setVisible(true);
 		app1.getCl().show(app1.getOpciones(), "1");
 		app1.eliminarContenidoMU();
 		
 	}
+	
+	/**
+	 * edita los datos de un usuario seleccionado en la tabla de administracion
+	 * @param u seleccionado
+	 */
+	private void editarUsuario(Usuario u) {
+		String[] cambios=app2.obtenerDatosUsuarioEU();
+		if (cambios==null) {
+			popup.getLblAviso().setText("Rellene los campos");
+			popup.getFrmpopup().setVisible(true);
+		}
+		else {
+			String correo=cambios[0];
+			String nombre=cambios[1];
+			String apellidos=cambios[2];
+			String contrasena=cambios[3];
+			String contrasenaAdmin=cambios[4];
+
+			if(contrasenaAdmin.equals(getUsuarioIS().getContrasena())) {
+				if(!correo.equals(u.getCorreo())) {
+					p.editarUsuario(u.getDni(), "correo", correo);
+				}
+				if(!nombre.equals(u.getNombre())) {
+					p.editarUsuario(u.getDni(), "nombre", nombre);
+				}
+				if(!apellidos.equals(u.getApellidos())) {
+					p.editarUsuario(u.getDni(), "apellidos", apellidos);
+				}
+				if(!contrasena.equals(u.getContrasena())) {
+					p.editarUsuario(u.getDni(), "contrasena", contrasena);
+				}
+				if(u.isBloqueado()&&app2.getChckbxDesbloquear().isSelected()) {
+					p.desbloquearUsuario(u.getDni());
+				}
+				if(!u.isAdmin()&&app2.getChckbxDerechosDeAdministrador().isSelected()) {
+					p.covertirAdministrador(u.getDni());
+				}
+				
+				popup.getLblAviso().setText("Cambios realizados");
+				popup.getFrmpopup().setVisible(true);
+				app2.refrescarTablas("usuario");
+				app2.getCu().show(app2.getUsuarios(), "1");
+			}
+			else {
+				popup.getLblAviso().setText("Se necesitan permisos");
+				popup.getFrmpopup().setVisible(true);
+			}
+		}
+
+
+		
+	}
+
+
+	//MÉTODOS RELACIONADOS CON LOS LIBROS
+	/**
+	 * llama a la funcion que añade los libros a la base de datos solo si se cumplen una serie de requisitos
+	 */
+	private void crearLibro() {
+		Libro libro=app2.obtenerDatosLibroCL();
+		if(libro==null) {
+			app2.getLblMensajeAnadirLibro().setText("Datos no rellenados correctamente");
+		}
+		else if(p.consultarLibro(libro.getCodigo())==null&&p.crearLibro(libro)) {
+			popup.getLblAviso().setText("Libro añadido");
+			popup.getFrmpopup().setVisible(true);
+			app2.eliminarDatosAnadirLibro();
+			app2.refrescarTablas("libro");
+			app2.getCb().show(app2.getBiblioteca(), "1");
+
+		}
+		else app2.getLblMensajeAnadirLibro().setText("Código de libro en uso");
+	}
+	
+	/**
+	 * edita un libro seleccionado de la tabla de administracion
+	 * @param libro seleccionado
+	 */
+	private void editarLibro(Libro libro) {
+		String[] cambios=app2.obtenerDatosLibroEL();
+		String titulo=cambios[0];
+		String autor=cambios[1];
+		String resumen=cambios[2];
+		String genero=cambios[3];
+		
+		if(!titulo.equals(libro.getTitulo())) {
+			p.editarLibro(libro.getCodigo(), "titulo", titulo);
+		}
+		if(!autor.equals(libro.getAutor())) {
+			p.editarLibro(libro.getCodigo(), "autor", autor);
+		}
+		if(!resumen.equals(libro.getResumen())) {
+			p.editarLibro(libro.getCodigo(), "resumen", resumen);
+		}
+		if(!genero.equals(libro.getGenero())) {
+			p.editarLibro(libro.getCodigo(), "genero", genero);
+		}
+		if(libro.isPrestado()&&app2.getChckbxMarcarComoDevuelto().isSelected()) {
+			p.devolverLibro(libro.getCodigo());
+		}
+		
+		popup.getLblAviso().setText("Cambios realizados");
+		popup.getFrmpopup().setVisible(true);
+		app2.getCb().show(app2.getBiblioteca(), "1");
+		
+	}
+
 }
+
+
+

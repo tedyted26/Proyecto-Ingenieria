@@ -122,6 +122,8 @@ public class A0VentanaInicio{
 		passContrasena2.setText("");
 		textFieldNombre.setText("");
 		textFieldApellidos.setText("");
+		lblMensaje.setText("");
+		
 	}
 	
 	/**
@@ -160,7 +162,7 @@ public class A0VentanaInicio{
 	public void eliminarContenidoIS() {
 		textField.setText("");
 		passwordField.setText("");
-		
+		lblAutentificacionDeContrasena.setText("");
 	}
 	
 	/**
