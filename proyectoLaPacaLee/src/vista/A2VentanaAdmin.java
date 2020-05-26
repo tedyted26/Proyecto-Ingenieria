@@ -40,7 +40,9 @@ public class A2VentanaAdmin{
 	private JTextField textFieldBuscar;
 	private JLabel lblFiltros, lblGeneros;
 	private JButton btnBuscar, btnDetalles, btnEliminar, btnAnadir;
-	private JCheckBox chckbxOtros, chckbxHistoricos, chckbxFilosofia, chckbxDrama, chckbxPoesia, chckbxNarrativa;
+	private JCheckBox chckbxOtros, chckbxHistoricos, chckbxFilosofia, chckbxDrama, chckbxPoesia, chckbxNarrativa, chckbxDisponible;
+	private JRadioButton rdbtnAutor, rdbtnTtulo, rdbtnCdigo;
+	private ButtonGroup grupoBuscarGeneros, grupoL;
 	
 	//PANEL AÑADIR LIBRO
 	private JPanel panelAnadir, panelLibroA, panelGenerosA;
@@ -71,8 +73,9 @@ public class A2VentanaAdmin{
 	private JLabel lblFiltrosU, lblFiltrarPorU;
 	private JTextField textFieldBuscarU;
 	private JButton btnBuscarU, btnAnadirU, btnEditarU, btnBloquear, btnEliminarU;
-	private JCheckBox chckbxUsuariosBloqueados, chckbxAdministrador, chckbxDisponible;
+	private JCheckBox chckbxUsuariosBloqueados, chckbxAdministrador;
 	private JRadioButton rdbtnDni,rdbtnNombre, rdbtnApellidos, rdbtnCorreo;
+	private ButtonGroup grupoFiltroUsuario, grupoU;
 	//PANEL AÑADIR
 	private JPanel panelAnadirU, panelCrearUsuario;
 	private JButton btnConfirmarU, btnCancelarAnadirU;
@@ -153,6 +156,9 @@ public class A2VentanaAdmin{
 		
 	}
 	
+	/**
+	 * método que restablece el orden inicial de los paneles
+	 */
 	public void reiniciarPaneles() {
 		tabbedPane.setSelectedComponent(inicio);
 		cu.show(usuarios, "1");
@@ -215,6 +221,10 @@ public class A2VentanaAdmin{
 		else return true;
 	}
 	
+	/**
+	 * Completa los campos del panel de editar usuario 
+	 * @param Usuario user 
+	 */
 	public void completarCamposEU(Usuario user) {
 		textFieldCorreoNuevo.setText(user.getCorreo());
 		textFieldApellidosNuevos.setText(user.getApellidos());
@@ -229,6 +239,10 @@ public class A2VentanaAdmin{
 
 	}
 	
+	/**
+	 * obtiene los datos de los campos del panel de editar usuario
+	 * @return String[] de los cambios realizados
+	 */
 	public String[] obtenerDatosUsuarioEU() {
 		String[] cambios=new String[5];
 		String correo = textFieldCorreoNuevo.getText();
@@ -333,9 +347,16 @@ public class A2VentanaAdmin{
 		else chckbxOtrosE.setSelected(true);
 		
 		if (!libro.isPrestado()) chckbxMarcarComoDevuelto.setEnabled(false);
-		else chckbxMarcarComoDevuelto.setEnabled(true);
+		else {
+			chckbxMarcarComoDevuelto.setEnabled(true);
+			chckbxMarcarComoDevuelto.setSelected(false);
+		}
 	}
 	
+	/**
+	 * obtiene los valores de los campos de editar libro
+	 * @return String[] de los datos
+	 */
 	public String[] obtenerDatosLibroEL() {
 		String[] cambios=new String[4];
 		String titulo = textFieldTituloE.getText();
@@ -357,7 +378,10 @@ public class A2VentanaAdmin{
 		}
 		return cambios;
 	}
-	
+	/**
+	 * método privado que solo se usa para obtener un string del género seleccionado
+	 * @return genero
+	 */
 	private String obtenerGeneroLibroEL() {
 		String genero;
 		if (chckbxNarrativaE.isSelected()) genero=chckbxNarrativaE.getText();
@@ -372,28 +396,115 @@ public class A2VentanaAdmin{
 	}
 	
 	/**
+	 * Recoge la casilla marcada de los generos del libro para usarlo como filtro
+	 * @return String genero
+	 */
+	public String recogerFiltrosB() {
+		String genero;
+		if (chckbxNarrativa.isSelected()) genero=chckbxNarrativa.getText();
+		else if (chckbxPoesia.isSelected()) genero=chckbxPoesia.getText();
+		else if (chckbxDrama.isSelected()) genero=chckbxDrama.getText();
+		else if (chckbxFilosofia.isSelected()) genero=chckbxFilosofia.getText();
+		else if (chckbxHistoricos.isSelected()) genero=chckbxHistoricos.getText();
+		else if (chckbxOtros.isSelected()) genero=chckbxOtros.getText();
+		else genero="";
+		return genero;
+		
+	}
+	
+	/**
+	 * Recoge la casilla marcada de los filtros por los que se puede buscar un usuario
+	 * @return String filtro
+	 */
+	public String recogerFiltrosU() {
+		String filtro;
+		if (chckbxUsuariosBloqueados.isSelected()) filtro=chckbxUsuariosBloqueados.getText();
+		else if	(chckbxAdministrador.isSelected()) filtro=chckbxAdministrador.getText();
+		else filtro="";
+		
+		return filtro;
+	}
+	
+	/**
+	 * Recoge el valor de la casilla marcada que despues servirá para establecer la columna por la que
+	 * se va a buscar el libro en la base de datos
+	 * @return String columna
+	 */
+	public String recogerColumnaFiltroB() {
+		String columna;
+		if (rdbtnAutor.isSelected()) {
+			columna="AUTOR";
+		}
+		else if (rdbtnTtulo.isSelected()) {
+			columna="TITULO";
+		}
+		else if (rdbtnCdigo.isSelected()) {
+			columna="CODIGO";
+		}
+		else columna=null;
+		return columna;
+	}
+	
+	/**
+	 * Recoge el valor de la casilla marcada que despues servirá para establecer la columna por la que 
+	 * se va a buscar el usuario en la base de datos
+	 * @return String columna
+	 */
+	public String recogerColumnaFiltroU() {
+		String columna;
+		if (rdbtnDni.isSelected()) {
+			columna="DNI";
+		}
+		else if (rdbtnNombre.isSelected()) {
+			columna="NOMBRE";
+		}
+		else if (rdbtnApellidos.isSelected()) {
+			columna="APELLIDOS";
+		}
+		else if (rdbtnCorreo.isSelected()) {
+			columna="CORREO";
+		}
+		else columna=null;
+		return columna;
+	}
+	
+	/**
 	 * Actualiza el contenido de las tablas al producirse una modificación
 	 * @param nombreTabla especifica qué tabla tiene que ser modificada
 	 */
 	public void refrescarTablas(String nombreTabla) {
 		if(nombreTabla.equals("libro")) {
-			tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO"));
-			tablaLibros.getColumn("TITULO").setPreferredWidth(200);
-			tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
-			tablaLibros.getColumn("GENERO").setPreferredWidth(100);
-			tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
-			tablaLibros.getColumn("PRESTATARIO").setPreferredWidth(100);
-			tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
+			tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO ORDER BY TITULO"));
+			preferenciasTamanoTablaLibros();
 		}
 		else if (nombreTabla.equals("usuario")) {
-			tablaUsuarios.setModel(p.modelarTabla("SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO"));
-			tablaUsuarios.getColumn("DNI").setPreferredWidth(100);
-			tablaUsuarios.getColumn("CORREO").setPreferredWidth(150);
-			tablaUsuarios.getColumn("NOMBRE").setPreferredWidth(150);
-			tablaUsuarios.getColumn("APELLIDOS").setPreferredWidth(200);
-			tablaUsuarios.getColumn("BLOQUEO").setPreferredWidth(50);
-			tablaUsuarios.getColumn("ADMIN").setPreferredWidth(50);
+			tablaUsuarios.setModel(p.modelarTabla("SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO ORDER BY CORREO"));
+			preferenciasTamanoTablaUsuarios();
 		}
+	}
+	
+	/**
+	 * método para establecer las preferencias visuales de tamaño de la tabla de libros en la interfaz
+	 */
+	public void preferenciasTamanoTablaLibros() {
+		tablaLibros.getColumn("TITULO").setPreferredWidth(200);
+		tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
+		tablaLibros.getColumn("GENERO").setPreferredWidth(100);
+		tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
+		tablaLibros.getColumn("PRESTATARIO").setPreferredWidth(100);
+		tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
+	}
+	
+	/**
+	 * método para establecer las preferencias visuales de tamaño de la tabla de usuarios en la interfaz
+	 */
+	public void preferenciasTamanoTablaUsuarios() {
+		tablaUsuarios.getColumn("DNI").setPreferredWidth(100);
+		tablaUsuarios.getColumn("CORREO").setPreferredWidth(150);
+		tablaUsuarios.getColumn("NOMBRE").setPreferredWidth(150);
+		tablaUsuarios.getColumn("APELLIDOS").setPreferredWidth(200);
+		tablaUsuarios.getColumn("BLOQUEO").setPreferredWidth(50);
+		tablaUsuarios.getColumn("ADMIN").setPreferredWidth(50);
 	}
 
 	/**
@@ -563,11 +674,10 @@ public class A2VentanaAdmin{
 		gbl_panelFiltros.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		panelFiltros.setLayout(gbl_panelFiltros);
 		
-		JRadioButton rdbtnAutor = new JRadioButton("Autor");
+		rdbtnAutor = new JRadioButton("Autor");
 		rdbtnAutor.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		rdbtnAutor.setForeground(new Color(0, 0, 0));
 		rdbtnAutor.setBackground(new Color(255, 228, 196));
-		rdbtnAutor.setSelected(true);
 		GridBagConstraints gbc_rdbtnAutor = new GridBagConstraints();
 		gbc_rdbtnAutor.fill = GridBagConstraints.BOTH;
 		gbc_rdbtnAutor.insets = new Insets(0, 0, 0, 5);
@@ -575,7 +685,8 @@ public class A2VentanaAdmin{
 		gbc_rdbtnAutor.gridy = 0;
 		panelFiltros.add(rdbtnAutor, gbc_rdbtnAutor);
 		
-		JRadioButton rdbtnTtulo = new JRadioButton("T\u00EDtulo");
+		rdbtnTtulo = new JRadioButton("T\u00EDtulo");
+		rdbtnTtulo.setSelected(true);
 		rdbtnTtulo.setBackground(new Color(255, 228, 196));
 		rdbtnTtulo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		rdbtnTtulo.setForeground(new Color(0, 0, 0));
@@ -586,7 +697,7 @@ public class A2VentanaAdmin{
 		gbc_rdbtnTtulo.gridy = 0;
 		panelFiltros.add(rdbtnTtulo, gbc_rdbtnTtulo);
 		
-		JRadioButton rdbtnCdigo = new JRadioButton("C\u00F3digo");
+		rdbtnCdigo = new JRadioButton("C\u00F3digo");
 		rdbtnCdigo.setBackground(new Color(255, 228, 196));
 		rdbtnCdigo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		rdbtnCdigo.setForeground(new Color(0, 0, 0));
@@ -597,7 +708,7 @@ public class A2VentanaAdmin{
 		gbc_rdbtnCdigo.gridy = 0;
 		panelFiltros.add(rdbtnCdigo, gbc_rdbtnCdigo);
 		
-		ButtonGroup grupoL = new ButtonGroup();
+		grupoL = new ButtonGroup();
 		grupoL.add(rdbtnAutor);
 		grupoL.add(rdbtnTtulo);
 		grupoL.add(rdbtnCdigo);
@@ -661,7 +772,7 @@ public class A2VentanaAdmin{
 		chckbxNarrativa.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		chckbxNarrativa.setBackground(new Color(240, 128, 128));
 		
-		ButtonGroup grupoBuscarGeneros = new ButtonGroup();
+		grupoBuscarGeneros = new ButtonGroup();
 		grupoBuscarGeneros.add(chckbxNarrativa);
 		grupoBuscarGeneros.add(chckbxHistoricos);
 		grupoBuscarGeneros.add(chckbxPoesia);
@@ -758,13 +869,8 @@ public class A2VentanaAdmin{
 		tablaLibros.setFocusable(false);
 		tablaLibros.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		tablaLibros.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO"));
-		tablaLibros.getColumn("TITULO").setPreferredWidth(200);
-		tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
-		tablaLibros.getColumn("GENERO").setPreferredWidth(100);
-		tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
-		tablaLibros.getColumn("PRESTATARIO").setPreferredWidth(100);
-		tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
+		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO ORDER BY TITULO"));
+		preferenciasTamanoTablaLibros();
 		
 		scrollPaneLibros.setViewportView(tablaLibros);
 		
@@ -1162,6 +1268,7 @@ public class A2VentanaAdmin{
 		panelFiltrosU.add(rdbtnApellidos, gbc_rdbtnApellidos);
 		
 		rdbtnCorreo = new JRadioButton("Correo");
+		rdbtnCorreo.setSelected(true);
 		rdbtnCorreo.setBackground(new Color(255, 228, 196));
 		rdbtnCorreo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		GridBagConstraints gbc_rdbtnCorreo = new GridBagConstraints();
@@ -1170,7 +1277,7 @@ public class A2VentanaAdmin{
 		gbc_rdbtnCorreo.gridy = 0;
 		panelFiltrosU.add(rdbtnCorreo, gbc_rdbtnCorreo);
 		
-		ButtonGroup grupoU = new ButtonGroup();
+		grupoU = new ButtonGroup();
 		grupoU.add(rdbtnDni);
 		grupoU.add(rdbtnNombre);
 		grupoU.add(rdbtnApellidos);
@@ -1240,7 +1347,7 @@ public class A2VentanaAdmin{
 		chckbxAdministrador.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		chckbxAdministrador.setBackground(new Color(240, 128, 128));
 		
-		ButtonGroup grupoFiltroUsuario=new ButtonGroup();
+		grupoFiltroUsuario=new ButtonGroup();
 		grupoFiltroUsuario.add(chckbxAdministrador);
 		grupoFiltroUsuario.add(chckbxUsuariosBloqueados);
 		
@@ -1284,14 +1391,9 @@ public class A2VentanaAdmin{
 		
 		tablaUsuarios = new JTable();
 		tablaUsuarios.setFillsViewportHeight(true);
-		tablaUsuarios.setModel(p.modelarTabla("SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO"));
+		tablaUsuarios.setModel(p.modelarTabla("SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO ORDER BY CORREO"));
 		tablaUsuarios.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		tablaUsuarios.getColumn("DNI").setPreferredWidth(100);
-		tablaUsuarios.getColumn("CORREO").setPreferredWidth(150);
-		tablaUsuarios.getColumn("NOMBRE").setPreferredWidth(150);
-		tablaUsuarios.getColumn("APELLIDOS").setPreferredWidth(200);
-		tablaUsuarios.getColumn("BLOQUEO").setPreferredWidth(50);
-		tablaUsuarios.getColumn("ADMIN").setPreferredWidth(50);
+		preferenciasTamanoTablaUsuarios();
 		
 		scrollPaneUsuarios.setViewportView(tablaUsuarios);
 		
@@ -1785,7 +1887,15 @@ public class A2VentanaAdmin{
 	public JCheckBox getChckbxDesbloquear() {
 		return chckbxDesbloquear;
 	}
+	public JTextField getTextFieldBuscar() {
+		return textFieldBuscar;
+	}
+	public JTextField getTextFieldBuscarU() {
+		return textFieldBuscarU;
+	}
+	public JCheckBox getChckbxDisponible() {
+		return chckbxDisponible;
+	}
 	
 
-	
 }

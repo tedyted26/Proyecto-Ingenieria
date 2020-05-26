@@ -160,18 +160,58 @@ public class A1VentanaUsuario {
 	}
 	
 	/**
+	 * Recoge la casilla marcada de los generos del libro para usarlo como filtro
+	 * @return String genero
+	 */
+	public String recogerFiltros() {
+		String genero;
+		if (chckbxNarrativa.isSelected()) genero=chckbxNarrativa.getText();
+		else if (chckbxPoesia.isSelected()) genero=chckbxPoesia.getText();
+		else if (chckbxDrama.isSelected()) genero=chckbxDrama.getText();
+		else if (chckbxFilosofia.isSelected()) genero=chckbxFilosofia.getText();
+		else if (chckbxHistoricos.isSelected()) genero=chckbxHistoricos.getText();
+		else if (chckbxOtros.isSelected()) genero=chckbxOtros.getText();
+		else genero="";
+		return genero;
+		
+	}
+	
+	/**
+	 * Recoge el valor de la casilla marcada que despues servirá para establecer la columna por la que
+	 * se va a buscar el libro en la base de datos
+	 * @return String columna
+	 */
+	public String recogerColumnaFiltro() {
+		String columna;
+		if (rdbtnAutor.isSelected()) {
+			columna="AUTOR";
+		}
+		else if (rdbtnTtulo.isSelected()) {
+			columna="TITULO";
+		}
+		else if (rdbtnCdigo.isSelected()) {
+			columna="CODIGO";
+		}
+		else columna=null;
+		return columna;
+	}
+	
+	/**
 	 * Actualiza el contenido de las tablas al producirse una modificación
 	 * @param nombreTabla especifica qué tabla tiene que ser modificada
 	 */
 	public void refrescarTablas() {
 		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
+		preferenciasTamanoTabla();
+	}
+
+	public void preferenciasTamanoTabla() {
 		tablaLibros.getColumn("TITULO").setPreferredWidth(200);
 		tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
 		tablaLibros.getColumn("GENERO").setPreferredWidth(100);
 		tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
 		tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
 	}
-
 	/**
 	 * Inicializa el contenido de la ventana
 	 */
@@ -493,11 +533,7 @@ public class A1VentanaUsuario {
 		tablaLibros.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		tablaLibros.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
 		tablaLibros.setModel(p.modelarTabla("SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO"));
-		tablaLibros.getColumn("TITULO").setPreferredWidth(200);
-		tablaLibros.getColumn("AUTOR").setPreferredWidth(150);
-		tablaLibros.getColumn("GENERO").setPreferredWidth(100);
-		tablaLibros.getColumn("PRESTADO").setPreferredWidth(50);
-		tablaLibros.getColumn("CODIGO").setPreferredWidth(100);
+		preferenciasTamanoTabla();
 		
 		scrollPane.setViewportView(tablaLibros);
 		tabbedPane.setBackgroundAt(1, new Color(255, 255, 255));
@@ -906,5 +942,10 @@ public class A1VentanaUsuario {
 	public JList getListaLibros() {
 		return listaLibros;
 	}
-	
+	public JTextField getTextFieldBuscar() {
+		return textFieldBuscar;
+	}
+	public JCheckBox getChckbxDisponible() {
+		return chckbxDisponible;
+	}
 }

@@ -561,16 +561,12 @@ public class PersistenciaDatos {
 		//declaracion de variables
 		Libro libro = null;
 
-		Connection conec = null;
-		PreparedStatement pstmt = null;
-		ResultSet rslt = null;
-
 		try {
 			//comprobar conexion
-			conec = acceso.getConexion();
+			con = acceso.getConexion();
 
 			String query = "SELECT * FROM LIBRO WHERE TITULO = ?";
-			pstmt = conec.prepareStatement(query);
+			pstmt = con.prepareStatement(query);
 			pstmt.setString(1, titulo);
 
 			rslt = pstmt.executeQuery();
@@ -603,7 +599,7 @@ public class PersistenciaDatos {
 				//cierra conexiones
 				if (rslt != null) rslt.close();
 				if (pstmt != null) pstmt.close();
-				if (conec != null) conec.close();
+				if (con != null) con.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -815,7 +811,7 @@ public class PersistenciaDatos {
 			
 			@SuppressWarnings("rawtypes")
 			DefaultListModel modelo=new DefaultListModel();
-			
+
 			while(rslt.next()) {
 				modelo.addElement(rslt.getString("TITULO"));
 			}
@@ -836,4 +832,147 @@ public class PersistenciaDatos {
 			}
 		}
 	}
+	
+	public TableModel buscarLibro(String columna, String texto, boolean buscarDisponibles, boolean usuarioAdmin) {
+		DatabaseMetaData datos=null;
+		TableModel modelo=null;
+		try {
+			con = acceso.getConexion();
+			datos=con.getMetaData();
+			rslt=datos.getTables(null, null, null, null);
+			String query=null;
+			if (usuarioAdmin){
+				if (buscarDisponibles) {
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO WHERE "
+							+"PRESTADO = 0 AND "+columna+" LIKE ? ORDER BY "+columna;
+				}
+				else {
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO WHERE "
+							+columna+" LIKE ? ORDER BY "+columna;
+				}
+			}
+			else {
+				if (buscarDisponibles) {
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO WHERE "
+							+"PRESTADO = 0 AND "+columna+" LIKE ? ORDER BY "+columna;
+				}
+				else {
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO WHERE "
+							+columna+" LIKE ? ORDER BY "+columna;
+				}
+			}
+			pstmt=con.prepareStatement(query);
+			pstmt.setString(1, texto+"%");
+			
+			rslt=pstmt.executeQuery();
+
+			modelo=DbUtils.resultSetToTableModel(rslt);
+			return modelo;
+
+			//control de errores
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				//cierra conexiones
+				if (rslt != null) rslt.close();
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+		
+	}
+	
+	public TableModel buscarLibrosDisponibles(boolean usuarioAdmin) {
+		DatabaseMetaData datos=null;
+		TableModel modelo=null;
+		try {
+			con = acceso.getConexion();
+			datos=con.getMetaData();
+			rslt=datos.getTables(null, null, null, null);
+			String query;
+			
+			if(usuarioAdmin) {
+				query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO WHERE "
+						+"PRESTADO = 0 ORDER BY TITULO";
+			}
+			else {
+				query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO WHERE "
+						+"PRESTADO = 0 ORDER BY TITULO";
+			}
+
+
+			pstmt=con.prepareStatement(query);
+
+			rslt=pstmt.executeQuery();
+
+			modelo=DbUtils.resultSetToTableModel(rslt);
+			return modelo;
+
+			//control de errores
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				//cierra conexiones
+				if (rslt != null) rslt.close();
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+		
+	}
+	
+	public TableModel buscarUsuario(String columna, String texto) {
+		DatabaseMetaData datos=null;
+		TableModel modelo=null;
+		try {
+			con = acceso.getConexion();
+			datos=con.getMetaData();
+			rslt=datos.getTables(null, null, null, null);
+			String query = "SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO WHERE "+columna+" LIKE ? ORDER BY "+columna;
+
+			pstmt=con.prepareStatement(query);
+			pstmt.setString(1, texto+"%");
+			
+			rslt=pstmt.executeQuery();
+
+			modelo=DbUtils.resultSetToTableModel(rslt);
+			return modelo;
+
+			//control de errores
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				//cierra conexiones
+				if (rslt != null) rslt.close();
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+		
+	}
+	
 }

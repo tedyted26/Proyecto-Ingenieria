@@ -167,7 +167,19 @@ public class Controlador implements ActionListener{
 		
 		//biblioteca
 		else if(fuente.equals(app1.getBtnBuscar())) {
-			// TODO buscador
+			String texto=app1.getTextFieldBuscar().getText();
+			boolean buscarDisponibles=app1.getChckbxDisponible().isSelected();
+			String generoSeleccionado=app1.recogerFiltros();
+			if (texto.equals("")&&buscarDisponibles) {
+				app1.getTablaLibros().setModel(p.buscarLibrosDisponibles(false));
+				app1.preferenciasTamanoTabla();
+			}else if (texto.equals("")&&!buscarDisponibles){
+				app1.refrescarTablas();
+			}else {
+				String columna=app1.recogerColumnaFiltro();				
+				app1.getTablaLibros().setModel(p.buscarLibro(columna, texto, buscarDisponibles, false));
+				app1.preferenciasTamanoTabla();			
+			}
 		}
 		else if(fuente.equals(app1.getBtnVerDetalles())) {
 			try {
@@ -265,7 +277,19 @@ public class Controlador implements ActionListener{
 		 */
 		//BIBLIOTECA
 		else if(fuente.equals(app2.getBtnBuscar())) {
-			//TODO buscador
+			String texto=app2.getTextFieldBuscar().getText();
+			boolean buscarDisponibles=app2.getChckbxDisponible().isSelected();
+			String generoSeleccionado=app2.recogerFiltrosB();
+			if (texto.equals("")&&buscarDisponibles) {
+				app2.getTablaLibros().setModel(p.buscarLibrosDisponibles(true));
+				app2.preferenciasTamanoTablaLibros();
+			}else if (texto.equals("")&&!buscarDisponibles){
+				app2.refrescarTablas("libro");
+			}else {
+				String columna=app2.recogerColumnaFiltroB();				
+				app2.getTablaLibros().setModel(p.buscarLibro(columna, texto, buscarDisponibles, true));
+				app2.preferenciasTamanoTablaLibros();			
+			}
 		}
 		else if(fuente.equals(app2.getBtnAnadir())) {
 			app2.getCb().show(parent2, "2");
@@ -349,7 +373,15 @@ public class Controlador implements ActionListener{
 		
 		//USUARIOS
 		else if(fuente.equals(app2.getBtnBuscarU())) {
-			//TODO buscador
+			String texto=app2.getTextFieldBuscarU().getText();
+			String filtroSeleccionado=app2.recogerFiltrosB();
+			if (texto.equals("")){
+				app2.refrescarTablas("usuario");
+			}else {
+				String columna=app2.recogerColumnaFiltroU();				
+				app2.getTablaUsuarios().setModel(p.buscarUsuario(columna, texto));
+				app2.preferenciasTamanoTablaLibros();			
+			}
 		}
 		else if(fuente.equals(app2.getBtnAnadirU())) {
 			app2.getCu().show(parent3, "2");
@@ -450,11 +482,17 @@ public class Controlador implements ActionListener{
 					popupEliminarUsuario.getFrmpopup().setVisible(false);
 				}
 				else {
-					p.eliminarUsuario(dni);
+					if(p.eliminarUsuario(dni)) {
 					app2.refrescarTablas("usuario");
 					popup.getLblAviso().setText("Usuario eliminado");
 					popup.getFrmpopup().setVisible(true);
 					popupEliminarUsuario.getFrmpopup().setVisible(false);
+					}
+					else {
+						popup.getLblAviso().setText("Debe devolver los libros");
+						popup.getFrmpopup().setVisible(true);
+						popupEliminarUsuario.getFrmpopup().setVisible(false);
+					}
 				}
 
 			}catch(Exception e) {
