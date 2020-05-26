@@ -13,7 +13,7 @@ public class AccesoDB {
 	
 	public AccesoDB() {
 		driver = "org.sqlite.JDBC";
-		url = "jdbc:sqlite:dbSQLite/pruebaUsuarioLibro.db";
+		url = "jdbc:sqlite:dbSQLite/UsuarioLibro.db";
 	}
 	
 	public Connection getConexion() throws ClassNotFoundException, SQLException {
