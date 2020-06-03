@@ -23,7 +23,7 @@ Collaboration diagram for control.Controlador:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_classcontrol_1_1_controlador_1a673417fa0276a97add35d20443bfcca3">Controlador</link> (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1, <link linkend="_classvista_1_1_a2_ventana_admin">A2VentanaAdmin</link> app2, <link linkend="_classvista_1_1_pop_up1_b">PopUp1B</link> popup)</para>
+            <listitem><para><link linkend="_classcontrol_1_1_controlador_1ab85a6a9ad6d7d32c74cf39de97d2faf2">Controlador</link> (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1, <link linkend="_classvista_1_1_a2_ventana_admin">A2VentanaAdmin</link> app2)</para>
 </listitem>
             <listitem><para>void <link linkend="_classcontrol_1_1_controlador_1a1f659a43855ef42fa73f85ed2efea4f8">actionPerformed</link> (ActionEvent ev)</para>
 </listitem>
@@ -32,15 +32,15 @@ Collaboration diagram for control.Controlador:<para>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 18 of file Controlador.java.</para>
+Definition at line 19 of file Controlador.java.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
-<anchor xml:id="_classcontrol_1_1_controlador_1a673417fa0276a97add35d20443bfcca3"/>    <section>
+<anchor xml:id="_classcontrol_1_1_controlador_1ab85a6a9ad6d7d32c74cf39de97d2faf2"/>    <section>
     <title>Controlador()</title>
 <indexterm><primary>Controlador</primary><secondary>control.Controlador</secondary></indexterm>
 <indexterm><primary>control.Controlador</primary><secondary>Controlador</secondary></indexterm>
-<para><computeroutput>control.Controlador.Controlador (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1, <link linkend="_classvista_1_1_a2_ventana_admin">A2VentanaAdmin</link> app2, <link linkend="_classvista_1_1_pop_up1_b">PopUp1B</link> popup)</computeroutput></para>
+<para><computeroutput>control.Controlador.Controlador (<link linkend="_classvista_1_1_a0_ventana_inicio">A0VentanaInicio</link> app0, <link linkend="_classvista_1_1_a1_ventana_usuario">A1VentanaUsuario</link> app1, <link linkend="_classvista_1_1_a2_ventana_admin">A2VentanaAdmin</link> app2)</computeroutput></para>
 <para>Constructor 
                 <formalpara>
                     <title>
@@ -76,12 +76,12 @@ Parameters                    </title>
                 </formalpara>
                 </para>
 <para>
-Definition at line 39 of file Controlador.java.</para>
+Definition at line 41 of file Controlador.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_controlador_a673417fa0276a97add35d20443bfcca3_cgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcontrol_1_1_controlador_ab85a6a9ad6d7d32c74cf39de97d2faf2_cgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -124,7 +124,7 @@ Parameters                    </title>
 
 <para>Acciones de la ventana de administrador (inicio, biblioteca, usuarios y opciones)</para>
 <para>
-Definition at line 63 of file Controlador.java.</para>
+Definition at line 74 of file Controlador.java.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

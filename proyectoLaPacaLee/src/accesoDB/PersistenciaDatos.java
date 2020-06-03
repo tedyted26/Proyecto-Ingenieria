@@ -833,7 +833,7 @@ public class PersistenciaDatos {
 		}
 	}
 	
-	public TableModel buscarLibro(String columna, String texto, boolean buscarDisponibles, boolean usuarioAdmin) {
+	public TableModel buscarLibro(String columna, String texto, boolean buscarDisponibles, boolean usuarioAdmin, String genero) {
 		DatabaseMetaData datos=null;
 		TableModel modelo=null;
 		try {
@@ -842,27 +842,73 @@ public class PersistenciaDatos {
 			rslt=datos.getTables(null, null, null, null);
 			String query=null;
 			if (usuarioAdmin){
-				if (buscarDisponibles) {
+				if (buscarDisponibles&&genero.equals("")) {
 					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO WHERE "
 							+"PRESTADO = 0 AND "+columna+" LIKE ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
+				}
+				else if (!buscarDisponibles&&genero.equals("")){
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO WHERE "
+							+columna+" LIKE ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
+				}
+				else if (buscarDisponibles&&!genero.equals("")) {
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO WHERE "
+							+"PRESTADO = 0 AND "+columna+" LIKE ? AND GENERO = ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
+					pstmt.setString(2, genero);
+				}
+				else if (!buscarDisponibles&&!genero.equals("")) {
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO WHERE "
+							+columna+" LIKE ? AND GENERO = ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
+					pstmt.setString(2, genero);
 				}
 				else {
 					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, PRESTATARIO, CODIGO FROM LIBRO WHERE "
 							+columna+" LIKE ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
 				}
 			}
 			else {
-				if (buscarDisponibles) {
+				if (buscarDisponibles&&genero.equals("")) {
 					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO WHERE "
 							+"PRESTADO = 0 AND "+columna+" LIKE ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
+				}
+				else if (!buscarDisponibles&&genero.equals("")){
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO WHERE "
+							+columna+" LIKE ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
+				}
+				else if (buscarDisponibles&&!genero.equals("")) {
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO WHERE "
+							+"PRESTADO = 0 AND "+columna+" LIKE ? AND GENERO = ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
+					pstmt.setString(2, genero);
+				}
+				else if (!buscarDisponibles&&!genero.equals("")) {
+					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO WHERE "
+							+columna+" LIKE ? AND GENERO = ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
+					pstmt.setString(2, genero);
 				}
 				else {
 					query = "SELECT TITULO, AUTOR, GENERO, PRESTADO, CODIGO FROM LIBRO WHERE "
 							+columna+" LIKE ? ORDER BY "+columna;
+					pstmt=con.prepareStatement(query);
+					pstmt.setString(1, texto+"%");
 				}
 			}
-			pstmt=con.prepareStatement(query);
-			pstmt.setString(1, texto+"%");
 			
 			rslt=pstmt.executeQuery();
 
@@ -937,18 +983,78 @@ public class PersistenciaDatos {
 		
 	}
 	
-	public TableModel buscarUsuario(String columna, String texto) {
+	public TableModel buscarUsuario(String columna, String texto, String filtro) {
 		DatabaseMetaData datos=null;
 		TableModel modelo=null;
 		try {
 			con = acceso.getConexion();
 			datos=con.getMetaData();
 			rslt=datos.getTables(null, null, null, null);
-			String query = "SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO WHERE "+columna+" LIKE ? ORDER BY "+columna;
+			if (filtro.equals("")) {
+				String query = "SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO WHERE "
+						+columna+" LIKE ? ORDER BY "+columna;
 
-			pstmt=con.prepareStatement(query);
-			pstmt.setString(1, texto+"%");
+				pstmt=con.prepareStatement(query);
+				pstmt.setString(1, texto+"%");
+			}
+			else if(filtro.equals("Bloqueados")) {
+				String query = "SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO WHERE "
+						+columna+" LIKE ? AND BLOQUEO = 1 ORDER BY "+columna;
+
+				pstmt=con.prepareStatement(query);
+				pstmt.setString(1, texto+"%");
+			}
+			else if(filtro.equals("Administradores")) {
+				String query = "SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO WHERE "
+						+columna+" LIKE ? AND ADMIN = 1 ORDER BY "+columna;
+
+				pstmt=con.prepareStatement(query);
+				pstmt.setString(1, texto+"%");
+			}
 			
+			rslt=pstmt.executeQuery();
+
+			modelo=DbUtils.resultSetToTableModel(rslt);
+			return modelo;
+
+			//control de errores
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				//cierra conexiones
+				if (rslt != null) rslt.close();
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+		
+	}
+	
+	public TableModel buscarUsuariosPorFiltro(String columna, String filtro) {
+		DatabaseMetaData datos=null;
+		TableModel modelo=null;
+		try {
+			con = acceso.getConexion();
+			datos=con.getMetaData();
+			rslt=datos.getTables(null, null, null, null);
+			String query=null;
+			if(filtro.equals("Bloqueados")) {
+				query = "SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO WHERE "
+						+"BLOQUEO = 1 ORDER BY "+columna;
+			}
+			else if(filtro.equals("Administradores")) {
+				query = "SELECT DNI, CORREO, NOMBRE, APELLIDOS, BLOQUEO, ADMIN FROM USUARIO WHERE "
+						+"ADMIN = 1 ORDER BY "+columna;
+			}
+			pstmt=con.prepareStatement(query);
 			rslt=pstmt.executeQuery();
 
 			modelo=DbUtils.resultSetToTableModel(rslt);

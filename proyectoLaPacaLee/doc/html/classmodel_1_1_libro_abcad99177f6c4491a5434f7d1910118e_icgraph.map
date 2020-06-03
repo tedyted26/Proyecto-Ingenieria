@@ -1,4 +1,6 @@
 <map id="model.Libro.getCodigo" name="model.Libro.getCodigo">
-<area shape="rect" id="node1" title=" " alt="" coords="279,13,429,39"/>
-<area shape="rect" id="node2" href="$classacceso_d_b_1_1_persistencia_datos.html#aabbecb71d8845376d15e87196a24eaa7" title=" " alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="497,36,648,62"/>
+<area shape="rect" id="node2" href="$classcontrol_1_1_controlador.html#a1f659a43855ef42fa73f85ed2efea4f8" title=" " alt="" coords="5,32,176,74"/>
+<area shape="rect" id="node3" href="$classacceso_d_b_1_1_persistencia_datos.html#a2c436beb4123893a0f66104021e3df01" title=" " alt="" coords="224,28,449,70"/>
+<area shape="rect" id="node4" href="$classvista_1_1_a2_ventana_admin.html#a7f482b00620eb90e09c09bbd5d724de8" title=" " alt="" coords="237,94,436,135"/>
 </map>

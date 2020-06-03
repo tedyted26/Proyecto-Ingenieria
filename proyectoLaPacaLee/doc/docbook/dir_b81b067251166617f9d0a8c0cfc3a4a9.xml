@@ -5,13 +5,9 @@
 <simplesect>
     <title>Files    </title>
         <itemizedlist>
-            <listitem><para>file <link linkend="__algoritmo__ordenacion_8java">Algoritmo_ordenacion.java</link></para>
-</listitem>
-            <listitem><para>file <link linkend="__buscador_8java">Buscador.java</link></para>
+            <listitem><para>file <link linkend="__a_sistema_8java">ASistema.java</link></para>
 </listitem>
             <listitem><para>file <link linkend="__controlador_8java">Controlador.java</link></para>
-</listitem>
-            <listitem><para>file <link linkend="__odenacion_8java">Odenacion.java</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

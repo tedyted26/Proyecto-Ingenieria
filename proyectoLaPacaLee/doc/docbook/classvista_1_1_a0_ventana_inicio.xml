@@ -30,154 +30,40 @@ Collaboration diagram for vista.A0VentanaInicio:<para>
 </listitem>
             <listitem><para>JFrame <link linkend="_classvista_1_1_a0_ventana_inicio_1aacecf44389469ae513fa9f9e5eacb4a2">getFrmLaPacaLee</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1ad7ec90185eec78bc6c0a4d86e3c3bd87">setFrmLaPacaLee</link> (JFrame frmLaPacaLee)</para>
-</listitem>
-            <listitem><para>JPanel <link linkend="_classvista_1_1_a0_ventana_inicio_1a09c4c41c45ac524c8be4c87a885aab45">getPanelInicio</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1ab18b987fd0cdb7b0eb3dd545a2978aa1">setPanelInicio</link> (JPanel panelInicio)</para>
-</listitem>
             <listitem><para>JButton <link linkend="_classvista_1_1_a0_ventana_inicio_1a91ea2db99c4b3934c008a8e11d677348">getBtnIniciarSesion</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a004cdcaf29e074d574fd1b47d2d300f5">setBtnIniciarSesion</link> (JButton btnIniciarSesion)</para>
 </listitem>
             <listitem><para>JButton <link linkend="_classvista_1_1_a0_ventana_inicio_1a70a86bd22e2c20961275f7670d773697">getBtnCrearCuenta</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a145f772548aa7804e8c34e1cc0bfe81a">setBtnCrearCuenta</link> (JButton btnCrearCuenta)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a42838f9effe7eaf66230f2bfbb37070c">getLblLapacalee</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a0f9e1b512a93043b490d01558cdc1c1f">setLblLapacalee</link> (JLabel lblLapacalee)</para>
-</listitem>
-            <listitem><para>JPanel <link linkend="_classvista_1_1_a0_ventana_inicio_1a74547270485f1de3bd6be770f1136e35">getPanelCrearCuenta</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a1e409c6414d8d880154c359cf0b24ed5">setPanelCrearCuenta</link> (JPanel panelCrearCuenta)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1ac7af6b1af2330cc9ab218aa735789d6d">getLblCreacionDeCuenta</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a428c4cdc0ccc620e037062495cf4d865">setLblCreacionDeCuenta</link> (JLabel lblCreacionDeCuenta)</para>
-</listitem>
             <listitem><para>JButton <link linkend="_classvista_1_1_a0_ventana_inicio_1a222bee2be007cfc125ce8d1621379170">getBtnCCSiguiente</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a6f5adb8127e93330738f36d029274938">setBtnCCSiguiente</link> (JButton btnCCSiguiente)</para>
 </listitem>
             <listitem><para>JButton <link linkend="_classvista_1_1_a0_ventana_inicio_1a3bad81ce2edc5b88dedc0e664821afdc">getBtnCCAtras</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1ad5786630644b55e2a3a58bbdf8300e79">setBtnCCAtras</link> (JButton btnCCAtras)</para>
-</listitem>
-            <listitem><para>JTextField <link linkend="_classvista_1_1_a0_ventana_inicio_1afa58c93af6679ac21c2850404a02a003">getTextFieldNombre</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a7cd10f96d9eac2f702e9afff5a3546e1">setTextFieldNombre</link> (JTextField textFieldNombre)</para>
-</listitem>
-            <listitem><para>JTextField <link linkend="_classvista_1_1_a0_ventana_inicio_1ac2f7e1b255abb4cf94baf02ea1610fd7">getTextFieldApellidos</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1ae93533f504e09335540a78704f3caa7b">setTextFieldApellidos</link> (JTextField textFieldApellidos)</para>
-</listitem>
-            <listitem><para>JTextField <link linkend="_classvista_1_1_a0_ventana_inicio_1a9107f4c3d86f50e4876fb29f3a263c65">getTextFieldDNI</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a5b2f8ff2e04e4f6b56132e2f5e7059e7">setTextFieldDNI</link> (JTextField textFieldDNI)</para>
-</listitem>
-            <listitem><para>JTextField <link linkend="_classvista_1_1_a0_ventana_inicio_1aeb141349182520302c647fdf54a75041">getTextFieldCorreo</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a4f01b3434407ab34202bf5bf244f5cf7">setTextFieldCorreo</link> (JTextField textFieldCorreo)</para>
-</listitem>
-            <listitem><para>JPasswordField <link linkend="_classvista_1_1_a0_ventana_inicio_1abc70f5c428ce30fb96428384d2dc5484">getPassContrasena1</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1aa8c1ceeb0bb962be492f466e7fe12084">setPassContrasena1</link> (JPasswordField passContrasena1)</para>
-</listitem>
-            <listitem><para>JPasswordField <link linkend="_classvista_1_1_a0_ventana_inicio_1a0c1e53cae1d6b67b3f500443111a9dd7">getPassContrasena2</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1aee6788149a76271e8022ebba91ceee7f">setPassContrasena2</link> (JPasswordField passContrasena2)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a97af0629e2d0a4812ac8e6e47f27e541">getLblNombre</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a86822ec370f3e83a322c5e21b6e33d12">setLblNombre</link> (JLabel lblNombre)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a7fc483bbe5968cb4cac2ecfa927d42a1">getLblApellidos</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a6fdf4af1c071b3eca93a39d9e24dcf49">setLblApellidos</link> (JLabel lblApellidos)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a295d4ffb28543171ce7abefcc86b24d2">getLblDNI</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a4ebeb4db2c59e9268c486392f6ae5d76">setLblDNI</link> (JLabel lblDNI)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a561e350c514aae47a6a2e41175dea794">getLblCCCorreo</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a3edf68a7ca46c2c7c4c491a396ce09d9">setLblCCCorreo</link> (JLabel lblCCCorreo)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a6dd413341c8f009566db5ed20a4983d6">getLblCCContrasena</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a62a8fbccabd37b6be3c3147c735fddc2">setLblCCContrasena</link> (JLabel lblCCContrasena)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a00e4a41924b500356943174ce11b5c4c">getLblContrasena2</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a3910fc44d4c874e44df4cb7a27155667">setLblContrasena2</link> (JLabel lblContrasena2)</para>
-</listitem>
-            <listitem><para>JPanel <link linkend="_classvista_1_1_a0_ventana_inicio_1aacf994ee3d971d655af17f5d5b2a74b1">getPanelMensaje</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a20e95f1206f5792a21a5a4ae7c2715bd">setPanelMensaje</link> (JPanel panelMensaje)</para>
-</listitem>
             <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1ab33a4f6b4ac783d37a569b6b1dd998c8">getLblMensaje</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1afa57072985feb9179eb510d9981da6db">setLblMensaje</link> (JLabel lblMensaje)</para>
 </listitem>
             <listitem><para>JPanel <link linkend="_classvista_1_1_a0_ventana_inicio_1a43071e65ad8f0a3defb4981111941b36">getPanelInicioSesion</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1add092c01d1197637073c949c76781ed6">setPanelInicioSesion</link> (JPanel panelInicioSesion)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a114c7acbcb38fce7cc09e68de00b1655">getLblInicioSesion</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1ab3f8b5d4ed7e605096766ac349fa36de">setLblInicioSesion</link> (JLabel lblInicioSesion)</para>
-</listitem>
             <listitem><para>Panel <link linkend="_classvista_1_1_a0_ventana_inicio_1abe4dfebc9cb8ccae1520fa29a6534785">getMarcoDeIncio</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a56a49f4371216bdc3a3124ac46d2f682">setMarcoDeIncio</link> (Panel marcoDeIncio)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a3b586be8a2c6d718002e439526e3d5aa">getLblCorreo</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a55ba0b9896a2aaf4ed536692975d7213">setLblCorreo</link> (JLabel lblCorreo)</para>
 </listitem>
             <listitem><para>JTextField <link linkend="_classvista_1_1_a0_ventana_inicio_1a27ff3ec032e210c01aba185e70ec705e">getTextField</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a16bd4d6d0fd9c8b536ca95ac6a5a35b9">setTextField</link> (JTextField textField)</para>
-</listitem>
-            <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a6783be3d0d0c280dbed5d2d476895ffc">getLblContrasena</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a1e01264fd1707b447748e44b1b911fdc">setLblContrasena</link> (JLabel lblContrasena)</para>
-</listitem>
-            <listitem><para>JPasswordField <link linkend="_classvista_1_1_a0_ventana_inicio_1ad6c42ef60267658d575ea8a16451466c">getPasswordField</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a3264b268d19e7ec50f7d8c5f7237457d">setPasswordField</link> (JPasswordField passwordField)</para>
-</listitem>
             <listitem><para>JButton <link linkend="_classvista_1_1_a0_ventana_inicio_1a33c60f692d2da8cfdcc4a7281c6cd5e8">getBtnAtras</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a4179913d60cda7eb714f9ccccdbe9ba4">setBtnAtras</link> (JButton btnAtras)</para>
 </listitem>
             <listitem><para>JButton <link linkend="_classvista_1_1_a0_ventana_inicio_1ad6c5638411a8868386d7343c19500adc">getBtnSiguiente</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a06ef34d8a9b1ef2f48e933413fd15905">setBtnSiguiente</link> (JButton btnSiguiente)</para>
-</listitem>
             <listitem><para>JButton <link linkend="_classvista_1_1_a0_ventana_inicio_1a26019d39bda6132b6a9e3cb6c3c0345c">getBtnAdmin</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a81b93b1d3d1efafa97a3839459d7d0ef">setBtnAdmin</link> (JButton btnAdmin)</para>
 </listitem>
             <listitem><para>JPanel <link linkend="_classvista_1_1_a0_ventana_inicio_1a8c0b15fec59b84598f9a72408a575377">getPanelMensajes</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a4b667aac037db3addafa1f8427b36df9">setPanelMensajes</link> (JPanel panelMensajes)</para>
-</listitem>
             <listitem><para>JLabel <link linkend="_classvista_1_1_a0_ventana_inicio_1a781eee9902cf2b67ca842f05b4212696">getLblAutentificacionDeContrasena</link> ()</para>
 </listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a84686a612c50be77a86963f2fd1c4af7">setLblAutentificacionDeContrasena</link> (JLabel lblAutentificacionDeContrasena)</para>
-</listitem>
             <listitem><para>CardLayout <link linkend="_classvista_1_1_a0_ventana_inicio_1a857b25ec4d29bac7f600bf9a1ecb5026">getCl</link> ()</para>
-</listitem>
-            <listitem><para>void <link linkend="_classvista_1_1_a0_ventana_inicio_1a5605ed7734f69a49a3a9704828b854d3">setCl</link> (CardLayout cl)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 29 of file A0VentanaInicio.java.</para>
+Definition at line 10 of file A0VentanaInicio.java.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -188,7 +74,7 @@ Definition at line 29 of file A0VentanaInicio.java.</para>
 <para><computeroutput>vista.A0VentanaInicio.A0VentanaInicio ( )</computeroutput></para>
 <para>Crea la ventana </para>
 <para>
-Definition at line 83 of file A0VentanaInicio.java.</para>
+Definition at line 64 of file A0VentanaInicio.java.</para>
 </section>
 </section>
 <section>
@@ -200,11 +86,11 @@ Definition at line 83 of file A0VentanaInicio.java.</para>
 <para><computeroutput>boolean vista.A0VentanaInicio.comprobarDatosCC ( )</computeroutput></para>
 <para>Comprueba si los datos en la creación de usuario son correctos <formalpara><title>Returns</title>
 
-<para>true o false </para>
+<para>true si son correctos </para>
 </formalpara>
 </para>
 <para>
-Definition at line 151 of file A0VentanaInicio.java.</para>
+Definition at line 134 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1aaed323fd5aa7deb34f3f87a91fdaf86c"/>    <section>
     <title>devolverDatosIS()</title>
 <indexterm><primary>devolverDatosIS</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
@@ -216,7 +102,7 @@ Definition at line 151 of file A0VentanaInicio.java.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 169 of file A0VentanaInicio.java.</para>
+Definition at line 152 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1aa28dca58499ca042ee6b258a7bbf7720"/>    <section>
     <title>eliminarContenidoCC()</title>
 <indexterm><primary>eliminarContenidoCC</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
@@ -224,7 +110,7 @@ Definition at line 169 of file A0VentanaInicio.java.</para>
 <para><computeroutput>void vista.A0VentanaInicio.eliminarContenidoCC ( )</computeroutput></para>
 <para>Elimina el contenido de los campos de la creación de usuario </para>
 <para>
-Definition at line 137 of file A0VentanaInicio.java.</para>
+Definition at line 118 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -241,7 +127,7 @@ Here is the caller graph for this function:<para>
 <para><computeroutput>void vista.A0VentanaInicio.eliminarContenidoIS ( )</computeroutput></para>
 <para>Elimina el contenido de los campos de iniciar sesion </para>
 <para>
-Definition at line 179 of file A0VentanaInicio.java.</para>
+Definition at line 162 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -256,7 +142,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getBtnAdmin</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getBtnAdmin</secondary></indexterm>
 <para><computeroutput>JButton vista.A0VentanaInicio.getBtnAdmin ( )</computeroutput></para><para>
-Definition at line 740 of file A0VentanaInicio.java.</para>
+Definition at line 517 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -271,7 +157,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getBtnAtras</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getBtnAtras</secondary></indexterm>
 <para><computeroutput>JButton vista.A0VentanaInicio.getBtnAtras ( )</computeroutput></para><para>
-Definition at line 724 of file A0VentanaInicio.java.</para>
+Definition at line 511 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -286,7 +172,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getBtnCCAtras</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getBtnCCAtras</secondary></indexterm>
 <para><computeroutput>JButton vista.A0VentanaInicio.getBtnCCAtras ( )</computeroutput></para><para>
-Definition at line 549 of file A0VentanaInicio.java.</para>
+Definition at line 496 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -301,7 +187,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getBtnCCSiguiente</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getBtnCCSiguiente</secondary></indexterm>
 <para><computeroutput>JButton vista.A0VentanaInicio.getBtnCCSiguiente ( )</computeroutput></para><para>
-Definition at line 543 of file A0VentanaInicio.java.</para>
+Definition at line 493 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -316,7 +202,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getBtnCrearCuenta</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getBtnCrearCuenta</secondary></indexterm>
 <para><computeroutput>JButton vista.A0VentanaInicio.getBtnCrearCuenta ( )</computeroutput></para><para>
-Definition at line 519 of file A0VentanaInicio.java.</para>
+Definition at line 490 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -331,7 +217,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getBtnIniciarSesion</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getBtnIniciarSesion</secondary></indexterm>
 <para><computeroutput>JButton vista.A0VentanaInicio.getBtnIniciarSesion ( )</computeroutput></para><para>
-Definition at line 513 of file A0VentanaInicio.java.</para>
+Definition at line 487 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -346,7 +232,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getBtnSiguiente</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getBtnSiguiente</secondary></indexterm>
 <para><computeroutput>JButton vista.A0VentanaInicio.getBtnSiguiente ( )</computeroutput></para><para>
-Definition at line 732 of file A0VentanaInicio.java.</para>
+Definition at line 514 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -361,7 +247,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getCl</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getCl</secondary></indexterm>
 <para><computeroutput>CardLayout vista.A0VentanaInicio.getCl ( )</computeroutput></para><para>
-Definition at line 763 of file A0VentanaInicio.java.</para>
+Definition at line 526 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -376,7 +262,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getFrmLaPacaLee</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getFrmLaPacaLee</secondary></indexterm>
 <para><computeroutput>JFrame vista.A0VentanaInicio.getFrmLaPacaLee ( )</computeroutput></para><para>
-Definition at line 501 of file A0VentanaInicio.java.</para>
+Definition at line 484 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -386,168 +272,42 @@ Here is the caller graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a7fc483bbe5968cb4cac2ecfa927d42a1"/>    <section>
-    <title>getLblApellidos()</title>
-<indexterm><primary>getLblApellidos</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblApellidos</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblApellidos ( )</computeroutput></para><para>
-Definition at line 612 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a781eee9902cf2b67ca842f05b4212696"/>    <section>
     <title>getLblAutentificacionDeContrasena()</title>
 <indexterm><primary>getLblAutentificacionDeContrasena</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblAutentificacionDeContrasena</secondary></indexterm>
 <para><computeroutput>JLabel vista.A0VentanaInicio.getLblAutentificacionDeContrasena ( )</computeroutput></para><para>
-Definition at line 756 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a6dd413341c8f009566db5ed20a4983d6"/>    <section>
-    <title>getLblCCContrasena()</title>
-<indexterm><primary>getLblCCContrasena</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblCCContrasena</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblCCContrasena ( )</computeroutput></para><para>
-Definition at line 636 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a561e350c514aae47a6a2e41175dea794"/>    <section>
-    <title>getLblCCCorreo()</title>
-<indexterm><primary>getLblCCCorreo</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblCCCorreo</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblCCCorreo ( )</computeroutput></para><para>
-Definition at line 628 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a6783be3d0d0c280dbed5d2d476895ffc"/>    <section>
-    <title>getLblContrasena()</title>
-<indexterm><primary>getLblContrasena</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblContrasena</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblContrasena ( )</computeroutput></para><para>
-Definition at line 708 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a00e4a41924b500356943174ce11b5c4c"/>    <section>
-    <title>getLblContrasena2()</title>
-<indexterm><primary>getLblContrasena2</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblContrasena2</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblContrasena2 ( )</computeroutput></para><para>
-Definition at line 644 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a3b586be8a2c6d718002e439526e3d5aa"/>    <section>
-    <title>getLblCorreo()</title>
-<indexterm><primary>getLblCorreo</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblCorreo</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblCorreo ( )</computeroutput></para><para>
-Definition at line 692 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1ac7af6b1af2330cc9ab218aa735789d6d"/>    <section>
-    <title>getLblCreacionDeCuenta()</title>
-<indexterm><primary>getLblCreacionDeCuenta</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblCreacionDeCuenta</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblCreacionDeCuenta ( )</computeroutput></para><para>
-Definition at line 537 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a295d4ffb28543171ce7abefcc86b24d2"/>    <section>
-    <title>getLblDNI()</title>
-<indexterm><primary>getLblDNI</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblDNI</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblDNI ( )</computeroutput></para><para>
-Definition at line 620 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a114c7acbcb38fce7cc09e68de00b1655"/>    <section>
-    <title>getLblInicioSesion()</title>
-<indexterm><primary>getLblInicioSesion</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblInicioSesion</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblInicioSesion ( )</computeroutput></para><para>
-Definition at line 676 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a42838f9effe7eaf66230f2bfbb37070c"/>    <section>
-    <title>getLblLapacalee()</title>
-<indexterm><primary>getLblLapacalee</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblLapacalee</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblLapacalee ( )</computeroutput></para><para>
-Definition at line 525 of file A0VentanaInicio.java.</para>
+Definition at line 523 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1ab33a4f6b4ac783d37a569b6b1dd998c8"/>    <section>
     <title>getLblMensaje()</title>
 <indexterm><primary>getLblMensaje</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblMensaje</secondary></indexterm>
 <para><computeroutput>JLabel vista.A0VentanaInicio.getLblMensaje ( )</computeroutput></para><para>
-Definition at line 660 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a97af0629e2d0a4812ac8e6e47f27e541"/>    <section>
-    <title>getLblNombre()</title>
-<indexterm><primary>getLblNombre</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getLblNombre</secondary></indexterm>
-<para><computeroutput>JLabel vista.A0VentanaInicio.getLblNombre ( )</computeroutput></para><para>
-Definition at line 604 of file A0VentanaInicio.java.</para>
+Definition at line 499 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1abe4dfebc9cb8ccae1520fa29a6534785"/>    <section>
     <title>getMarcoDeIncio()</title>
 <indexterm><primary>getMarcoDeIncio</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getMarcoDeIncio</secondary></indexterm>
 <para><computeroutput>Panel vista.A0VentanaInicio.getMarcoDeIncio ( )</computeroutput></para><para>
-Definition at line 684 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a74547270485f1de3bd6be770f1136e35"/>    <section>
-    <title>getPanelCrearCuenta()</title>
-<indexterm><primary>getPanelCrearCuenta</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getPanelCrearCuenta</secondary></indexterm>
-<para><computeroutput>JPanel vista.A0VentanaInicio.getPanelCrearCuenta ( )</computeroutput></para><para>
-Definition at line 531 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a09c4c41c45ac524c8be4c87a885aab45"/>    <section>
-    <title>getPanelInicio()</title>
-<indexterm><primary>getPanelInicio</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getPanelInicio</secondary></indexterm>
-<para><computeroutput>JPanel vista.A0VentanaInicio.getPanelInicio ( )</computeroutput></para><para>
-Definition at line 507 of file A0VentanaInicio.java.</para>
+Definition at line 505 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a43071e65ad8f0a3defb4981111941b36"/>    <section>
     <title>getPanelInicioSesion()</title>
 <indexterm><primary>getPanelInicioSesion</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getPanelInicioSesion</secondary></indexterm>
 <para><computeroutput>JPanel vista.A0VentanaInicio.getPanelInicioSesion ( )</computeroutput></para><para>
-Definition at line 668 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1aacf994ee3d971d655af17f5d5b2a74b1"/>    <section>
-    <title>getPanelMensaje()</title>
-<indexterm><primary>getPanelMensaje</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getPanelMensaje</secondary></indexterm>
-<para><computeroutput>JPanel vista.A0VentanaInicio.getPanelMensaje ( )</computeroutput></para><para>
-Definition at line 652 of file A0VentanaInicio.java.</para>
+Definition at line 502 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a8c0b15fec59b84598f9a72408a575377"/>    <section>
     <title>getPanelMensajes()</title>
 <indexterm><primary>getPanelMensajes</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getPanelMensajes</secondary></indexterm>
 <para><computeroutput>JPanel vista.A0VentanaInicio.getPanelMensajes ( )</computeroutput></para><para>
-Definition at line 748 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1abc70f5c428ce30fb96428384d2dc5484"/>    <section>
-    <title>getPassContrasena1()</title>
-<indexterm><primary>getPassContrasena1</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getPassContrasena1</secondary></indexterm>
-<para><computeroutput>JPasswordField vista.A0VentanaInicio.getPassContrasena1 ( )</computeroutput></para><para>
-Definition at line 588 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a0c1e53cae1d6b67b3f500443111a9dd7"/>    <section>
-    <title>getPassContrasena2()</title>
-<indexterm><primary>getPassContrasena2</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getPassContrasena2</secondary></indexterm>
-<para><computeroutput>JPasswordField vista.A0VentanaInicio.getPassContrasena2 ( )</computeroutput></para><para>
-Definition at line 596 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1ad6c42ef60267658d575ea8a16451466c"/>    <section>
-    <title>getPasswordField()</title>
-<indexterm><primary>getPasswordField</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getPasswordField</secondary></indexterm>
-<para><computeroutput>JPasswordField vista.A0VentanaInicio.getPasswordField ( )</computeroutput></para><para>
-Definition at line 716 of file A0VentanaInicio.java.</para>
+Definition at line 520 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a27ff3ec032e210c01aba185e70ec705e"/>    <section>
     <title>getTextField()</title>
 <indexterm><primary>getTextField</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
 <indexterm><primary>vista.A0VentanaInicio</primary><secondary>getTextField</secondary></indexterm>
 <para><computeroutput>JTextField vista.A0VentanaInicio.getTextField ( )</computeroutput></para><para>
-Definition at line 700 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1ac2f7e1b255abb4cf94baf02ea1610fd7"/>    <section>
-    <title>getTextFieldApellidos()</title>
-<indexterm><primary>getTextFieldApellidos</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getTextFieldApellidos</secondary></indexterm>
-<para><computeroutput>JTextField vista.A0VentanaInicio.getTextFieldApellidos ( )</computeroutput></para><para>
-Definition at line 564 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1aeb141349182520302c647fdf54a75041"/>    <section>
-    <title>getTextFieldCorreo()</title>
-<indexterm><primary>getTextFieldCorreo</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getTextFieldCorreo</secondary></indexterm>
-<para><computeroutput>JTextField vista.A0VentanaInicio.getTextFieldCorreo ( )</computeroutput></para><para>
-Definition at line 580 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a9107f4c3d86f50e4876fb29f3a263c65"/>    <section>
-    <title>getTextFieldDNI()</title>
-<indexterm><primary>getTextFieldDNI</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getTextFieldDNI</secondary></indexterm>
-<para><computeroutput>JTextField vista.A0VentanaInicio.getTextFieldDNI ( )</computeroutput></para><para>
-Definition at line 572 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1afa58c93af6679ac21c2850404a02a003"/>    <section>
-    <title>getTextFieldNombre()</title>
-<indexterm><primary>getTextFieldNombre</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>getTextFieldNombre</secondary></indexterm>
-<para><computeroutput>JTextField vista.A0VentanaInicio.getTextFieldNombre ( )</computeroutput></para><para>
-Definition at line 556 of file A0VentanaInicio.java.</para>
+Definition at line 508 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a6794a817b2040df470ed230159773073"/>    <section>
     <title>obtenerDatosUsuarioCC()</title>
 <indexterm><primary>obtenerDatosUsuarioCC</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
@@ -559,55 +319,7 @@ Definition at line 556 of file A0VentanaInicio.java.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 113 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a81b93b1d3d1efafa97a3839459d7d0ef"/>    <section>
-    <title>setBtnAdmin()</title>
-<indexterm><primary>setBtnAdmin</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setBtnAdmin</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setBtnAdmin (JButton btnAdmin)</computeroutput></para><para>
-Definition at line 744 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a4179913d60cda7eb714f9ccccdbe9ba4"/>    <section>
-    <title>setBtnAtras()</title>
-<indexterm><primary>setBtnAtras</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setBtnAtras</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setBtnAtras (JButton btnAtras)</computeroutput></para><para>
-Definition at line 728 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1ad5786630644b55e2a3a58bbdf8300e79"/>    <section>
-    <title>setBtnCCAtras()</title>
-<indexterm><primary>setBtnCCAtras</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setBtnCCAtras</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setBtnCCAtras (JButton btnCCAtras)</computeroutput></para><para>
-Definition at line 552 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a6f5adb8127e93330738f36d029274938"/>    <section>
-    <title>setBtnCCSiguiente()</title>
-<indexterm><primary>setBtnCCSiguiente</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setBtnCCSiguiente</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setBtnCCSiguiente (JButton btnCCSiguiente)</computeroutput></para><para>
-Definition at line 546 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a145f772548aa7804e8c34e1cc0bfe81a"/>    <section>
-    <title>setBtnCrearCuenta()</title>
-<indexterm><primary>setBtnCrearCuenta</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setBtnCrearCuenta</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setBtnCrearCuenta (JButton btnCrearCuenta)</computeroutput></para><para>
-Definition at line 522 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a004cdcaf29e074d574fd1b47d2d300f5"/>    <section>
-    <title>setBtnIniciarSesion()</title>
-<indexterm><primary>setBtnIniciarSesion</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setBtnIniciarSesion</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setBtnIniciarSesion (JButton btnIniciarSesion)</computeroutput></para><para>
-Definition at line 516 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a06ef34d8a9b1ef2f48e933413fd15905"/>    <section>
-    <title>setBtnSiguiente()</title>
-<indexterm><primary>setBtnSiguiente</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setBtnSiguiente</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setBtnSiguiente (JButton btnSiguiente)</computeroutput></para><para>
-Definition at line 736 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a5605ed7734f69a49a3a9704828b854d3"/>    <section>
-    <title>setCl()</title>
-<indexterm><primary>setCl</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setCl</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setCl (CardLayout cl)</computeroutput></para><para>
-Definition at line 766 of file A0VentanaInicio.java.</para>
+Definition at line 94 of file A0VentanaInicio.java.</para>
     </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1af8b7c9d3b7f8cc88f2a08731d233e68f"/>    <section>
     <title>setControlador()</title>
 <indexterm><primary>setControlador</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
@@ -636,7 +348,7 @@ Parameters                    </title>
                 </formalpara>
                 </para>
 <para>
-Definition at line 92 of file A0VentanaInicio.java.</para>
+Definition at line 73 of file A0VentanaInicio.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -646,174 +358,6 @@ Here is the caller graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1ad7ec90185eec78bc6c0a4d86e3c3bd87"/>    <section>
-    <title>setFrmLaPacaLee()</title>
-<indexterm><primary>setFrmLaPacaLee</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setFrmLaPacaLee</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setFrmLaPacaLee (JFrame frmLaPacaLee)</computeroutput></para><para>
-Definition at line 504 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a6fdf4af1c071b3eca93a39d9e24dcf49"/>    <section>
-    <title>setLblApellidos()</title>
-<indexterm><primary>setLblApellidos</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblApellidos</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblApellidos (JLabel lblApellidos)</computeroutput></para><para>
-Definition at line 616 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a84686a612c50be77a86963f2fd1c4af7"/>    <section>
-    <title>setLblAutentificacionDeContrasena()</title>
-<indexterm><primary>setLblAutentificacionDeContrasena</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblAutentificacionDeContrasena</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblAutentificacionDeContrasena (JLabel lblAutentificacionDeContrasena)</computeroutput></para><para>
-Definition at line 760 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a62a8fbccabd37b6be3c3147c735fddc2"/>    <section>
-    <title>setLblCCContrasena()</title>
-<indexterm><primary>setLblCCContrasena</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblCCContrasena</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblCCContrasena (JLabel lblCCContrasena)</computeroutput></para><para>
-Definition at line 640 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a3edf68a7ca46c2c7c4c491a396ce09d9"/>    <section>
-    <title>setLblCCCorreo()</title>
-<indexterm><primary>setLblCCCorreo</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblCCCorreo</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblCCCorreo (JLabel lblCCCorreo)</computeroutput></para><para>
-Definition at line 632 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a1e01264fd1707b447748e44b1b911fdc"/>    <section>
-    <title>setLblContrasena()</title>
-<indexterm><primary>setLblContrasena</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblContrasena</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblContrasena (JLabel lblContrasena)</computeroutput></para><para>
-Definition at line 712 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a3910fc44d4c874e44df4cb7a27155667"/>    <section>
-    <title>setLblContrasena2()</title>
-<indexterm><primary>setLblContrasena2</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblContrasena2</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblContrasena2 (JLabel lblContrasena2)</computeroutput></para><para>
-Definition at line 648 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a55ba0b9896a2aaf4ed536692975d7213"/>    <section>
-    <title>setLblCorreo()</title>
-<indexterm><primary>setLblCorreo</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblCorreo</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblCorreo (JLabel lblCorreo)</computeroutput></para><para>
-Definition at line 696 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a428c4cdc0ccc620e037062495cf4d865"/>    <section>
-    <title>setLblCreacionDeCuenta()</title>
-<indexterm><primary>setLblCreacionDeCuenta</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblCreacionDeCuenta</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblCreacionDeCuenta (JLabel lblCreacionDeCuenta)</computeroutput></para><para>
-Definition at line 540 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a4ebeb4db2c59e9268c486392f6ae5d76"/>    <section>
-    <title>setLblDNI()</title>
-<indexterm><primary>setLblDNI</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblDNI</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblDNI (JLabel lblDNI)</computeroutput></para><para>
-Definition at line 624 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1ab3f8b5d4ed7e605096766ac349fa36de"/>    <section>
-    <title>setLblInicioSesion()</title>
-<indexterm><primary>setLblInicioSesion</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblInicioSesion</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblInicioSesion (JLabel lblInicioSesion)</computeroutput></para><para>
-Definition at line 680 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a0f9e1b512a93043b490d01558cdc1c1f"/>    <section>
-    <title>setLblLapacalee()</title>
-<indexterm><primary>setLblLapacalee</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblLapacalee</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblLapacalee (JLabel lblLapacalee)</computeroutput></para><para>
-Definition at line 528 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1afa57072985feb9179eb510d9981da6db"/>    <section>
-    <title>setLblMensaje()</title>
-<indexterm><primary>setLblMensaje</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblMensaje</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblMensaje (JLabel lblMensaje)</computeroutput></para><para>
-Definition at line 664 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a86822ec370f3e83a322c5e21b6e33d12"/>    <section>
-    <title>setLblNombre()</title>
-<indexterm><primary>setLblNombre</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setLblNombre</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setLblNombre (JLabel lblNombre)</computeroutput></para><para>
-Definition at line 608 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a56a49f4371216bdc3a3124ac46d2f682"/>    <section>
-    <title>setMarcoDeIncio()</title>
-<indexterm><primary>setMarcoDeIncio</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setMarcoDeIncio</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setMarcoDeIncio (Panel marcoDeIncio)</computeroutput></para><para>
-Definition at line 688 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a1e409c6414d8d880154c359cf0b24ed5"/>    <section>
-    <title>setPanelCrearCuenta()</title>
-<indexterm><primary>setPanelCrearCuenta</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setPanelCrearCuenta</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setPanelCrearCuenta (JPanel panelCrearCuenta)</computeroutput></para><para>
-Definition at line 534 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1ab18b987fd0cdb7b0eb3dd545a2978aa1"/>    <section>
-    <title>setPanelInicio()</title>
-<indexterm><primary>setPanelInicio</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setPanelInicio</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setPanelInicio (JPanel panelInicio)</computeroutput></para><para>
-Definition at line 510 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1add092c01d1197637073c949c76781ed6"/>    <section>
-    <title>setPanelInicioSesion()</title>
-<indexterm><primary>setPanelInicioSesion</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setPanelInicioSesion</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setPanelInicioSesion (JPanel panelInicioSesion)</computeroutput></para><para>
-Definition at line 672 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a20e95f1206f5792a21a5a4ae7c2715bd"/>    <section>
-    <title>setPanelMensaje()</title>
-<indexterm><primary>setPanelMensaje</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setPanelMensaje</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setPanelMensaje (JPanel panelMensaje)</computeroutput></para><para>
-Definition at line 656 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a4b667aac037db3addafa1f8427b36df9"/>    <section>
-    <title>setPanelMensajes()</title>
-<indexterm><primary>setPanelMensajes</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setPanelMensajes</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setPanelMensajes (JPanel panelMensajes)</computeroutput></para><para>
-Definition at line 752 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1aa8c1ceeb0bb962be492f466e7fe12084"/>    <section>
-    <title>setPassContrasena1()</title>
-<indexterm><primary>setPassContrasena1</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setPassContrasena1</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setPassContrasena1 (JPasswordField passContrasena1)</computeroutput></para><para>
-Definition at line 592 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1aee6788149a76271e8022ebba91ceee7f"/>    <section>
-    <title>setPassContrasena2()</title>
-<indexterm><primary>setPassContrasena2</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setPassContrasena2</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setPassContrasena2 (JPasswordField passContrasena2)</computeroutput></para><para>
-Definition at line 600 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a3264b268d19e7ec50f7d8c5f7237457d"/>    <section>
-    <title>setPasswordField()</title>
-<indexterm><primary>setPasswordField</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setPasswordField</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setPasswordField (JPasswordField passwordField)</computeroutput></para><para>
-Definition at line 720 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a16bd4d6d0fd9c8b536ca95ac6a5a35b9"/>    <section>
-    <title>setTextField()</title>
-<indexterm><primary>setTextField</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setTextField</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setTextField (JTextField textField)</computeroutput></para><para>
-Definition at line 704 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1ae93533f504e09335540a78704f3caa7b"/>    <section>
-    <title>setTextFieldApellidos()</title>
-<indexterm><primary>setTextFieldApellidos</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setTextFieldApellidos</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setTextFieldApellidos (JTextField textFieldApellidos)</computeroutput></para><para>
-Definition at line 568 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a4f01b3434407ab34202bf5bf244f5cf7"/>    <section>
-    <title>setTextFieldCorreo()</title>
-<indexterm><primary>setTextFieldCorreo</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setTextFieldCorreo</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setTextFieldCorreo (JTextField textFieldCorreo)</computeroutput></para><para>
-Definition at line 584 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a5b2f8ff2e04e4f6b56132e2f5e7059e7"/>    <section>
-    <title>setTextFieldDNI()</title>
-<indexterm><primary>setTextFieldDNI</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setTextFieldDNI</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setTextFieldDNI (JTextField textFieldDNI)</computeroutput></para><para>
-Definition at line 576 of file A0VentanaInicio.java.</para>
-    </section><anchor xml:id="_classvista_1_1_a0_ventana_inicio_1a7cd10f96d9eac2f702e9afff5a3546e1"/>    <section>
-    <title>setTextFieldNombre()</title>
-<indexterm><primary>setTextFieldNombre</primary><secondary>vista.A0VentanaInicio</secondary></indexterm>
-<indexterm><primary>vista.A0VentanaInicio</primary><secondary>setTextFieldNombre</secondary></indexterm>
-<para><computeroutput>void vista.A0VentanaInicio.setTextFieldNombre (JTextField textFieldNombre)</computeroutput></para><para>
-Definition at line 560 of file A0VentanaInicio.java.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

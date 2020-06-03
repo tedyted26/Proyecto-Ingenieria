@@ -16,6 +16,12 @@ Collaboration diagram for vista.PopUpInfo:<para>
         <itemizedlist>
             <listitem><para><link linkend="_classvista_1_1_pop_up_info_1a60dfc770ee3c7a6f99a84145cd286133">PopUpInfo</link> ()</para>
 </listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_pop_up_info_1abb7709b9610a7a748582ed8caf4b0516">rellenarDatos</link> (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</para>
+</listitem>
+            <listitem><para>JDialog <link linkend="_classvista_1_1_pop_up_info_1a59969c4b6ac21e52fa24b873b233cad9">getFrmpopup</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classvista_1_1_pop_up_info_1a185e0207bdb19d15854634d0407fccfa">setFrmpopup</link> (JDialog frmpopup)</para>
+</listitem>
         </itemizedlist>
 </simplesect>
 <section>
@@ -30,9 +36,81 @@ Definition at line 9 of file PopUpInfo.java.</para>
 <indexterm><primary>PopUpInfo</primary><secondary>vista.PopUpInfo</secondary></indexterm>
 <indexterm><primary>vista.PopUpInfo</primary><secondary>PopUpInfo</secondary></indexterm>
 <para><computeroutput>vista.PopUpInfo.PopUpInfo ( )</computeroutput></para>
-<para>Create the application. </para>
+<para>Crea el popup </para>
 <para>
-Definition at line 15 of file PopUpInfo.java.</para>
+Definition at line 25 of file PopUpInfo.java.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classvista_1_1_pop_up_info_1a59969c4b6ac21e52fa24b873b233cad9"/>    <section>
+    <title>getFrmpopup()</title>
+<indexterm><primary>getFrmpopup</primary><secondary>vista.PopUpInfo</secondary></indexterm>
+<indexterm><primary>vista.PopUpInfo</primary><secondary>getFrmpopup</secondary></indexterm>
+<para><computeroutput>JDialog vista.PopUpInfo.getFrmpopup ( )</computeroutput></para><para>
+Definition at line 107 of file PopUpInfo.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up_info_a59969c4b6ac21e52fa24b873b233cad9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_pop_up_info_1abb7709b9610a7a748582ed8caf4b0516"/>    <section>
+    <title>rellenarDatos()</title>
+<indexterm><primary>rellenarDatos</primary><secondary>vista.PopUpInfo</secondary></indexterm>
+<indexterm><primary>vista.PopUpInfo</primary><secondary>rellenarDatos</secondary></indexterm>
+<para><computeroutput>void vista.PopUpInfo.rellenarDatos (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</computeroutput></para>
+<para>Función que rellena los campos del popup dependiendo del libro que se ha seleccionado 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>libro</entry>
+                                <entry>
+<para>libro seleccionado en la tabla </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 33 of file PopUpInfo.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up_info_abb7709b9610a7a748582ed8caf4b0516_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classvista_1_1_pop_up_info_abb7709b9610a7a748582ed8caf4b0516_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classvista_1_1_pop_up_info_1a185e0207bdb19d15854634d0407fccfa"/>    <section>
+    <title>setFrmpopup()</title>
+<indexterm><primary>setFrmpopup</primary><secondary>vista.PopUpInfo</secondary></indexterm>
+<indexterm><primary>vista.PopUpInfo</primary><secondary>setFrmpopup</secondary></indexterm>
+<para><computeroutput>void vista.PopUpInfo.setFrmpopup (JDialog frmpopup)</computeroutput></para><para>
+Definition at line 111 of file PopUpInfo.java.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

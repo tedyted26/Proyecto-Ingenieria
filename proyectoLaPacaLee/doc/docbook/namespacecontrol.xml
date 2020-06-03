@@ -5,13 +5,9 @@
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
-            <listitem><para>class <link linkend="_classcontrol_1_1_algoritmo__ordenacion">Algoritmo_ordenacion</link></para>
-</listitem>
-            <listitem><para>class <link linkend="_classcontrol_1_1_buscador">Buscador</link></para>
+            <listitem><para>class <link linkend="_classcontrol_1_1_a_sistema">ASistema</link></para>
 </listitem>
             <listitem><para>class <link linkend="_classcontrol_1_1_controlador">Controlador</link></para>
-</listitem>
-            <listitem><para>class <link linkend="_classcontrol_1_1_odenacion">Odenacion</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>

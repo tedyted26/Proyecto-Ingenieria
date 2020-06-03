@@ -5,8 +5,6 @@
 <simplesect>
     <title>Files    </title>
         <itemizedlist>
-            <listitem><para>file <link linkend="__incidencia_8java">Incidencia.java</link></para>
-</listitem>
             <listitem><para>file <link linkend="__libro_8java">Libro.java</link></para>
 </listitem>
             <listitem><para>file <link linkend="__usuario_8java">Usuario.java</link></para>

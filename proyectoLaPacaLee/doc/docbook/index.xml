@@ -16,18 +16,13 @@
     <xi:include href="classvista_1_1_a1_ventana_usuario.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="classvista_1_1_a2_ventana_admin.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="classacceso_d_b_1_1_acceso_d_b.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="classcontrol_1_1_algoritmo__ordenacion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_a_sistema.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="classcontrol_1_1_buscador.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcontrol_1_1_a_sistema.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="classcontrol_1_1_controlador.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="classmodel_1_1_incidencia.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="classmodel_1_1_libro.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="classcontrol_1_1_odenacion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="classacceso_d_b_1_1_persistencia_datos.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="classvista_1_1_pop_up1_b.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="classvista_1_1_pop_up2_b.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="classvista_1_1_pop_up_info.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_prueba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="classmodel_1_1_usuario.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <chapter>
@@ -35,14 +30,9 @@
     <xi:include href="_acceso_d_b_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_persistencia_datos_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_a_sistema_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_algoritmo__ordenacion_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_buscador_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_controlador_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_odenacion_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_incidencia_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_libro_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_usuario_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_prueba_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_a0_ventana_inicio_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_a1_ventana_usuario_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_a2_ventana_admin_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

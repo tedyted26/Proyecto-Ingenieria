@@ -169,16 +169,16 @@ public class Controlador implements ActionListener{
 		else if(fuente.equals(app1.getBtnBuscar())) {
 			String texto=app1.getTextFieldBuscar().getText();
 			boolean buscarDisponibles=app1.getChckbxDisponible().isSelected();
-			String generoSeleccionado=app1.recogerFiltros();
-			if (texto.equals("")&&buscarDisponibles) {
+			String columna=app1.recogerColumnaFiltro();
+			String genero=app1.recogerFiltros();
+			if (texto.equals("")&&buscarDisponibles&&genero.equals("")) {
 				app1.getTablaLibros().setModel(p.buscarLibrosDisponibles(false));
 				app1.preferenciasTamanoTabla();
-			}else if (texto.equals("")&&!buscarDisponibles){
+			}else if (texto.equals("")&&!buscarDisponibles&&genero.equals("")){
 				app1.refrescarTablas();
 			}else {
-				String columna=app1.recogerColumnaFiltro();				
-				app1.getTablaLibros().setModel(p.buscarLibro(columna, texto, buscarDisponibles, false));
-				app1.preferenciasTamanoTabla();			
+				app1.getTablaLibros().setModel(p.buscarLibro(columna, texto, buscarDisponibles, false, genero));
+				app1.preferenciasTamanoTabla();
 			}
 		}
 		else if(fuente.equals(app1.getBtnVerDetalles())) {
@@ -242,6 +242,10 @@ public class Controlador implements ActionListener{
 		else if(fuente.equals(app1.getBtnConfirmarModificaciones())) {
 			modificarPerfil();	
 		}
+		
+		else if(fuente.equals(app1.getBtnLimpiarFiltros())) {
+			app1.eliminarFiltros();
+		}
 		else if(fuente.equals(app1.getBtnInformacionYContacto())) {
 			app1.getCl().show(parent1, "3");
 		}
@@ -279,16 +283,16 @@ public class Controlador implements ActionListener{
 		else if(fuente.equals(app2.getBtnBuscar())) {
 			String texto=app2.getTextFieldBuscar().getText();
 			boolean buscarDisponibles=app2.getChckbxDisponible().isSelected();
-			String generoSeleccionado=app2.recogerFiltrosB();
-			if (texto.equals("")&&buscarDisponibles) {
+			String columna=app2.recogerColumnaFiltroB();
+			String genero=app2.recogerFiltrosB();
+			if (texto.equals("")&&buscarDisponibles&&genero.equals("")) {
 				app2.getTablaLibros().setModel(p.buscarLibrosDisponibles(true));
 				app2.preferenciasTamanoTablaLibros();
-			}else if (texto.equals("")&&!buscarDisponibles){
+			}else if (texto.equals("")&&!buscarDisponibles&&genero.equals("")){
 				app2.refrescarTablas("libro");
 			}else {
-				String columna=app2.recogerColumnaFiltroB();				
-				app2.getTablaLibros().setModel(p.buscarLibro(columna, texto, buscarDisponibles, true));
-				app2.preferenciasTamanoTablaLibros();			
+				app2.getTablaLibros().setModel(p.buscarLibro(columna, texto, buscarDisponibles, true, genero));
+				app2.preferenciasTamanoTablaLibros();
 			}
 		}
 		else if(fuente.equals(app2.getBtnAnadir())) {
@@ -351,6 +355,10 @@ public class Controlador implements ActionListener{
 			popupEliminarLibro.getFrmpopup().setVisible(true);
 			
 		}
+		
+		else if(fuente.equals(app2.getBtnLimpiarFiltrosB())) {
+			app2.eliminarFiltrosB();
+		}
 		//POPUP
 		else if (fuente.equals(popupEliminarLibro.getBtnNo())) {
 			popupEliminarLibro.getFrmpopup().setVisible(false);
@@ -374,12 +382,17 @@ public class Controlador implements ActionListener{
 		//USUARIOS
 		else if(fuente.equals(app2.getBtnBuscarU())) {
 			String texto=app2.getTextFieldBuscarU().getText();
-			String filtroSeleccionado=app2.recogerFiltrosB();
-			if (texto.equals("")){
+			String filtro=app2.recogerFiltrosU();
+			String columna=app2.recogerColumnaFiltroU();
+			if (texto.equals("")&&filtro.equals("")){
 				app2.refrescarTablas("usuario");
-			}else {
-				String columna=app2.recogerColumnaFiltroU();				
-				app2.getTablaUsuarios().setModel(p.buscarUsuario(columna, texto));
+			}
+			else if(texto.equals("")&&!filtro.equals("")) {
+				app2.getTablaUsuarios().setModel(p.buscarUsuariosPorFiltro(columna, filtro));
+				app2.preferenciasTamanoTablaUsuarios();
+			}
+			else {	
+				app2.getTablaUsuarios().setModel(p.buscarUsuario(columna, texto, filtro));
 				app2.preferenciasTamanoTablaLibros();			
 			}
 		}
@@ -465,6 +478,9 @@ public class Controlador implements ActionListener{
 			popupEliminarUsuario.getLblAviso().setFont(new Font("Goudy Old Style", Font.PLAIN, 18));
 			popupEliminarUsuario.getLblAviso().setText("¿Desea eliminar este usuario?");
 			popupEliminarUsuario.getFrmpopup().setVisible(true);	
+		}
+		else if(fuente.equals(app2.getBtnLimpiarFiltrosU())){
+			app2.eliminarFiltrosU();
 		}
 		
 		//POPUP

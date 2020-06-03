@@ -26,22 +26,46 @@ Collaboration diagram for accesoDB.PersistenciaDatos:<para>
 </listitem>
             <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a919f101ac8c818d3517106b0ed47dfbd">modificarContrasenaUsuario</link> (<link linkend="_classmodel_1_1_usuario">Usuario</link> user, String contrasena)</para>
 </listitem>
-            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1ab39660ad9628601f20773f2dc74376a7">bloqueoUsuario</link> (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</para>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a31c837079ad99055f8f51335414c5eef">editarUsuario</link> (String dni, String columna, String valor)</para>
 </listitem>
-            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1abe5b6bc072191c582aa455de7ea1a928">eliminarUsuario</link> (String dni)</para>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a0f38322226a80a6ffe25272b4a4af873">bloquearUsuario</link> (String dni)</para>
 </listitem>
-            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1aabbecb71d8845376d15e87196a24eaa7">crearLibro</link> (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</para>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1ab84c114d6d3d3f8320afa58e7b205dc4">desbloquearUsuario</link> (String dni)</para>
 </listitem>
-            <listitem><para><link linkend="_classmodel_1_1_libro">Libro</link> <link linkend="_classacceso_d_b_1_1_persistencia_datos_1abdf86aed9584de7c8129776297bf2d42">consultaLibro</link> (String titulo)</para>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a7f04f744bdea45aa2fbed8ac3c599ea3">covertirAdministrador</link> (String dni)</para>
 </listitem>
-            <listitem><para>String <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a4a98cbf9c638e07e8aefbb37cc9d8052">eliminarLibro</link> (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</para>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1ade527ddd65c5d51ab6554ec868109a84">eliminarUsuario</link> (String dni)</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a2c436beb4123893a0f66104021e3df01">crearLibro</link> (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</para>
+</listitem>
+            <listitem><para><link linkend="_classmodel_1_1_libro">Libro</link> <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a3ebb2502b50351a5a2e992817d3e1762">consultarLibro</link> (String codigo)</para>
+</listitem>
+            <listitem><para><link linkend="_classmodel_1_1_libro">Libro</link> <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a004be0c1688c810cb8f3900ae97f907d">consultarLibroTitulo</link> (String titulo)</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1ae1e539ce5efe290331bae016c81bc2d6">prestarLibro</link> (String codigo, String dni)</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a86bc7a0de34291cc7b4277da1c2da107">editarLibro</link> (String codigo, String columna, String valor)</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a319fd310c9a670bffa96b323ea7c13cb">devolverLibro</link> (String codigo)</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a629b3de73b1c7a15992e9be59ff11af5">eliminarLibro</link> (String codigo)</para>
+</listitem>
+            <listitem><para>TableModel <link linkend="_classacceso_d_b_1_1_persistencia_datos_1abfa3a734c560130fd469203ccf6da73c">modelarTabla</link> (String query)</para>
+</listitem>
+            <listitem><para>DefaultListModel <link linkend="_classacceso_d_b_1_1_persistencia_datos_1aac76a0e8f89abcea66a33a929f66da33">cargarLista</link> (String dniPrestatario)</para>
+</listitem>
+            <listitem><para>TableModel <link linkend="_classacceso_d_b_1_1_persistencia_datos_1aab05b01b25a788680318e081131fbb30">buscarLibro</link> (String columna, String texto, boolean buscarDisponibles, boolean usuarioAdmin)</para>
+</listitem>
+            <listitem><para>TableModel <link linkend="_classacceso_d_b_1_1_persistencia_datos_1abd7d10c8ce02d7fc9974476c3dc88d0c">buscarLibrosDisponibles</link> (boolean usuarioAdmin)</para>
+</listitem>
+            <listitem><para>TableModel <link linkend="_classacceso_d_b_1_1_persistencia_datos_1a43d4790a3d309529952bd00e3272c3bc">buscarUsuario</link> (String columna, String texto)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 11 of file PersistenciaDatos.java.</para>
+Definition at line 12 of file PersistenciaDatos.java.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -50,37 +74,256 @@ Definition at line 11 of file PersistenciaDatos.java.</para>
 <indexterm><primary>PersistenciaDatos</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
 <indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>PersistenciaDatos</secondary></indexterm>
 <para><computeroutput>accesoDB.PersistenciaDatos.PersistenciaDatos ( )</computeroutput></para><para>
-Definition at line 15 of file PersistenciaDatos.java.</para>
+Definition at line 21 of file PersistenciaDatos.java.</para>
 </section>
 </section>
 <section>
 <title>Member Function Documentation</title>
-<anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1ab39660ad9628601f20773f2dc74376a7"/>    <section>
-    <title>bloqueoUsuario()</title>
-<indexterm><primary>bloqueoUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
-<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>bloqueoUsuario</secondary></indexterm>
-<para><computeroutput>String accesoDB.PersistenciaDatos.bloqueoUsuario (<link linkend="_classmodel_1_1_usuario">Usuario</link> user)</computeroutput></para><para>
-Definition at line 306 of file PersistenciaDatos.java.</para>
+<anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a0f38322226a80a6ffe25272b4a4af873"/>    <section>
+    <title>bloquearUsuario()</title>
+<indexterm><primary>bloquearUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>bloquearUsuario</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.bloquearUsuario (String dni)</computeroutput></para>
+<para>bloquea un usuario para que no sea capaz de entrar a su cuenta 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>dni</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+<para>
+Definition at line 308 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_ab39660ad9628601f20773f2dc74376a7_cgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a0f38322226a80a6ffe25272b4a4af873_cgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
 </para>
-    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1abdf86aed9584de7c8129776297bf2d42"/>    <section>
-    <title>consultaLibro()</title>
-<indexterm><primary>consultaLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
-<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>consultaLibro</secondary></indexterm>
-<para><computeroutput><link linkend="_classmodel_1_1_libro">Libro</link> accesoDB.PersistenciaDatos.consultaLibro (String titulo)</computeroutput></para><para>
-Definition at line 444 of file PersistenciaDatos.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a0f38322226a80a6ffe25272b4a4af873_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1aab05b01b25a788680318e081131fbb30"/>    <section>
+    <title>buscarLibro()</title>
+<indexterm><primary>buscarLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>buscarLibro</secondary></indexterm>
+<para><computeroutput>TableModel accesoDB.PersistenciaDatos.buscarLibro (String columna, String texto, boolean buscarDisponibles, boolean usuarioAdmin)</computeroutput></para><para>
+Definition at line 836 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_abdf86aed9584de7c8129776297bf2d42_cgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_aab05b01b25a788680318e081131fbb30_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_aab05b01b25a788680318e081131fbb30_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1abd7d10c8ce02d7fc9974476c3dc88d0c"/>    <section>
+    <title>buscarLibrosDisponibles()</title>
+<indexterm><primary>buscarLibrosDisponibles</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>buscarLibrosDisponibles</secondary></indexterm>
+<para><computeroutput>TableModel accesoDB.PersistenciaDatos.buscarLibrosDisponibles (boolean usuarioAdmin)</computeroutput></para><para>
+Definition at line 893 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_abd7d10c8ce02d7fc9974476c3dc88d0c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_abd7d10c8ce02d7fc9974476c3dc88d0c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a43d4790a3d309529952bd00e3272c3bc"/>    <section>
+    <title>buscarUsuario()</title>
+<indexterm><primary>buscarUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>buscarUsuario</secondary></indexterm>
+<para><computeroutput>TableModel accesoDB.PersistenciaDatos.buscarUsuario (String columna, String texto)</computeroutput></para><para>
+Definition at line 940 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a43d4790a3d309529952bd00e3272c3bc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a43d4790a3d309529952bd00e3272c3bc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1aac76a0e8f89abcea66a33a929f66da33"/>    <section>
+    <title>cargarLista()</title>
+<indexterm><primary>cargarLista</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>cargarLista</secondary></indexterm>
+<para><computeroutput>DefaultListModel accesoDB.PersistenciaDatos.cargarLista (String dniPrestatario)</computeroutput></para><para>
+Definition at line 803 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_aac76a0e8f89abcea66a33a929f66da33_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_aac76a0e8f89abcea66a33a929f66da33_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a3ebb2502b50351a5a2e992817d3e1762"/>    <section>
+    <title>consultarLibro()</title>
+<indexterm><primary>consultarLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>consultarLibro</secondary></indexterm>
+<para><computeroutput><link linkend="_classmodel_1_1_libro">Libro</link> accesoDB.PersistenciaDatos.consultarLibro (String codigo)</computeroutput></para>
+<para>Función que consulta los datos de un libro según su código 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>codigo</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Libro </para>
+</formalpara>
+</para>
+<para>
+Definition at line 500 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a3ebb2502b50351a5a2e992817d3e1762_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a3ebb2502b50351a5a2e992817d3e1762_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a004be0c1688c810cb8f3900ae97f907d"/>    <section>
+    <title>consultarLibroTitulo()</title>
+<indexterm><primary>consultarLibroTitulo</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>consultarLibroTitulo</secondary></indexterm>
+<para><computeroutput><link linkend="_classmodel_1_1_libro">Libro</link> accesoDB.PersistenciaDatos.consultarLibroTitulo (String titulo)</computeroutput></para>
+<para>consulta un libro en la base de datos por el titulo 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>titulo</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>objeto Libro con los datos pedidos </para>
+</formalpara>
+</para>
+<para>
+Definition at line 560 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a004be0c1688c810cb8f3900ae97f907d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a004be0c1688c810cb8f3900ae97f907d_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -117,12 +360,21 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 90 of file PersistenciaDatos.java.</para>
+Definition at line 82 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
                 <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -159,7 +411,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 152 of file PersistenciaDatos.java.</para>
+Definition at line 135 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -169,17 +421,95 @@ Here is the call graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
-    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1aabbecb71d8845376d15e87196a24eaa7"/>    <section>
-    <title>crearLibro()</title>
-<indexterm><primary>crearLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
-<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>crearLibro</secondary></indexterm>
-<para><computeroutput>String accesoDB.PersistenciaDatos.crearLibro (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</computeroutput></para><para>
-Definition at line 392 of file PersistenciaDatos.java.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a10adbeedb31fb40147576f9884cb6747_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a7f04f744bdea45aa2fbed8ac3c599ea3"/>    <section>
+    <title>covertirAdministrador()</title>
+<indexterm><primary>covertirAdministrador</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>covertirAdministrador</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.covertirAdministrador (String dni)</computeroutput></para>
+<para>convierte un usuario en administrador. Solo puede acceder a la pantalla de administracion 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>dni</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+<para>
+Definition at line 378 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_aabbecb71d8845376d15e87196a24eaa7_cgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a7f04f744bdea45aa2fbed8ac3c599ea3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a2c436beb4123893a0f66104021e3df01"/>    <section>
+    <title>crearLibro()</title>
+<indexterm><primary>crearLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>crearLibro</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.crearLibro (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</computeroutput></para>
+<para>Mete el libro pasado por parametro en la base de datos 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>libro</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true si se ha realizado con exito </para>
+</formalpara>
+</para>
+<para>
+Definition at line 452 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a2c436beb4123893a0f66104021e3df01_cgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -216,7 +546,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 24 of file PersistenciaDatos.java.</para>
+Definition at line 30 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -226,32 +556,86 @@ Here is the call graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
-    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a4a98cbf9c638e07e8aefbb37cc9d8052"/>    <section>
-    <title>eliminarLibro()</title>
-<indexterm><primary>eliminarLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
-<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>eliminarLibro</secondary></indexterm>
-<para><computeroutput>String accesoDB.PersistenciaDatos.eliminarLibro (<link linkend="_classmodel_1_1_libro">Libro</link> libro)</computeroutput></para><para>
-Definition at line 497 of file PersistenciaDatos.java.</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1ab84c114d6d3d3f8320afa58e7b205dc4"/>    <section>
+    <title>desbloquearUsuario()</title>
+<indexterm><primary>desbloquearUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>desbloquearUsuario</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.desbloquearUsuario (String dni)</computeroutput></para>
+<para>desbloquea un usario para que pueda volver a acceder a su cuenta 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>dni</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true si se ha realizado con exito </para>
+</formalpara>
+</para>
+<para>
+Definition at line 343 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a4a98cbf9c638e07e8aefbb37cc9d8052_cgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_ab84c114d6d3d3f8320afa58e7b205dc4_cgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
 </para>
-    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1abe5b6bc072191c582aa455de7ea1a928"/>    <section>
-    <title>eliminarUsuario()</title>
-<indexterm><primary>eliminarUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
-<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>eliminarUsuario</secondary></indexterm>
-<para><computeroutput>String accesoDB.PersistenciaDatos.eliminarUsuario (String dni)</computeroutput></para><para>
-Definition at line 352 of file PersistenciaDatos.java.</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a319fd310c9a670bffa96b323ea7c13cb"/>    <section>
+    <title>devolverLibro()</title>
+<indexterm><primary>devolverLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>devolverLibro</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.devolverLibro (String codigo)</computeroutput></para>
+<para>Marca el libro como devuelto y elimina al prestatario 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>codigo</entry>
+                                <entry>
+<para>del libro a devolver </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true si se ha realizado con exito </para>
+</formalpara>
+</para>
+<para>
+Definition at line 694 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_abe5b6bc072191c582aa455de7ea1a928_cgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a319fd310c9a670bffa96b323ea7c13cb_cgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -260,7 +644,268 @@ Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_abe5b6bc072191c582aa455de7ea1a928_icgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a319fd310c9a670bffa96b323ea7c13cb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a86bc7a0de34291cc7b4277da1c2da107"/>    <section>
+    <title>editarLibro()</title>
+<indexterm><primary>editarLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>editarLibro</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.editarLibro (String codigo, String columna, String valor)</computeroutput></para>
+<para>Edita solo una caracteristica del libro dependiendo de los parametros pasados 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>codigo</entry>
+                                <entry>
+<para>del libro editado (primary key) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>columna</entry>
+                                <entry>
+<para>que se vaya a editar </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>valor</entry>
+                                <entry>
+<para>que se va a actualizar </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true si se ha realizado con exito </para>
+</formalpara>
+</para>
+<para>
+Definition at line 656 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a86bc7a0de34291cc7b4277da1c2da107_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a31c837079ad99055f8f51335414c5eef"/>    <section>
+    <title>editarUsuario()</title>
+<indexterm><primary>editarUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>editarUsuario</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.editarUsuario (String dni, String columna, String valor)</computeroutput></para>
+<para>Edita los campos de un usuario dependiendo de los parametros pasados 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>dni</entry>
+                                <entry>
+<para>del usuario a editar </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>columna</entry>
+                                <entry>
+<para>en la que se va a editar </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>valor</entry>
+                                <entry>
+<para>que se va a actualizar </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true si se ha realizado con exito </para>
+</formalpara>
+</para>
+<para>
+Definition at line 270 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a31c837079ad99055f8f51335414c5eef_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1a629b3de73b1c7a15992e9be59ff11af5"/>    <section>
+    <title>eliminarLibro()</title>
+<indexterm><primary>eliminarLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>eliminarLibro</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.eliminarLibro (String codigo)</computeroutput></para>
+<para>elimina un libro por su codigo, antes de eliminarlo, si esta prestado primero hay que devolverlo para que no se produzca error al ejecutar 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>codigo</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true si se ha realizado con exito </para>
+</formalpara>
+</para>
+<para>
+Definition at line 733 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a629b3de73b1c7a15992e9be59ff11af5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a629b3de73b1c7a15992e9be59ff11af5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1ade527ddd65c5d51ab6554ec868109a84"/>    <section>
+    <title>eliminarUsuario()</title>
+<indexterm><primary>eliminarUsuario</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>eliminarUsuario</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.eliminarUsuario (String dni)</computeroutput></para>
+<para>elimina un usuario por su dni 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>dni</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true si se ha realizado con exito </para>
+</formalpara>
+</para>
+<para>
+Definition at line 414 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_ade527ddd65c5d51ab6554ec868109a84_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_ade527ddd65c5d51ab6554ec868109a84_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1abfa3a734c560130fd469203ccf6da73c"/>    <section>
+    <title>modelarTabla()</title>
+<indexterm><primary>modelarTabla</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>modelarTabla</secondary></indexterm>
+<para><computeroutput>TableModel accesoDB.PersistenciaDatos.modelarTabla (String query)</computeroutput></para>
+<para>Función que modela una tabla dependiendo de los datos que se necesiten 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>query</entry>
+                                <entry>
+<para>Sentencia sql con los datos pedidos </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>TableModel </para>
+</formalpara>
+</para>
+<para>
+Definition at line 772 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_abfa3a734c560130fd469203ccf6da73c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_abfa3a734c560130fd469203ccf6da73c_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -303,7 +948,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 262 of file PersistenciaDatos.java.</para>
+Definition at line 223 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -345,12 +990,63 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 214 of file PersistenciaDatos.java.</para>
+Definition at line 190 of file PersistenciaDatos.java.</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
                 <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_a95739805e115766083cf228f290de8d6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classacceso_d_b_1_1_persistencia_datos_1ae1e539ce5efe290331bae016c81bc2d6"/>    <section>
+    <title>prestarLibro()</title>
+<indexterm><primary>prestarLibro</primary><secondary>accesoDB.PersistenciaDatos</secondary></indexterm>
+<indexterm><primary>accesoDB.PersistenciaDatos</primary><secondary>prestarLibro</secondary></indexterm>
+<para><computeroutput>boolean accesoDB.PersistenciaDatos.prestarLibro (String codigo, String dni)</computeroutput></para>
+<para>Funcion que cambia el estado de los libros a prestado 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>codigo</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true cuando se realiza de forma correcta </para>
+</formalpara>
+</para>
+<para>
+Definition at line 616 of file PersistenciaDatos.java.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_ae1e539ce5efe290331bae016c81bc2d6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classacceso_d_b_1_1_persistencia_datos_ae1e539ce5efe290331bae016c81bc2d6_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>

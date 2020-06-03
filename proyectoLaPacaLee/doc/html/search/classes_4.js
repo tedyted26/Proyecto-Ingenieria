@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['libro_279',['Libro',['../classmodel_1_1_libro.html',1,'model']]]
+  ['usuario_201',['Usuario',['../classmodel_1_1_usuario.html',1,'model']]]
 ];

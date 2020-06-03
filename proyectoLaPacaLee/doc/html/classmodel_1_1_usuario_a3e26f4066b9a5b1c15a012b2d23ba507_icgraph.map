@@ -1,5 +1,6 @@
 <map id="model.Usuario.getCorreo" name="model.Usuario.getCorreo">
-<area shape="rect" id="node1" title=" " alt="" coords="295,46,460,73"/>
-<area shape="rect" id="node2" href="$classacceso_d_b_1_1_persistencia_datos.html#ab39660ad9628601f20773f2dc74376a7" title=" " alt="" coords="5,5,247,47"/>
-<area shape="rect" id="node3" href="$classacceso_d_b_1_1_persistencia_datos.html#a905ddf3e5fb4ee83a4c1e58bdd86e920" title=" " alt="" coords="13,71,239,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="497,46,663,73"/>
+<area shape="rect" id="node2" href="$classvista_1_1_a2_ventana_admin.html#ae8286e39c0c74881f1214a5092143ede" title=" " alt="" coords="229,5,444,47"/>
+<area shape="rect" id="node4" href="$classacceso_d_b_1_1_persistencia_datos.html#a905ddf3e5fb4ee83a4c1e58bdd86e920" title=" " alt="" coords="224,71,449,112"/>
+<area shape="rect" id="node3" href="$classcontrol_1_1_controlador.html#a1f659a43855ef42fa73f85ed2efea4f8" title=" " alt="" coords="5,5,176,47"/>
 </map>

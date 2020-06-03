@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['controlador_277',['Controlador',['../classcontrol_1_1_controlador.html',1,'control']]]
+  ['libro_196',['Libro',['../classmodel_1_1_libro.html',1,'model']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buscador_276',['Buscador',['../classcontrol_1_1_buscador.html',1,'control']]]
+  ['controlador_195',['Controlador',['../classcontrol_1_1_controlador.html',1,'control']]]
 ];

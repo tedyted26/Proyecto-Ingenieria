@@ -64,9 +64,6 @@ $(function() {
 &#160;
 
 <h3><a id="index_g"></a>- g -</h3><ul>
-<li>gestionar()
-: <a class="el" href="classmodel_1_1_incidencia.html#a7200771e4abe57a73edcceef5eb3017c">model.Incidencia</a>
-</li>
 <li>getApellidos()
 : <a class="el" href="classmodel_1_1_usuario.html#aff6aa1f735bf1f6cc2ee631d54f81945">model.Usuario</a>
 </li>
@@ -154,6 +151,9 @@ $(function() {
 <li>getBtnDetalles()
 : <a class="el" href="classvista_1_1_a2_ventana_admin.html#aa442d0658b2c386444cbdb068f12a554">vista.A2VentanaAdmin</a>
 </li>
+<li>getBtnDevolver()
+: <a class="el" href="classvista_1_1_a1_ventana_usuario.html#abd305cd1000701a4fba88f978a71a9e1">vista.A1VentanaUsuario</a>
+</li>
 <li>getBtnEditar()
 : <a class="el" href="classvista_1_1_a2_ventana_admin.html#a40e7453c5f69db5bc944393607b21ca7">vista.A2VentanaAdmin</a>
 </li>
@@ -205,11 +205,21 @@ $(function() {
 <li>getBtnVerDetalles()
 : <a class="el" href="classvista_1_1_a1_ventana_usuario.html#ad0c3044ce2794d6beeacb5107f649667">vista.A1VentanaUsuario</a>
 </li>
-<li>getBtnVerInfo()
-: <a class="el" href="classvista_1_1_a2_ventana_admin.html#a9720bc789f039677020c0ba6296ce53b">vista.A2VentanaAdmin</a>
-</li>
 <li>getCb()
 : <a class="el" href="classvista_1_1_a2_ventana_admin.html#a257eff5800cc2b77b4bf0a44f66012b5">vista.A2VentanaAdmin</a>
+</li>
+<li>getChckbxDerechosDeAdministrador()
+: <a class="el" href="classvista_1_1_a2_ventana_admin.html#a64da90c4ae5ff8abf130dd1bd7de9e87">vista.A2VentanaAdmin</a>
+</li>
+<li>getChckbxDesbloquear()
+: <a class="el" href="classvista_1_1_a2_ventana_admin.html#ab6ac3348a282426903318dd3a26fda32">vista.A2VentanaAdmin</a>
+</li>
+<li>getChckbxDisponible()
+: <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a4a7c302e32e79c8fbba50b8aa8a44ae9">vista.A1VentanaUsuario</a>
+, <a class="el" href="classvista_1_1_a2_ventana_admin.html#a04fe6b2d0b7e69d14f788a0a9e2d1e03">vista.A2VentanaAdmin</a>
+</li>
+<li>getChckbxMarcarComoDevuelto()
+: <a class="el" href="classvista_1_1_a2_ventana_admin.html#a76430a640de7acfb5de57a30e7ff8120">vista.A2VentanaAdmin</a>
 </li>
 <li>getCl()
 : <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a857b25ec4d29bac7f600bf9a1ecb5026">vista.A0VentanaInicio</a>
@@ -239,9 +249,6 @@ $(function() {
 <li>getDniPrestatario()
 : <a class="el" href="classmodel_1_1_libro.html#a2f75462b55d3e719b866f6ffa1f6aaf0">model.Libro</a>
 </li>
-<li>getEstado()
-: <a class="el" href="classmodel_1_1_incidencia.html#aada0e05e5286bb2a08093db8297fcf86">model.Incidencia</a>
-</li>
 <li>getFrmLaPacaLee()
 : <a class="el" href="classvista_1_1_a0_ventana_inicio.html#aacecf44389469ae513fa9f9e5eacb4a2">vista.A0VentanaInicio</a>
 </li>
@@ -252,15 +259,13 @@ $(function() {
 <li>getFrmpopup()
 : <a class="el" href="classvista_1_1_pop_up1_b.html#a8551a96f1665d2ca50ccdb0c0774ee18">vista.PopUp1B</a>
 , <a class="el" href="classvista_1_1_pop_up2_b.html#a3e96010302da14d695334c0a8d15439e">vista.PopUp2B</a>
+, <a class="el" href="classvista_1_1_pop_up_info.html#a59969c4b6ac21e52fa24b873b233cad9">vista.PopUpInfo</a>
 </li>
 <li>getGenero()
-: <a class="el" href="classmodel_1_1_libro.html#a4022d6fc6863819b2926de658d5e2033">model.Libro</a>
+: <a class="el" href="classmodel_1_1_libro.html#a612432d3649aa038c39d33f24c9b3d1a">model.Libro</a>
 </li>
 <li>getLabelMensaje()
 : <a class="el" href="classvista_1_1_a1_ventana_usuario.html#ad5b3f959aefb05dd46b4408044bf45ec">vista.A1VentanaUsuario</a>
-</li>
-<li>getLblApellidos()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a7fc483bbe5968cb4cac2ecfa927d42a1">vista.A0VentanaInicio</a>
 </li>
 <li>getLblAutentificacionDeContrasena()
 : <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a781eee9902cf2b67ca842f05b4212696">vista.A0VentanaInicio</a>
@@ -269,39 +274,15 @@ $(function() {
 : <a class="el" href="classvista_1_1_pop_up1_b.html#ac1467c2b53f1628ac028d0122f6423d6">vista.PopUp1B</a>
 , <a class="el" href="classvista_1_1_pop_up2_b.html#a8b95f3ad9e8521382efedac0f3cd4655">vista.PopUp2B</a>
 </li>
-<li>getLblCCContrasena()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a6dd413341c8f009566db5ed20a4983d6">vista.A0VentanaInicio</a>
-</li>
-<li>getLblCCCorreo()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a561e350c514aae47a6a2e41175dea794">vista.A0VentanaInicio</a>
-</li>
-<li>getLblContrasena()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a6783be3d0d0c280dbed5d2d476895ffc">vista.A0VentanaInicio</a>
-</li>
-<li>getLblContrasena2()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a00e4a41924b500356943174ce11b5c4c">vista.A0VentanaInicio</a>
-</li>
-<li>getLblCorreo()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a3b586be8a2c6d718002e439526e3d5aa">vista.A0VentanaInicio</a>
-</li>
-<li>getLblCreacionDeCuenta()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#ac7af6b1af2330cc9ab218aa735789d6d">vista.A0VentanaInicio</a>
-</li>
-<li>getLblDNI()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a295d4ffb28543171ce7abefcc86b24d2">vista.A0VentanaInicio</a>
-</li>
-<li>getLblInicioSesion()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a114c7acbcb38fce7cc09e68de00b1655">vista.A0VentanaInicio</a>
-</li>
-<li>getLblLapacalee()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a42838f9effe7eaf66230f2bfbb37070c">vista.A0VentanaInicio</a>
-</li>
 <li>getLblMensaje()
 : <a class="el" href="classvista_1_1_a0_ventana_inicio.html#ab33a4f6b4ac783d37a569b6b1dd998c8">vista.A0VentanaInicio</a>
 , <a class="el" href="classvista_1_1_a2_ventana_admin.html#a6cab051960d5a901457156b9bd2461df">vista.A2VentanaAdmin</a>
 </li>
-<li>getLblNombre()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a97af0629e2d0a4812ac8e6e47f27e541">vista.A0VentanaInicio</a>
+<li>getLblMensajeAnadirLibro()
+: <a class="el" href="classvista_1_1_a2_ventana_admin.html#a2c7d377bc904f06eae229f077776458e">vista.A2VentanaAdmin</a>
+</li>
+<li>getListaLibros()
+: <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a66c918a7be9966525c112a5b814ae345">vista.A1VentanaUsuario</a>
 </li>
 <li>getMarcoDeIncio()
 : <a class="el" href="classvista_1_1_a0_ventana_inicio.html#abe4dfebc9cb8ccae1520fa29a6534785">vista.A0VentanaInicio</a>
@@ -313,32 +294,14 @@ $(function() {
 : <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a763790e732721e68a028c7f5cde7ae76">vista.A1VentanaUsuario</a>
 , <a class="el" href="classvista_1_1_a2_ventana_admin.html#a7c5469d2e4f6fae7ec0014ad3479ee59">vista.A2VentanaAdmin</a>
 </li>
-<li>getPanelCrearCuenta()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a74547270485f1de3bd6be770f1136e35">vista.A0VentanaInicio</a>
-</li>
-<li>getPanelInicio()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a09c4c41c45ac524c8be4c87a885aab45">vista.A0VentanaInicio</a>
-</li>
 <li>getPanelInicioSesion()
 : <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a43071e65ad8f0a3defb4981111941b36">vista.A0VentanaInicio</a>
-</li>
-<li>getPanelMensaje()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#aacf994ee3d971d655af17f5d5b2a74b1">vista.A0VentanaInicio</a>
 </li>
 <li>getPanelMensajes()
 : <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a8c0b15fec59b84598f9a72408a575377">vista.A0VentanaInicio</a>
 </li>
-<li>getPassContrasena1()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#abc70f5c428ce30fb96428384d2dc5484">vista.A0VentanaInicio</a>
-</li>
-<li>getPassContrasena2()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a0c1e53cae1d6b67b3f500443111a9dd7">vista.A0VentanaInicio</a>
-</li>
 <li>getPasswordContrasena()
 : <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a7b386a17a2cd32ed9942e6320e9db3ec">vista.A1VentanaUsuario</a>
-</li>
-<li>getPasswordField()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#ad6c42ef60267658d575ea8a16451466c">vista.A0VentanaInicio</a>
 </li>
 <li>getPasswordFieldConfirmarContrasena()
 : <a class="el" href="classvista_1_1_a1_ventana_usuario.html#abfab88dc813295489ae29f46e4ba5245">vista.A1VentanaUsuario</a>
@@ -346,20 +309,35 @@ $(function() {
 <li>getPasswordFieldContrasenaActual()
 : <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a628a97136d302ee29d8ae9b106cf6419">vista.A1VentanaUsuario</a>
 </li>
+<li>getPasswordFieldContrasenaAdmin()
+: <a class="el" href="classvista_1_1_a2_ventana_admin.html#a8baaed0ea23612e92a9857c841a65af3">vista.A2VentanaAdmin</a>
+</li>
 <li>getResumen()
 : <a class="el" href="classmodel_1_1_libro.html#a7229b977136c6ed25edcd46e4fb4fafe">model.Libro</a>
+</li>
+<li>getTablaLibros()
+: <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a763d238bd01c3045e4c826b24020b510">vista.A1VentanaUsuario</a>
+, <a class="el" href="classvista_1_1_a2_ventana_admin.html#a78aeeca054c330a8c2425a702f24cd33">vista.A2VentanaAdmin</a>
+</li>
+<li>getTablaUsuarios()
+: <a class="el" href="classvista_1_1_a2_ventana_admin.html#a77ed81c10142a5efbd80d5e028671689">vista.A2VentanaAdmin</a>
 </li>
 <li>getTextField()
 : <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a27ff3ec032e210c01aba185e70ec705e">vista.A0VentanaInicio</a>
 </li>
 <li>getTextFieldApellidos()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#ac2f7e1b255abb4cf94baf02ea1610fd7">vista.A0VentanaInicio</a>
-, <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a6dfe4482d337f8cbc5c416c2b288b0a8">vista.A1VentanaUsuario</a>
+: <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a6dfe4482d337f8cbc5c416c2b288b0a8">vista.A1VentanaUsuario</a>
 , <a class="el" href="classvista_1_1_a2_ventana_admin.html#aca1143f7203db51c918ca6870a6b19b5">vista.A2VentanaAdmin</a>
 </li>
+<li>getTextFieldBuscar()
+: <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a3613433bbc0cd4b5f567eb62c9eb3dab">vista.A1VentanaUsuario</a>
+, <a class="el" href="classvista_1_1_a2_ventana_admin.html#ae88478c3df9cd30597b00835d989ea3c">vista.A2VentanaAdmin</a>
+</li>
+<li>getTextFieldBuscarU()
+: <a class="el" href="classvista_1_1_a2_ventana_admin.html#a8bf5b777de24a171c6cbdd9ae1b7a5c5">vista.A2VentanaAdmin</a>
+</li>
 <li>getTextFieldCorreo()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#aeb141349182520302c647fdf54a75041">vista.A0VentanaInicio</a>
-, <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a8329f5e6b35b8c7a75864bb5181636eb">vista.A1VentanaUsuario</a>
+: <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a8329f5e6b35b8c7a75864bb5181636eb">vista.A1VentanaUsuario</a>
 , <a class="el" href="classvista_1_1_a2_ventana_admin.html#adb6c14dc42edb09aea5295c8651c5cac">vista.A2VentanaAdmin</a>
 </li>
 <li>getTextFieldCorreoActual()
@@ -369,17 +347,12 @@ $(function() {
 : <a class="el" href="classvista_1_1_a1_ventana_usuario.html#acc3928898aac1fa0126f044e9247ad8d">vista.A1VentanaUsuario</a>
 </li>
 <li>getTextFieldDNI()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#a9107f4c3d86f50e4876fb29f3a263c65">vista.A0VentanaInicio</a>
-, <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a04a0b3771ce4742afb383564964e5b55">vista.A1VentanaUsuario</a>
+: <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a04a0b3771ce4742afb383564964e5b55">vista.A1VentanaUsuario</a>
 , <a class="el" href="classvista_1_1_a2_ventana_admin.html#ac8d6c01396dc28978c0334171b515eca">vista.A2VentanaAdmin</a>
 </li>
 <li>getTextFieldNombre()
-: <a class="el" href="classvista_1_1_a0_ventana_inicio.html#afa58c93af6679ac21c2850404a02a003">vista.A0VentanaInicio</a>
-, <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a7e2215e2c90a2da53cdfc5d0fc4fdaea">vista.A1VentanaUsuario</a>
+: <a class="el" href="classvista_1_1_a1_ventana_usuario.html#a7e2215e2c90a2da53cdfc5d0fc4fdaea">vista.A1VentanaUsuario</a>
 , <a class="el" href="classvista_1_1_a2_ventana_admin.html#a4171867072558b53d1cf931f56fbc748">vista.A2VentanaAdmin</a>
-</li>
-<li>getTexto()
-: <a class="el" href="classmodel_1_1_incidencia.html#aa8edd8c844fb83ba2457e24af5160dad">model.Incidencia</a>
 </li>
 <li>getTitulo()
 : <a class="el" href="classmodel_1_1_libro.html#aff2850da358eb42564280d95d7e7c8db">model.Libro</a>

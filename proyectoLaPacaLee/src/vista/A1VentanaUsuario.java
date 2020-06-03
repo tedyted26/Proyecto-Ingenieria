@@ -46,28 +46,15 @@ public class A1VentanaUsuario {
 	
 	//PESTAÑA BIBLIOTECA
 	private JLayeredPane biblioteca;
-	private JPanel panelBuscar;
-	private JLabel lblFiltros;
-	private JPanel panel;
+	private JPanel panelBuscar, panel, panelGeneros, panelBuscador;
+	private JLabel lblNewLabel, lblFiltros;
 	private JTextField textFieldBuscar;
-	private JButton btnBuscar;
-	private JPanel panelGeneros;
-	private JCheckBox chckbxOtros;
-	private JCheckBox chckbxHistoricos;
-	private JCheckBox chckbxFilosofia;
-	private JCheckBox chckbxDrama;
-	private JCheckBox chckbxPoesia;
-	private JCheckBox chckbxNarrativa;
-	private JLabel lblNewLabel;
-	private JButton btnVerDetalles;
-	private JButton btnPedirPrestado;
-	private JRadioButton rdbtnAutor;
-	private JRadioButton rdbtnTtulo;
-	private JRadioButton rdbtnCdigo;
-	private JCheckBox chckbxDisponible;
-	private JPanel panelBuscador;
+	private JButton btnBuscar, btnLimpiarFiltros, btnVerDetalles, btnPedirPrestado;
+	private JCheckBox chckbxOtros, chckbxHistoricos, chckbxFilosofia, chckbxDrama, chckbxPoesia, chckbxNarrativa, chckbxDisponible;
+	private JRadioButton rdbtnAutor, rdbtnTtulo, rdbtnCdigo;
 	private JScrollPane scrollPane;
 	private JTable tablaLibros;
+	private ButtonGroup grupoBuscarGeneros;
 	
 	//PESTAÑA OPCIONES
 	private JLayeredPane opciones;
@@ -130,6 +117,7 @@ public class A1VentanaUsuario {
 		btnBuscar.addActionListener(control);
 		btnVerDetalles.addActionListener(control);
 		btnPedirPrestado.addActionListener(control);
+		btnLimpiarFiltros.addActionListener(control);
 		//PESTAÑA OPCIONES
 		btnInformacionYContacto.addActionListener(control);
 		btnEliminarCuenta.addActionListener(control);
@@ -142,6 +130,13 @@ public class A1VentanaUsuario {
 		btncontactanos.addActionListener(control);
 		btnSi.addActionListener(control);
 		btnNo.addActionListener(control);
+	}
+	
+	/**
+	 * mtodo que limpia los filtros de los generos de los libros
+	 */
+	public void eliminarFiltros() {
+		grupoBuscarGeneros.clearSelection();
 	}
 	
 	/**
@@ -456,7 +451,7 @@ public class A1VentanaUsuario {
 		chckbxNarrativa.setFont(new Font("Yu Gothic UI", Font.PLAIN, 11));
 		chckbxNarrativa.setBackground(new Color(240, 128, 128));
 		
-		ButtonGroup grupoBuscarGeneros = new ButtonGroup();
+		grupoBuscarGeneros = new ButtonGroup();
 		grupoBuscarGeneros.add(chckbxNarrativa);
 		grupoBuscarGeneros.add(chckbxHistoricos);
 		grupoBuscarGeneros.add(chckbxPoesia);
@@ -467,32 +462,49 @@ public class A1VentanaUsuario {
 		lblNewLabel = new JLabel("G\u00E9neros");
 		lblNewLabel.setForeground(new Color(220, 20, 60));
 		lblNewLabel.setFont(new Font("Goudy Old Style", Font.PLAIN, 25));
+		
+		btnLimpiarFiltros = new JButton("Limpiar");
+		btnLimpiarFiltros.setHorizontalTextPosition(SwingConstants.RIGHT);
+		btnLimpiarFiltros.setBorder(null);
+		btnLimpiarFiltros.setContentAreaFilled(false);
+		btnLimpiarFiltros.setBackground(new Color(255, 228, 196));
+		btnLimpiarFiltros.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnLimpiarFiltros.setForeground(new Color(220, 20, 60));
 		GroupLayout gl_panelGeneros = new GroupLayout(panelGeneros);
 		gl_panelGeneros.setHorizontalGroup(
 			gl_panelGeneros.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 146, Short.MAX_VALUE)
 				.addGroup(gl_panelGeneros.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(gl_panelGeneros.createParallelGroup(Alignment.LEADING)
-						.addComponent(chckbxOtros)
-						.addComponent(chckbxHistoricos)
-						.addComponent(chckbxFilosofia)
-						.addComponent(chckbxDrama)
-						.addComponent(chckbxPoesia)
 						.addComponent(chckbxNarrativa)
-						.addComponent(lblNewLabel))
-					.addContainerGap(21, Short.MAX_VALUE))
+						.addGroup(gl_panelGeneros.createParallelGroup(Alignment.TRAILING)
+							.addGroup(gl_panelGeneros.createSequentialGroup()
+								.addComponent(lblNewLabel)
+								.addGap(34))
+							.addGroup(gl_panelGeneros.createParallelGroup(Alignment.LEADING)
+								.addComponent(chckbxOtros)
+								.addComponent(chckbxHistoricos)
+								.addComponent(chckbxFilosofia)
+								.addComponent(chckbxDrama)
+								.addComponent(chckbxPoesia))))
+					.addContainerGap(26, Short.MAX_VALUE))
+				.addGroup(Alignment.TRAILING, gl_panelGeneros.createSequentialGroup()
+					.addGap(107)
+					.addComponent(btnLimpiarFiltros)
+					.addGap(0, 0, Short.MAX_VALUE))
 		);
 		gl_panelGeneros.setVerticalGroup(
 			gl_panelGeneros.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 304, Short.MAX_VALUE)
 				.addGroup(gl_panelGeneros.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(lblNewLabel)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(chckbxNarrativa)
-					.addGap(18)
-					.addComponent(chckbxPoesia)
+					.addGroup(gl_panelGeneros.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panelGeneros.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(lblNewLabel)
+							.addGap(9)
+							.addComponent(chckbxNarrativa)
+							.addGap(18)
+							.addComponent(chckbxPoesia))
+						.addComponent(btnLimpiarFiltros, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
 					.addGap(18)
 					.addComponent(chckbxDrama)
 					.addGap(18)
@@ -501,7 +513,7 @@ public class A1VentanaUsuario {
 					.addComponent(chckbxHistoricos)
 					.addGap(18)
 					.addComponent(chckbxOtros)
-					.addContainerGap(23, Short.MAX_VALUE))
+					.addContainerGap(21, Short.MAX_VALUE))
 		);
 		panelGeneros.setLayout(gl_panelGeneros);
 		
@@ -520,7 +532,7 @@ public class A1VentanaUsuario {
 		panelBuscar.add(btnPedirPrestado);
 		
 		panelBuscador = new JPanel();
-		panelBuscador.setBounds(10, 76, 386, 201);
+		panelBuscador.setBounds(10, 69, 386, 208);
 		panelBuscar.add(panelBuscador);
 		panelBuscador.setLayout(new BorderLayout(0, 0));
 		
@@ -948,4 +960,8 @@ public class A1VentanaUsuario {
 	public JCheckBox getChckbxDisponible() {
 		return chckbxDisponible;
 	}
+	public JButton getBtnLimpiarFiltros() {
+		return btnLimpiarFiltros;
+	}
+	
 }

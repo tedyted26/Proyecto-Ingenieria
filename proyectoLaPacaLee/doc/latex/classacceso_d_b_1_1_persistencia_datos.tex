@@ -1,4 +1,4 @@
-\doxysection{acceso\+D\+B.\+Persistencia\+Datos Class Reference}
+\hypertarget{classacceso_d_b_1_1_persistencia_datos}{}\doxysection{acceso\+D\+B.\+Persistencia\+Datos Class Reference}
 \label{classacceso_d_b_1_1_persistencia_datos}\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
 
 
@@ -12,90 +12,272 @@ Collaboration diagram for acceso\+D\+B.\+Persistencia\+Datos\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Persistencia\+Datos} ()
+\mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_ac43299b4336c14b08183bc7303ce6b96}{Persistencia\+Datos}} ()
 \item 
-boolean \textbf{ crear\+Usuario} (\textbf{ Usuario} user)
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a905ddf3e5fb4ee83a4c1e58bdd86e920}{crear\+Usuario}} (\mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}} user)
 \item 
-\textbf{ Usuario} \textbf{ consultar\+Usuario} (String correo)
+\mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}} \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783}{consultar\+Usuario}} (String correo)
 \item 
-\textbf{ Usuario} \textbf{ consultar\+Usuario\+Dni} (String dni)
+\mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}} \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a10adbeedb31fb40147576f9884cb6747}{consultar\+Usuario\+Dni}} (String dni)
 \item 
-boolean \textbf{ modificar\+Correo\+Usuario} (\textbf{ Usuario} user, String correo\+Nuevo)
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a95739805e115766083cf228f290de8d6}{modificar\+Correo\+Usuario}} (\mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}} user, String correo\+Nuevo)
 \item 
-boolean \textbf{ modificar\+Contrasena\+Usuario} (\textbf{ Usuario} user, String contrasena)
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a919f101ac8c818d3517106b0ed47dfbd}{modificar\+Contrasena\+Usuario}} (\mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}} user, String contrasena)
 \item 
-String \textbf{ bloqueo\+Usuario} (\textbf{ Usuario} user)
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a31c837079ad99055f8f51335414c5eef}{editar\+Usuario}} (String dni, String columna, String valor)
 \item 
-String \textbf{ eliminar\+Usuario} (String dni)
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a0f38322226a80a6ffe25272b4a4af873}{bloquear\+Usuario}} (String dni)
 \item 
-String \textbf{ crear\+Libro} (\textbf{ Libro} libro)
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_ab84c114d6d3d3f8320afa58e7b205dc4}{desbloquear\+Usuario}} (String dni)
 \item 
-\textbf{ Libro} \textbf{ consulta\+Libro} (String titulo)
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a7f04f744bdea45aa2fbed8ac3c599ea3}{covertir\+Administrador}} (String dni)
 \item 
-String \textbf{ eliminar\+Libro} (\textbf{ Libro} libro)
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_ade527ddd65c5d51ab6554ec868109a84}{eliminar\+Usuario}} (String dni)
+\item 
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a2c436beb4123893a0f66104021e3df01}{crear\+Libro}} (\mbox{\hyperlink{classmodel_1_1_libro}{Libro}} libro)
+\item 
+\mbox{\hyperlink{classmodel_1_1_libro}{Libro}} \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a3ebb2502b50351a5a2e992817d3e1762}{consultar\+Libro}} (String codigo)
+\item 
+\mbox{\hyperlink{classmodel_1_1_libro}{Libro}} \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a004be0c1688c810cb8f3900ae97f907d}{consultar\+Libro\+Titulo}} (String titulo)
+\item 
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_ae1e539ce5efe290331bae016c81bc2d6}{prestar\+Libro}} (String codigo, String dni)
+\item 
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a86bc7a0de34291cc7b4277da1c2da107}{editar\+Libro}} (String codigo, String columna, String valor)
+\item 
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a319fd310c9a670bffa96b323ea7c13cb}{devolver\+Libro}} (String codigo)
+\item 
+boolean \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a629b3de73b1c7a15992e9be59ff11af5}{eliminar\+Libro}} (String codigo)
+\item 
+Table\+Model \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_abfa3a734c560130fd469203ccf6da73c}{modelar\+Tabla}} (String query)
+\item 
+Default\+List\+Model \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_aac76a0e8f89abcea66a33a929f66da33}{cargar\+Lista}} (String dni\+Prestatario)
+\item 
+Table\+Model \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_aab05b01b25a788680318e081131fbb30}{buscar\+Libro}} (String columna, String texto, boolean buscar\+Disponibles, boolean usuario\+Admin)
+\item 
+Table\+Model \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_abd7d10c8ce02d7fc9974476c3dc88d0c}{buscar\+Libros\+Disponibles}} (boolean usuario\+Admin)
+\item 
+Table\+Model \mbox{\hyperlink{classacceso_d_b_1_1_persistencia_datos_a43d4790a3d309529952bd00e3272c3bc}{buscar\+Usuario}} (String columna, String texto)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line 11 of file Persistencia\+Datos.\+java.
+Definition at line 12 of file Persistencia\+Datos.\+java.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_ac43299b4336c14b08183bc7303ce6b96}} 
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_ac43299b4336c14b08183bc7303ce6b96}\label{classacceso_d_b_1_1_persistencia_datos_ac43299b4336c14b08183bc7303ce6b96}} 
 \index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!PersistenciaDatos@{PersistenciaDatos}}
 \index{PersistenciaDatos@{PersistenciaDatos}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{PersistenciaDatos()}
+\doxysubsubsection{\texorpdfstring{PersistenciaDatos()}{PersistenciaDatos()}}
 {\footnotesize\ttfamily acceso\+D\+B.\+Persistencia\+Datos.\+Persistencia\+Datos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 15 of file Persistencia\+Datos.\+java.
+Definition at line 21 of file Persistencia\+Datos.\+java.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_ab39660ad9628601f20773f2dc74376a7}} 
-\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!bloqueoUsuario@{bloqueoUsuario}}
-\index{bloqueoUsuario@{bloqueoUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{bloqueoUsuario()}
-{\footnotesize\ttfamily String acceso\+D\+B.\+Persistencia\+Datos.\+bloqueo\+Usuario (\begin{DoxyParamCaption}\item[{\textbf{ Usuario}}]{user }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a0f38322226a80a6ffe25272b4a4af873}\label{classacceso_d_b_1_1_persistencia_datos_a0f38322226a80a6ffe25272b4a4af873}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!bloquearUsuario@{bloquearUsuario}}
+\index{bloquearUsuario@{bloquearUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{bloquearUsuario()}{bloquearUsuario()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+bloquear\+Usuario (\begin{DoxyParamCaption}\item[{String}]{dni }\end{DoxyParamCaption})}
+
+bloquea un usuario para que no sea capaz de entrar a su cuenta 
+\begin{DoxyParams}{Parameters}
+{\em dni} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
-
-Definition at line 306 of file Persistencia\+Datos.\+java.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_ab39660ad9628601f20773f2dc74376a7_cgraph}
-\end{center}
-\end{figure}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_abdf86aed9584de7c8129776297bf2d42}} 
-\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!consultaLibro@{consultaLibro}}
-\index{consultaLibro@{consultaLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{consultaLibro()}
-{\footnotesize\ttfamily \textbf{ Libro} acceso\+D\+B.\+Persistencia\+Datos.\+consulta\+Libro (\begin{DoxyParamCaption}\item[{String}]{titulo }\end{DoxyParamCaption})}
-
-
-
-Definition at line 444 of file Persistencia\+Datos.\+java.
+Definition at line 308 of file Persistencia\+Datos.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_abdf86aed9584de7c8129776297bf2d42_cgraph}
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a0f38322226a80a6ffe25272b4a4af873_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783}} 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a0f38322226a80a6ffe25272b4a4af873_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_aab05b01b25a788680318e081131fbb30}\label{classacceso_d_b_1_1_persistencia_datos_aab05b01b25a788680318e081131fbb30}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!buscarLibro@{buscarLibro}}
+\index{buscarLibro@{buscarLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{buscarLibro()}{buscarLibro()}}
+{\footnotesize\ttfamily Table\+Model acceso\+D\+B.\+Persistencia\+Datos.\+buscar\+Libro (\begin{DoxyParamCaption}\item[{String}]{columna,  }\item[{String}]{texto,  }\item[{boolean}]{buscar\+Disponibles,  }\item[{boolean}]{usuario\+Admin }\end{DoxyParamCaption})}
+
+
+
+Definition at line 836 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_aab05b01b25a788680318e081131fbb30_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_aab05b01b25a788680318e081131fbb30_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_abd7d10c8ce02d7fc9974476c3dc88d0c}\label{classacceso_d_b_1_1_persistencia_datos_abd7d10c8ce02d7fc9974476c3dc88d0c}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!buscarLibrosDisponibles@{buscarLibrosDisponibles}}
+\index{buscarLibrosDisponibles@{buscarLibrosDisponibles}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{buscarLibrosDisponibles()}{buscarLibrosDisponibles()}}
+{\footnotesize\ttfamily Table\+Model acceso\+D\+B.\+Persistencia\+Datos.\+buscar\+Libros\+Disponibles (\begin{DoxyParamCaption}\item[{boolean}]{usuario\+Admin }\end{DoxyParamCaption})}
+
+
+
+Definition at line 893 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_abd7d10c8ce02d7fc9974476c3dc88d0c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_abd7d10c8ce02d7fc9974476c3dc88d0c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a43d4790a3d309529952bd00e3272c3bc}\label{classacceso_d_b_1_1_persistencia_datos_a43d4790a3d309529952bd00e3272c3bc}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!buscarUsuario@{buscarUsuario}}
+\index{buscarUsuario@{buscarUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{buscarUsuario()}{buscarUsuario()}}
+{\footnotesize\ttfamily Table\+Model acceso\+D\+B.\+Persistencia\+Datos.\+buscar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{columna,  }\item[{String}]{texto }\end{DoxyParamCaption})}
+
+
+
+Definition at line 940 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a43d4790a3d309529952bd00e3272c3bc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a43d4790a3d309529952bd00e3272c3bc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_aac76a0e8f89abcea66a33a929f66da33}\label{classacceso_d_b_1_1_persistencia_datos_aac76a0e8f89abcea66a33a929f66da33}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!cargarLista@{cargarLista}}
+\index{cargarLista@{cargarLista}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{cargarLista()}{cargarLista()}}
+{\footnotesize\ttfamily Default\+List\+Model acceso\+D\+B.\+Persistencia\+Datos.\+cargar\+Lista (\begin{DoxyParamCaption}\item[{String}]{dni\+Prestatario }\end{DoxyParamCaption})}
+
+
+
+Definition at line 803 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_aac76a0e8f89abcea66a33a929f66da33_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_aac76a0e8f89abcea66a33a929f66da33_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a3ebb2502b50351a5a2e992817d3e1762}\label{classacceso_d_b_1_1_persistencia_datos_a3ebb2502b50351a5a2e992817d3e1762}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!consultarLibro@{consultarLibro}}
+\index{consultarLibro@{consultarLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{consultarLibro()}{consultarLibro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodel_1_1_libro}{Libro}} acceso\+D\+B.\+Persistencia\+Datos.\+consultar\+Libro (\begin{DoxyParamCaption}\item[{String}]{codigo }\end{DoxyParamCaption})}
+
+Función que consulta los datos de un libro según su código 
+\begin{DoxyParams}{Parameters}
+{\em codigo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Libro 
+\end{DoxyReturn}
+
+
+Definition at line 500 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a3ebb2502b50351a5a2e992817d3e1762_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a3ebb2502b50351a5a2e992817d3e1762_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a004be0c1688c810cb8f3900ae97f907d}\label{classacceso_d_b_1_1_persistencia_datos_a004be0c1688c810cb8f3900ae97f907d}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!consultarLibroTitulo@{consultarLibroTitulo}}
+\index{consultarLibroTitulo@{consultarLibroTitulo}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{consultarLibroTitulo()}{consultarLibroTitulo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodel_1_1_libro}{Libro}} acceso\+D\+B.\+Persistencia\+Datos.\+consultar\+Libro\+Titulo (\begin{DoxyParamCaption}\item[{String}]{titulo }\end{DoxyParamCaption})}
+
+consulta un libro en la base de datos por el titulo 
+\begin{DoxyParams}{Parameters}
+{\em titulo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+objeto Libro con los datos pedidos 
+\end{DoxyReturn}
+
+
+Definition at line 560 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a004be0c1688c810cb8f3900ae97f907d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a004be0c1688c810cb8f3900ae97f907d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783}\label{classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783}} 
 \index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!consultarUsuario@{consultarUsuario}}
 \index{consultarUsuario@{consultarUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{consultarUsuario()}
-{\footnotesize\ttfamily \textbf{ Usuario} acceso\+D\+B.\+Persistencia\+Datos.\+consultar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{correo }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{consultarUsuario()}{consultarUsuario()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}} acceso\+D\+B.\+Persistencia\+Datos.\+consultar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{correo }\end{DoxyParamCaption})}
 
 Consulta un usuario por su correo y devuelve los datos completos del usuario si se realiza correctamente 
 \begin{DoxyParams}{Parameters}
@@ -107,7 +289,7 @@ user
 \end{DoxyReturn}
 
 
-Definition at line 90 of file Persistencia\+Datos.\+java.
+Definition at line 82 of file Persistencia\+Datos.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -116,11 +298,18 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_a10adbeedb31fb40147576f9884cb6747}} 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a4f5be43be6a7352894a174da869e2783_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a10adbeedb31fb40147576f9884cb6747}\label{classacceso_d_b_1_1_persistencia_datos_a10adbeedb31fb40147576f9884cb6747}} 
 \index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!consultarUsuarioDni@{consultarUsuarioDni}}
 \index{consultarUsuarioDni@{consultarUsuarioDni}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{consultarUsuarioDni()}
-{\footnotesize\ttfamily \textbf{ Usuario} acceso\+D\+B.\+Persistencia\+Datos.\+consultar\+Usuario\+Dni (\begin{DoxyParamCaption}\item[{String}]{dni }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{consultarUsuarioDni()}{consultarUsuarioDni()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}} acceso\+D\+B.\+Persistencia\+Datos.\+consultar\+Usuario\+Dni (\begin{DoxyParamCaption}\item[{String}]{dni }\end{DoxyParamCaption})}
 
 Consulta los datos de un usuario a traves de su dni y los devuelve 
 \begin{DoxyParams}{Parameters}
@@ -132,7 +321,7 @@ user
 \end{DoxyReturn}
 
 
-Definition at line 152 of file Persistencia\+Datos.\+java.
+Definition at line 135 of file Persistencia\+Datos.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -141,28 +330,68 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a10adbeedb31fb40147576f9884cb6747_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_aabbecb71d8845376d15e87196a24eaa7}} 
-\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!crearLibro@{crearLibro}}
-\index{crearLibro@{crearLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{crearLibro()}
-{\footnotesize\ttfamily String acceso\+D\+B.\+Persistencia\+Datos.\+crear\+Libro (\begin{DoxyParamCaption}\item[{\textbf{ Libro}}]{libro }\end{DoxyParamCaption})}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a10adbeedb31fb40147576f9884cb6747_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a7f04f744bdea45aa2fbed8ac3c599ea3}\label{classacceso_d_b_1_1_persistencia_datos_a7f04f744bdea45aa2fbed8ac3c599ea3}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!covertirAdministrador@{covertirAdministrador}}
+\index{covertirAdministrador@{covertirAdministrador}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{covertirAdministrador()}{covertirAdministrador()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+covertir\+Administrador (\begin{DoxyParamCaption}\item[{String}]{dni }\end{DoxyParamCaption})}
+
+convierte un usuario en administrador. Solo puede acceder a la pantalla de administracion 
+\begin{DoxyParams}{Parameters}
+{\em dni} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
-
-Definition at line 392 of file Persistencia\+Datos.\+java.
+Definition at line 378 of file Persistencia\+Datos.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_aabbecb71d8845376d15e87196a24eaa7_cgraph}
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a7f04f744bdea45aa2fbed8ac3c599ea3_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_a905ddf3e5fb4ee83a4c1e58bdd86e920}} 
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a2c436beb4123893a0f66104021e3df01}\label{classacceso_d_b_1_1_persistencia_datos_a2c436beb4123893a0f66104021e3df01}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!crearLibro@{crearLibro}}
+\index{crearLibro@{crearLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{crearLibro()}{crearLibro()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+crear\+Libro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1_libro}{Libro}}}]{libro }\end{DoxyParamCaption})}
+
+Mete el libro pasado por parametro en la base de datos 
+\begin{DoxyParams}{Parameters}
+{\em libro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si se ha realizado con exito 
+\end{DoxyReturn}
+
+
+Definition at line 452 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a2c436beb4123893a0f66104021e3df01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a905ddf3e5fb4ee83a4c1e58bdd86e920}\label{classacceso_d_b_1_1_persistencia_datos_a905ddf3e5fb4ee83a4c1e58bdd86e920}} 
 \index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!crearUsuario@{crearUsuario}}
 \index{crearUsuario@{crearUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{crearUsuario()}
-{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+crear\+Usuario (\begin{DoxyParamCaption}\item[{\textbf{ Usuario}}]{user }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{crearUsuario()}{crearUsuario()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+crear\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}}}]{user }\end{DoxyParamCaption})}
 
 Crea un usuario y devuelve true si se inserta correctamente en la bbdd 
 \begin{DoxyParams}{Parameters}
@@ -174,7 +403,7 @@ boolean exito
 \end{DoxyReturn}
 
 
-Definition at line 24 of file Persistencia\+Datos.\+java.
+Definition at line 30 of file Persistencia\+Datos.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -183,52 +412,222 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a905ddf3e5fb4ee83a4c1e58bdd86e920_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_a4a98cbf9c638e07e8aefbb37cc9d8052}} 
-\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!eliminarLibro@{eliminarLibro}}
-\index{eliminarLibro@{eliminarLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{eliminarLibro()}
-{\footnotesize\ttfamily String acceso\+D\+B.\+Persistencia\+Datos.\+eliminar\+Libro (\begin{DoxyParamCaption}\item[{\textbf{ Libro}}]{libro }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_ab84c114d6d3d3f8320afa58e7b205dc4}\label{classacceso_d_b_1_1_persistencia_datos_ab84c114d6d3d3f8320afa58e7b205dc4}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!desbloquearUsuario@{desbloquearUsuario}}
+\index{desbloquearUsuario@{desbloquearUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{desbloquearUsuario()}{desbloquearUsuario()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+desbloquear\+Usuario (\begin{DoxyParamCaption}\item[{String}]{dni }\end{DoxyParamCaption})}
+
+desbloquea un usario para que pueda volver a acceder a su cuenta 
+\begin{DoxyParams}{Parameters}
+{\em dni} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si se ha realizado con exito 
+\end{DoxyReturn}
 
 
-
-Definition at line 497 of file Persistencia\+Datos.\+java.
+Definition at line 343 of file Persistencia\+Datos.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a4a98cbf9c638e07e8aefbb37cc9d8052_cgraph}
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_ab84c114d6d3d3f8320afa58e7b205dc4_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_abe5b6bc072191c582aa455de7ea1a928}} 
-\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!eliminarUsuario@{eliminarUsuario}}
-\index{eliminarUsuario@{eliminarUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{eliminarUsuario()}
-{\footnotesize\ttfamily String acceso\+D\+B.\+Persistencia\+Datos.\+eliminar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{dni }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a319fd310c9a670bffa96b323ea7c13cb}\label{classacceso_d_b_1_1_persistencia_datos_a319fd310c9a670bffa96b323ea7c13cb}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!devolverLibro@{devolverLibro}}
+\index{devolverLibro@{devolverLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{devolverLibro()}{devolverLibro()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+devolver\+Libro (\begin{DoxyParamCaption}\item[{String}]{codigo }\end{DoxyParamCaption})}
+
+Marca el libro como devuelto y elimina al prestatario 
+\begin{DoxyParams}{Parameters}
+{\em codigo} & del libro a devolver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si se ha realizado con exito 
+\end{DoxyReturn}
 
 
-
-Definition at line 352 of file Persistencia\+Datos.\+java.
+Definition at line 694 of file Persistencia\+Datos.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_abe5b6bc072191c582aa455de7ea1a928_cgraph}
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a319fd310c9a670bffa96b323ea7c13cb_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_abe5b6bc072191c582aa455de7ea1a928_icgraph}
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a319fd310c9a670bffa96b323ea7c13cb_icgraph}
 \end{center}
 \end{figure}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_a919f101ac8c818d3517106b0ed47dfbd}} 
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a86bc7a0de34291cc7b4277da1c2da107}\label{classacceso_d_b_1_1_persistencia_datos_a86bc7a0de34291cc7b4277da1c2da107}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!editarLibro@{editarLibro}}
+\index{editarLibro@{editarLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{editarLibro()}{editarLibro()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+editar\+Libro (\begin{DoxyParamCaption}\item[{String}]{codigo,  }\item[{String}]{columna,  }\item[{String}]{valor }\end{DoxyParamCaption})}
+
+Edita solo una caracteristica del libro dependiendo de los parametros pasados 
+\begin{DoxyParams}{Parameters}
+{\em codigo} & del libro editado (primary key) \\
+\hline
+{\em columna} & que se vaya a editar \\
+\hline
+{\em valor} & que se va a actualizar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si se ha realizado con exito 
+\end{DoxyReturn}
+
+
+Definition at line 656 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a86bc7a0de34291cc7b4277da1c2da107_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a31c837079ad99055f8f51335414c5eef}\label{classacceso_d_b_1_1_persistencia_datos_a31c837079ad99055f8f51335414c5eef}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!editarUsuario@{editarUsuario}}
+\index{editarUsuario@{editarUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{editarUsuario()}{editarUsuario()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+editar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{dni,  }\item[{String}]{columna,  }\item[{String}]{valor }\end{DoxyParamCaption})}
+
+Edita los campos de un usuario dependiendo de los parametros pasados 
+\begin{DoxyParams}{Parameters}
+{\em dni} & del usuario a editar \\
+\hline
+{\em columna} & en la que se va a editar \\
+\hline
+{\em valor} & que se va a actualizar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si se ha realizado con exito 
+\end{DoxyReturn}
+
+
+Definition at line 270 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a31c837079ad99055f8f51335414c5eef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a629b3de73b1c7a15992e9be59ff11af5}\label{classacceso_d_b_1_1_persistencia_datos_a629b3de73b1c7a15992e9be59ff11af5}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!eliminarLibro@{eliminarLibro}}
+\index{eliminarLibro@{eliminarLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{eliminarLibro()}{eliminarLibro()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+eliminar\+Libro (\begin{DoxyParamCaption}\item[{String}]{codigo }\end{DoxyParamCaption})}
+
+elimina un libro por su codigo, antes de eliminarlo, si esta prestado primero hay que devolverlo para que no se produzca error al ejecutar 
+\begin{DoxyParams}{Parameters}
+{\em codigo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si se ha realizado con exito 
+\end{DoxyReturn}
+
+
+Definition at line 733 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a629b3de73b1c7a15992e9be59ff11af5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a629b3de73b1c7a15992e9be59ff11af5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_ade527ddd65c5d51ab6554ec868109a84}\label{classacceso_d_b_1_1_persistencia_datos_ade527ddd65c5d51ab6554ec868109a84}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!eliminarUsuario@{eliminarUsuario}}
+\index{eliminarUsuario@{eliminarUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{eliminarUsuario()}{eliminarUsuario()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+eliminar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{dni }\end{DoxyParamCaption})}
+
+elimina un usuario por su dni 
+\begin{DoxyParams}{Parameters}
+{\em dni} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si se ha realizado con exito 
+\end{DoxyReturn}
+
+
+Definition at line 414 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_ade527ddd65c5d51ab6554ec868109a84_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_ade527ddd65c5d51ab6554ec868109a84_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_abfa3a734c560130fd469203ccf6da73c}\label{classacceso_d_b_1_1_persistencia_datos_abfa3a734c560130fd469203ccf6da73c}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!modelarTabla@{modelarTabla}}
+\index{modelarTabla@{modelarTabla}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{modelarTabla()}{modelarTabla()}}
+{\footnotesize\ttfamily Table\+Model acceso\+D\+B.\+Persistencia\+Datos.\+modelar\+Tabla (\begin{DoxyParamCaption}\item[{String}]{query }\end{DoxyParamCaption})}
+
+Función que modela una tabla dependiendo de los datos que se necesiten 
+\begin{DoxyParams}{Parameters}
+{\em query} & Sentencia sql con los datos pedidos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Table\+Model 
+\end{DoxyReturn}
+
+
+Definition at line 772 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_abfa3a734c560130fd469203ccf6da73c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_abfa3a734c560130fd469203ccf6da73c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a919f101ac8c818d3517106b0ed47dfbd}\label{classacceso_d_b_1_1_persistencia_datos_a919f101ac8c818d3517106b0ed47dfbd}} 
 \index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!modificarContrasenaUsuario@{modificarContrasenaUsuario}}
 \index{modificarContrasenaUsuario@{modificarContrasenaUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{modificarContrasenaUsuario()}
-{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+modificar\+Contrasena\+Usuario (\begin{DoxyParamCaption}\item[{\textbf{ Usuario}}]{user,  }\item[{String}]{contrasena }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{modificarContrasenaUsuario()}{modificarContrasenaUsuario()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+modificar\+Contrasena\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}}}]{user,  }\item[{String}]{contrasena }\end{DoxyParamCaption})}
 
 Modifica la contraseña de un usuario utilizando su dni. Devuelve true si la modificacion se ha hecho con exito 
 \begin{DoxyParams}{Parameters}
@@ -242,7 +641,7 @@ boolean exito
 \end{DoxyReturn}
 
 
-Definition at line 262 of file Persistencia\+Datos.\+java.
+Definition at line 223 of file Persistencia\+Datos.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -251,11 +650,11 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a919f101ac8c818d3517106b0ed47dfbd_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{classacceso_d_b_1_1_persistencia_datos_a95739805e115766083cf228f290de8d6}} 
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_a95739805e115766083cf228f290de8d6}\label{classacceso_d_b_1_1_persistencia_datos_a95739805e115766083cf228f290de8d6}} 
 \index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!modificarCorreoUsuario@{modificarCorreoUsuario}}
 \index{modificarCorreoUsuario@{modificarCorreoUsuario}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
-\doxysubsubsection{modificarCorreoUsuario()}
-{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+modificar\+Correo\+Usuario (\begin{DoxyParamCaption}\item[{\textbf{ Usuario}}]{user,  }\item[{String}]{correo\+Nuevo }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{modificarCorreoUsuario()}{modificarCorreoUsuario()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+modificar\+Correo\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1_usuario}{Usuario}}}]{user,  }\item[{String}]{correo\+Nuevo }\end{DoxyParamCaption})}
 
 Modifica el correo de un usuario utilizando su dni. Devuelve true si la modificacion se ha hecho con exito 
 \begin{DoxyParams}{Parameters}
@@ -267,7 +666,7 @@ boolean exito
 \end{DoxyReturn}
 
 
-Definition at line 214 of file Persistencia\+Datos.\+java.
+Definition at line 190 of file Persistencia\+Datos.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -276,8 +675,40 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_a95739805e115766083cf228f290de8d6_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classacceso_d_b_1_1_persistencia_datos_ae1e539ce5efe290331bae016c81bc2d6}\label{classacceso_d_b_1_1_persistencia_datos_ae1e539ce5efe290331bae016c81bc2d6}} 
+\index{accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}!prestarLibro@{prestarLibro}}
+\index{prestarLibro@{prestarLibro}!accesoDB.PersistenciaDatos@{accesoDB.PersistenciaDatos}}
+\doxysubsubsection{\texorpdfstring{prestarLibro()}{prestarLibro()}}
+{\footnotesize\ttfamily boolean acceso\+D\+B.\+Persistencia\+Datos.\+prestar\+Libro (\begin{DoxyParamCaption}\item[{String}]{codigo,  }\item[{String}]{dni }\end{DoxyParamCaption})}
+
+Funcion que cambia el estado de los libros a prestado 
+\begin{DoxyParams}{Parameters}
+{\em codigo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true cuando se realiza de forma correcta 
+\end{DoxyReturn}
+
+
+Definition at line 616 of file Persistencia\+Datos.\+java.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_ae1e539ce5efe290331bae016c81bc2d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classacceso_d_b_1_1_persistencia_datos_ae1e539ce5efe290331bae016c81bc2d6_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/acceso\+D\+B/\textbf{ Persistencia\+Datos.\+java}\end{DoxyCompactItemize}
+src/acceso\+D\+B/\mbox{\hyperlink{_persistencia_datos_8java}{Persistencia\+Datos.\+java}}\end{DoxyCompactItemize}

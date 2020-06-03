@@ -1,4 +1,7 @@
 <map id="model.Libro.getResumen" name="model.Libro.getResumen">
-<area shape="rect" id="node1" title=" " alt="" coords="279,13,445,39"/>
-<area shape="rect" id="node2" href="$classacceso_d_b_1_1_persistencia_datos.html#aabbecb71d8845376d15e87196a24eaa7" title=" " alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="497,78,664,105"/>
+<area shape="rect" id="node2" href="$classacceso_d_b_1_1_persistencia_datos.html#a2c436beb4123893a0f66104021e3df01" title=" " alt="" coords="224,5,449,47"/>
+<area shape="rect" id="node3" href="$classvista_1_1_pop_up_info.html#abb7709b9610a7a748582ed8caf4b0516" title=" " alt="" coords="258,71,415,112"/>
+<area shape="rect" id="node5" href="$classvista_1_1_a2_ventana_admin.html#a7f482b00620eb90e09c09bbd5d724de8" title=" " alt="" coords="237,136,436,177"/>
+<area shape="rect" id="node4" href="$classcontrol_1_1_controlador.html#a1f659a43855ef42fa73f85ed2efea4f8" title=" " alt="" coords="5,104,176,145"/>
 </map>

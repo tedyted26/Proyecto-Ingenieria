@@ -15,13 +15,4 @@
 </listitem>
         </itemizedlist>
 </simplesect>
-<simplesect>
-    <title>Files    </title>
-        <itemizedlist>
-            <listitem><para>file <link linkend="__a_sistema_8java">ASistema.java</link></para>
-</listitem>
-            <listitem><para>file <link linkend="__prueba_8java">Prueba.java</link></para>
-</listitem>
-        </itemizedlist>
-</simplesect>
 </section>

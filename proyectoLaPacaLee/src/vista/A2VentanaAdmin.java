@@ -39,7 +39,7 @@ public class A2VentanaAdmin{
 	private JPanel panelBuscar, panelFiltros, panelGeneros, panelBotones;
 	private JTextField textFieldBuscar;
 	private JLabel lblFiltros, lblGeneros;
-	private JButton btnBuscar, btnDetalles, btnEliminar, btnAnadir;
+	private JButton btnBuscar, btnDetalles, btnEliminar, btnAnadir, btnLimpiarFiltrosB;
 	private JCheckBox chckbxOtros, chckbxHistoricos, chckbxFilosofia, chckbxDrama, chckbxPoesia, chckbxNarrativa, chckbxDisponible;
 	private JRadioButton rdbtnAutor, rdbtnTtulo, rdbtnCdigo;
 	private ButtonGroup grupoBuscarGeneros, grupoL;
@@ -72,7 +72,7 @@ public class A2VentanaAdmin{
 	private JPanel panelBuscarU, panelFiltrosU, panelBotonesU, panelCheckBxU;
 	private JLabel lblFiltrosU, lblFiltrarPorU;
 	private JTextField textFieldBuscarU;
-	private JButton btnBuscarU, btnAnadirU, btnEditarU, btnBloquear, btnEliminarU;
+	private JButton btnBuscarU, btnAnadirU, btnEditarU, btnBloquear, btnEliminarU, btnLimpiarFiltrosU;
 	private JCheckBox chckbxUsuariosBloqueados, chckbxAdministrador;
 	private JRadioButton rdbtnDni,rdbtnNombre, rdbtnApellidos, rdbtnCorreo;
 	private ButtonGroup grupoFiltroUsuario, grupoU;
@@ -125,6 +125,7 @@ public class A2VentanaAdmin{
 		btnEliminar.addActionListener(control);
 		btnAnadir.addActionListener(control);
 		btnEditar.addActionListener(control);
+		btnLimpiarFiltrosB.addActionListener(control);
 		//PANEL AÑADIR
 		btnConfirmar.addActionListener(control);
 		btnCancelarAnadir.addActionListener(control);
@@ -139,6 +140,7 @@ public class A2VentanaAdmin{
 		btnEditarU.addActionListener(control);
 		btnBloquear.addActionListener(control);
 		btnEliminarU.addActionListener(control);
+		btnLimpiarFiltrosU.addActionListener(control);
 		//PANEL AÑADIR
 		btnConfirmarU.addActionListener(control);
 		btnCancelarAnadirU.addActionListener(control);
@@ -154,6 +156,20 @@ public class A2VentanaAdmin{
 		btnAtras.addActionListener(control);
 		btnEditarInfo.addActionListener(control);
 		
+	}
+	
+	/**
+	 * metodo que limpia los filtros de los generos de la biblioteca
+	 */
+	public void eliminarFiltrosB() {
+		grupoBuscarGeneros.clearSelection();
+	}
+	
+	/**
+	 * metodo que limpia los filtros del tipo de usuario
+	 */
+	public void eliminarFiltrosU() {
+		grupoFiltroUsuario.clearSelection();
 	}
 	
 	/**
@@ -783,10 +799,16 @@ public class A2VentanaAdmin{
 		lblGeneros = new JLabel("G\u00E9neros");
 		lblGeneros.setForeground(new Color(220, 20, 60));
 		lblGeneros.setFont(new Font("Goudy Old Style", Font.PLAIN, 25));
+		
+		btnLimpiarFiltrosB = new JButton("Limpiar");
+		btnLimpiarFiltrosB.setForeground(new Color(220, 20, 60));
+		btnLimpiarFiltrosB.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnLimpiarFiltrosB.setContentAreaFilled(false);
+		btnLimpiarFiltrosB.setBorder(null);
+		btnLimpiarFiltrosB.setBackground(new Color(255, 228, 196));
 		GroupLayout gl_panelGeneros = new GroupLayout(panelGeneros);
 		gl_panelGeneros.setHorizontalGroup(
 			gl_panelGeneros.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 146, Short.MAX_VALUE)
 				.addGroup(gl_panelGeneros.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(gl_panelGeneros.createParallelGroup(Alignment.LEADING)
@@ -798,17 +820,22 @@ public class A2VentanaAdmin{
 						.addComponent(chckbxNarrativa)
 						.addComponent(lblGeneros))
 					.addContainerGap(25, Short.MAX_VALUE))
+				.addGroup(Alignment.TRAILING, gl_panelGeneros.createSequentialGroup()
+					.addGap(107)
+					.addComponent(btnLimpiarFiltrosB, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		gl_panelGeneros.setVerticalGroup(
 			gl_panelGeneros.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 304, Short.MAX_VALUE)
 				.addGroup(gl_panelGeneros.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(lblGeneros)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(chckbxNarrativa)
-					.addGap(18)
-					.addComponent(chckbxPoesia)
+					.addGroup(gl_panelGeneros.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panelGeneros.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(lblGeneros)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(chckbxNarrativa)
+							.addGap(18)
+							.addComponent(chckbxPoesia))
+						.addComponent(btnLimpiarFiltrosB, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
 					.addGap(18)
 					.addComponent(chckbxDrama)
 					.addGap(18)
@@ -1354,29 +1381,43 @@ public class A2VentanaAdmin{
 		lblFiltrarPorU = new JLabel("Filtrar por:");
 		lblFiltrarPorU.setForeground(new Color(220, 20, 60));
 		lblFiltrarPorU.setFont(new Font("Goudy Old Style", Font.PLAIN, 25));
+		
+		btnLimpiarFiltrosU = new JButton("Limpiar");
+		btnLimpiarFiltrosU.setForeground(new Color(220, 20, 60));
+		btnLimpiarFiltrosU.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnLimpiarFiltrosU.setContentAreaFilled(false);
+		btnLimpiarFiltrosU.setBorder(null);
+		btnLimpiarFiltrosU.setBackground(new Color(255, 228, 196));
 		GroupLayout gl_panelCheckBxU = new GroupLayout(panelCheckBxU);
 		gl_panelCheckBxU.setHorizontalGroup(
 			gl_panelCheckBxU.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 142, Short.MAX_VALUE)
 				.addGroup(gl_panelCheckBxU.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(gl_panelCheckBxU.createParallelGroup(Alignment.LEADING)
-						.addComponent(chckbxUsuariosBloqueados)
-						.addComponent(chckbxAdministrador)
-						.addComponent(lblFiltrarPorU, GroupLayout.PREFERRED_SIZE, 108, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap(20, Short.MAX_VALUE))
+						.addGroup(gl_panelCheckBxU.createSequentialGroup()
+							.addComponent(chckbxAdministrador)
+							.addContainerGap())
+						.addGroup(gl_panelCheckBxU.createParallelGroup(Alignment.LEADING)
+							.addGroup(gl_panelCheckBxU.createSequentialGroup()
+								.addComponent(chckbxUsuariosBloqueados)
+								.addContainerGap())
+							.addGroup(gl_panelCheckBxU.createParallelGroup(Alignment.LEADING)
+								.addComponent(btnLimpiarFiltrosU, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
+								.addGroup(gl_panelCheckBxU.createSequentialGroup()
+									.addComponent(lblFiltrarPorU, GroupLayout.PREFERRED_SIZE, 108, GroupLayout.PREFERRED_SIZE)
+									.addContainerGap(20, Short.MAX_VALUE))))))
 		);
 		gl_panelCheckBxU.setVerticalGroup(
 			gl_panelCheckBxU.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 129, Short.MAX_VALUE)
 				.addGroup(gl_panelCheckBxU.createSequentialGroup()
-					.addContainerGap()
+					.addComponent(btnLimpiarFiltrosU, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(lblFiltrarPorU, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
-					.addGap(10)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(chckbxUsuariosBloqueados)
-					.addGap(18)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(chckbxAdministrador)
-					.addContainerGap(15, Short.MAX_VALUE))
+					.addContainerGap(26, Short.MAX_VALUE))
 		);
 		panelCheckBxU.setLayout(gl_panelCheckBxU);
 		cu.addLayoutComponent(panelBuscarU, "1");
@@ -1896,6 +1937,10 @@ public class A2VentanaAdmin{
 	public JCheckBox getChckbxDisponible() {
 		return chckbxDisponible;
 	}
-	
-
+	public JButton getBtnLimpiarFiltrosB() {
+		return btnLimpiarFiltrosB;
+	}
+	public JButton getBtnLimpiarFiltrosU() {
+		return btnLimpiarFiltrosU;
+	}	
 }

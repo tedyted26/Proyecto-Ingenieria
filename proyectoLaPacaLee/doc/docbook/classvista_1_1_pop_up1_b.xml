@@ -46,7 +46,7 @@ Collaboration diagram for vista.PopUp1B:<para>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 22 of file PopUp1B.java.</para>
+Definition at line 11 of file PopUp1B.java.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -55,7 +55,7 @@ Definition at line 22 of file PopUp1B.java.</para>
 <indexterm><primary>PopUp1B</primary><secondary>vista.PopUp1B</secondary></indexterm>
 <indexterm><primary>vista.PopUp1B</primary><secondary>PopUp1B</secondary></indexterm>
 <para><computeroutput>vista.PopUp1B.PopUp1B ( )</computeroutput></para><para>
-Definition at line 32 of file PopUp1B.java.</para>
+Definition at line 21 of file PopUp1B.java.</para>
 </section>
 </section>
 <section>
@@ -65,7 +65,7 @@ Definition at line 32 of file PopUp1B.java.</para>
 <indexterm><primary>getBtnAceptar</primary><secondary>vista.PopUp1B</secondary></indexterm>
 <indexterm><primary>vista.PopUp1B</primary><secondary>getBtnAceptar</secondary></indexterm>
 <para><computeroutput>JButton vista.PopUp1B.getBtnAceptar ( )</computeroutput></para><para>
-Definition at line 91 of file PopUp1B.java.</para>
+Definition at line 80 of file PopUp1B.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -80,7 +80,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getFrmpopup</primary><secondary>vista.PopUp1B</secondary></indexterm>
 <indexterm><primary>vista.PopUp1B</primary><secondary>getFrmpopup</secondary></indexterm>
 <para><computeroutput>JDialog vista.PopUp1B.getFrmpopup ( )</computeroutput></para><para>
-Definition at line 83 of file PopUp1B.java.</para>
+Definition at line 72 of file PopUp1B.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -95,7 +95,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>getLblAviso</primary><secondary>vista.PopUp1B</secondary></indexterm>
 <indexterm><primary>vista.PopUp1B</primary><secondary>getLblAviso</secondary></indexterm>
 <para><computeroutput>JLabel vista.PopUp1B.getLblAviso ( )</computeroutput></para><para>
-Definition at line 99 of file PopUp1B.java.</para>
+Definition at line 88 of file PopUp1B.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -110,19 +110,19 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>initialize</primary><secondary>vista.PopUp1B</secondary></indexterm>
 <indexterm><primary>vista.PopUp1B</primary><secondary>initialize</secondary></indexterm>
 <para><computeroutput>void vista.PopUp1B.initialize ( )</computeroutput></para><para>
-Definition at line 36 of file PopUp1B.java.</para>
+Definition at line 25 of file PopUp1B.java.</para>
     </section><anchor xml:id="_classvista_1_1_pop_up1_b_1a6451287b3cb668e8e6dc4781d68d1246"/>    <section>
     <title>setBtnAceptar()</title>
 <indexterm><primary>setBtnAceptar</primary><secondary>vista.PopUp1B</secondary></indexterm>
 <indexterm><primary>vista.PopUp1B</primary><secondary>setBtnAceptar</secondary></indexterm>
 <para><computeroutput>void vista.PopUp1B.setBtnAceptar (JButton btnAceptar)</computeroutput></para><para>
-Definition at line 95 of file PopUp1B.java.</para>
+Definition at line 84 of file PopUp1B.java.</para>
     </section><anchor xml:id="_classvista_1_1_pop_up1_b_1a3f5f654df97a91789053b56c85a19139"/>    <section>
     <title>setControlador()</title>
 <indexterm><primary>setControlador</primary><secondary>vista.PopUp1B</secondary></indexterm>
 <indexterm><primary>vista.PopUp1B</primary><secondary>setControlador</secondary></indexterm>
 <para><computeroutput>void vista.PopUp1B.setControlador (<link linkend="_classcontrol_1_1_controlador">Controlador</link> control)</computeroutput></para><para>
-Definition at line 28 of file PopUp1B.java.</para>
+Definition at line 17 of file PopUp1B.java.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -137,13 +137,13 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>setFrmpopup</primary><secondary>vista.PopUp1B</secondary></indexterm>
 <indexterm><primary>vista.PopUp1B</primary><secondary>setFrmpopup</secondary></indexterm>
 <para><computeroutput>void vista.PopUp1B.setFrmpopup (JDialog popup)</computeroutput></para><para>
-Definition at line 87 of file PopUp1B.java.</para>
+Definition at line 76 of file PopUp1B.java.</para>
     </section><anchor xml:id="_classvista_1_1_pop_up1_b_1aa59b6a836395ef9ecc534480f2945da8"/>    <section>
     <title>setLblAviso()</title>
 <indexterm><primary>setLblAviso</primary><secondary>vista.PopUp1B</secondary></indexterm>
 <indexterm><primary>vista.PopUp1B</primary><secondary>setLblAviso</secondary></indexterm>
 <para><computeroutput>void vista.PopUp1B.setLblAviso (JLabel lblAviso)</computeroutput></para><para>
-Definition at line 103 of file PopUp1B.java.</para>
+Definition at line 92 of file PopUp1B.java.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

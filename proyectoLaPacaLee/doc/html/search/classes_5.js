@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['odenacion_280',['Odenacion',['../classcontrol_1_1_odenacion.html',1,'control']]]
+  ['usuario_210',['Usuario',['../classmodel_1_1_usuario.html',1,'model']]]
 ];

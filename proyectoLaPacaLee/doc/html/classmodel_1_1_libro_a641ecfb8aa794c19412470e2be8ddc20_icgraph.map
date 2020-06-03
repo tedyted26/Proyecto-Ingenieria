@@ -1,4 +1,6 @@
 <map id="model.Libro.isPrestado" name="model.Libro.isPrestado">
-<area shape="rect" id="node1" title=" " alt="" coords="279,13,433,39"/>
-<area shape="rect" id="node2" href="$classacceso_d_b_1_1_persistencia_datos.html#aabbecb71d8845376d15e87196a24eaa7" title=" " alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="471,46,625,73"/>
+<area shape="rect" id="node2" href="$classvista_1_1_pop_up_info.html#abb7709b9610a7a748582ed8caf4b0516" title=" " alt="" coords="245,5,402,47"/>
+<area shape="rect" id="node4" href="$classvista_1_1_a2_ventana_admin.html#a7f482b00620eb90e09c09bbd5d724de8" title=" " alt="" coords="224,71,423,112"/>
+<area shape="rect" id="node3" href="$classcontrol_1_1_controlador.html#a1f659a43855ef42fa73f85ed2efea4f8" title=" " alt="" coords="5,39,176,80"/>
 </map>
