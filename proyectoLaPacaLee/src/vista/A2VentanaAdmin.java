@@ -264,7 +264,9 @@ public class A2VentanaAdmin{
 		String correo = textFieldCorreoNuevo.getText();
 		String nombre = textFieldNombreNuevo.getText();
 		String apellidos = textFieldApellidosNuevos.getText();
+		@SuppressWarnings("deprecation")
 		String contrasena = passwordFieldContrasenaNueva.getText();
+		@SuppressWarnings("deprecation")
 		String contrasenaAdmin = passwordFieldContrasenaAdmin.getText();
 		
 		if(correo.equals("")

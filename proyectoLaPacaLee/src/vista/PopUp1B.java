@@ -7,8 +7,7 @@ import control.Controlador;
 import javax.swing.GroupLayout.Alignment;
 
 
-@SuppressWarnings("serial")
-public class PopUp1B extends JDialog{
+public class PopUp1B{
 
 	private JDialog frmpopup;
 	private JButton btnAceptar;

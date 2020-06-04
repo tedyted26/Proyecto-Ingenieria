@@ -799,7 +799,7 @@ public class PersistenciaDatos {
 
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public DefaultListModel cargarLista(String dniPrestatario) {
 		try {
 			con=acceso.getConexion();
@@ -808,8 +808,7 @@ public class PersistenciaDatos {
 			pstmt=con.prepareStatement(query);
 			pstmt.setString(1, dniPrestatario);
 			rslt=pstmt.executeQuery();
-			
-			@SuppressWarnings("rawtypes")
+
 			DefaultListModel modelo=new DefaultListModel();
 
 			while(rslt.next()) {

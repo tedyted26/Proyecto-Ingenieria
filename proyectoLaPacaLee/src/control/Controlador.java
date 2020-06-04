@@ -109,7 +109,6 @@ public class Controlador implements ActionListener{
 		//POP UP 
 		else if(fuente.equals(popup.getBtnAceptar())) {
 			popup.getFrmpopup().setVisible(false);
-			popup.getFrmpopup().getContentPane().setBackground(new Color(255, 228, 196));
 		}
 		
 		
@@ -556,7 +555,6 @@ public class Controlador implements ActionListener{
 				app0.getLblMensaje().setText("Debe completar los campos");			
 			}
 			else if(app0.comprobarDatosCC()&&p.crearUsuario(u)) {
-				popup.getFrmpopup().getContentPane().setBackground(new Color(255, 192, 203));
 				popup.getLblAviso().setText("Usuario creado con éxito");
 				popup.getFrmpopup().setVisible(true);
 				app0.eliminarContenidoCC();
@@ -697,6 +695,7 @@ public class Controlador implements ActionListener{
 	 * Actualiza los datos al modificar el perfil nada mas se modifican
 	 * @param dni para evitar fallos
 	 */
+	@SuppressWarnings("unchecked")
 	private void actualizarDatos(String dni) {
 		Usuario u=p.consultarUsuarioDni(dni);
 		app1.getTextFieldCorreo().setText(u.getCorreo());
